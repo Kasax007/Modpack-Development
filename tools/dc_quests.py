@@ -29,7 +29,7 @@ p.quest('wood', 'Punch a Tree', 2.5, 0, [
 p.quest('table', 'The First Workbench', 4.5, -1.5, [
     TIP + 'Craft a crafting table.',
     '',
-    TIP + 'Not sure how something is made? Hover over any item in your inventory and press &eR&7 for its recipes or &eU&7 for its uses (&eRoughly Enough Items&7). The search bar at the bottom of the screen finds every item in the pack.'],
+    TIP + 'Not sure how something is made? Hover over any item in your inventory and press &eR&7 for its recipes or &eU&7 for its uses (&eJEI&7). The search bar at the bottom of the screen finds every item in the pack.'],
     [item('minecraft:crafting_table')], [give('minecraft:stick', 16)], deps=['wood'])
 p.quest('stone', 'Stone Age', 4.5, 1.5, [
     TIP + 'Get some cobblestone and craft a stone pickaxe.',
@@ -200,7 +200,7 @@ t.quest('start', '&eSparks of Industry', 0, 0, [
     KEEPER + '"Some dreamers dream of magic. Others dream of machines that never sleep."',
     '',
     TIP + 'This chapter teaches &eTech Reborn&7: machines run on energy (E), cables carry it, and every machine doubles or improves something you already do by hand.',
-    TIP + 'Open the &eTech Reborn Manual&7 for details - every machine also explains itself in REI.'],
+    TIP + 'Open the &eTech Reborn Manual&7 for details - every machine also explains itself in JEI.'],
     [item('#c:ingots/iron', 32)], [give('techreborn:manual')], icon='questsicons:icon_gear', deps=['deep:done'], shape='star', size=1.4)
 t.quest('rubber', 'Rubber Trees', 2, -2, [
     TIP + 'Rubber trees grow in forests and swamps. Use a &eTree Tap&7 on the sap spots of a rubber log to collect &eSap&7, then smelt or extract it into rubber.'],
@@ -209,7 +209,7 @@ t.quest('refined', 'Refined Iron', 2, 0, [
     TIP + 'Smelt iron ingots once more to get &eRefined Iron&7, the backbone of every Tech Reborn machine.'],
     [item('techreborn:refined_iron_ingot', 16)], [give('minecraft:coal_block', 2)], deps=['start'])
 t.quest('circuit', 'Electronic Circuits', 4, -1, [
-    TIP + 'Circuits need copper cables (insulated with rubber), redstone and refined iron. Use the &eR&7 key in REI to see every step.'],
+    TIP + 'Circuits need copper cables (insulated with rubber), redstone and refined iron. Use the &eR&7 key in JEI to see every step.'],
     [item('techreborn:electronic_circuit', 4)], [give('minecraft:redstone', 32)], deps=['rubber', 'refined'])
 t.quest('frame', 'Machine Frame', 4, 1, [TIP + 'Every basic machine starts with a &eBasic Machine Frame&7.'],
         [item('techreborn:basic_machine_frame', 2)], [give('techreborn:refined_iron_ingot', 8)], deps=['refined'])
@@ -396,7 +396,7 @@ k.quest('start', '&2Kitchen & Farm', 0, 0, [TIP + 'Good food keeps you alive in 
         [item('#c:foods', 32)], [rxp(30)], icon='questsicons:icon_food', deps=['settler:start'], shape='star', size=1.3)
 k.quest('skillet', 'The Skillet', 2, -2, [TIP + 'Hold a &eSkillet&7 (Farmer\'s Delight) over a campfire or stove to fry food in your hand - or swing it as a weapon.'],
         [item('farmersdelight:skillet')], [give('minecraft:egg', 8)], deps=['start'])
-k.quest('more', 'More Delight', 4, -2, [TIP + '&eMore Delight&7 adds sandwiches, pasta, salads and loaded burgers. Check the cooking pot in REI.'],
+k.quest('more', 'More Delight', 4, -2, [TIP + '&eMore Delight&7 adds sandwiches, pasta, salads and loaded burgers. Check the cooking pot in JEI.'],
         [item('moredelight:loaded_hamburger')], [give('farmersdelight:tomato', 6)], deps=['skillet'], optional=True)
 k.quest('rustic', 'Rustic Delight', 4, 0, [TIP + '&eRustic Delight&7 brings cotton, bell peppers, coffee and calamari. Look for wild crops.'],
         [item('#c:foods', 1) if False else item('rusticdelight:cotton_seeds' if False else 'rusticdelight:bell_pepper_green')], [crate('common')], deps=['start'], optional=True)
@@ -428,7 +428,7 @@ b.quest('macaw', 'Macaw\'s Collection', 4, 1, [TIP + 'Craft a piece from every M
         [item('#mcwroofs:roofs') if False else item('mcwroofs:oak_roof'), item('mcwwindows:oak_window'), item('mcwbridges:oak_log_bridge_middle')], [crate('common')], deps=['start'])
 b.quest('lanterns', 'Light It Up', 6, 1, [TIP + '&eAdditional Lanterns&7 makes lanterns from every material and color.'],
         [item('additionallanterns:stone_lantern' if False else 'additionallanterns:amethyst_lantern', 4)], [give('minecraft:torch', 32)], deps=['macaw'], optional=True)
-b.quest('dawn', 'Dawn of Time', 6, -1, [TIP + '&eDawn of Time&7 adds historic blocks from many cultures: Roman, Japanese, Persian, Gothic... Browse them in REI.'],
+b.quest('dawn', 'Dawn of Time', 6, -1, [TIP + '&eDawn of Time&7 adds historic blocks from many cultures: Roman, Japanese, Persian, Gothic... Browse them in JEI.'],
         [check('I found a style I like')], [crate('common')], deps=['effortless', 'chisel'], optional=True)
 b.quest('done', '&6Master Builder', 8, 0, [TIP + 'Show off your best build to a friend - then tick the box.'],
         [check('My dream build is done')], [crate('rare'), rxp(200)], deps=['dawn', 'lanterns'], any_dep=True, shape='star', size=1.3, icon='questsicons:quest_crown')

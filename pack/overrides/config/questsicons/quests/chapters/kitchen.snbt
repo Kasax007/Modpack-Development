@@ -63,7 +63,7 @@
 			dependencies: ["C95A406A7C9F21B9"]
 			optional: true
 			description: [
-				"&7&eMore Delight&7 adds sandwiches, pasta, salads and loaded burgers. Check the cooking pot in REI."
+				"&7&eMore Delight&7 adds sandwiches, pasta, salads and loaded burgers. Check the cooking pot in JEI."
 			]
 			tasks: [
 				{ id: "1A4C7F44D276A7BB", type: "item", item: "moredelight:loaded_hamburger" }

@@ -75,7 +75,7 @@
 			description: [
 				"&7Craft a crafting table."
 				""
-				"&7Not sure how something is made? Hover over any item in your inventory and press &eR&7 for its recipes or &eU&7 for its uses (&eRoughly Enough Items&7). The search bar at the bottom of the screen finds every item in the pack."
+				"&7Not sure how something is made? Hover over any item in your inventory and press &eR&7 for its recipes or &eU&7 for its uses (&eJEI&7). The search bar at the bottom of the screen finds every item in the pack."
 			]
 			tasks: [
 				{ id: "44BE4A194E2CC676", type: "item", item: "minecraft:crafting_table" }

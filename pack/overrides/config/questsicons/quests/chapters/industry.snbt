@@ -23,7 +23,7 @@
 				"&d&o\"Some dreamers dream of magic. Others dream of machines that never sleep.\""
 				""
 				"&7This chapter teaches &eTech Reborn&7: machines run on energy (E), cables carry it, and every machine doubles or improves something you already do by hand."
-				"&7Open the &eTech Reborn Manual&7 for details - every machine also explains itself in REI."
+				"&7Open the &eTech Reborn Manual&7 for details - every machine also explains itself in JEI."
 			]
 			tasks: [
 				{
@@ -97,7 +97,7 @@
 			y: -1.0d
 			dependencies: ["C1A90A0B7EFD9489", "049D73DC6BFB70DA"]
 			description: [
-				"&7Circuits need copper cables (insulated with rubber), redstone and refined iron. Use the &eR&7 key in REI to see every step."
+				"&7Circuits need copper cables (insulated with rubber), redstone and refined iron. Use the &eR&7 key in JEI to see every step."
 			]
 			tasks: [
 				{

@@ -1,6 +1,6 @@
 # Dreamcraft 26.3 - mod list
 
-250 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
+249 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
 
 | Mod | File | Side |
 | --- | --- | --- |
@@ -113,7 +113,6 @@
 | [Jewelry (RPG Series)](https://www.curseforge.com/minecraft/mc-mods/jewelry) | jewelry-fabric-2.5.1+26.3.jar | both |
 | [Just Enough Items (JEI)](https://www.curseforge.com/minecraft/mc-mods/jei) | jei-26.3-fabric-31.14.0.72.jar | both |
 | [Just Enough Professions (JEP)](https://www.curseforge.com/minecraft/mc-mods/just-enough-professions-jep) | JustEnoughProfessions-fabric-26.3-130.0.jar | both |
-| [Just Enough Resources (JER)](https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer) | JustEnoughResources-Fabric-26.3-1.11.0.58.jar | both |
 | [JustHammers](https://www.curseforge.com/minecraft/mc-mods/justhammers) | just-hammers-fabric-26.3.0.1.jar | both |
 | [Konkrete](https://www.curseforge.com/minecraft/mc-mods/konkrete) | konkrete_fabric_1.11.1_MC_26.3.jar | both |
 | [LambDynamicLights](https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights) | lambdynamiclights-4.13.0+26.3.jar | client |

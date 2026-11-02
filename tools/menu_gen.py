@@ -24,11 +24,11 @@ def setkeys(block, **kv):
     return block
 
 def fresh_ids(block, seed):
-    # new identifiers for every uuid-like value so layouts never share instances
-    n = [0]
+    # new identifiers for every uuid-like value so layouts never share instances. The same old id must get the same
+    # new id everywhere in the block: a button names its action block twice (button_element_executable_block_identifier
+    # and [executable_block:...]); different ids there left the Mods and Rent a Server buttons without any action.
     def rep(m):
-        n[0] += 1
-        return uid(f'{seed}/{m.group(0)}/{n[0]}')
+        return uid(f'{seed}/{m.group(0)}')
     return re.sub(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-\d{13}', rep, block)
 
 IMG = [b for b in blocks(summit, 'element') if 'element_type = image' in b][0]
@@ -40,6 +40,13 @@ def title_layout(i):
     h = head
     h = re.sub(r'identifier = title_screen\n', 'identifier = title_screen\n', h)
     h = setkeys_meta(h, randommode='true', randomonlyfirsttime='true', is_enabled='true', layout_index=str(i))
+    # The layout is drawn at GUI scale 2 on a 1920x1080 window (960x540 GUI units). Auto-scaling turns that scale
+    # into scale 2 * min(window / 1920x1080), so smaller windows (the default 854x480, 1366x768) show the whole menu
+    # instead of cutting off the lower buttons.
+    h = h.replace('customization {\n  action = setscale\n  scale = 2.0\n}',
+                  'customization {\n  action = setscale\n  scale = 2.0\n}\n\ncustomization {\n  action = autoscale\n'
+                  '  basewidth = 1920\n  baseheight = 1080\n}', 1)
+    assert 'action = autoscale' in h
     h = h.replace('[source:local]/config/fancymenu/assets/cc_menu_bg.png', f'{A}/bg{i}.jpg')
     h = re.sub(r'(background_type = image\n  show_background = )\w+', r'\1true', h)
     h = re.sub(r'parallax_intensity_x = 0.015\n  parallax_intensity_y = 0.015', 'parallax_intensity_x = 0.01\n  parallax_intensity_y = 0.01', h)
@@ -74,7 +81,7 @@ def setkeys_meta(h, **kv):
 
 def image(seed, src, anchor, x, y, w, h, stretch_y=False):
     b = fresh_ids(IMG, seed)
-    b = setkeys(b, anchor_point=anchor, x=x, y=y, width=w, height=h, source=src, enable_parallax='false',
+    b = setkeys(b, instance_identifier=uid(seed + '/image'), anchor_point=anchor, x=x, y=y, width=w, height=h, source=src, enable_parallax='false',
                 stretch_y='true' if stretch_y else 'false', auto_sizing='false')
     return b.lstrip('\n')
 
@@ -115,7 +122,13 @@ d = re.sub(r'(source = )\[source:local\]/config/fancymenu/assets/final.png', r'\
 logo = [b for b in blocks(d, 'element') if 'loading_logo' in b][0]
 d = d.replace(logo, setkeys(logo, anchor_point='mid-centered', x=-200, y=-190, width=400, height=300))
 bar = [b for b in blocks(d, 'vanilla_button') if 'instance_identifier = progress_bar' in b][0]
-d = d.replace(bar, setkeys(bar, anchor_point='mid-centered', x=-200, y=110, width=400, height=10, bar_color='#7E0CC9'))
+# the vanilla bar widget cannot be coloured (it ignores any colour key): hide it and draw Drippy's own bar in purple
+d = d.replace(bar, setkeys(bar, anchor_point='mid-centered', x=-200, y=110, width=400, height=10, is_hidden='true'))
+pbar = fresh_ids(IMG, 'drippy/purple_bar')
+pbar = re.sub(r'\n  source = .*', '', pbar)
+pbar = setkeys(pbar, element_type='drippy_vanilla_bar', instance_identifier=uid('drippy/purple_bar/el'), anchor_point='mid-centered', x=-200, y=110, width=400, height=10,
+               color='#7E0CC9FF', stretch_y='false', auto_sizing='false')
+d = d.rstrip('\n') + '\n\n' + pbar.lstrip('\n') + '\n'
 open(f'{OUT}/drippy_loading_overlay_layout.txt', 'w').write(d)
 
 open(f'{SP}/pack/overrides/config/fancymenu/customizablemenus.txt', 'w').write(

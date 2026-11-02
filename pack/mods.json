@@ -936,7 +936,7 @@
   "env": "*"
  },
  {
-  "title": "Jade 🔍",
+  "title": "Jade \ud83d\udd0d",
   "slug": "jade",
   "projectID": 324717,
   "fileID": 9042194,
@@ -978,15 +978,6 @@
   "fileID": 8906958,
   "file": "JustEnoughProfessions-fabric-26.3-130.0.jar",
   "modid": "justenoughprofessions",
-  "env": "*"
- },
- {
-  "title": "Just Enough Resources (JER)",
-  "slug": "just-enough-resources-jer",
-  "projectID": 240630,
-  "fileID": 9375678,
-  "file": "JustEnoughResources-Fabric-26.3-1.11.0.58.jar",
-  "modid": "jeresources",
   "env": "*"
  },
  {

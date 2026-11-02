@@ -167,7 +167,7 @@
 			dependencies: ["A45F2076BAF9BF91", "0974E18CC2E9F310"]
 			optional: true
 			description: [
-				"&7&eDawn of Time&7 adds historic blocks from many cultures: Roman, Japanese, Persian, Gothic... Browse them in REI."
+				"&7&eDawn of Time&7 adds historic blocks from many cultures: Roman, Japanese, Persian, Gothic... Browse them in JEI."
 			]
 			tasks: [
 				{ id: "E363AD9089CFF86D", type: "checkmark", title: "I found a style I like" }

@@ -7,4 +7,5 @@
 - ModernFix-mVUS (1367508): its preLaunch loads chat classes too early -> Language Reload / CreativeCore mixins fail on the client
 - FrozenLib (709773) + Wilder Wild (648511) + Simple Copper Pipes (571336): FrozenLib's early-entrypoint mixin plugin loads chat classes too early -> Language Reload/CreativeCore mixins fail, client cannot start
 - Item Highlighter (541578) + Iceberg (539382): Iceberg shades an old NightConfig without WritingMode.REPLACE_ATOMIC -> every Fuzs mod config crashes on the client
-- Roughly Enough Items (310111) + REP (597988): REI 26.3 cannot build displays for the data-driven brewing recipes (557) and the Farmer's Delight cooking pot (27) -> switched to JEI + Just Enough Professions + Just Enough Resources
+- Roughly Enough Items (310111) + REP (597988): REI 26.3 cannot build displays for the data-driven brewing recipes (557) and the Farmer's Delight cooking pot (27) -> switched to JEI + Just Enough Professions
+- Just Enough Resources (240630), removed in V1.2: its JEI plugin builds its own worldgen registry and fails on BetterNether's biome keys ("No value registered for key betternether:flooded_deltas"), so it showed no page at all
