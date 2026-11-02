@@ -24,6 +24,8 @@ loom {
 			if (project.hasProperty('out')) vmArg "-Ddc.out=${project.property('out')}"
 			if (project.hasProperty('shots')) vmArg "-Ddc.shots=${project.property('shots')}"
 			if (project.hasProperty('quests')) vmArg "-Ddc.quests=${project.property('quests')}"
+			if (project.hasProperty('rd')) vmArg "-Ddc.rd=${project.property('rd')}"
+			if (project.hasProperty('nostills')) vmArg "-Ddc.nostills=true"
 		}
 	}
 }

@@ -13,7 +13,7 @@ r.quest('energy', 'Ancient Energy', 4, -2, [TIP + 'Smelt the ring. What is left 
 r.quest('crystal', 'Ancient Crystal', 2, 2, [TIP + 'Shipwreck treasure chests often hold an &eAncient Crystal&7. Look for wrecks on beaches and in oceans.'],
         [item('raft:ancient_crystal')], [give('minecraft:heart_of_the_sea') if False else rxp(80)], deps=['start'])
 r.quest('driftwood', 'Driftwood', 4, 2, [
-    TIP + 'Bleached &eDriftwood&7 trees wash up on beaches. Collect the logs and plant the saplings - you will need plenty.'],
+    TIP + 'Dark &eDriftwood&7 stumps stand on sandy beaches. Chop the logs - you will need plenty.'],
     [item('raft:driftwood_log', 12)], [give('raft:driftwood_sapling', 2) if False else give('minecraft:bone_meal', 16)], deps=['start'])
 r.quest('staff', 'The Energy Staff', 6, -1, [TIP + 'An &eEnergy Staff&7 channels ancient energy. It lights the portal to the sea.'],
         [item('raft:energy_staff')], [give('minecraft:glowstone_dust', 8)], deps=['energy', 'crystal'], shape='diamond')
@@ -55,15 +55,15 @@ r.quest('shark', '&cBruce', 14, -2, [
 r.quest('trophy', 'Shark Trophy', 16, -2, [TIP + 'Hang a &eShark Jaw Trophy&7 on your wall. Bruce would be proud.'],
         [item('raft:shark_jaw_trophy')], [rxp(100)], deps=['shark'], optional=True)
 r.quest('receiver', 'Receiver', 14, 0, [
-    TIP + 'Right-click the &eReceiver&7 to get the direction and distance to the nearest drifting island. Islands hide old raft wrecks with loot.'],
+    TIP + 'Right-click the &eReceiver&7 to get the direction and distance to the nearest floating driftwood. Out at sea it is the best source of driftwood logs.'],
     [item('raft:receiver')], [rxp(150)], deps=['hook', 'grill'])
-r.quest('island', 'Land Ho!', 16, 0, [TIP + 'Follow the receiver and land on an island. Climb the ruins, loot the chests.'],
-        [struct('raft:driftwood', 'Find a driftwood island')], [crate('rare')], deps=['receiver'], shape='diamond')
+r.quest('island', 'Driftwood Ahoy!', 16, 0, [TIP + 'Follow the receiver to the floating driftwood and haul the logs aboard. On the way, dive down: shipwrecks on the sea floor hide treasure.'],
+        [item('raft:driftwood_log', 16)], [crate('rare')], deps=['receiver'], shape='diamond')
 r.quest('paddle', 'Paddle Power', 14, 2, [TIP + 'In a boat, right-click with a &ePaddle&7 for a push forward. Island hopping made easy.'],
         [item('raft:paddle')], [give('minecraft:oak_boat') if False else rxp(80)], deps=['grill'])
-r.quest('titanium', 'Titanium', 18, 0, [TIP + 'Titanium ore hides under the sea floor. Smelt it into ingots for tools and armor that give special effects.'],
+r.quest('titanium', 'Titanium', 18, 0, [TIP + 'Titanium ore hides deep under the sea floor - you need a diamond pickaxe. The &eMetal Detector&7 tells you how deep it is. Smelt the raw titanium into ingots.'],
         [item('raft:titanium_ingot', 12)], [crate('rare')], deps=['island'])
-r.quest('armor', 'Titanium Armor', 20, -1.5, [TIP + 'A full set of titanium armor - light and strong.'],
+r.quest('armor', 'Titanium Armor', 20, -1.5, [TIP + 'A full set of titanium armor is as strong as diamond and gives Water Breathing, Dolphin\'s Grace and Conduit Power.'],
         [item('raft:titanium_helmet'), item('raft:titanium_chestplate'), item('raft:titanium_leggings'), item('raft:titanium_boots')],
         [crate('epic')], deps=['titanium'], optional=True)
 r.quest('solar', 'Sun Power', 20, 1.5, [

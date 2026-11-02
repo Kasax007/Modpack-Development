@@ -18,7 +18,7 @@ import java.util.List;
  */
 final class Film {
     private final ClientGameTestContext ctx;
-    private final Path out;
+    final Path out;
     private TestSingleplayerContext sp;
 
     Film(ClientGameTestContext ctx, Path out) {
@@ -37,11 +37,32 @@ final class Film {
         for (String c : cs) cmd(c);
     }
 
+    static final int RD = Integer.getInteger("dc.rd", 12);
+
+    /**
+     * Waits until every chunk within the render distance is loaded on the client and all sections are built
+     * (at most {@code max} ticks, at least 40), so no half-loaded terrain shows up in a shot.
+     */
     void settle(int max) {
+        int need = Math.max(2, RD - 1);
         for (int i = 1; i <= max; i++) {
             ctx.waitTick();
-            if (i >= 40 && i % 10 == 0 && ctx.computeOnClient(mc -> mc.levelRenderer.hasRenderedAllSections())) return;
+            if (i >= 40 && i % 10 == 0 && ctx.computeOnClient(mc -> {
+                if (mc.level == null || mc.player == null) return true;
+                int cx = mc.player.chunkPosition().x(), cz = mc.player.chunkPosition().z();
+                for (int dx = -need; dx <= need; dx++) {
+                    for (int dz = -need; dz <= need; dz++) {
+                        if (dx * dx + dz * dz > need * need) continue;
+                        if (!mc.level.getChunkSource().hasChunk(cx + dx, cz + dz)) return false;
+                    }
+                }
+                return mc.levelRenderer.hasRenderedAllSections();
+            })) {
+                PackTest.LOG.info("[dctest] settled after {} ticks", i);
+                return;
+            }
         }
+        PackTest.LOG.warn("[dctest] not settled after {} ticks", max);
     }
 
     void portrait() {
@@ -76,6 +97,8 @@ final class Film {
     void frames(String shot, int frames, Runnable perTick) {
         Path dir = out.resolve(shot);
         int tick = 0;
+        long t0 = System.nanoTime();
+        FilmSound.start(dir, 30, ctx.computeOnClient(mc -> mc.level == null ? 0L : mc.level.getGameTime()));
         for (int i = 0; i < frames; i++) {
             double t = i * 20.0 / 30.0;
             int whole = (int) Math.floor(t);
@@ -87,7 +110,8 @@ final class Film {
             ctx.takeScreenshot(TestScreenshotOptions.of(String.format("f%05d", i)).withDeltaTicks((float) (t - whole))
                     .disableCounterPrefix().withDestinationDir(dir));
         }
-        PackTest.LOG.info("[dctest] filmed {} ({} frames)", shot, frames);
+        FilmSound.stop();
+        PackTest.LOG.info("[dctest] filmed {} ({} frames, {} ms per frame)", shot, frames, (System.nanoTime() - t0) / 1_000_000 / Math.max(1, frames));
     }
 
     void still(String name) {
@@ -95,10 +119,14 @@ final class Film {
     }
 
     /** Portrait frames, then a landscape still of the same view. */
+    /** -Ddc.nostills=true: portrait frames only (with shaders every window resize costs native memory). */
+    static final boolean NO_STILLS = Boolean.getBoolean("dc.nostills");
+
     void shoot(String shot, int frames, Runnable perTick) {
         portrait();
-        settle(200);
+        settle(900);
         frames(shot, frames, perTick);
+        if (NO_STILLS) return;
         landscape();
         settle(120);
         still(shot);
@@ -108,7 +136,8 @@ final class Film {
     void run(List<String> shots) {
         ctx.runOnClient(mc -> {
             var o = mc.options;
-            o.renderDistance().set(8);
+            o.renderDistance().set(RD);
+            o.simulationDistance().set(Math.min(RD, 12));
             o.fov().set(80);
             o.bobView().set(false);
             o.showAutosaveIndicator().set(false);
@@ -150,6 +179,14 @@ final class Film {
         }
         switch (shot) {
             case "menu" -> {
+            }
+            case "shadertest" -> {
+                cmds("execute in minecraft:overworld run tp @p 120 200 120");
+                findLand(FLAT, 2);
+                camera(CameraType.THIRD_PERSON_BACK);
+                portrait();
+                settle(900);
+                frames("shadertest", 8, null);
             }
             case "vista" -> {
                 // a Terralith landscape: the player on the highest spot nearby, looking into the open, slow pan
@@ -357,7 +394,10 @@ final class Film {
                 camera(CameraType.THIRD_PERSON_BACK);
                 shoot("village", 60, () -> cmd("execute as @p at @p run tp @p ~ ~ ~ ~-0.3 ~"));
             }
-            default -> PackTest.LOG.warn("[dctest] unknown shot {}", shot);
+            default -> {
+                if (shot.startsWith("bc_")) new BcShots(this, ctx, sp).shot(shot);
+                else PackTest.LOG.warn("[dctest] unknown shot {}", shot);
+            }
         }
     }
 
@@ -372,7 +412,7 @@ final class Film {
     }
 
     /** Main hand item (or air), empty off hand (the starter kit's shield hides the player). */
-    private void hands(String main) {
+    void hands(String main) {
         cmds("item replace entity @p weapon.mainhand with " + main, "item replace entity @p weapon.offhand with air");
     }
 
@@ -485,7 +525,7 @@ final class Film {
      * surroundings (8 blocks around) are no more than {@code flat} blocks higher or lower, using the generator's base
      * heights (no chunks are generated while searching), then teleports the player onto the real surface there.
      */
-    private boolean findLand(List<String> biomes, int flat) {
+    boolean findLand(List<String> biomes, int flat) {
         Object pos = sp.getServer().computeOnServer(server -> {
             var p = server.getPlayerList().getPlayers().getFirst();
             var level = server.overworld();

@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "net.kasax.dctest.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["SoundLogMixin", "ScreenshotLeakMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

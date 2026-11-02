@@ -101,7 +101,7 @@
 			y: 2.0d
 			dependencies: ["A86C5C17B948EC6E"]
 			description: [
-				"&7Bleached &eDriftwood&7 trees wash up on beaches. Collect the logs and plant the saplings - you will need plenty."
+				"&7Dark &eDriftwood&7 stumps stand on sandy beaches. Chop the logs - you will need plenty."
 			]
 			tasks: [
 				{
@@ -446,7 +446,7 @@
 			y: 0.0d
 			dependencies: ["566CD39EB3306E79", "1118183A72E5E5D6"]
 			description: [
-				"&7Right-click the &eReceiver&7 to get the direction and distance to the nearest drifting island. Islands hide old raft wrecks with loot."
+				"&7Right-click the &eReceiver&7 to get the direction and distance to the nearest floating driftwood. Out at sea it is the best source of driftwood logs."
 			]
 			tasks: [
 				{ id: "1120ACBC12061EB1", type: "item", item: "raft:receiver" }
@@ -457,20 +457,20 @@
 		}
 		{
 			id: "38EA3B7A88D1623B"
-			title: "Land Ho!"
+			title: "Driftwood Ahoy!"
 			x: 16.0d
 			y: 0.0d
 			shape: "diamond"
 			dependencies: ["7917CC5FBB3D841B"]
 			description: [
-				"&7Follow the receiver and land on an island. Climb the ruins, loot the chests."
+				"&7Follow the receiver to the floating driftwood and haul the logs aboard. On the way, dive down: shipwrecks on the sea floor hide treasure."
 			]
 			tasks: [
 				{
 					id: "CE45169C7C71A3B0"
-					type: "structure"
-					title: "Find a driftwood island"
-					structure: "raft:driftwood"
+					type: "item"
+					count: 16
+					item: "raft:driftwood_log"
 				}
 			]
 			rewards: [
@@ -500,7 +500,7 @@
 			y: 0.0d
 			dependencies: ["38EA3B7A88D1623B"]
 			description: [
-				"&7Titanium ore hides under the sea floor. Smelt it into ingots for tools and armor that give special effects."
+				"&7Titanium ore hides deep under the sea floor - you need a diamond pickaxe. The &eMetal Detector&7 tells you how deep it is. Smelt the raw titanium into ingots."
 			]
 			tasks: [
 				{
@@ -522,7 +522,7 @@
 			dependencies: ["364B3A6273E47AED"]
 			optional: true
 			description: [
-				"&7A full set of titanium armor - light and strong."
+				"&7A full set of titanium armor is as strong as diamond and gives Water Breathing, Dolphin's Grace and Conduit Power."
 			]
 			tasks: [
 				{ id: "F47B2EB7B8F58409", type: "item", item: "raft:titanium_helmet" }
