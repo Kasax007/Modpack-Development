@@ -234,8 +234,9 @@ final class Film {
                 ctx.waitTicks(40);
                 hands("air");
                 spreadIn("minecraft:the_nether", "betternether:nether_jungle");
+                openYaw(6);
                 camera(CameraType.THIRD_PERSON_BACK);
-                shoot("nether", 50, () -> cmd("execute as @p at @p run tp @p ~0.05 ~ ~"));
+                shoot("nether", 60, () -> cmd("execute as @p at @p run tp @p ~ ~ ~ ~0.3 ~"));
             }
             case "end" -> {
                 cmds("execute in minecraft:the_end run tp @p 1200 120 1200");
@@ -373,6 +374,41 @@ final class Film {
     /** Main hand item (or air), empty off hand (the starter kit's shield hides the player). */
     private void hands(String main) {
         cmds("item replace entity @p weapon.mainhand with " + main, "item replace entity @p weapon.offhand with air");
+    }
+
+    /** Turns the player towards the direction with the most free space at eye level (caves, the Nether). */
+    private void openYaw(float pitch) {
+        sp.getServer().runOnServer(server -> {
+            var p = server.getPlayerList().getPlayers().getFirst();
+            var level = (net.minecraft.server.level.ServerLevel) p.level();
+            var o = p.blockPosition();
+            float bestYaw = p.getYRot();
+            int best = -1;
+            for (int k = 0; k < 16; k++) {
+                double a = Math.toRadians(k * 22.5);
+                int free = 0;
+                for (int r = 1; r <= 14; r++) {
+                    var b = o.offset((int) Math.round(-Math.sin(a) * r), 1, (int) Math.round(Math.cos(a) * r));
+                    if (level.getBlockState(b).isSolid() || level.getBlockState(b.above()).isSolid()) break;
+                    free = r;
+                }
+                // the camera sits behind the player: it needs room there too
+                double back = Math.toRadians(k * 22.5 + 180);
+                int behind = 0;
+                for (int r = 1; r <= 4; r++) {
+                    var b = o.offset((int) Math.round(-Math.sin(back) * r), 1, (int) Math.round(Math.cos(back) * r));
+                    if (level.getBlockState(b).isSolid()) break;
+                    behind = r;
+                }
+                int score = free + 3 * behind;
+                if (score > best) {
+                    best = score;
+                    bestYaw = k * 22.5f;
+                }
+            }
+            p.teleportTo(level, p.getX(), p.getY(), p.getZ(), java.util.Set.of(), bestYaw, pitch, true);
+        });
+        ctx.waitTicks(10);
     }
 
     /** Moves the player to the highest dry point within {@code radius} blocks (generator heights, overworld). */
