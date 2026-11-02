@@ -1,0 +1,10 @@
+- Enhanced Quarries (528338): rewrites recipe JSON (item->id) and breaks BetterEnd/BCLib recipes -> server cannot start
+- MCPitanLib (682213): converts recipe JSON item->id globally; breaks BetterEnd and Farming for Blockheads data (no mod needs it any more)
+- Display Case (517791): its 26.3 advancements still use the 1.20 NBT format -> registry load error
+- Kaleidoscope Cookery Refabricated (1394201): REI cannot display its pot/stockpot/teapot recipes (hundreds of errors); Farmer's Delight + addons cover cooking
+- Wakes (884267): FancyMenu 3.9.14 declares it incompatible (breaks wakes *)
+- Cherished Worlds (308240): its bundled SpectreLib loads ComponentSerialization too early in preLaunch -> CreativeCore mixin fails, client cannot start
+- ModernFix-mVUS (1367508): its preLaunch loads chat classes too early -> Language Reload / CreativeCore mixins fail on the client
+- FrozenLib (709773) + Wilder Wild (648511) + Simple Copper Pipes (571336): FrozenLib's early-entrypoint mixin plugin loads chat classes too early -> Language Reload/CreativeCore mixins fail, client cannot start
+- Item Highlighter (541578) + Iceberg (539382): Iceberg shades an old NightConfig without WritingMode.REPLACE_ATOMIC -> every Fuzs mod config crashes on the client
+- Roughly Enough Items (310111) + REP (597988): REI 26.3 cannot build displays for the data-driven brewing recipes (557) and the Farmer's Delight cooking pot (27) -> switched to JEI + Just Enough Professions + Just Enough Resources

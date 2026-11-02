@@ -1,0 +1,205 @@
+{
+	id: "D3A919AB9B72D1B4"
+	filename: "end"
+	title: "&57. The End of the Dream"
+	subtitle: [
+		"&7Find the stronghold. Face the dragon."
+	]
+	icon: "questsicons:end_lock"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 7
+	default_quest_shape: "circle"
+	quests: [
+		{
+			id: "D6A9AB6225A0A57E"
+			title: "&5Eyes of Ender"
+			icon: "minecraft:ender_eye"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["821D41E08A97318F"]
+			description: [
+				"&d&o\"The dragon is the last nightmare. It holds the Dream captive at the edge of the world.\""
+				""
+				"&7Craft eyes of ender from pearls and blaze powder. Throw one - it flies towards the nearest stronghold."
+			]
+			tasks: [
+				{
+					id: "A4F4D48EDD1D0F7D"
+					type: "item"
+					count: 12
+					item: "minecraft:ender_eye"
+				}
+			]
+			rewards: [
+				{
+					id: "A4EE488EDD17B5EB"
+					type: "item"
+					count: 4
+					item: "minecraft:ender_pearl"
+				}
+			]
+		}
+		{
+			id: "F1BCCF811F9AF3D2"
+			title: "The Stronghold"
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["D6A9AB6225A0A57E"]
+			description: [
+				"&7Follow the eyes and find the stronghold below ground."
+			]
+			tasks: [
+				{
+					id: "265DA5332B1E9B02"
+					type: "structure"
+					title: "Find the stronghold"
+					structure: "minecraft:stronghold"
+				}
+			]
+			rewards: [
+				{ id: "266431332B23F494", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "0B669EE242028C2A"
+			title: "The End Portal"
+			icon: "questsicons:quest_portal_five"
+			x: 4.0d
+			y: 0.0d
+			dependencies: ["F1BCCF811F9AF3D2"]
+			description: [
+				"&7Fill the frame with eyes of ender and jump in. Bring blocks, food, a bow and slow-falling if you can."
+			]
+			tasks: [
+				{
+					id: "6E9B699D59E61473"
+					type: "dimension"
+					title: "Enter the End"
+					dimension: "minecraft:the_end"
+				}
+			]
+			rewards: [
+				{ id: "6EA2759D59EC4785", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "774735F23D32F447"
+			title: "&5The Last Nightmare"
+			icon: "minecraft:dragon_head"
+			x: 6.0d
+			y: 0.0d
+			shape: "heart"
+			size: 2.0d
+			dependencies: ["0B669EE242028C2A"]
+			description: [
+				"&d&o\"Now, Dreamer!\""
+				""
+				"&7Destroy the healing crystals on the pillars, then defeat the &5Ender Dragon&7."
+			]
+			tasks: [
+				{
+					id: "FEDAB1548EBFBDA0"
+					type: "kill"
+					entity: "minecraft:ender_dragon"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "FEEF35548ED146F6", type: "item", item: "questsicons:legendary_crate" }
+				{ id: "FEEF36548ED148A9", type: "xp_levels", xp_levels: 30 }
+			]
+		}
+		{
+			id: "019D514B0B995817"
+			title: "The Outer Islands"
+			x: 8.0d
+			y: -2.0d
+			dependencies: ["774735F23D32F447"]
+			description: [
+				"&7Throw a pearl into the gateway that appears. &eBetterEnd&7 turns the outer End into a whole world of biomes, from glowing forests to sulphuric lakes."
+			]
+			tasks: [
+				{
+					id: "D898C47A08467C2F"
+					type: "biome"
+					title: "Visit the Foggy Mushroomland"
+					biome: "betterend:foggy_mushroomland"
+				}
+			]
+			rewards: [
+				{ id: "D884407A0834F2D9", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "7538B596ECD56BC3"
+			title: "End City"
+			x: 8.0d
+			y: 2.0d
+			dependencies: ["774735F23D32F447"]
+			description: [
+				"&7End cities float in the outer End. Shulkers guard elytra and great loot."
+			]
+			tasks: [
+				{
+					id: "A4618094D7D86292"
+					type: "structure"
+					title: "Find an End city"
+					structure: "minecraft:end_city"
+				}
+				{
+					id: "A4618194D7D86445"
+					type: "item"
+					count: 4
+					item: "minecraft:shulker_shell"
+				}
+			]
+			rewards: [
+				{ id: "A4680C94D7DDBC24", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "533DD78BFDF372A5"
+			title: "&bWings"
+			x: 10.0d
+			y: 2.0d
+			shape: "diamond"
+			dependencies: ["7538B596ECD56BC3"]
+			description: [
+				"&7Find an elytra in an End ship. Fireworks give you a boost while flying."
+			]
+			tasks: [
+				{ id: "5D6763C35115DBA4", type: "item", item: "minecraft:elytra" }
+			]
+			rewards: [
+				{
+					id: "5D60D7C351108212"
+					type: "item"
+					count: 32
+					item: "minecraft:firework_rocket"
+				}
+			]
+		}
+		{
+			id: "31E96F5B7FFD58FC"
+			title: "&5The Dream Is Free"
+			icon: "questsicons:quest_crown"
+			x: 12.0d
+			y: 0.0d
+			shape: "star"
+			size: 2.0d
+			dependencies: ["019D514B0B995817", "533DD78BFDF372A5"]
+			description: [
+				"&d&o\"You did it. The dragon is gone and the Dream breathes again. But dreams never truly end...\""
+				""
+				"&7Continue with the &dEpilogue&7 for the hardest challenges."
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "787ECA35C7B65434", type: "item", item: "questsicons:legendary_crate" }
+				{ id: "787ECB35C7B655E7", type: "xp", xp: 1000 }
+			]
+		}
+	]
+}

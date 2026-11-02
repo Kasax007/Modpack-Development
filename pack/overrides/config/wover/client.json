@@ -1,0 +1,18 @@
+{
+  "create_version": "26.302.1",
+  "internal": {
+    "did_present_welcome_screen": true
+  },
+  "general": {
+    "check_for_new_versions": false,
+    "prefere_modrinth": false,
+    "survives_on_hint": true,
+    "speech_bubble_scale": 1.0,
+    "show_relationship_popups": true,
+    "force_betterx_world_type": true
+  },
+  "loading": {
+    "disable_experimental_warning": true
+  },
+  "modify_version": "26.302.1"
+}

@@ -1,0 +1,17 @@
+{
+	title: "&6Legendary Crate"
+	icon: "questsicons:legendary_crate"
+	entries: [
+		{ count: 2, item: "minecraft:netherite_ingot", weight: 12 }
+		{ count: 2, item: "minecraft:totem_of_undying", weight: 12 }
+		{ count: 2, item: "minecraft:enchanted_golden_apple", weight: 10 }
+		{ item: "minecraft:elytra", weight: 6 }
+		{ item: "minecraft:nether_star", weight: 6 }
+		{ item: "minecraft:beacon", weight: 4 }
+		{ count: 2, item: "minecraft:netherite_upgrade_smithing_template", weight: 8 }
+		{ count: 4, item: "minecraft:diamond_block", weight: 12 }
+		{ item: "minecraft:heavy_core", weight: 3 }
+		{ item: "minecraft:music_disc_pigstep", weight: 4 }
+		{ count: 8, item: "minecraft:dragon_breath", weight: 5 }
+	]
+}

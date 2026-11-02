@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "dctest",
+  "version": "1.0.0",
+  "name": "Dreamcraft pack test",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-client-gametest": [
+      "net.kasax.dctest.PackTest"
+    ],
+    "client": [
+      "net.kasax.dctest.KeyFix"
+    ]
+  },
+  "depends": {
+    "fabric-client-gametest-api-v1": "*"
+  }
+}

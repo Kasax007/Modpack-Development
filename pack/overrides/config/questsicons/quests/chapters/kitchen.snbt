@@ -1,0 +1,203 @@
+{
+	id: "4688ED1453D627C1"
+	filename: "kitchen"
+	title: "&2Kitchen & Farm"
+	subtitle: [
+		"&7Everything about food, farming and cooking."
+	]
+	icon: "questsicons:icon_food"
+	group: "1C49159F2FE9E643"
+	order_index: 9
+	default_quest_shape: "circle"
+	quests: [
+		{
+			id: "A0537B93B8CB2329"
+			title: "&2Kitchen & Farm"
+			icon: "questsicons:icon_food"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["A5C73A63F59D816A"]
+			description: [
+				"&7Good food keeps you alive in the Dream. This side path shows every cooking and farming mod in the pack."
+			]
+			tasks: [
+				{
+					id: "1D0069043AD01A41"
+					type: "item"
+					count: 32
+					item: "#c:foods"
+				}
+			]
+			rewards: [
+				{ id: "1D146D043AE0CA17", type: "xp", xp: 30 }
+			]
+		}
+		{
+			id: "C95A406A7C9F21B9"
+			title: "The Skillet"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["A0537B93B8CB2329"]
+			description: [
+				"&7Hold a &eSkillet&7 (Farmer's Delight) over a campfire or stove to fry food in your hand - or swing it as a weapon."
+			]
+			tasks: [
+				{ id: "802B33A2122D3574", type: "item", item: "farmersdelight:skillet" }
+			]
+			rewards: [
+				{
+					id: "802427A212270262"
+					type: "item"
+					count: 8
+					item: "minecraft:egg"
+				}
+			]
+		}
+		{
+			id: "2CFD3D19EAF6701E"
+			title: "More Delight"
+			x: 4.0d
+			y: -2.0d
+			dependencies: ["C95A406A7C9F21B9"]
+			optional: true
+			description: [
+				"&7&eMore Delight&7 adds sandwiches, pasta, salads and loaded burgers. Check the cooking pot in REI."
+			]
+			tasks: [
+				{ id: "1A4C7F44D276A7BB", type: "item", item: "moredelight:loaded_hamburger" }
+			]
+			rewards: [
+				{
+					id: "1A538B44D27CDACD"
+					type: "item"
+					count: 6
+					item: "farmersdelight:tomato"
+				}
+			]
+		}
+		{
+			id: "A502A7A9E80B66CD"
+			title: "Rustic Delight"
+			x: 4.0d
+			y: 0.0d
+			dependencies: ["A0537B93B8CB2329"]
+			optional: true
+			description: [
+				"&7&eRustic Delight&7 brings cotton, bell peppers, coffee and calamari. Look for wild crops."
+			]
+			tasks: [
+				{ id: "084EDFE84ADB01CC", type: "item", item: "rusticdelight:bell_pepper_green" }
+			]
+			rewards: [
+				{ id: "084873E84AD5DE9A", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "F48AFBDC098A09B7"
+			title: "Ube's Delight"
+			x: 6.0d
+			y: -1.0d
+			dependencies: ["A502A7A9E80B66CD", "2CFD3D19EAF6701E"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7Purple yams, lemongrass and sweet treats from the Philippines (Ube's Delight)."
+			]
+			tasks: [
+				{
+					id: "99B4B45D03E1D73E"
+					type: "item"
+					count: 4
+					item: "ubesdelight:ube"
+				}
+			]
+			rewards: [
+				{ id: "99A0B05D03D12768", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "D99F21DEEDE7056B"
+			title: "Crate and Barrel"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["A0537B93B8CB2329"]
+			description: [
+				"&7Store crops in crates (Farmer's Delight) and decorate your pantry with &eStorage Delight&7 cabinets and drawers."
+			]
+			tasks: [
+				{ id: "B0CE5AAE5DFF7616", type: "item", item: "farmersdelight:carrot_crate" }
+			]
+			rewards: [
+				{
+					id: "B0B9D6AE5DEDECC0"
+					type: "item"
+					count: 4
+					item: "farmersdelight:canvas"
+				}
+			]
+		}
+		{
+			id: "830FA23804143CB5"
+			title: "Fertilizer"
+			x: 4.0d
+			y: 2.0d
+			dependencies: ["D99F21DEEDE7056B"]
+			description: [
+				"&7Farming for Blockheads fertilizers make farmland rich (more crops), healthy (faster growth) or stable (never trampled)."
+			]
+			tasks: [
+				{
+					id: "1ED8CFFA6E9BFB51"
+					type: "item"
+					count: 4
+					item: "farmingforblockheads:green_fertilizer"
+				}
+			]
+			rewards: [
+				{
+					id: "1EED53FA6EAD84A7"
+					type: "item"
+					count: 32
+					item: "minecraft:bone_meal"
+				}
+			]
+		}
+		{
+			id: "B9F1D07E2E04A291"
+			title: "Sprinkler"
+			x: 6.0d
+			y: 2.0d
+			dependencies: ["830FA23804143CB5"]
+			optional: true
+			description: [
+				"&7A &eSprinkler&7 waters and speeds up crops around it. Feed it water through a pipe or bucket."
+			]
+			tasks: [
+				{ id: "9A6F66246954B38E", type: "item", item: "farmingforblockheads:sprinkler" }
+			]
+			rewards: [
+				{ id: "9A5AE22469432A38", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "1BFF05DDA508CD5E"
+			title: "Kitchen Multiblock"
+			x: 8.0d
+			y: 0.0d
+			dependencies: ["F48AFBDC098A09B7", "B9F1D07E2E04A291"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7Place a &eFridge&7, &eSink&7 and &eCounter&7 next to your &eCooking Table&7. The cooking table now sees their contents and offers every recipe you can make."
+			]
+			tasks: [
+				{ id: "AB4DF75DBA2494FB", type: "item", item: "cookingforblockheads:sink" }
+				{ id: "AB4DF65DBA249348", type: "item", item: "cookingforblockheads:counter" }
+			]
+			rewards: [
+				{ id: "AB55035DBA2AC80D", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+{
+	title: "&dDreamcraft &7- Quest Book"
+	icon: "questsicons:quest_book"
+	default_quest_shape: "circle"
+	default_reward_team: false
+	give_book_on_first_join: true
+}

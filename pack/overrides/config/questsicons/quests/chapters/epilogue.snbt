@@ -1,0 +1,162 @@
+{
+	id: "A46596E9DF264A77"
+	filename: "epilogue"
+	title: "&6Epilogue: Lucid Dreamer"
+	subtitle: [
+		"&7For those who never want to wake up."
+	]
+	icon: "questsicons:icon_trophy"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 8
+	default_quest_shape: "star"
+	quests: [
+		{
+			id: "65AE4E721C3EAFF3"
+			title: "&6Lucid Dreamer"
+			icon: "questsicons:icon_trophy"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["31E96F5B7FFD58FC"]
+			description: [
+				"&d&o\"You can shape the Dream now. Show me how strong you have become.\""
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "5E53ED7A480C1D33", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "3A3CFB2044752686"
+			title: "The Wither"
+			icon: "minecraft:nether_star"
+			x: 2.0d
+			y: -2.0d
+			shape: "heart"
+			dependencies: ["65AE4E721C3EAFF3"]
+			description: [
+				"&7Summon and defeat the Wither. Fight it underground so it cannot fly away."
+			]
+			tasks: [
+				{
+					id: "0DBDB36477A8E1FC"
+					type: "kill"
+					entity: "minecraft:wither"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "0DB6C76477A2E54A", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "07C05FA1ABE391ED"
+			title: "A Beacon in the Dream"
+			x: 4.0d
+			y: -2.0d
+			dependencies: ["3A3CFB2044752686"]
+			description: [
+				"&7Build a beacon on a pyramid of mineral blocks."
+			]
+			tasks: [
+				{ id: "3673FF4D4A6836B7", type: "item", item: "minecraft:beacon" }
+			]
+			rewards: [
+				{
+					id: "365F7B4D4A56AD61"
+					type: "item"
+					count: 2
+					item: "minecraft:diamond_block"
+				}
+			]
+		}
+		{
+			id: "676F777D54FE1CD7"
+			title: "Mythic Upgrades"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["65AE4E721C3EAFF3"]
+			optional: true
+			description: [
+				"&7&eMythic Upgrades&7 adds crystal geodes deep underground and in the Nether. Their ingots (ametrine, aquamarine, citrine...) upgrade netherite gear with powerful effects."
+			]
+			tasks: [
+				{ id: "5A1EBFCB560453A7", type: "item", item: "mythicupgrades:ametrine_ingot" }
+			]
+			rewards: [
+				{ id: "5A0A3BCB55F2CA51", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "D2C18FD03D4F5850"
+			title: "The Warden"
+			x: 4.0d
+			y: 2.0d
+			shape: "heart"
+			dependencies: ["65AE4E721C3EAFF3"]
+			optional: true
+			description: [
+				"&7Defeat a warden in the deep dark. Sneak, it is blind but hears everything."
+			]
+			tasks: [
+				{
+					id: "112647649CA09689"
+					type: "kill"
+					entity: "minecraft:warden"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "113ACB649CB21FDF", type: "item", item: "questsicons:legendary_crate" }
+			]
+		}
+		{
+			id: "5D2661A1629BE7A4"
+			title: "Crate Collector"
+			x: 6.0d
+			y: 0.0d
+			dependencies: ["07C05FA1ABE391ED"]
+			optional: true
+			description: [
+				"&7Open a &6Legendary Crate&7. You earned it."
+			]
+			tasks: [
+				{
+					id: "B7A3F06BF65CD6E6"
+					type: "item"
+					consume_items: true
+					item: "questsicons:legendary_crate"
+				}
+			]
+			rewards: [
+				{ id: "B78FEC6BF64C2710", type: "item", item: "questsicons:legendary_crate" }
+			]
+		}
+		{
+			id: "333033678726C7C7"
+			title: "&6Master of Dreams"
+			icon: "questsicons:quest_crown"
+			x: 8.0d
+			y: 0.0d
+			shape: "star"
+			size: 2.2d
+			dependencies: ["07C05FA1ABE391ED", "3A3CFB2044752686"]
+			description: [
+				"&d&o\"You are no longer a dreamer. You are the Dream itself. Thank you for playing Dreamcraft.\""
+			]
+			tasks: [
+				{ id: "3DC96FBF59A7EF75", type: "checkmark", title: "Finish the journey" }
+			]
+			rewards: [
+				{
+					id: "3DC263BF59A1BC63"
+					type: "item"
+					count: 2
+					item: "questsicons:legendary_crate"
+				}
+				{ id: "3DC262BF59A1BAB0", type: "item", item: "questsicons:quest_crown" }
+			]
+		}
+	]
+}

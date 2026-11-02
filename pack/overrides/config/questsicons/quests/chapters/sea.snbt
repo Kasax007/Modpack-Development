@@ -1,0 +1,616 @@
+{
+	id: "6F81FCABF3B2FB2E"
+	filename: "sea"
+	title: "&b6. The Endless Sea"
+	subtitle: [
+		"&7A drowned dream: rafts, sharks and floating treasure."
+	]
+	icon: "questsicons:icon_raft"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 6
+	default_quest_shape: "hexagon"
+	quests: [
+		{
+			id: "A86C5C17B948EC6E"
+			title: "&bThe Endless Sea"
+			icon: "questsicons:icon_raft"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["70AE548090DE3D9A"]
+			description: [
+				"&d&o\"Part of the Dream has drowned. Only an ocean is left, and the people who lived there now drift on rafts.\""
+				""
+				"&7This chapter is the &eRaft&7 mod: a whole dimension of open sea, inspired by the survival game Raft. To get there you need a portal of &edriftwood&7, lit with an &eEnergy Staff&7."
+			]
+			tasks: [
+				{ id: "58B48DEF8B4CEB54", type: "item", item: "minecraft:fishing_rod" }
+			]
+			rewards: [
+				{
+					id: "58AE01EF8B4791C2"
+					type: "item"
+					count: 6
+					item: "minecraft:cod"
+				}
+			]
+		}
+		{
+			id: "0552514B4B499414"
+			title: "Ancient Broken Ring"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["A86C5C17B948EC6E"]
+			description: [
+				"&7Strange old rings lie on the sea floor of the Dream. You can find them in &eshipwreck treasure&7, &eburied treasure&7, &eocean ruins&7 - and sometimes while fishing."
+			]
+			tasks: [
+				{ id: "32E4BE4AD5846D79", type: "item", item: "raft:ancient_broken_ring" }
+			]
+			rewards: [
+				{
+					id: "32F9424AD595F6CF"
+					type: "item"
+					count: 2
+					item: "minecraft:map"
+				}
+			]
+		}
+		{
+			id: "39C94812D13095F6"
+			title: "Ancient Energy"
+			x: 4.0d
+			y: -2.0d
+			dependencies: ["0552514B4B499414"]
+			description: [
+				"&7Smelt the ring. What is left is pure &eAncient Energy&7."
+			]
+			tasks: [
+				{
+					id: "6E7910E52FC06EF5"
+					type: "item"
+					count: 3
+					item: "raft:ancient_energy"
+				}
+			]
+			rewards: [
+				{ id: "6E7204E52FBA3BE3", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "7B326BE48009D350"
+			title: "Ancient Crystal"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["A86C5C17B948EC6E"]
+			description: [
+				"&7Shipwreck treasure chests often hold an &eAncient Crystal&7. Look for wrecks on beaches and in oceans."
+			]
+			tasks: [
+				{ id: "CC3AE7E2F213B1C4", type: "item", item: "raft:ancient_crystal" }
+			]
+			rewards: [
+				{ id: "CC33DBE2F20D7EB2", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "972382373B131948"
+			title: "Driftwood"
+			x: 4.0d
+			y: 2.0d
+			dependencies: ["A86C5C17B948EC6E"]
+			description: [
+				"&7Bleached &eDriftwood&7 trees wash up on beaches. Collect the logs and plant the saplings - you will need plenty."
+			]
+			tasks: [
+				{
+					id: "6DD946CCE292E852"
+					type: "item"
+					count: 12
+					item: "raft:driftwood_log"
+				}
+			]
+			rewards: [
+				{
+					id: "6DDFD2CCE29841E4"
+					type: "item"
+					count: 16
+					item: "minecraft:bone_meal"
+				}
+			]
+		}
+		{
+			id: "A8434A17B925C8C4"
+			title: "The Energy Staff"
+			x: 6.0d
+			y: -1.0d
+			shape: "diamond"
+			dependencies: ["39C94812D13095F6", "7B326BE48009D350"]
+			description: [
+				"&7An &eEnergy Staff&7 channels ancient energy. It lights the portal to the sea."
+			]
+			tasks: [
+				{ id: "C2213D8A186D237F", type: "item", item: "raft:energy_staff" }
+			]
+			rewards: [
+				{
+					id: "C20D398A185C73A9"
+					type: "item"
+					count: 8
+					item: "minecraft:glowstone_dust"
+				}
+			]
+		}
+		{
+			id: "8249014F5E0233EF"
+			title: "Portal Frames"
+			x: 6.0d
+			y: 1.0d
+			dependencies: ["39C94812D13095F6", "972382373B131948"]
+			description: [
+				"&7Four driftwood logs around one ancient energy give &e4 Driftwood Portal Frames&7. Build a frame like a nether portal (at least 4 wide and 5 high, corners not needed)."
+			]
+			tasks: [
+				{
+					id: "E46B520768AC7131"
+					type: "item"
+					count: 10
+					item: "raft:driftwood_portal_frame"
+				}
+			]
+			rewards: [
+				{ id: "E47FD60768BDFA87", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "A0214A98C4426668"
+			title: "&bBeyond the Horizon"
+			icon: "raft:driftwood_portal_frame"
+			x: 8.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["A8434A17B925C8C4", "8249014F5E0233EF"]
+			description: [
+				"&d&o\"Breathe in. Smell the salt? Welcome to the Endless Sea.\""
+				""
+				"&7Right-click the frame with the Energy Staff and step through. You arrive on a small driftwood platform high above the waves."
+			]
+			tasks: [
+				{
+					id: "E2F62155607C9745"
+					type: "dimension"
+					title: "Enter the Raft dimension"
+					dimension: "raft:raftdim"
+				}
+			]
+			rewards: [
+				{
+					id: "E2EF155560766433"
+					type: "item"
+					count: 8
+					item: "raft:rope"
+				}
+				{
+					id: "E2EF145560766280"
+					type: "item"
+					count: 8
+					item: "raft:raft_foundation"
+				}
+			]
+		}
+		{
+			id: "F64EF14B43706CC2"
+			title: "Rope"
+			x: 10.0d
+			y: -3.0d
+			dependencies: ["A0214A98C4426668"]
+			description: [
+				"&7Two palm leaves (or string) make &eRope&7. Palm leaves sometimes drop rope by themselves."
+			]
+			tasks: [
+				{
+					id: "26D71D5B8D409BDA"
+					type: "item"
+					count: 8
+					item: "raft:rope"
+				}
+			]
+			rewards: [
+				{
+					id: "26DD895B8D45BF0C"
+					type: "item"
+					count: 8
+					item: "minecraft:string"
+				}
+			]
+		}
+		{
+			id: "A304177AED91E42B"
+			title: "Expand the Raft"
+			x: 12.0d
+			y: -3.0d
+			dependencies: ["F64EF14B43706CC2"]
+			description: [
+				"&7&eRaft Foundations&7 (planks bound with rope) float your base. &eReinforced Foundations&7 are sturdier."
+			]
+			tasks: [
+				{
+					id: "4A3322048319CD30"
+					type: "item"
+					count: 32
+					item: "raft:raft_foundation"
+				}
+			]
+			rewards: [
+				{
+					id: "4A47A604832B5686"
+					type: "item"
+					count: 16
+					item: "raft:palm_thatch"
+				}
+			]
+		}
+		{
+			id: "855F0669307C19CA"
+			title: "Item Catcher"
+			icon: "raft:net"
+			x: 10.0d
+			y: -1.0d
+			shape: "hexagon"
+			dependencies: ["A0214A98C4426668"]
+			description: [
+				"&7Debris drifts past you all the time: planks, palm leaves, plastic and scrap. An &eItem Catcher&7 in the water catches it for you."
+				"&7Put a &eNet&7 into it and it also fishes &eUnrefined Ocean Garbage&7 out of the sea. Smelt it into a &eTrash Cube&7 and right-click to see what is inside."
+			]
+			tasks: [
+				{ id: "25014F8D96295126", type: "item", item: "raft:item_catcher" }
+				{ id: "2501508D962952D9", type: "item", item: "raft:net" }
+			]
+			rewards: [
+				{
+					id: "24ED4B8D9618A150"
+					type: "item"
+					count: 8
+					item: "raft:plastic"
+				}
+			]
+		}
+		{
+			id: "566CD39EB3306E79"
+			title: "Plastic Hook"
+			x: 12.0d
+			y: -1.0d
+			dependencies: ["855F0669307C19CA"]
+			description: [
+				"&7Hold right-click with the &ePlastic Hook&7 to pull floating debris to you, like in the real game."
+			]
+			tasks: [
+				{ id: "3B2D4471607EAE44", type: "item", item: "raft:plastic_hook" }
+			]
+			rewards: [
+				{
+					id: "3B26387160787B32"
+					type: "item"
+					count: 6
+					item: "raft:scrap_metal"
+				}
+			]
+		}
+		{
+			id: "851A5F35AEE3F509"
+			title: "Fresh Water"
+			x: 10.0d
+			y: 1.0d
+			dependencies: ["A0214A98C4426668"]
+			description: [
+				"&7Sea water is no good. A &eWater Purifier&7 turns water bottles into &eFresh Water&7 (a bucket gives three). Fresh water fills you up a little."
+			]
+			tasks: [
+				{ id: "9F75F4038452EDAC", type: "item", item: "raft:water_purifier" }
+				{
+					id: "9F75F5038452EF5F"
+					type: "item"
+					count: 3
+					item: "raft:fresh_water"
+				}
+			]
+			rewards: [
+				{
+					id: "9F6F0803844CF0FA"
+					type: "item"
+					count: 8
+					item: "minecraft:glass_bottle"
+				}
+			]
+		}
+		{
+			id: "1118183A72E5E5D6"
+			title: "Simple Grill"
+			x: 12.0d
+			y: 1.0d
+			dependencies: ["851A5F35AEE3F509"]
+			description: [
+				"&7The &eSimple Grill&7 cooks two foods at once, 50% faster than a campfire. It burns planks, logs or coal."
+			]
+			tasks: [
+				{ id: "B330A7B35D81220D", type: "item", item: "raft:simple_grill" }
+			]
+			rewards: [
+				{
+					id: "B3299BB35D7AEEFB"
+					type: "item"
+					count: 8
+					item: "minecraft:cod"
+				}
+			]
+		}
+		{
+			id: "6CDB4BB06ADC6102"
+			title: "A Floating Farm"
+			x: 10.0d
+			y: 3.0d
+			dependencies: ["851A5F35AEE3F509"]
+			description: [
+				"&7&eCrop Plots&7 are always watered and can never be trampled - perfect for a raft. A &eScarecrow&7 keeps monsters from spawning within 24 blocks and protects crops around it."
+			]
+			tasks: [
+				{
+					id: "297D138571EDB7A8"
+					type: "item"
+					count: 4
+					item: "raft:crop_plot"
+				}
+				{ id: "297D148571EDB95B", type: "item", item: "raft:scarecrow" }
+			]
+			rewards: [
+				{
+					id: "2991178571FE677E"
+					type: "item"
+					count: 4
+					item: "raft:coconut"
+				}
+			]
+		}
+		{
+			id: "12B81BA9BAC2D069"
+			title: "Island Drinks"
+			x: 12.0d
+			y: 3.0d
+			dependencies: ["6CDB4BB06ADC6102"]
+			optional: true
+			description: [
+				"&7Coconut milk heals over time. A Piña Colada... well, try it."
+			]
+			tasks: [
+				{ id: "C797ADDD6068D935", type: "item", item: "raft:coconut_milk" }
+				{ id: "C797ACDD6068D782", type: "item", item: "raft:pina_colada" }
+			]
+			rewards: [
+				{ id: "C790A1DD6062A623", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "FF2B67FFEE9B6D8B"
+			title: "&cBruce"
+			x: 14.0d
+			y: -2.0d
+			shape: "heart"
+			size: 1.3d
+			dependencies: ["566CD39EB3306E79"]
+			description: [
+				"&d&o\"Something circles your raft. It is patient. It is hungry.\""
+				""
+				"&7&cBruce the shark&7 attacks swimmers. Defeat him for shark meat and teeth - and keep your feet out of the water."
+			]
+			tasks: [
+				{
+					id: "FD52DD34D69B4E54"
+					type: "kill"
+					entity: "raft:shark"
+					value: 1
+				}
+			]
+			rewards: [
+				{
+					id: "FD4C5134D695F4C2"
+					type: "item"
+					count: 4
+					item: "raft:cooked_shark_meat"
+				}
+				{ id: "FD4C5234D695F675", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "829273C5F8C83D28"
+			title: "Shark Trophy"
+			x: 16.0d
+			y: -2.0d
+			dependencies: ["FF2B67FFEE9B6D8B"]
+			optional: true
+			description: [
+				"&7Hang a &eShark Jaw Trophy&7 on your wall. Bruce would be proud."
+			]
+			tasks: [
+				{ id: "B815E1208FA6C413", type: "item", item: "raft:shark_jaw_trophy" }
+			]
+			rewards: [
+				{ id: "B81C6D208FAC1DA5", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "7917CC5FBB3D841B"
+			title: "Receiver"
+			x: 14.0d
+			y: 0.0d
+			dependencies: ["566CD39EB3306E79", "1118183A72E5E5D6"]
+			description: [
+				"&7Right-click the &eReceiver&7 to get the direction and distance to the nearest drifting island. Islands hide old raft wrecks with loot."
+			]
+			tasks: [
+				{ id: "1120ACBC12061EB1", type: "item", item: "raft:receiver" }
+			]
+			rewards: [
+				{ id: "113530BC1217A807", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "38EA3B7A88D1623B"
+			title: "Land Ho!"
+			x: 16.0d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: ["7917CC5FBB3D841B"]
+			description: [
+				"&7Follow the receiver and land on an island. Climb the ruins, loot the chests."
+			]
+			tasks: [
+				{
+					id: "CE45169C7C71A3B0"
+					type: "structure"
+					title: "Find a driftwood island"
+					structure: "raft:driftwood"
+				}
+			]
+			rewards: [
+				{ id: "CE599A9C7C832D06", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "6FCBA528C1715246"
+			title: "Paddle Power"
+			x: 14.0d
+			y: 2.0d
+			dependencies: ["1118183A72E5E5D6"]
+			description: [
+				"&7In a boat, right-click with a &ePaddle&7 for a push forward. Island hopping made easy."
+			]
+			tasks: [
+				{ id: "06FE8DF31DC717D6", type: "item", item: "raft:paddle" }
+			]
+			rewards: [
+				{ id: "06EA09F31DB58E80", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "364B3A6273E47AED"
+			title: "Titanium"
+			x: 18.0d
+			y: 0.0d
+			dependencies: ["38EA3B7A88D1623B"]
+			description: [
+				"&7Titanium ore hides under the sea floor. Smelt it into ingots for tools and armor that give special effects."
+			]
+			tasks: [
+				{
+					id: "73E5FFA5B040095D"
+					type: "item"
+					count: 12
+					item: "raft:titanium_ingot"
+				}
+			]
+			rewards: [
+				{ id: "73DEF3A5B039D64B", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "8B34D48F4E3CDCFD"
+			title: "Titanium Armor"
+			x: 20.0d
+			y: -1.5d
+			dependencies: ["364B3A6273E47AED"]
+			optional: true
+			description: [
+				"&7A full set of titanium armor - light and strong."
+			]
+			tasks: [
+				{ id: "F47B2EB7B8F58409", type: "item", item: "raft:titanium_helmet" }
+				{ id: "F47B2DB7B8F58256", type: "item", item: "raft:titanium_chestplate" }
+				{ id: "F47B2CB7B8F580A3", type: "item", item: "raft:titanium_leggings" }
+				{ id: "F47B2BB7B8F57EF0", type: "item", item: "raft:titanium_boots" }
+			]
+			rewards: [
+				{ id: "F48FB2B7B9070D5F", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "5ABB63C44A39F1DF"
+			title: "Sun Power"
+			x: 20.0d
+			y: 1.5d
+			dependencies: ["364B3A6273E47AED"]
+			description: [
+				"&7Raft has its own energy: a &eMakeshift Solar Panel&7 makes 10 FE per tick, a &eMakeshift Battery&7 stores 1,000,000 FE, cables carry it - and they also work with Tech Reborn machines."
+			]
+			tasks: [
+				{ id: "FB245E0E7357952C", type: "item", item: "raft:makeshift_solar_panel" }
+				{ id: "FB245F0E735796DF", type: "item", item: "raft:makeshift_battery" }
+			]
+			rewards: [
+				{
+					id: "FB1D720E7351987A"
+					type: "item"
+					count: 16
+					item: "raft:copper_cable"
+				}
+			]
+		}
+		{
+			id: "5C8FB2F9DC235146"
+			title: "Raft Quarry"
+			x: 22.0d
+			y: 1.5d
+			dependencies: ["5ABB63C44A39F1DF"]
+			optional: true
+			description: [
+				"&7The raft &eQuarry&7 mines an 11x11 area for 1000 FE per block."
+			]
+			tasks: [
+				{ id: "83F6C16F7426A209", type: "item", item: "raft:quarry" }
+			]
+			rewards: [
+				{ id: "840B456F74382B5F", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "073FDCED799C1CE0"
+			title: "Songs of the Sea"
+			x: 18.0d
+			y: 3.0d
+			dependencies: ["38EA3B7A88D1623B"]
+			optional: true
+			description: [
+				"&7Three music discs hide in shipwrecks. Collect them all."
+			]
+			tasks: [
+				{ id: "11FDDACA2DA28DF5", type: "item", item: "raft:lofi_beat_music_disc" }
+				{ id: "11FDD9CA2DA28C42", type: "item", item: "raft:crystal_castles_music_disc" }
+				{ id: "11FDD8CA2DA28A8F", type: "item", item: "raft:some_game_music_music_disc" }
+			]
+			rewards: [
+				{ id: "11F6CECA2D9C5AE3", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "5C29D1C20B1A09A6"
+			title: "&bMaster of the Sea"
+			icon: "questsicons:quest_crown"
+			x: 24.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["364B3A6273E47AED", "FF2B67FFEE9B6D8B"]
+			description: [
+				"&d&o\"The sea respects you now. The Dream is almost whole.\""
+			]
+			tasks: [
+				{ id: "36E971E4A2035CE7", type: "item", item: "raft:raft_flag" }
+			]
+			rewards: [
+				{ id: "36D4EDE4A1F1D391", type: "item", item: "questsicons:epic_crate" }
+				{ id: "36D4ECE4A1F1D1DE", type: "xp", xp: 400 }
+			]
+		}
+	]
+}

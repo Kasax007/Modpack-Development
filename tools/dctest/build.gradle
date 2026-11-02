@@ -1,0 +1,29 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+version = '1.0.0'
+group = 'net.kasax'
+base { archivesName = 'dctest' }
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+tasks.withType(JavaCompile).configureEach { it.options.release = 25 }
+java { sourceCompatibility = JavaVersion.VERSION_25; targetCompatibility = JavaVersion.VERSION_25 }
+// Dreamcraft pack test client (the pack's mods and configs are copied into build/run/client by tools/dc_prepare.py)
+loom {
+	runs {
+		pack {
+			client()
+			name "Pack"
+			runDir "build/run/client"
+			property "fabric.client.gametest"
+			vmArg "-Xmx${project.findProperty('xmx') ?: '6G'}"
+			if (project.hasProperty('scene')) vmArg "-Ddc.scene=${project.property('scene')}"
+			if (project.hasProperty('out')) vmArg "-Ddc.out=${project.property('out')}"
+			if (project.hasProperty('shots')) vmArg "-Ddc.shots=${project.property('shots')}"
+			if (project.hasProperty('quests')) vmArg "-Ddc.quests=${project.property('quests')}"
+		}
+	}
+}

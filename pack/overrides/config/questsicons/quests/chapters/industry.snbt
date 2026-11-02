@@ -1,0 +1,416 @@
+{
+	id: "C6F3BD8F984ACB15"
+	filename: "industry"
+	title: "&e3. Sparks of Industry"
+	subtitle: [
+		"&7Machines, power and automation."
+	]
+	icon: "questsicons:icon_gear"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 3
+	default_quest_shape: "gear"
+	quests: [
+		{
+			id: "9F65E335AE3362D9"
+			title: "&eSparks of Industry"
+			icon: "questsicons:icon_gear"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["3C0DC1C46F445C7F"]
+			description: [
+				"&d&o\"Some dreamers dream of magic. Others dream of machines that never sleep.\""
+				""
+				"&7This chapter teaches &eTech Reborn&7: machines run on energy (E), cables carry it, and every machine doubles or improves something you already do by hand."
+				"&7Open the &eTech Reborn Manual&7 for details - every machine also explains itself in REI."
+			]
+			tasks: [
+				{
+					id: "DFD807215A0B6DA5"
+					type: "item"
+					count: 32
+					item: "#c:ingots/iron"
+				}
+			]
+			rewards: [
+				{ id: "DFD17B215A061413", type: "item", item: "techreborn:manual" }
+			]
+		}
+		{
+			id: "C1A90A0B7EFD9489"
+			title: "Rubber Trees"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["9F65E335AE3362D9"]
+			description: [
+				"&7Rubber trees grow in forests and swamps. Use a &eTree Tap&7 on the sap spots of a rubber log to collect &eSap&7, then smelt or extract it into rubber."
+			]
+			tasks: [
+				{ id: "FBB45B208EDF888B", type: "item", item: "techreborn:treetap" }
+				{
+					id: "FBB45A208EDF86D8"
+					type: "item"
+					count: 8
+					item: "techreborn:sap"
+				}
+			]
+			rewards: [
+				{
+					id: "FBBB67208EE5BB9D"
+					type: "item"
+					count: 4
+					item: "techreborn:rubber_sapling"
+				}
+			]
+		}
+		{
+			id: "049D73DC6BFB70DA"
+			title: "Refined Iron"
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["9F65E335AE3362D9"]
+			description: [
+				"&7Smelt iron ingots once more to get &eRefined Iron&7, the backbone of every Tech Reborn machine."
+			]
+			tasks: [
+				{
+					id: "D3DDBD0AF1F7E4DC"
+					type: "item"
+					count: 16
+					item: "techreborn:refined_iron_ingot"
+				}
+			]
+			rewards: [
+				{
+					id: "D3D6D10AF1F1E82A"
+					type: "item"
+					count: 2
+					item: "minecraft:coal_block"
+				}
+			]
+		}
+		{
+			id: "8BE3C8D0132CA582"
+			title: "Electronic Circuits"
+			x: 4.0d
+			y: -1.0d
+			dependencies: ["C1A90A0B7EFD9489", "049D73DC6BFB70DA"]
+			description: [
+				"&7Circuits need copper cables (insulated with rubber), redstone and refined iron. Use the &eR&7 key in REI to see every step."
+			]
+			tasks: [
+				{
+					id: "ACCDEFD9179722C4"
+					type: "item"
+					count: 4
+					item: "techreborn:electronic_circuit"
+				}
+			]
+			rewards: [
+				{
+					id: "ACC6E3D91790EFB2"
+					type: "item"
+					count: 32
+					item: "minecraft:redstone"
+				}
+			]
+		}
+		{
+			id: "D8310D5F907E2E80"
+			title: "Machine Frame"
+			x: 4.0d
+			y: 1.0d
+			dependencies: ["049D73DC6BFB70DA"]
+			description: [
+				"&7Every basic machine starts with a &eBasic Machine Frame&7."
+			]
+			tasks: [
+				{
+					id: "1535D8B7D66EDE87"
+					type: "item"
+					count: 2
+					item: "techreborn:basic_machine_frame"
+				}
+			]
+			rewards: [
+				{
+					id: "152154B7D65D5531"
+					type: "item"
+					count: 8
+					item: "techreborn:refined_iron_ingot"
+				}
+			]
+		}
+		{
+			id: "D769C915FFDF85B0"
+			title: "Let There Be Power"
+			x: 6.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.3d
+			dependencies: ["8BE3C8D0132CA582", "D8310D5F907E2E80"]
+			description: [
+				"&7The &eGenerator&7 burns any fuel and makes energy. Put it next to a machine or connect it with &eInsulated Copper Cable&7."
+				"&7Store power in a &eBattery&7 or a &eLow Voltage SU&7."
+			]
+			tasks: [
+				{ id: "D2EABFC98EA490F5", type: "item", item: "techreborn:solid_fuel_generator" }
+			]
+			rewards: [
+				{
+					id: "D2E3B3C98E9E5DE3"
+					type: "item"
+					count: 16
+					item: "techreborn:insulated_copper_cable"
+				}
+			]
+		}
+		{
+			id: "17B15AFDD5D38DB5"
+			title: "Electric Furnace"
+			x: 8.0d
+			y: -2.0d
+			dependencies: ["D769C915FFDF85B0"]
+			description: [
+				"&7Smelts faster than a furnace and never needs coal."
+			]
+			tasks: [
+				{ id: "4AF55D986788CC10", type: "item", item: "techreborn:electric_furnace" }
+			]
+			rewards: [
+				{ id: "4B09619867997BE6", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "6942DED3C807C6F8"
+			title: "Ore Doubling"
+			x: 8.0d
+			y: 0.0d
+			shape: "hexagon"
+			dependencies: ["D769C915FFDF85B0"]
+			description: [
+				"&7The &eGrinder&7 turns one ore into two dusts. Smelt the dusts and you get twice the ingots."
+			]
+			tasks: [
+				{ id: "535EDC7E78DAFB56", type: "item", item: "techreborn:grinder" }
+			]
+			rewards: [
+				{
+					id: "534A587E78C97200"
+					type: "item"
+					count: 16
+					item: "minecraft:raw_iron"
+				}
+			]
+		}
+		{
+			id: "6E28E09036B27A14"
+			title: "Free Energy"
+			x: 8.0d
+			y: 2.0d
+			dependencies: ["D769C915FFDF85B0"]
+			description: [
+				"&7A &eSolar Panel&7 makes energy during the day without fuel. Raft players can also use the makeshift solar panels of the sea (see &bThe Endless Sea&7)."
+			]
+			tasks: [
+				{
+					id: "0BD35CA7EF2AE887"
+					type: "item"
+					count: 2
+					item: "techreborn:basic_solar_panel"
+				}
+			]
+			rewards: [
+				{ id: "0BBED8A7EF195F31", type: "item", item: "techreborn:red_cell_battery" }
+			]
+		}
+		{
+			id: "6652546A53588B28"
+			title: "Battery Bank"
+			x: 10.0d
+			y: 2.0d
+			dependencies: ["6E28E09036B27A14"]
+			description: [
+				"&7A &eLow Voltage SU&7 stores lots of energy and feeds it to your machines."
+			]
+			tasks: [
+				{ id: "C88711D2BFDF49D8", type: "item", item: "techreborn:low_voltage_su" }
+			]
+			rewards: [
+				{ id: "C89B95D2BFF0D32E", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "73DC341BC467F96E"
+			title: "Alloys"
+			x: 10.0d
+			y: -2.0d
+			dependencies: ["17B15AFDD5D38DB5"]
+			description: [
+				"&7The &eAlloy Smelter&7 combines metals - bronze, electrum and the advanced alloys used for better machines."
+			]
+			tasks: [
+				{ id: "E3E46ABB17589597", type: "item", item: "techreborn:alloy_smelter" }
+			]
+			rewards: [
+				{
+					id: "E3D066BB1747E5C1"
+					type: "item"
+					count: 16
+					item: "techreborn:refined_iron_ingot"
+				}
+			]
+		}
+		{
+			id: "4E67866B9F2EF9FF"
+			title: "Let the Machines Dig"
+			x: 12.0d
+			y: 0.0d
+			shape: "gear"
+			size: 1.4d
+			dependencies: ["6942DED3C807C6F8", "6652546A53588B28"]
+			description: [
+				"&7The &eQuarry&7 (Quarry Reborn) digs out a whole area for you. Place markers to mark the corners, put the quarry next to them and give it energy."
+				"&7Modules add pumps, item filters or even bedrock removal."
+			]
+			tasks: [
+				{ id: "A64A2227C3384AF1", type: "item", item: "quarryplus:quarry" }
+				{
+					id: "A64A2127C338493E"
+					type: "item"
+					count: 4
+					item: "quarryplus:marker"
+				}
+			]
+			rewards: [
+				{ id: "A65EA627C349D447", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "DDBF7275DD4E8797"
+			title: "Item Collectors"
+			x: 12.0d
+			y: 2.5d
+			dependencies: ["4E67866B9F2EF9FF"]
+			optional: true
+			description: [
+				"&7An &eItem Collector&7 picks up dropped items around it and puts them into the chest next to it."
+			]
+			tasks: [
+				{ id: "C68CABB34EFEE733", type: "item", item: "itemcollectors:basic_collector" }
+			]
+			rewards: [
+				{
+					id: "C693B7B34F051A45"
+					type: "item"
+					count: 2
+					item: "minecraft:hopper"
+				}
+			]
+		}
+		{
+			id: "26126F3E465FE0EC"
+			title: "Copper Hoppers"
+			x: 12.0d
+			y: -2.5d
+			dependencies: ["4E67866B9F2EF9FF"]
+			optional: true
+			description: [
+				"&7A &eCopper Hopper&7 only moves the items that match its filter slot - perfect for sorting. It oxidizes over time; wax it to keep it shiny."
+			]
+			tasks: [
+				{
+					id: "3F3936A2799C4893"
+					type: "item"
+					count: 4
+					item: "copperhopper:copper_hopper"
+				}
+			]
+			rewards: [
+				{
+					id: "3F3FC2A279A1A225"
+					type: "item"
+					count: 16
+					item: "minecraft:copper_ingot"
+				}
+			]
+		}
+		{
+			id: "1A3DCED07495AB48"
+			title: "Never Sleeping"
+			x: 14.0d
+			y: -1.5d
+			dependencies: ["4E67866B9F2EF9FF"]
+			description: [
+				"&7A &eChunk Loader&7 keeps the chunks around it loaded even when you are far away - your machines keep working."
+			]
+			tasks: [
+				{ id: "B35394907D59746B", type: "item", item: "chunkloaders:single_chunk_loader" }
+			]
+			rewards: [
+				{ id: "B35A20907D5ECDFD", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "492C8289C503A659"
+			title: "Going Up"
+			x: 14.0d
+			y: 1.5d
+			dependencies: ["4E67866B9F2EF9FF"]
+			optional: true
+			description: [
+				"&7Stack &eElevator Controllers&7 (Moving Elevators) on different floors. Stand on one and use its screen to ride smoothly to another floor."
+			]
+			tasks: [
+				{
+					id: "59FF342617362025"
+					type: "item"
+					count: 2
+					item: "movingelevators:elevator_block"
+				}
+			]
+			rewards: [
+				{ id: "59F8A8261730C693", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "A275507B819F6F4B"
+			title: "Wireless Charging"
+			x: 16.0d
+			y: 1.5d
+			dependencies: ["492C8289C503A659", "1A3DCED07495AB48"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7A &eWireless Player Charger&7 refills energy items in your inventory while you are near it."
+			]
+			tasks: [
+				{ id: "9EED6D8EB02C80F9", type: "item", item: "wirelesschargers:basic_wireless_player_charger" }
+			]
+			rewards: [
+				{ id: "9F01F18EB03E0A4F", type: "xp", xp: 120 }
+			]
+		}
+		{
+			id: "F357039F77C476A7"
+			title: "&eThe Dream Never Sleeps"
+			icon: "questsicons:quest_crown"
+			x: 16.0d
+			y: -1.5d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["1A3DCED07495AB48"]
+			description: [
+				"&d&o\"Your machines hum through the night. The Dream grows stronger.\""
+			]
+			tasks: [
+				{ id: "46A435FE56B3B605", type: "item", item: "techreborn:industrial_centrifuge" }
+			]
+			rewards: [
+				{ id: "469D29FE56AD82F3", type: "item", item: "questsicons:epic_crate" }
+				{ id: "469D28FE56AD8140", type: "xp", xp: 400 }
+			]
+		}
+	]
+}

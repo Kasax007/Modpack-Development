@@ -1,0 +1,277 @@
+{
+	id: "4D39E75D693CE521"
+	filename: "nether"
+	title: "&c5. Through the Fire"
+	subtitle: [
+		"&7The burning layer of the Dream."
+	]
+	icon: "questsicons:quest_portal_two"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 5
+	default_quest_shape: "pentagon"
+	quests: [
+		{
+			id: "DB5422502199A591"
+			title: "&cThrough the Fire"
+			icon: "questsicons:quest_portal_two"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["CB28A4A847F17041"]
+			description: [
+				"&d&o\"Beneath the Dream burns its fever. Light a portal and step through.\""
+				""
+				"&7Build a nether portal (obsidian frame, 4x5) and light it with flint and steel."
+			]
+			tasks: [
+				{
+					id: "C948D7F7C908E115"
+					type: "item"
+					count: 10
+					item: "minecraft:obsidian"
+				}
+				{ id: "C948D6F7C908DF62", type: "item", item: "minecraft:flint_and_steel" }
+			]
+			rewards: [
+				{
+					id: "C9424BF7C9038783"
+					type: "item"
+					count: 8
+					item: "minecraft:golden_carrot"
+				}
+			]
+		}
+		{
+			id: "1367205BCBCB52B7"
+			title: "Into the Nether"
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["DB5422502199A591"]
+			description: [
+				"&7&eBetterNether&7 fills the Nether with new biomes, plants, mobs and ruined cities. Bring a bed? Better not - it explodes here."
+			]
+			tasks: [
+				{
+					id: "5A661EBC5AF05898"
+					type: "dimension"
+					title: "Enter the Nether"
+					dimension: "minecraft:the_nether"
+				}
+			]
+			rewards: [
+				{ id: "5A7AA2BC5B01E1EE", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "F8E053E08B0F4ABC"
+			title: "Quartz and Gold"
+			x: 4.0d
+			y: -2.0d
+			dependencies: ["1367205BCBCB52B7"]
+			description: [
+				"&7Nether quartz and nether gold ore are everywhere. Piglins love gold - wear at least one golden armor piece."
+			]
+			tasks: [
+				{
+					id: "703CB0B844DC34BC"
+					type: "item"
+					count: 32
+					item: "minecraft:quartz"
+				}
+				{ id: "703CB1B844DC366F", type: "item", item: "minecraft:golden_helmet" }
+			]
+			rewards: [
+				{
+					id: "7035C4B844D6380A"
+					type: "item"
+					count: 8
+					item: "minecraft:gold_ingot"
+				}
+			]
+		}
+		{
+			id: "5AA62E7BBF5DBC81"
+			title: "The Fortress"
+			x: 4.0d
+			y: 0.0d
+			shape: "hexagon"
+			dependencies: ["1367205BCBCB52B7"]
+			description: [
+				"&7Find a nether fortress. Blazes guard it - their rods power brewing stands and eyes of ender."
+			]
+			tasks: [
+				{
+					id: "6238378FB0F006BE"
+					type: "structure"
+					title: "Find a nether fortress"
+					structure: "minecraft:fortress"
+				}
+				{
+					id: "6238388FB0F00871"
+					type: "item"
+					count: 8
+					item: "minecraft:blaze_rod"
+				}
+			]
+			rewards: [
+				{ id: "6224338FB0DF56E8", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "2F2E15DBA1BF4309"
+			title: "Potion Master"
+			x: 6.0d
+			y: -2.0d
+			dependencies: ["5AA62E7BBF5DBC81"]
+			description: [
+				"&7Brew a potion. Nether wart grows in fortresses."
+			]
+			tasks: [
+				{ id: "6EB28B7E8906BDE1", type: "item", item: "minecraft:brewing_stand" }
+				{
+					id: "6EB28A7E8906BC2E"
+					type: "item"
+					count: 8
+					item: "minecraft:nether_wart"
+				}
+			]
+			rewards: [
+				{
+					id: "6EC70F7E89184737"
+					type: "item"
+					count: 16
+					item: "minecraft:glass_bottle"
+				}
+			]
+		}
+		{
+			id: "ADF6B78966EC7751"
+			title: "Bastion Remnant"
+			x: 4.0d
+			y: 2.0d
+			dependencies: ["1367205BCBCB52B7"]
+			description: [
+				"&7Bastions are full of piglins and treasure. Careful with the brutes."
+			]
+			tasks: [
+				{
+					id: "A04393B862FE047D"
+					type: "structure"
+					title: "Find a bastion"
+					structure: "minecraft:bastion_remnant"
+				}
+			]
+			rewards: [
+				{ id: "A03D07B862F8AAEB", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "191A4BD0FD887A94"
+			title: "Ancient Debris"
+			x: 6.0d
+			y: 2.0d
+			dependencies: ["ADF6B78966EC7751", "5AA62E7BBF5DBC81"]
+			description: [
+				"&7Ancient debris hides near Y=15. Beds and TNT help - or a lot of patience."
+			]
+			tasks: [
+				{
+					id: "9E0B39D3E1498895"
+					type: "item"
+					count: 4
+					item: "minecraft:ancient_debris"
+				}
+			]
+			rewards: [
+				{
+					id: "9E04ADD3E1442F03"
+					type: "item"
+					count: 16
+					item: "minecraft:gold_ingot"
+				}
+			]
+		}
+		{
+			id: "40609B0A35C5A727"
+			title: "&8Netherite"
+			x: 8.0d
+			y: 1.0d
+			shape: "diamond"
+			size: 1.3d
+			dependencies: ["191A4BD0FD887A94"]
+			description: [
+				"&7Combine four netherite scrap and four gold into a netherite ingot. Upgrade diamond gear at a smithing table."
+			]
+			tasks: [
+				{ id: "B4BA1A343EDB13ED", type: "item", item: "minecraft:netherite_ingot" }
+			]
+			rewards: [
+				{ id: "B4B38E343ED5BA5B", type: "item", item: "minecraft:netherite_upgrade_smithing_template" }
+			]
+		}
+		{
+			id: "37D5C7B9C77CFFAD"
+			title: "Advanced Netherite"
+			x: 10.0d
+			y: 1.0d
+			dependencies: ["40609B0A35C5A727"]
+			optional: true
+			description: [
+				"&7&eAdvanced Netherite&7 upgrades netherite tools and armor further with iron, gold, emerald or diamond: each tier gives more durability and special bonuses."
+			]
+			tasks: [
+				{ id: "D2335F4F918DE9DF", type: "item", item: "advancednetherite:netherite_diamond_ingot" }
+			]
+			rewards: [
+				{ id: "D21EDB4F917C6089", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "75A3111A2E29875A"
+			title: "Skulls of the Wither"
+			x: 8.0d
+			y: -1.0d
+			dependencies: ["5AA62E7BBF5DBC81"]
+			description: [
+				"&7Wither skeletons in fortresses sometimes drop their skulls. Three of them... you know."
+			]
+			tasks: [
+				{
+					id: "FABC16F3EAB938BB"
+					type: "item"
+					count: 3
+					item: "minecraft:wither_skeleton_skull"
+				}
+			]
+			rewards: [
+				{ id: "FAC322F3EABF6BCD", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "821D41E08A97318F"
+			title: "&cForged in Fire"
+			icon: "questsicons:quest_crown"
+			x: 12.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["75A3111A2E29875A", "40609B0A35C5A727"]
+			description: [
+				"&d&o\"The fever cools. Now find the place where the Dream ends.\""
+			]
+			tasks: [
+				{
+					id: "9705F98A3D84E3A6"
+					type: "item"
+					count: 12
+					item: "minecraft:ender_pearl"
+				}
+			]
+			rewards: [
+				{ id: "96F1F58A3D7433D0", type: "item", item: "questsicons:epic_crate" }
+				{ id: "96F1F68A3D743583", type: "xp", xp: 400 }
+			]
+		}
+	]
+}

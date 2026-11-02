@@ -1,0 +1,6 @@
+{
+	chapter_groups: [
+		{ id: "5C66DB14A1ABD5AE", title: "&d✦ The Dream", icon: "questsicons:icon_moon" }
+		{ id: "1C49159F2FE9E643", title: "&b✦ Side Paths", icon: "questsicons:icon_map" }
+	]
+}

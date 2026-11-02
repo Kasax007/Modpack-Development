@@ -1,0 +1,323 @@
+{
+	id: "0DA5000BF9351EF8"
+	filename: "power"
+	title: "&54. Paths of Power"
+	subtitle: [
+		"&7Choose your class: wizard, paladin, archer or rogue."
+	]
+	icon: "questsicons:icon_magic"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 4
+	default_quest_shape: "octagon"
+	quests: [
+		{
+			id: "8B0905B72719884C"
+			title: "&5Paths of Power"
+			icon: "questsicons:icon_magic"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["CB28A4A847F17041"]
+			description: [
+				"&d&o\"Every dreamer carries a power. Which one is yours?\""
+				""
+				"&7The RPG series adds four classes. Each has its own &eworkbench&7, weapons, armor and &espells&7. Weapons show their spells in their tooltip; the spells appear on a &espell hotbar&7 above your item bar."
+				"&7You may follow one path or all of them."
+			]
+			tasks: [
+				{ id: "80FF8AE8EEE2F115", type: "checkmark", title: "Show me the paths" }
+			]
+			rewards: [
+				{ id: "80F8FEE8EEDD9783", type: "xp", xp: 50 }
+			]
+		}
+		{
+			id: "B19B75E1AAAF1E51"
+			title: "The Spell Binding Table"
+			x: 0.0d
+			y: 3.0d
+			shape: "square"
+			dependencies: ["8B0905B72719884C"]
+			description: [
+				"&7At the &eSpell Binding Table&7 you bind &eSpell Scrolls&7 to a &eSpell Book&7 for levels and lapis. Hold the book in your offhand and its spells join your weapon's spells."
+				"&7Spell books are also found in loot chests."
+			]
+			tasks: [
+				{ id: "93F17F28E98A5531", type: "item", item: "spell_engine:spell_binding" }
+			]
+			rewards: [
+				{
+					id: "94060328E99BDE87"
+					type: "item"
+					count: 32
+					item: "minecraft:lapis_lazuli"
+				}
+				{ id: "94060228E99BDCD4", type: "xp_levels", xp_levels: 5 }
+			]
+		}
+		{
+			id: "572E48FFC2DA92F7"
+			title: "&9Path of the Wizard"
+			icon: "wizards:staff_arcane"
+			x: 3.0d
+			y: -3.0d
+			dependencies: ["8B0905B72719884C"]
+			description: [
+				"&7Wizards cast &eArcane&7, &eFire&7 and &eFrost&7 spells from wands and staves. Hold right-click to cast; the spell hotbar shows what each key does."
+				"&7Wizard towers in the world sell spell books."
+			]
+			tasks: [
+				{ id: "8170DC1954D3F77F", type: "item", item: "wizards:staff_arcane" }
+			]
+			rewards: [
+				{ id: "815CD81954C347A9", type: "item", item: "wizards:spell_scroll/arcane" }
+			]
+		}
+		{
+			id: "311CD09F021F17A2"
+			title: "Robes of Power"
+			x: 5.0d
+			y: -4.0d
+			dependencies: ["572E48FFC2DA92F7"]
+			optional: true
+			description: [
+				"&7Wizard robes boost spell power of their school. Wear a full set."
+			]
+			tasks: [
+				{ id: "2FD24938AD2F7459", type: "item", item: "wizards:arcane_robe_head" }
+				{ id: "2FD24838AD2F72A6", type: "item", item: "wizards:arcane_robe_chest" }
+				{ id: "2FD24738AD2F70F3", type: "item", item: "wizards:arcane_robe_legs" }
+				{ id: "2FD24638AD2F6F40", type: "item", item: "wizards:arcane_robe_feet" }
+			]
+			rewards: [
+				{
+					id: "2FE6CD38AD40FDAF"
+					type: "item"
+					count: 16
+					item: "minecraft:amethyst_shard"
+				}
+			]
+		}
+		{
+			id: "6B9FF2C3136544A4"
+			title: "Fire and Frost"
+			x: 5.0d
+			y: -2.0d
+			dependencies: ["572E48FFC2DA92F7"]
+			optional: true
+			description: [
+				"&7Craft a staff of a second school. Fire burns, frost slows - mix them as you like."
+			]
+			tasks: [
+				{ id: "4D85268053D122C9", type: "item", item: "wizards:staff_fire" }
+				{ id: "4D85258053D12116", type: "item", item: "wizards:staff_frost" }
+			]
+			rewards: [
+				{ id: "4D99AA8053E2AC1F", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "D5E700507682A69F"
+			title: "&ePath of the Paladin"
+			icon: "paladins:iron_claymore"
+			x: 3.0d
+			y: -1.0d
+			dependencies: ["8B0905B72719884C"]
+			description: [
+				"&7Paladins fight with claymores, maces and great hammers and protect allies with &eholy&7 spells. Priests heal with holy wands and staves."
+				"&7Craft gear at the &eMonk Workbench&7."
+			]
+			tasks: [
+				{ id: "D30800A2806A437D", type: "item", item: "paladins:monk_workbench" }
+				{ id: "D307FFA2806A41CA", type: "item", item: "paladins:iron_claymore" }
+			]
+			rewards: [
+				{ id: "D30174A28064E9EB", type: "item", item: "minecraft:golden_apple" }
+			]
+		}
+		{
+			id: "7619E5D6DB1F34E7"
+			title: "Crusader Plate"
+			x: 5.0d
+			y: -0.5d
+			dependencies: ["D5E700507682A69F"]
+			optional: true
+			description: [
+				"&7The &eCrusader armor&7 is heavy but blessed."
+			]
+			tasks: [
+				{ id: "B2B9E002AE0791E1", type: "item", item: "paladins:crusader_armor_chest" }
+			]
+			rewards: [
+				{ id: "B2CE6402AE191B37", type: "item", item: "paladins:iron_kite_shield" }
+			]
+		}
+		{
+			id: "EBB6E5388905CA4F"
+			title: "&aPath of the Archer"
+			icon: "archers:composite_longbow"
+			x: 3.0d
+			y: 1.0d
+			dependencies: ["8B0905B72719884C"]
+			description: [
+				"&7Archers use longbows, shortbows, crossbows and spears. Bow spells like &eBarrage&7 and &eEntangling Roots&7 trigger while you draw."
+				"&7The &eAuto-Fire Hook&7 makes crossbows reload by themselves."
+			]
+			tasks: [
+				{ id: "DE34E87E7C7644FE", type: "item", item: "archers:archers_workbench" }
+				{ id: "DE34E97E7C7646B1", type: "item", item: "archers:composite_longbow" }
+			]
+			rewards: [
+				{
+					id: "DE20E47E7C659528"
+					type: "item"
+					count: 64
+					item: "minecraft:arrow"
+				}
+			]
+		}
+		{
+			id: "14C9402F7E860137"
+			title: "Ranger Gear"
+			x: 5.0d
+			y: 1.5d
+			dependencies: ["EBB6E5388905CA4F"]
+			optional: true
+			description: [
+				"&7Ranger armor raises your ranged damage."
+			]
+			tasks: [
+				{ id: "21208687B1D6B4E8", type: "item", item: "archers:archer_armor_chest" }
+			]
+			rewards: [
+				{ id: "21348A87B1E764BE", type: "item", item: "archers:auto_fire_hook" }
+			]
+		}
+		{
+			id: "C820CFC7DDB7E912"
+			title: "&cPath of the Rogue"
+			icon: "rogues:iron_dagger"
+			x: 3.0d
+			y: 3.0d
+			dependencies: ["8B0905B72719884C"]
+			description: [
+				"&7Rogues strike fast with daggers and sickles and vanish into the shadows; warriors smash with double axes and glaives."
+				"&7Craft gear at the &eArms Workbench&7."
+			]
+			tasks: [
+				{ id: "48F8A10CDFD26EBA", type: "item", item: "rogues:arms_workbench" }
+				{ id: "48F8A20CDFD2706D", type: "item", item: "rogues:iron_dagger" }
+			]
+			rewards: [
+				{
+					id: "48FF8D0CDFD86B6C"
+					type: "item"
+					count: 6
+					item: "minecraft:iron_ingot"
+				}
+			]
+		}
+		{
+			id: "6454F1176593351E"
+			title: "Assassin or Berserker"
+			x: 5.0d
+			y: 3.5d
+			dependencies: ["C820CFC7DDB7E912"]
+			optional: true
+			description: [
+				"&7Assassin armor makes you quicker, berserker armor makes you hit harder."
+			]
+			tasks: [
+				{ id: "5E739F3265195FFD", type: "item", item: "rogues:assassin_armor_chest" }
+			]
+			rewards: [
+				{ id: "5E6D13326514066B", type: "item", item: "rogues:iron_sickle" }
+			]
+		}
+		{
+			id: "EDB1BB1B2CE50049"
+			title: "Runes"
+			x: 7.0d
+			y: -1.5d
+			dependencies: ["572E48FFC2DA92F7", "D5E700507682A69F", "EBB6E5388905CA4F", "C820CFC7DDB7E912"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7Many spells cost &erunes&7. Craft them cheaply at the &eRune Crafting Altar&7 and keep them in a &eRune Pouch&7 (equipped in an accessory slot) so spells take them automatically."
+			]
+			tasks: [
+				{ id: "D641BFEF0A397439", type: "item", item: "runes:crafting_altar" }
+				{ id: "D641BEEF0A397286", type: "item", item: "runes:small_rune_pouch" }
+			]
+			rewards: [
+				{
+					id: "D65643EF0A4AFD8F"
+					type: "item"
+					count: 16
+					item: "runes:arcane_stone"
+				}
+			]
+		}
+		{
+			id: "E7C6D22B40D298F8"
+			title: "Gems and Jewelry"
+			x: 7.0d
+			y: 1.5d
+			dependencies: ["572E48FFC2DA92F7", "D5E700507682A69F", "EBB6E5388905CA4F", "C820CFC7DDB7E912"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7Find gems like &cRuby&7, &9Sapphire&7 and &aJade&7 (Jewelry). Cut them at the &eJeweler's Kit&7, then add a &eSocket Mount&7 to armor at an anvil and insert the cut gem."
+				"&7Rings and necklaces go into your accessory slots for extra spell power, health or speed."
+			]
+			tasks: [
+				{ id: "35E3180F49211AA0", type: "item", item: "jewelry:jewelers_kit" }
+				{ id: "35E3190F49211C53", type: "item", item: "jewelry:ruby" }
+			]
+			rewards: [
+				{ id: "35F79C0F4932A3F6", type: "item", item: "jewelry:gold_ring" }
+			]
+		}
+		{
+			id: "AE4236D28806F0C1"
+			title: "Legendary Arsenal"
+			x: 9.0d
+			y: 0.0d
+			dependencies: ["EDB1BB1B2CE50049", "E7C6D22B40D298F8"]
+			optional: true
+			description: [
+				"&7Unique weapons of the &eArsenal&7 are only found in the world - in dungeon chests and on bosses. Each one has its own spell."
+				"&7Find or claim one of them."
+			]
+			tasks: [
+				{ id: "24AD252DE3A3486F", type: "item", item: "arsenal:unique_claymore_1" }
+			]
+			rewards: [
+				{ id: "2498A12DE391BF19", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "41D8D5D4AC2EFFE0"
+			title: "&5Awakened Power"
+			icon: "questsicons:quest_crown"
+			x: 11.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["EDB1BB1B2CE50049", "E7C6D22B40D298F8"]
+			description: [
+				"&d&o\"Your power is awake. Now carry it into the fire.\""
+			]
+			tasks: [
+				{ id: "73E8A4A6524E0C7E", type: "xp", value: 20 }
+			]
+			rewards: [
+				{ id: "73D4A0A6523D5CA8", type: "item", item: "questsicons:epic_crate" }
+				{
+					id: "73D4A1A6523D5E5B"
+					type: "choice"
+					items: ["jewelry:ruby_ring", "jewelry:sapphire_ring", "jewelry:jade_ring", "jewelry:citrine_ring"]
+				}
+			]
+		}
+	]
+}

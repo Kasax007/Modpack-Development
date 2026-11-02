@@ -1,0 +1,369 @@
+{
+	id: "2B7FABA0C98DDF96"
+	filename: "settler"
+	title: "&a1. The Settler"
+	subtitle: [
+		"&7A home, a farm and a full belly."
+	]
+	icon: "questsicons:icon_house"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 1
+	default_quest_shape: "rsquare"
+	quests: [
+		{
+			id: "A5C73A63F59D816A"
+			title: "&aA Home in the Dream"
+			icon: "questsicons:icon_house"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["E8D0243E1A664826"]
+			description: [
+				"&d&o\"A dreamer without a home wanders forever. Settle down.\""
+				""
+				"&7This chapter is about your first base: farming, cooking, animals and travel."
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "83438F6FFBCE0B43", type: "xp", xp: 20 }
+			]
+		}
+		{
+			id: "888E3C1881693962"
+			title: "Till the Soil"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["A5C73A63F59D816A"]
+			description: [
+				"&7Craft a hoe and plant some wheat. &eRightClickHarvest&7 is installed: right-click a ripe crop to harvest and replant it in one go."
+			]
+			tasks: [
+				{ id: "9045268B7D22A4C8", type: "item", item: "#minecraft:hoes" }
+				{
+					id: "9045278B7D22A67B"
+					type: "item"
+					count: 16
+					item: "minecraft:wheat"
+				}
+			]
+			rewards: [
+				{
+					id: "9059AA8B7D342E1E"
+					type: "item"
+					count: 16
+					item: "minecraft:bone_meal"
+				}
+			]
+		}
+		{
+			id: "216048F2731E7BAA"
+			title: "Wild Crops"
+			x: 4.0d
+			y: -3.0d
+			dependencies: ["888E3C1881693962"]
+			description: [
+				"&7&eFarmer's Delight&7 adds wild cabbages, tomatoes, onions and rice. Look for them in plains, beaches and swamps and plant their seeds."
+			]
+			tasks: [
+				{
+					id: "79F3087BFA55F776"
+					type: "item"
+					count: 4
+					item: "farmersdelight:cabbage"
+				}
+				{
+					id: "79F3097BFA55F929"
+					type: "item"
+					count: 4
+					item: "farmersdelight:onion"
+				}
+			]
+			rewards: [
+				{
+					id: "79DE847BFA446E20"
+					type: "item"
+					count: 4
+					item: "farmersdelight:rice"
+				}
+			]
+		}
+		{
+			id: "EC2BFEBFEEC4C132"
+			title: "Knife and Board"
+			x: 4.0d
+			y: -1.0d
+			dependencies: ["888E3C1881693962"]
+			description: [
+				"&7Place a &eCutting Board&7 and right-click it with an ingredient, then with a knife. It slices food, strips logs (giving bark) and cuts more items than a crafting table can."
+			]
+			tasks: [
+				{ id: "4775B40E2229BEC1", type: "item", item: "farmersdelight:cutting_board" }
+				{ id: "4775B30E2229BD0E", type: "item", item: "#c:tools/knife" }
+			]
+			rewards: [
+				{
+					id: "4789B80E223A6E97"
+					type: "item"
+					count: 4
+					item: "farmersdelight:tomato_seeds"
+				}
+			]
+		}
+		{
+			id: "B72E65180A66810D"
+			title: "The Cooking Pot"
+			x: 6.0d
+			y: -2.0d
+			shape: "hexagon"
+			dependencies: ["216048F2731E7BAA", "EC2BFEBFEEC4C132"]
+			description: [
+				"&7The &eCooking Pot&7 makes hearty meals. It needs heat: place it on a campfire, a fire or a &eStove&7."
+				"&7Put up to 6 ingredients in, add a bowl, and wait. Meals give long saturation and the &eComfort&7 or &eNourishment&7 effect."
+			]
+			tasks: [
+				{ id: "EED19C877C4AF96C", type: "item", item: "farmersdelight:cooking_pot" }
+				{ id: "EED19D877C4AFB1F", type: "item", item: "farmersdelight:stove" }
+			]
+			rewards: [
+				{
+					id: "EECAB0877C44FCBA"
+					type: "item"
+					count: 4
+					item: "farmersdelight:dumplings"
+				}
+			]
+		}
+		{
+			id: "92ED4CD3E7475471"
+			title: "Rich Soil"
+			x: 8.0d
+			y: -3.0d
+			dependencies: ["B72E65180A66810D"]
+			optional: true
+			description: [
+				"&7Mix dirt, straw, rotten flesh and bone meal into &eOrganic Compost&7. It slowly turns into &eRich Soil&7, which grows crops faster and lets mushrooms spread."
+			]
+			tasks: [
+				{
+					id: "BCD4249BDDAF527C"
+					type: "item"
+					count: 4
+					item: "farmersdelight:organic_compost"
+				}
+			]
+			rewards: [
+				{
+					id: "BCCD389BDDA955CA"
+					type: "item"
+					count: 8
+					item: "farmersdelight:rich_soil"
+				}
+			]
+		}
+		{
+			id: "E39B04A8BAC71EE9"
+			title: "A Feast for Friends"
+			x: 8.0d
+			y: -1.0d
+			dependencies: ["B72E65180A66810D"]
+			optional: true
+			description: [
+				"&7Feasts are placed as blocks and serve several portions. Cook one and share it."
+			]
+			tasks: [
+				{ id: "C5175BA5A8F09B95", type: "item", item: "farmersdelight:roast_chicken_block" }
+			]
+			rewards: [
+				{ id: "C510CFA5A8EB4203", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "9A338F1FA9ED4C5F"
+			title: "Animal Husbandry"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["A5C73A63F59D816A"]
+			description: [
+				"&7Breed some animals. &eFarming for Blockheads&7 adds a &eFeeding Trough&7: fill it with food and nearby animals breed on their own."
+			]
+			tasks: [
+				{ id: "3E534032BA1B1012", type: "item", item: "farmingforblockheads:feeding_trough" }
+			]
+			rewards: [
+				{
+					id: "3E59CC32BA2069A4"
+					type: "item"
+					count: 2
+					item: "minecraft:lead"
+				}
+				{
+					id: "3E59CD32BA206B57"
+					type: "item"
+					count: 16
+					item: "minecraft:wheat"
+				}
+			]
+		}
+		{
+			id: "0A538C429591E4FA"
+			title: "The Market"
+			x: 4.0d
+			y: 3.0d
+			dependencies: ["9A338F1FA9ED4C5F"]
+			description: [
+				"&7The &eMarket&7 sells seeds, saplings, flowers and animal eggs for emeralds. A great way to get crops from biomes you have not found yet."
+			]
+			tasks: [
+				{ id: "C92C1FE16455C716", type: "item", item: "farmingforblockheads:market" }
+			]
+			rewards: [
+				{
+					id: "C9179BE164443DC0"
+					type: "item"
+					count: 6
+					item: "minecraft:emerald"
+				}
+			]
+		}
+		{
+			id: "7EB1DF7351645850"
+			title: "Catch Them All"
+			x: 6.0d
+			y: 3.0d
+			dependencies: ["0A538C429591E4FA"]
+			optional: true
+			description: [
+				"&7A &eGolden Lasso&7 (Mob Lassos) picks up a passive animal; right-click again to release it. Moving animals has never been easier."
+				"&7Villagers need an &eEmerald Lasso&7 and a &eContract&7."
+			]
+			tasks: [
+				{ id: "63E94F0D7AD7A819", type: "item", item: "moblassos:golden_lasso" }
+			]
+			rewards: [
+				{
+					id: "63FDD30D7AE9316F"
+					type: "item"
+					count: 8
+					item: "minecraft:golden_carrot"
+				}
+			]
+		}
+		{
+			id: "774B0CED866E81A4"
+			title: "A Villager in a Bucket"
+			x: 6.0d
+			y: 1.0d
+			dependencies: ["9A338F1FA9ED4C5F"]
+			description: [
+				"&7Right-click a villager with an empty bucket to scoop it up (&eVillager In A Bucket&7). Place it wherever you need it."
+				"&7With &eTrading Post&7 you can trade with all villagers around you from one block."
+			]
+			tasks: [
+				{ id: "A71F14AB5108B75D", type: "item", item: "villagerinabucket:villager_in_a_bucket" }
+				{ id: "A71F13AB5108B5AA", type: "item", item: "tradingpost:trading_post" }
+			]
+			rewards: [
+				{
+					id: "A71808AB5102844B"
+					type: "item"
+					count: 12
+					item: "minecraft:emerald"
+				}
+			]
+		}
+		{
+			id: "84E0567F2C2ADD62"
+			title: "Home Sweet Home"
+			x: 0.0d
+			y: 4.0d
+			shape: "square"
+			dependencies: ["A5C73A63F59D816A"]
+			description: [
+				"&7Build a real house. The &eMacaw's&7 mods add furniture, roofs, windows, doors, lights, paths and bridges. Press &eR&7 on a log or plank in your inventory to see everything you can make from it."
+				""
+				"&7Tick the box when your house is done - and be proud of it!"
+			]
+			tasks: [
+				{ id: "8EE35AACD1975A49", type: "checkmark", title: "My house is built" }
+			]
+			rewards: [
+				{
+					id: "8EF7DEACD1A8E39F"
+					type: "item"
+					count: 6
+					item: "minecraft:lantern"
+				}
+				{ id: "8EF7DDACD1A8E1EC", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "4F48B2F6DF0575D6"
+			title: "Waystones"
+			x: 10.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["B72E65180A66810D", "0A538C429591E4FA"]
+			description: [
+				"&d&o\"The Dream is vast. Waystones are its shortcuts.\""
+				""
+				"&7&eWaystones&7 appear in villages and in the wild. Right-click one to activate it, then use it to teleport to any waystone you have activated (costs a little XP)."
+				"&7A &eWarp Stone&7 lets you teleport from anywhere."
+			]
+			tasks: [
+				{ id: "4280A77A7D694631", type: "item", item: "waystones:warp_stone" }
+			]
+			rewards: [
+				{
+					id: "42952B7A7D7ACF87"
+					type: "item"
+					count: 3
+					item: "waystones:return_scroll"
+				}
+			]
+		}
+		{
+			id: "38B651FB3482CBFA"
+			title: "A Proper Kitchen"
+			x: 12.0d
+			y: -1.5d
+			dependencies: ["4F48B2F6DF0575D6"]
+			optional: true
+			description: [
+				"&7Build a &eCooking Table&7 (Cooking for Blockheads). Next to a &eFridge&7, &eSink&7, oven and counters it forms a kitchen that shows every meal you can cook with what you have."
+			]
+			tasks: [
+				{ id: "752E62199B08A3F6", type: "item", item: "cookingforblockheads:cooking_table" }
+			]
+			rewards: [
+				{ id: "7519DE199AF71AA0", type: "item", item: "cookingforblockheads:recipe_book" }
+			]
+		}
+		{
+			id: "70AE548090DE3D9A"
+			title: "&aSettled In"
+			icon: "questsicons:quest_crown"
+			x: 12.0d
+			y: 1.5d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["4F48B2F6DF0575D6"]
+			description: [
+				"&d&o\"Good. A full belly and a warm bed. Now - deeper.\""
+			]
+			tasks: [
+				{
+					id: "26FD6AE5F5A74647"
+					type: "item"
+					count: 16
+					item: "minecraft:cooked_beef"
+				}
+			]
+			rewards: [
+				{ id: "26E8E6E5F595BCF1", type: "item", item: "questsicons:rare_crate" }
+				{ id: "26E8E5E5F595BB3E", type: "xp", xp: 150 }
+			]
+		}
+	]
+}

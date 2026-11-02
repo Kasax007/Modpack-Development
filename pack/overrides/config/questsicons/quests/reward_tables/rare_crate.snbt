@@ -1,0 +1,20 @@
+{
+	title: "&9Rare Crate"
+	icon: "questsicons:rare_crate"
+	entries: [
+		{ count: 2, item: "minecraft:diamond", weight: 15 }
+		{ count: 8, item: "minecraft:emerald", weight: 15 }
+		{ count: 2, item: "minecraft:golden_apple", weight: 12 }
+		{ count: 4, item: "minecraft:ender_pearl", weight: 12 }
+		{ count: 2, item: "minecraft:iron_block", weight: 10 }
+		{ item: "minecraft:gold_block", weight: 8 }
+		{ item: "minecraft:saddle", weight: 6 }
+		{ count: 2, item: "minecraft:name_tag", weight: 6 }
+		{ count: 16, item: "minecraft:experience_bottle", weight: 10 }
+		{ count: 2, item: "minecraft:lapis_block", weight: 8 }
+		{ count: 8, item: "minecraft:obsidian", weight: 8 }
+		{ item: "minecraft:trial_key", weight: 6 }
+		{ count: 2, item: "jewelry:ruby", weight: 5 }
+		{ count: 2, item: "jewelry:sapphire", weight: 5 }
+	]
+}

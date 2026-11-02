@@ -1,0 +1,201 @@
+{
+	id: "EE0C31D10E47D77E"
+	filename: "builder"
+	title: "&6Builder's Dream"
+	subtitle: [
+		"&7Blocks, furniture and the tools to build big."
+	]
+	icon: "questsicons:icon_house"
+	group: "1C49159F2FE9E643"
+	order_index: 10
+	default_quest_shape: "square"
+	quests: [
+		{
+			id: "59283AB35DE5A5BA"
+			title: "&6Builder's Dream"
+			icon: "questsicons:icon_house"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["84E0567F2C2ADD62"]
+			description: [
+				"&7Dreamcraft has thousands of building blocks. Here is how to find and place them quickly."
+			]
+			tasks: [
+				{
+					id: "B6D5227E3EE12177"
+					type: "item"
+					count: 64
+					item: "#minecraft:planks"
+				}
+			]
+			rewards: [
+				{ id: "B6C09E7E3ECF9821", type: "xp", xp: 30 }
+			]
+		}
+		{
+			id: "0974E18CC2E9F310"
+			title: "The Chisel"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["59283AB35DE5A5BA"]
+			description: [
+				"&7Put blocks into a &eChisel&7 (Rechiseled) and pick one of many variants. Right-click with the chisel to open it."
+			]
+			tasks: [
+				{ id: "411D1AA7CC61F670", type: "item", item: "rechiseled:chisel" }
+			]
+			rewards: [
+				{
+					id: "41319EA7CC737FC6"
+					type: "item"
+					count: 64
+					item: "minecraft:stone_bricks"
+				}
+			]
+		}
+		{
+			id: "2F11A820AB49A8D8"
+			title: "Building Wand"
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["59283AB35DE5A5BA"]
+			description: [
+				"&7A &eBuilding Wand&7 extends a whole wall at once using blocks from your inventory. Sneak + scroll changes the mode."
+			]
+			tasks: [
+				{ id: "DC429916331F19AE", type: "item", item: "constructionwand:iron_wand" }
+			]
+			rewards: [
+				{
+					id: "DC2E1516330D9058"
+					type: "item"
+					count: 64
+					item: "minecraft:cobblestone"
+				}
+			]
+		}
+		{
+			id: "A45F2076BAF9BF91"
+			title: "Effortless Building"
+			x: 4.0d
+			y: -1.0d
+			dependencies: ["2F11A820AB49A8D8"]
+			description: [
+				"&7Press &eAlt&7 (Effortless Building) for build modes: lines, walls, floors, cubes, circles and mirrors."
+			]
+			tasks: [
+				{ id: "0E7AB769ACBC2ABB", type: "checkmark", title: "I tried a build mode" }
+			]
+			rewards: [
+				{
+					id: "0E81C369ACC25DCD"
+					type: "item"
+					count: 32
+					item: "minecraft:glass"
+				}
+			]
+		}
+		{
+			id: "E8D0C67B2B49399D"
+			title: "Chalk Marks"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["59283AB35DE5A5BA"]
+			optional: true
+			description: [
+				"&7Draw on any block with &eChalk&7. Glowing chalk shines in the dark - great for marking cave paths."
+			]
+			tasks: [
+				{ id: "E55196D1F0273427", type: "item", item: "chalk:white_chalk" }
+			]
+			rewards: [
+				{ id: "E53D12D1F015AAD1", type: "item", item: "chalk:yellow_chalk" }
+			]
+		}
+		{
+			id: "42324CAF63E9FA31"
+			title: "Macaw's Collection"
+			x: 4.0d
+			y: 1.0d
+			dependencies: ["59283AB35DE5A5BA"]
+			description: [
+				"&7Craft a piece from every Macaw's mod: a roof, a window, a bridge and a lamp."
+			]
+			tasks: [
+				{ id: "C1746C7A9C872CE1", type: "item", item: "mcwroofs:oak_roof" }
+				{ id: "C1746B7A9C872B2E", type: "item", item: "mcwwindows:oak_window" }
+				{ id: "C1746A7A9C87297B", type: "item", item: "mcwbridges:oak_log_bridge_middle" }
+			]
+			rewards: [
+				{ id: "C188F07A9C98B637", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "AF7BF712ECED33A3"
+			title: "Light It Up"
+			x: 6.0d
+			y: 1.0d
+			dependencies: ["42324CAF63E9FA31"]
+			optional: true
+			description: [
+				"&7&eAdditional Lanterns&7 makes lanterns from every material and color."
+			]
+			tasks: [
+				{
+					id: "CC1AD4BA8C0FBB71"
+					type: "item"
+					count: 4
+					item: "additionallanterns:amethyst_lantern"
+				}
+			]
+			rewards: [
+				{
+					id: "CC2F58BA8C2144C7"
+					type: "item"
+					count: 32
+					item: "minecraft:torch"
+				}
+			]
+		}
+		{
+			id: "E11009A3A8411EDC"
+			title: "Dawn of Time"
+			x: 6.0d
+			y: -1.0d
+			dependencies: ["A45F2076BAF9BF91", "0974E18CC2E9F310"]
+			optional: true
+			description: [
+				"&7&eDawn of Time&7 adds historic blocks from many cultures: Roman, Japanese, Persian, Gothic... Browse them in REI."
+			]
+			tasks: [
+				{ id: "E363AD9089CFF86D", type: "checkmark", title: "I found a style I like" }
+			]
+			rewards: [
+				{ id: "E35D219089CA9EDB", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "376E8EA3D91AB18A"
+			title: "&6Master Builder"
+			icon: "questsicons:quest_crown"
+			x: 8.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["E11009A3A8411EDC", "AF7BF712ECED33A3"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7Show off your best build to a friend - then tick the box."
+			]
+			tasks: [
+				{ id: "CFC0B4F44C0E9783", type: "checkmark", title: "My dream build is done" }
+			]
+			rewards: [
+				{ id: "CFC740F44C13F115", type: "item", item: "questsicons:rare_crate" }
+				{ id: "CFC73FF44C13EF62", type: "xp", xp: 200 }
+			]
+		}
+	]
+}

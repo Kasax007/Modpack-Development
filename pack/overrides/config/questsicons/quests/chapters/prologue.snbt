@@ -1,0 +1,286 @@
+{
+	id: "14B4AA34E0B85D82"
+	filename: "prologue"
+	title: "&dPrologue: A Strange Dream"
+	subtitle: [
+		"&7You fell asleep... and woke up somewhere else."
+	]
+	icon: "questsicons:icon_moon"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 0
+	default_quest_shape: "circle"
+	quests: [
+		{
+			id: "69EBF5E4D7E44EE2"
+			title: "&dA Strange Dream"
+			icon: "questsicons:quest_book"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.6d
+			description: [
+				"&d&o\"Welcome, Dreamer. I am the Dreamkeeper. This world is a dream - yours now.\""
+				""
+				"&7This is your &eQuest Book&7. Open it any time with &eJ&7, the book in your inventory or the button in the top-left corner of your inventory."
+				"&7Click a quest to read it. Finished quests turn &agreen&7 and their rewards wait behind the &eClaim&7 button."
+				"&7Tick the box below to begin your journey."
+			]
+			tasks: [
+				{ id: "2DFCE0E8A1DD9230", type: "checkmark", title: "I am ready to dream" }
+			]
+			rewards: [
+				{ id: "2E1164E8A1EF1B86", type: "xp", xp: 25 }
+				{
+					id: "2E1165E8A1EF1D39"
+					type: "item"
+					count: 6
+					item: "minecraft:bread"
+				}
+			]
+		}
+		{
+			id: "EF45C4E492080CFB"
+			title: "Punch a Tree"
+			x: 2.5d
+			y: 0.0d
+			dependencies: ["69EBF5E4D7E44EE2"]
+			description: [
+				"&d&o\"Every dream begins with something simple. Wood.\""
+				""
+				"&7Chop any logs. &eFallingTree&7 is installed: break the bottom log with an axe and the whole tree comes down. Sneak while chopping to take only one log."
+			]
+			tasks: [
+				{
+					id: "E0A8D0A32B295F2E"
+					type: "item"
+					count: 16
+					item: "#minecraft:logs"
+				}
+			]
+			rewards: [
+				{
+					id: "E0944CA32B17D5D8"
+					type: "item"
+					count: 4
+					item: "minecraft:apple"
+				}
+			]
+		}
+		{
+			id: "8B55AF41550E7976"
+			title: "The First Workbench"
+			x: 4.5d
+			y: -1.5d
+			dependencies: ["EF45C4E492080CFB"]
+			description: [
+				"&7Craft a crafting table."
+				""
+				"&7Not sure how something is made? Hover over any item in your inventory and press &eR&7 for its recipes or &eU&7 for its uses (&eRoughly Enough Items&7). The search bar at the bottom of the screen finds every item in the pack."
+			]
+			tasks: [
+				{ id: "44BE4A194E2CC676", type: "item", item: "minecraft:crafting_table" }
+			]
+			rewards: [
+				{
+					id: "44A9C6194E1B3D20"
+					type: "item"
+					count: 16
+					item: "minecraft:stick"
+				}
+			]
+		}
+		{
+			id: "4377A30B557AA41F"
+			title: "Stone Age"
+			x: 4.5d
+			y: 1.5d
+			dependencies: ["EF45C4E492080CFB"]
+			description: [
+				"&7Get some cobblestone and craft a stone pickaxe."
+				""
+				"&7Look at any block to see what it is and which tool mines it (&eJade&7, top of the screen)."
+			]
+			tasks: [
+				{
+					id: "264C1CD3440310C5"
+					type: "item"
+					count: 32
+					item: "minecraft:cobblestone"
+				}
+				{ id: "264C1BD344030F12", type: "item", item: "minecraft:stone_pickaxe" }
+			]
+			rewards: [
+				{
+					id: "264510D343FCDDB3"
+					type: "item"
+					count: 16
+					item: "minecraft:torch"
+				}
+			]
+		}
+		{
+			id: "5B8A9655BDDE8E52"
+			title: "Hunger Pangs"
+			x: 6.5d
+			y: -1.5d
+			dependencies: ["8B55AF41550E7976"]
+			description: [
+				"&d&o\"Even dreamers get hungry.\""
+				""
+				"&7Collect some food. &eAppleSkin&7 shows how much hunger and saturation a food restores right on your hunger bar."
+			]
+			tasks: [
+				{
+					id: "498EDD7CE290DA82"
+					type: "item"
+					count: 8
+					item: "#c:foods"
+				}
+			]
+			rewards: [
+				{ id: "4995697CE2963414", type: "item", item: "farmersdelight:flint_knife" }
+			]
+		}
+		{
+			id: "0AAA1EB98189B2A1"
+			title: "A Place to Sleep"
+			x: 6.5d
+			y: 1.5d
+			dependencies: ["4377A30B557AA41F"]
+			description: [
+				"&7Craft a bed. Sleeping skips the night and sets your respawn point."
+				""
+				"&7Night in the dream is dangerous: new monsters roam the dark."
+			]
+			tasks: [
+				{ id: "52880EDB18C20062", type: "item", item: "#minecraft:beds" }
+			]
+			rewards: [
+				{
+					id: "528F1ADB18C83374"
+					type: "item"
+					count: 3
+					item: "minecraft:lantern"
+				}
+			]
+		}
+		{
+			id: "BCA05DDAF3FD4B74"
+			title: "Survive the Night"
+			x: 8.5d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: ["5B8A9655BDDE8E52", "0AAA1EB98189B2A1"]
+			description: [
+				"&d&o\"The nightmares are restless. Show them you are not afraid.\""
+				""
+				"&7Defeat 5 undead monsters. Better Combat makes every weapon swing differently: try a sword and an axe and feel the difference. Press &eR&7 in combat to do a quick &edodge roll&7 (Combat Roll)."
+			]
+			tasks: [
+				{
+					id: "325786DAE556FF3E"
+					type: "kill"
+					entity: "#minecraft:undead"
+					value: 5
+				}
+			]
+			rewards: [
+				{
+					id: "324382DAE5464F68"
+					type: "item"
+					count: 3
+					item: "minecraft:iron_ingot"
+				}
+				{ id: "324383DAE546511B", type: "xp", xp: 50 }
+			]
+		}
+		{
+			id: "8D5D63B9CBC9018C"
+			title: "Where Am I?"
+			x: 8.5d
+			y: -2.5d
+			dependencies: ["BCA05DDAF3FD4B74"]
+			optional: true
+			description: [
+				"&7You have a &eminimap&7 in the corner. Press &eM&7 for the full world map, &eB&7 to add a waypoint, &eY&7 for the waypoint list."
+				"&7Middle-click with &ePing Wheel&7 to mark a spot for your friends."
+				""
+				"&7Tick the box when you found your way around."
+			]
+			tasks: [
+				{ id: "928B2872932780C2", type: "checkmark" }
+			]
+			rewards: [
+				{ id: "9291B472932CDA54", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "98D612C75580D2BC"
+			title: "Pack Your Bags"
+			x: 8.5d
+			y: 2.5d
+			dependencies: ["BCA05DDAF3FD4B74"]
+			optional: true
+			description: [
+				"&7A &eTraveler's Backpack&7 holds a lot of items, two fluid tanks and upgrades (crafting grid, furnace, magnet...)."
+				"&7Wear it on your back and open it with &eB&7, or place it like a chest. Sneak + right-click a placed backpack to pick it up."
+			]
+			tasks: [
+				{ id: "C08B113005357C61", type: "item", item: "#travelersbackpack:custom_travelers_backpack" }
+			]
+			rewards: [
+				{ id: "C09F9530054705B7", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "B7E7699138A2CCE4"
+			title: "Iron Will"
+			x: 10.5d
+			y: 0.0d
+			shape: "hexagon"
+			dependencies: ["BCA05DDAF3FD4B74"]
+			description: [
+				"&d&o\"Iron. Now you can truly begin.\""
+				""
+				"&7Mine iron ore and smelt it. Caves are bigger now (&eTerralith&7, &eTectonic&7): bring torches."
+			]
+			tasks: [
+				{
+					id: "A41913868A5B3897"
+					type: "item"
+					count: 12
+					item: "#c:ingots/iron"
+				}
+			]
+			rewards: [
+				{
+					id: "A4050F868A4A88C1"
+					type: "item"
+					count: 2
+					item: "questsicons:common_crate"
+				}
+			]
+		}
+		{
+			id: "E8D0243E1A664826"
+			title: "&dThe Dream Calls"
+			icon: "questsicons:quest_portal_two"
+			x: 13.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.8d
+			dependencies: ["B7E7699138A2CCE4"]
+			description: [
+				"&d&o\"Listen. Do you hear it? The Dream is breaking apart. Nightmares leak in from below, the seas have swallowed the land, and something old waits beyond the End.\""
+				"&d&o\"Gather your strength, Dreamer. Each chapter of this book is a part of the Dream that needs you.\""
+				""
+				"&7New chapters are now open on the left. The &dThe Dream&7 chapters tell the story, the &bSide Paths&7 are optional and explain the other mods."
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "7C70A1ACC358A9D7", type: "item", item: "questsicons:rare_crate" }
+				{ id: "7C70A0ACC358A824", type: "xp", xp: 100 }
+			]
+		}
+	]
+}

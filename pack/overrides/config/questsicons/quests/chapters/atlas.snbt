@@ -1,0 +1,211 @@
+{
+	id: "7521CD952A17F696"
+	filename: "atlas"
+	title: "&3Explorer's Atlas"
+	subtitle: [
+		"&7Biomes, structures and how to find them."
+	]
+	icon: "questsicons:icon_map"
+	group: "1C49159F2FE9E643"
+	order_index: 11
+	default_quest_shape: "diamond"
+	quests: [
+		{
+			id: "118061931ED412E6"
+			title: "&3Explorer's Atlas"
+			icon: "questsicons:icon_map"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["8D5D63B9CBC9018C"]
+			description: [
+				"&7Terralith, Tectonic and Wilder Wild reshape the world. Hundreds of new structures wait out there."
+			]
+			tasks: [
+				{ id: "2434FF0E71DC15C1", type: "item", item: "minecraft:compass" }
+			]
+			rewards: [
+				{
+					id: "2449030E71ECC597"
+					type: "item"
+					count: 4
+					item: "minecraft:map"
+				}
+			]
+		}
+		{
+			id: "216385EECDD0BEA1"
+			title: "Nature's Compass"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["118061931ED412E6"]
+			description: [
+				"&7Open the &eNature's Compass&7, pick any biome and it points the way."
+			]
+			tasks: [
+				{ id: "D22E79C172A6402F", type: "item", item: "naturescompass:naturescompass" }
+			]
+			rewards: [
+				{ id: "D219F5C17294B6D9", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "AD983859D41DDDC1"
+			title: "Explorer's Compass"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["118061931ED412E6"]
+			description: [
+				"&7The &eExplorer's Compass&7 does the same for structures: villages, taverns, towers, temples..."
+			]
+			tasks: [
+				{ id: "76C57B691F2EDFCA", type: "item", item: "explorerscompass:explorerscompass" }
+			]
+			rewards: [
+				{ id: "76CC67691F34DC7C", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "9A11CC949344A10F"
+			title: "Hang Glider"
+			x: 4.0d
+			y: 0.0d
+			dependencies: ["216385EECDD0BEA1", "AD983859D41DDDC1"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7Jump off a cliff with a &eHang Glider&7 and soar. Updrafts over fire lift you up."
+			]
+			tasks: [
+				{ id: "35F3D7A48F8BE137", type: "item", item: "hangglider:hang_glider" }
+			]
+			rewards: [
+				{
+					id: "35DF53A48F7A57E1"
+					type: "item"
+					count: 16
+					item: "minecraft:feather"
+				}
+			]
+		}
+		{
+			id: "997B144F28EBABCA"
+			title: "A Village"
+			x: 4.0d
+			y: 2.0d
+			dependencies: ["AD983859D41DDDC1"]
+			description: [
+				"&7Find a village. &eTowns and Towers&7 and &eMoog's&7 structures make them bigger and more varied."
+			]
+			tasks: [
+				{
+					id: "FE74743D6D06EC48"
+					type: "structure"
+					title: "Find a village"
+					structure: "#minecraft:village"
+				}
+			]
+			rewards: [
+				{
+					id: "FE88F83D6D18759E"
+					type: "item"
+					count: 8
+					item: "minecraft:emerald"
+				}
+			]
+		}
+		{
+			id: "7A2B7AA286DFF954"
+			title: "The Tavern"
+			x: 6.0d
+			y: 2.0d
+			dependencies: ["997B144F28EBABCA"]
+			optional: true
+			description: [
+				"&7Taverns (Dungeons and Taverns) have traders, food and a cartographer who sells maps to rare structures."
+			]
+			tasks: [
+				{
+					id: "05CE7D0DC9A13D8B"
+					type: "structure"
+					title: "Find a tavern"
+					structure: "nova_structures:tavern_birch"
+				}
+			]
+			rewards: [
+				{ id: "05D5890DC9A7709D", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "20D1AA10B17E733A"
+			title: "Bryce Canyon"
+			x: 4.0d
+			y: -2.0d
+			dependencies: ["216385EECDD0BEA1"]
+			optional: true
+			description: [
+				"&7Terralith biomes can be breathtaking. Visit a canyon."
+			]
+			tasks: [
+				{
+					id: "5DB0B5F3DA1244C1"
+					type: "biome"
+					title: "Visit a Bryce Canyon"
+					biome: "terralith:bryce_canyon"
+				}
+			]
+			rewards: [
+				{ id: "5DC4B9F3DA22F497", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "552DE000CC5908DF"
+			title: "A Graveyard"
+			x: 6.0d
+			y: -2.0d
+			dependencies: ["20D1AA10B17E733A", "9A11CC949344A10F"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7Graveyards (The Graveyard) are full of undead and loot. Some hide a crypt with a dangerous boss."
+			]
+			tasks: [
+				{
+					id: "E6851D0E804E388B"
+					type: "structure"
+					title: "Find a large graveyard"
+					structure: "graveyard:large_graveyard"
+				}
+			]
+			rewards: [
+				{ id: "E68C290E80546B9D", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "DA723ADF9AFD498E"
+			title: "&3World Traveller"
+			icon: "questsicons:quest_crown"
+			x: 8.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["9A11CC949344A10F"]
+			description: [
+				"&7Travel 10 km (walking, flying or boating)."
+			]
+			tasks: [
+				{
+					id: "011C24222B5BF1EE"
+					type: "stat"
+					title: "Walk 10 km"
+					stat: "minecraft:walk_one_cm"
+					value: 1000000
+				}
+			]
+			rewards: [
+				{ id: "0107A0222B4A6898", type: "item", item: "questsicons:epic_crate" }
+				{ id: "0107A1222B4A6A4B", type: "xp", xp: 300 }
+			]
+		}
+	]
+}

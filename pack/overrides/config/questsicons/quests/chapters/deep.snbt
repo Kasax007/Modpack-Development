@@ -1,0 +1,396 @@
+{
+	id: "41F79FA52C6A6189"
+	filename: "deep"
+	title: "&62. Into the Deep"
+	subtitle: [
+		"&7Ores, storage and the magic of enchanting."
+	]
+	icon: "questsicons:icon_pickaxe"
+	group: "5C66DB14A1ABD5AE"
+	order_index: 2
+	default_quest_shape: "hexagon"
+	quests: [
+		{
+			id: "6280E27799DE3221"
+			title: "&6Into the Deep"
+			icon: "questsicons:icon_pickaxe"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["E8D0243E1A664826"]
+			description: [
+				"&d&o\"Below every dream lies a deeper one. Dig.\""
+			]
+			tasks: [
+				{ id: "4736400EFD3AFF56", type: "item", item: "minecraft:iron_pickaxe" }
+			]
+			rewards: [
+				{
+					id: "4721BC0EFD297600"
+					type: "item"
+					count: 32
+					item: "minecraft:torch"
+				}
+			]
+		}
+		{
+			id: "07C5C8890A493998"
+			title: "Fuel for the Fire"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["6280E27799DE3221"]
+			description: [
+				"&7Collect coal. You will need a lot of it for furnaces and torches."
+			]
+			tasks: [
+				{
+					id: "204D1A46F71CA486"
+					type: "item"
+					count: 32
+					item: "minecraft:coal"
+				}
+			]
+			rewards: [
+				{
+					id: "20389646F70B1B30"
+					type: "item"
+					count: 2
+					item: "minecraft:furnace"
+				}
+			]
+		}
+		{
+			id: "3AEA0B333449A126"
+			title: "Copper Shine"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["6280E27799DE3221"]
+			description: [
+				"&7Copper is everywhere in the deep. It is used for pipes, hoppers and much more."
+			]
+			tasks: [
+				{
+					id: "44B9404E47165E0E"
+					type: "item"
+					count: 24
+					item: "#c:ingots/copper"
+				}
+			]
+			rewards: [
+				{ id: "44A4BC4E4704D4B8", type: "xp", xp: 40 }
+			]
+		}
+		{
+			id: "63DEF6A77A117641"
+			title: "Gold Rush"
+			x: 4.0d
+			y: -2.0d
+			dependencies: ["07C5C8890A493998"]
+			description: [
+				"&7Gold is softer than iron but loved by piglins and needed for golden carrots and apples."
+			]
+			tasks: [
+				{
+					id: "AA2363AEAAFFF32E"
+					type: "item"
+					count: 12
+					item: "#c:ingots/gold"
+				}
+			]
+			rewards: [
+				{
+					id: "AA0EDFAEAAEE69D8"
+					type: "item"
+					count: 6
+					item: "minecraft:golden_carrot"
+				}
+			]
+		}
+		{
+			id: "622E8CC4278079B6"
+			title: "Deepslate"
+			x: 4.0d
+			y: 0.0d
+			dependencies: ["6280E27799DE3221"]
+			description: [
+				"&7Below Y=0 the stone turns to deepslate. Ores are richer here - and so are the monsters."
+			]
+			tasks: [
+				{
+					id: "99C732E8043B15CE"
+					type: "item"
+					count: 64
+					item: "minecraft:cobbled_deepslate"
+				}
+			]
+			rewards: [
+				{
+					id: "99B2AEE804298C78"
+					type: "item"
+					count: 4
+					item: "minecraft:iron_ingot"
+				}
+			]
+		}
+		{
+			id: "68DBE0A590EB0759"
+			title: "Smash It"
+			x: 4.0d
+			y: 2.0d
+			dependencies: ["3AEA0B333449A126"]
+			description: [
+				"&7A &eHammer&7 (JustHammers) mines a 3x3 area at once. Perfect for tunnels and big rooms."
+				"&7Sneak to mine a single block."
+			]
+			tasks: [
+				{ id: "9C6830587FF36458", type: "item", item: "justhammers:iron_hammer" }
+			]
+			rewards: [
+				{
+					id: "9C7CB4588004EDAE"
+					type: "item"
+					count: 3
+					item: "minecraft:iron_ingot"
+				}
+			]
+		}
+		{
+			id: "CB28A4A847F17041"
+			title: "&bDiamonds!"
+			x: 6.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.3d
+			dependencies: ["622E8CC4278079B6", "63DEF6A77A117641"]
+			description: [
+				"&d&o\"The Dream hides its brightest treasures in the deepest dark.\""
+				""
+				"&7Diamonds are most common around Y=-58. Mine them with an iron pickaxe or better."
+			]
+			tasks: [
+				{
+					id: "B5D17F67318C3BA7"
+					type: "item"
+					count: 5
+					item: "#c:gems/diamond"
+				}
+			]
+			rewards: [
+				{ id: "B5BCFB67317AB251", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "59A22C101E746B75"
+			title: "Magnetic Personality"
+			x: 6.0d
+			y: 2.5d
+			dependencies: ["68DBE0A590EB0759"]
+			optional: true
+			description: [
+				"&7A &eBasic Magnet&7 (Simple Magnets) pulls nearby items to you. Right-click to switch it on and off."
+			]
+			tasks: [
+				{ id: "129221F6D5C34A18", type: "item", item: "simplemagnets:basicmagnet" }
+			]
+			rewards: [
+				{ id: "12A6A5F6D5D4D36E", type: "xp", xp: 50 }
+			]
+		}
+		{
+			id: "3BC1B6DF463F1797"
+			title: "Keep the Dark Away"
+			x: 6.0d
+			y: -2.5d
+			dependencies: ["CB28A4A847F17041"]
+			optional: true
+			description: [
+				"&7A &eMagnum Torch&7 stops hostile monsters from spawning in a large area around it. Great for your base."
+			]
+			tasks: [
+				{ id: "94614D6C5ED71F8A", type: "item", item: "magnumtorch:diamond_magnum_torch" }
+			]
+			rewards: [
+				{ id: "9468396C5EDD1C3C", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "2FDB22C9D06AD0A0"
+			title: "Organized Chaos"
+			x: 8.0d
+			y: 2.0d
+			shape: "square"
+			dependencies: ["CB28A4A847F17041"]
+			description: [
+				"&7Too many chests? &eTom's Simple Storage&7: connect your chests with &eInventory Cable&7 to an &eInventory Connector&7, then place a &eStorage Terminal&7 next to it. Now you see and search every item in all chests from one screen."
+				"&7The &eCrafting Terminal&7 even crafts straight from storage."
+			]
+			tasks: [
+				{ id: "A67E6E3809A37B34", type: "item", item: "toms_storage:inventory_connector" }
+				{ id: "A67E6F3809A37CE7", type: "item", item: "toms_storage:storage_terminal" }
+			]
+			rewards: [
+				{
+					id: "A6776238099D4822"
+					type: "item"
+					count: 16
+					item: "toms_storage:inventory_cable"
+				}
+			]
+		}
+		{
+			id: "44E9C4AE8A7DC72B"
+			title: "Drawers"
+			x: 10.0d
+			y: 3.0d
+			dependencies: ["2FDB22C9D06AD0A0"]
+			optional: true
+			description: [
+				"&7&eStorage Drawers&7 hold huge amounts of a single item each. Click a drawer to insert, punch it to take out."
+				"&7Upgrades raise their capacity. A &eDrawer Controller&7 links all drawers so you can insert into all of them at once."
+			]
+			tasks: [
+				{ id: "94301A45EB86B1F1", type: "item", item: "#storagedrawers:drawers" }
+				{ id: "94301945EB86B03E", type: "item", item: "storagedrawers:controller" }
+			]
+			rewards: [
+				{
+					id: "94449E45EB983B47"
+					type: "item"
+					count: 2
+					item: "storagedrawers:iron_storage_upgrade"
+				}
+			]
+		}
+		{
+			id: "6AAAC14D4BF021D0"
+			title: "Enchanted"
+			x: 8.0d
+			y: -1.0d
+			dependencies: ["CB28A4A847F17041"]
+			description: [
+				"&7Build an enchanting table. Surround it with 15 bookshelves for the best enchantments."
+				"&7&eEasy Magic&7 is installed: the table keeps its lapis and items, and you can re-roll the offers with a click."
+			]
+			tasks: [
+				{ id: "7B89DB4FDBFC3238", type: "item", item: "minecraft:enchanting_table" }
+				{
+					id: "7B89DC4FDBFC33EB"
+					type: "item"
+					count: 15
+					item: "minecraft:bookshelf"
+				}
+			]
+			rewards: [
+				{
+					id: "7B9E5F4FDC0DBB8E"
+					type: "item"
+					count: 32
+					item: "minecraft:lapis_lazuli"
+				}
+			]
+		}
+		{
+			id: "2712C7E8A3D2BCB5"
+			title: "The Enchanting Infuser"
+			x: 10.0d
+			y: -2.0d
+			shape: "hexagon"
+			dependencies: ["6AAAC14D4BF021D0"]
+			description: [
+				"&7The &eEnchanting Infuser&7 lets you pick exactly which enchantments you want - for more XP. Place bookshelves around it (up to two layers) for stronger enchantments."
+				"&7A &eGrindstone&7 can move enchantments from an item onto a book (Grind Enchantments)."
+			]
+			tasks: [
+				{ id: "2EA4A28E21F4E5AB", type: "item", item: "enchantinginfuser:enchanting_infuser" }
+			]
+			rewards: [
+				{ id: "2EAB2E8E21FA3F3D", type: "xp_levels", xp_levels: 10 }
+			]
+		}
+		{
+			id: "BC543D77F5F6C96E"
+			title: "A Book of Experience"
+			x: 12.0d
+			y: -2.0d
+			dependencies: ["2712C7E8A3D2BCB5"]
+			optional: true
+			description: [
+				"&7The &eBook of Experience&7 (XP Storage) stores your XP safely. Right-click to store, sneak + right-click to take it out."
+			]
+			tasks: [
+				{ id: "AF44E580E0B7E047", type: "item", item: "xp_storage:xp_book" }
+			]
+			rewards: [
+				{ id: "AF306180E0A656F1", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "0816F662D562F00E"
+			title: "Dig Up the Past"
+			x: 10.0d
+			y: 0.5d
+			dependencies: ["CB28A4A847F17041"]
+			optional: true
+			description: [
+				"&7Brush suspicious sand and gravel to find relics. &eBetter Archeology&7 adds fossils, artifacts and an &eArcheology Table&7 that identifies artifact shards."
+				"&7Look for archeologist camps and buried ruins."
+			]
+			tasks: [
+				{ id: "9117F54492666569", type: "item", item: "minecraft:brush" }
+				{ id: "9117F444926663B6", type: "item", item: "betterarcheology:archeology_table" }
+			]
+			rewards: [
+				{ id: "912BF9449277153F", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "8800C705995DEB4D"
+			title: "Loot for Everyone"
+			x: 12.0d
+			y: 1.0d
+			dependencies: ["0816F662D562F00E", "2FDB22C9D06AD0A0"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7Dungeon chests are &eLootr&7 chests: every player gets their own loot, so nobody steals your treasure."
+				"&7Find a dungeon, a mineshaft or a tavern and open its chest."
+			]
+			tasks: [
+				{
+					id: "D3C3ABCBBB3E5835"
+					type: "structure"
+					title: "Explore a mineshaft"
+					structure: "#minecraft:mineshaft"
+				}
+			]
+			rewards: [
+				{ id: "D3BC9FCBBB382523", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "3C0DC1C46F445C7F"
+			title: "&6Master of the Deep"
+			icon: "questsicons:quest_crown"
+			x: 14.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["8800C705995DEB4D", "2712C7E8A3D2BCB5"]
+			description: [
+				"&d&o\"The deep has given you its gifts. Use them well.\""
+			]
+			tasks: [
+				{ id: "77389048122151BE", type: "item", item: "minecraft:diamond_pickaxe" }
+			]
+			rewards: [
+				{
+					id: "77248C481210A1E8"
+					type: "item"
+					count: 2
+					item: "questsicons:rare_crate"
+				}
+				{ id: "77248D481210A39B", type: "xp", xp: 300 }
+			]
+		}
+	]
+}

@@ -1,0 +1,216 @@
+{
+	id: "4F1A182F2DDD531F"
+	filename: "creatures"
+	title: "&aCreatures & Companions"
+	subtitle: [
+		"&7Friends, foes and fearsome mutants."
+	]
+	icon: "questsicons:icon_heart"
+	group: "1C49159F2FE9E643"
+	order_index: 12
+	default_quest_shape: "heart"
+	quests: [
+		{
+			id: "CEAEB6BD91389E2F"
+			title: "&aCreatures & Companions"
+			icon: "questsicons:icon_heart"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["9A338F1FA9ED4C5F"]
+			description: [
+				"&7&eNaturalist&7, &eFriends&Foes&7, &eEcologics&7 and more fill the world with animals - and monsters."
+			]
+			tasks: [
+				{ id: "EF31CF18350DE9B3", type: "checkmark" }
+			]
+			rewards: [
+				{ id: "EF38DB1835141CC5", type: "xp", xp: 30 }
+			]
+		}
+		{
+			id: "039D09B73B078D94"
+			title: "Butterflies"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["CEAEB6BD91389E2F"]
+			description: [
+				"&7Catch a butterfly in a bucket... or just watch it. Naturalist animals react to you, sleep at night and hunt each other."
+			]
+			tasks: [
+				{
+					id: "B9ED318374CEF401"
+					type: "observation"
+					title: "Watch a butterfly"
+					entity: true
+					observe: "naturalist:butterfly"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "BA01358374DFA3D7"
+					type: "item"
+					count: 2
+					item: "minecraft:honey_bottle"
+				}
+			]
+		}
+		{
+			id: "C00DDAACF02E1D63"
+			title: "Bear Country"
+			x: 4.0d
+			y: -2.0d
+			dependencies: ["039D09B73B078D94"]
+			optional: true
+			description: [
+				"&7Bears guard their berries. Find one in a forest - from a safe distance."
+			]
+			tasks: [
+				{
+					id: "B168E491386DD47D"
+					type: "observation"
+					title: "Spot a bear"
+					entity: true
+					observe: "naturalist:bear"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "B162589138687AEB"
+					type: "item"
+					count: 16
+					item: "minecraft:sweet_berries"
+				}
+			]
+		}
+		{
+			id: "66BABC465A66A849"
+			title: "Moobloom"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["CEAEB6BD91389E2F"]
+			optional: true
+			description: [
+				"&7A cow covered in flowers (Friends&Foes). Bees love it."
+			]
+			tasks: [
+				{
+					id: "82D9559A75EF9F7A"
+					type: "observation"
+					title: "Find a moobloom"
+					entity: true
+					observe: "friendsandfoes:moobloom"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "82E0419A75F59C2C"
+					type: "item"
+					count: 4
+					item: "minecraft:sunflower"
+				}
+			]
+		}
+		{
+			id: "283067CBFC01C9EF"
+			title: "Penguins"
+			x: 4.0d
+			y: 2.0d
+			dependencies: ["66BABC465A66A849", "CEAEB6BD91389E2F"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7Penguins waddle on cold beaches (Ecologics). Squirrels and coconut crabs live in warmer places."
+			]
+			tasks: [
+				{
+					id: "464BC321652503FE"
+					type: "observation"
+					title: "Find a penguin"
+					entity: true
+					observe: "ecologics:penguin"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "4637BF2165145428"
+					type: "item"
+					count: 8
+					item: "minecraft:cod"
+				}
+			]
+		}
+		{
+			id: "01191CEDCFCE1F8E"
+			title: "A Loyal Friend"
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["CEAEB6BD91389E2F"]
+			description: [
+				"&7Tame a wolf or cat. With &eRespawnable Pets&7 your pet comes back to life if it dies."
+			]
+			tasks: [
+				{
+					id: "F2500B1BBF367AB5"
+					type: "item"
+					count: 8
+					item: "minecraft:bone"
+				}
+			]
+			rewards: [
+				{ id: "F248FF1BBF3047A3", type: "item", item: "minecraft:name_tag" }
+			]
+		}
+		{
+			id: "F80BABC0024848C2"
+			title: "Mutant Zombie"
+			x: 6.0d
+			y: 0.0d
+			shape: "heart"
+			dependencies: ["01191CEDCFCE1F8E"]
+			description: [
+				"&7&eMutant Monsters&7 are huge, fast and dangerous. Defeat a Mutant Zombie - their drops make legendary gear like the Hulk Hammer."
+			]
+			tasks: [
+				{
+					id: "8DBB656E23AB03EB"
+					type: "kill"
+					entity: "mutantmonsters:mutant_zombie"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "8DC1F16E23B05D7D", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "096824BEC464EF65"
+			title: "The Lich"
+			x: 8.0d
+			y: 0.0d
+			shape: "heart"
+			size: 1.4d
+			dependencies: ["F80BABC0024848C2"]
+			optional: true
+			description: [
+				"&7Deep in a crypt waits the &5Lich&7 (The Graveyard), the most dangerous undead of all."
+			]
+			tasks: [
+				{
+					id: "5719A31DE16317C1"
+					type: "kill"
+					entity: "graveyard:lich"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "572DA71DE173C797", type: "item", item: "questsicons:legendary_crate" }
+			]
+		}
+	]
+}

@@ -1,0 +1,2252 @@
+[
+ {
+  "title": "[EMF] Entity Model Features [Fabric & Forge]",
+  "slug": "entity-model-features",
+  "projectID": 844662,
+  "fileID": 9188547,
+  "file": "entity_model_features-3.3.12-26.3-fabric.jar",
+  "modid": "entity_model_features",
+  "env": "client"
+ },
+ {
+  "title": "[ETF] Entity Texture Features - [Fabric & Forge]",
+  "slug": "entity-texture-features-fabric",
+  "projectID": 568563,
+  "fileID": 9188429,
+  "file": "entity_texture_features-7.2.6-26.3-fabric.jar",
+  "modid": "entity_texture_features",
+  "env": "client"
+ },
+ {
+  "title": "Accelerated Decay",
+  "slug": "accelerated-decay",
+  "projectID": 699872,
+  "fileID": 8920440,
+  "file": "accelerated-decay-fabric-26.3.0.1.jar",
+  "modid": "accelerateddecay",
+  "env": "*"
+ },
+ {
+  "title": "Additional Additions for Fabric: Vanilla+ QoL, Sniffers, Music, Food",
+  "slug": "additional-additions",
+  "projectID": 508556,
+  "fileID": 9293168,
+  "file": "additionaladditions-fabric-10.0.15.jar",
+  "modid": "additionaladditions",
+  "env": "*"
+ },
+ {
+  "title": "Additional Enchanted Miner",
+  "slug": "additional-enchanted-miner",
+  "projectID": 282837,
+  "fileID": 9394682,
+  "file": "AdditionalEnchantedMiner-26.3-fabric-26.30.166.jar",
+  "modid": "quarryplus",
+  "env": "*"
+ },
+ {
+  "title": "Additional Lanterns",
+  "slug": "additional-lanterns",
+  "projectID": 501590,
+  "fileID": 8888125,
+  "file": "additionallanterns-1.1.2-fabric-mc26.3.jar",
+  "modid": "additionallanterns",
+  "env": "*"
+ },
+ {
+  "title": "Advanced Netherite (Fabric)",
+  "slug": "advanced-netherite-fabric",
+  "projectID": 547881,
+  "fileID": 9049372,
+  "file": "advancednetherite-fabric-2.4.4-26.3.jar",
+  "modid": "advancednetherite",
+  "env": "*"
+ },
+ {
+  "title": "AmbientSounds 6",
+  "slug": "ambientsounds",
+  "projectID": 254284,
+  "fileID": 9254861,
+  "file": "AmbientSounds_FABRIC_v6.3.11_mc26.3.jar",
+  "modid": "ambientsounds",
+  "env": "client"
+ },
+ {
+  "title": "AppleSkin",
+  "slug": "appleskin",
+  "projectID": 248787,
+  "fileID": 8907912,
+  "file": "appleskin-fabric-mc26.3-3.0.10.jar",
+  "modid": "appleskin",
+  "env": "*"
+ },
+ {
+  "title": "Archers (RPG Series)",
+  "slug": "archers",
+  "projectID": 932359,
+  "fileID": 9062864,
+  "file": "archers-fabric-3.1.4+26.3.jar",
+  "modid": "archers",
+  "env": "*"
+ },
+ {
+  "title": "Architectury API",
+  "slug": "architectury-api",
+  "projectID": 419699,
+  "fileID": 9111314,
+  "file": "architectury-fabric-22.0.5.jar",
+  "modid": "architectury",
+  "env": "*"
+ },
+ {
+  "title": "Armor Model API",
+  "slug": "armor-model-api",
+  "projectID": 1659764,
+  "fileID": 9004390,
+  "file": "armor_model_api-fabric-1.1.2+26.3.jar",
+  "modid": "armor_model_api",
+  "env": "*"
+ },
+ {
+  "title": "Armor Statues",
+  "slug": "armor-statues",
+  "projectID": 682566,
+  "fileID": 8945589,
+  "file": "armorstatues-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "armorstatues",
+  "env": "*"
+ },
+ {
+  "title": "Armory (RPG Series)",
+  "slug": "armory-rpg-series",
+  "projectID": 1311561,
+  "fileID": 9013395,
+  "file": "armory-fabric-1.5.3+26.3.jar",
+  "modid": "armory_rpgs",
+  "env": "*"
+ },
+ {
+  "title": "Arsenal (RPG Series)",
+  "slug": "arsenal-rpg-series",
+  "projectID": 1230054,
+  "fileID": 9013386,
+  "file": "arsenal-fabric-1.5.1+26.3.jar",
+  "modid": "arsenal",
+  "env": "*"
+ },
+ {
+  "title": "Athena",
+  "slug": "athena",
+  "projectID": 841890,
+  "fileID": 9385206,
+  "file": "athena-4.7.4.jar",
+  "modid": "athena",
+  "env": "*"
+ },
+ {
+  "title": "ATi Structures",
+  "slug": "ati-structures",
+  "projectID": 964608,
+  "fileID": 8984314,
+  "file": "ATi Structure V1.4.7 (26.3).jar",
+  "modid": "mr_ati_structuresfabricforge",
+  "env": "*"
+ },
+ {
+  "title": "AttributeFix",
+  "slug": "attributefix",
+  "projectID": 280510,
+  "fileID": 8969089,
+  "file": "AttributeFix-fabric-MC26.3-26.3.0.1.jar",
+  "modid": "attributefix",
+  "env": "*"
+ },
+ {
+  "title": "BadOptimizations",
+  "slug": "badoptimizations",
+  "projectID": 949555,
+  "fileID": 8891658,
+  "file": "BadOptimizations-2.4.1-26.3-fabric.jar",
+  "modid": "badoptimizations",
+  "env": "client"
+ },
+ {
+  "title": "Balm",
+  "slug": "balm",
+  "projectID": 531761,
+  "fileID": 9035245,
+  "file": "balm-fabric-26.3-26.3.0.3.jar",
+  "modid": "balm",
+  "env": "*"
+ },
+ {
+  "title": "BCLib",
+  "slug": "bclib",
+  "projectID": 495191,
+  "fileID": 9400439,
+  "file": "bclib-26.302.1.jar",
+  "modid": "bclib",
+  "env": "*"
+ },
+ {
+  "title": "Beautify: Refabricated",
+  "slug": "beautify-refabricated",
+  "projectID": 809311,
+  "fileID": 9332487,
+  "file": "beautify-3.6.0-fabric+26.3.jar",
+  "modid": "beautify",
+  "env": "*"
+ },
+ {
+  "title": "Better Advancements",
+  "slug": "better-advancements",
+  "projectID": 272515,
+  "fileID": 9300836,
+  "file": "BetterAdvancements-Fabric-26.3-0.6.0.81.jar",
+  "modid": "betteradvancements",
+  "env": "client"
+ },
+ {
+  "title": "Better Archeology",
+  "slug": "better-archeology",
+  "projectID": 835687,
+  "fileID": 9099997,
+  "file": "betterarcheology-fabric-26.3-1.3.9.jar",
+  "modid": "betterarcheology",
+  "env": "*"
+ },
+ {
+  "title": "Better Combat [Fabric & Forge]",
+  "slug": "better-combat-by-daedelus",
+  "projectID": 639842,
+  "fileID": 8906536,
+  "file": "bettercombat-fabric-3.2.2+26.3.jar",
+  "modid": "bettercombat",
+  "env": "*"
+ },
+ {
+  "title": "Better Mount HUD",
+  "slug": "better-mount-hud",
+  "projectID": 475358,
+  "fileID": 8280974,
+  "file": "bettermounthud-1.3.1.jar",
+  "modid": "bettermounthud",
+  "env": "client"
+ },
+ {
+  "title": "BetterEnd",
+  "slug": "betterend",
+  "projectID": 413596,
+  "fileID": 9400452,
+  "file": "better-end-26.302.1.jar",
+  "modid": "betterend",
+  "env": "*"
+ },
+ {
+  "title": "BetterNether",
+  "slug": "betternether",
+  "projectID": 311377,
+  "fileID": 9400444,
+  "file": "better-nether-26.302.1.jar",
+  "modid": "betternether",
+  "env": "*"
+ },
+ {
+  "title": "BisectHosting Server Integration Menu [FABRIC]",
+  "slug": "bisecthosting-server-integration-menu-fabric",
+  "projectID": 585548,
+  "fileID": 9098385,
+  "file": "bhmenu-fabric-26.3-3.0.0.jar",
+  "modid": "bhmenu",
+  "env": "client"
+ },
+ {
+  "title": "Blur+",
+  "slug": "blur-fabric",
+  "projectID": 393563,
+  "fileID": 8921642,
+  "file": "blur-fabric-6.3.1+26.3.jar",
+  "modid": "blur",
+  "env": "client"
+ },
+ {
+  "title": "Bobby",
+  "slug": "bobby",
+  "projectID": 409301,
+  "fileID": 9077335,
+  "file": "bobby-5.2.16+mc26.3.jar",
+  "modid": "bobby",
+  "env": "client"
+ },
+ {
+  "title": "Bookshelf",
+  "slug": "bookshelf",
+  "projectID": 228525,
+  "fileID": 9011793,
+  "file": "Bookshelf-fabric-MC26.3-26.3.0.4.jar",
+  "modid": "bookshelf",
+  "env": "*"
+ },
+ {
+  "title": "BSL Shaders",
+  "slug": "bsl-shaders",
+  "projectID": 322506,
+  "fileID": 8939313,
+  "file": "BSL_v10.1.8.zip",
+  "modid": null,
+  "env": null
+ },
+ {
+  "title": "Carry On",
+  "slug": "carry-on",
+  "projectID": 274259,
+  "fileID": 8989615,
+  "file": "carryon-fabric-26.3-2.12.0.jar",
+  "modid": "carryon",
+  "env": "*"
+ },
+ {
+  "title": "Chalk (Fabric)",
+  "slug": "chalk-fabric",
+  "projectID": 535541,
+  "fileID": 9284650,
+  "file": "chalk-3.2.0+26.3.jar",
+  "modid": "chalk",
+  "env": "*"
+ },
+ {
+  "title": "Chat Heads",
+  "slug": "chat-heads",
+  "projectID": 407206,
+  "fileID": 9060723,
+  "file": "chat_heads-1.3.2-fabric-26.3.jar",
+  "modid": "chat_heads",
+  "env": "client"
+ },
+ {
+  "title": "Chunk Loaders",
+  "slug": "chunk-loaders",
+  "projectID": 402924,
+  "fileID": 8888019,
+  "file": "chunkloaders-1.2.9-fabric-mc26.3.jar",
+  "modid": "chunkloaders",
+  "env": "*"
+ },
+ {
+  "title": "Chunky (Fabric)",
+  "slug": "chunky-pregenerator",
+  "projectID": 433175,
+  "fileID": 8036332,
+  "file": "Chunky-Fabric-1.5.3.jar",
+  "modid": "chunky",
+  "env": "*"
+ },
+ {
+  "title": "Cloth Config API (Fabric/Forge/NeoForge)",
+  "slug": "cloth-config",
+  "projectID": 348521,
+  "fileID": 8884063,
+  "file": "cloth-config-26.3.158.jar",
+  "modid": "cloth-config",
+  "env": "*"
+ },
+ {
+  "title": "Clumps",
+  "slug": "clumps",
+  "projectID": 256717,
+  "fileID": 8897016,
+  "file": "Clumps-fabric-26.3-26.3.2.jar",
+  "modid": "clumps",
+  "env": "*"
+ },
+ {
+  "title": "Collective",
+  "slug": "collective",
+  "projectID": 342584,
+  "fileID": 9394030,
+  "file": "collective-26.3.0-8.73.jar",
+  "modid": "collective",
+  "env": "*"
+ },
+ {
+  "title": "Combat Roll [Fabric & Forge]",
+  "slug": "combat-roll",
+  "projectID": 678036,
+  "fileID": 8906551,
+  "file": "combat_roll-fabric-3.0.1+26.3.jar",
+  "modid": "combat_roll",
+  "env": "*"
+ },
+ {
+  "title": "Complementary Shaders - Reimagined",
+  "slug": "complementary-reimagined",
+  "projectID": 627557,
+  "fileID": 8884654,
+  "file": "ComplementaryReimagined_r5.9.3.zip",
+  "modid": null,
+  "env": null
+ },
+ {
+  "title": "Configurable",
+  "slug": "configurable",
+  "projectID": 1092048,
+  "fileID": 9191031,
+  "file": "configurable-3.5.3+26.3-fabric.jar",
+  "modid": "configurable",
+  "env": "*"
+ },
+ {
+  "title": "Construction Wand (Fabric)",
+  "slug": "construction-wand-fabric",
+  "projectID": 1035665,
+  "fileID": 8930870,
+  "file": "constructionwand-2.1.3+26.3.jar",
+  "modid": "constructionwand",
+  "env": "*"
+ },
+ {
+  "title": "Continuity",
+  "slug": "continuity",
+  "projectID": 531351,
+  "fileID": 8892594,
+  "file": "continuity-3.0.1+26.3.jar",
+  "modid": "continuity",
+  "env": "client"
+ },
+ {
+  "title": "Controlling",
+  "slug": "controlling",
+  "projectID": 250398,
+  "fileID": 9110875,
+  "file": "Controlling-fabric-26.3-26.3.4.jar",
+  "modid": "controlling",
+  "env": "client"
+ },
+ {
+  "title": "Cooking for Blockheads",
+  "slug": "cooking-for-blockheads",
+  "projectID": 231484,
+  "fileID": 9035244,
+  "file": "cookingforblockheads-fabric-26.3-26.3.0.2.jar",
+  "modid": "cookingforblockheads",
+  "env": "*"
+ },
+ {
+  "title": "Copper Hopper",
+  "slug": "copper-hopper",
+  "projectID": 575851,
+  "fileID": 8967332,
+  "file": "copperhopper-fabric-0.25.2+26.3.jar",
+  "modid": "copperhopper",
+  "env": "*"
+ },
+ {
+  "title": "CraftedCore",
+  "slug": "crafted-core",
+  "projectID": 923377,
+  "fileID": 9164615,
+  "file": "craftedcore-fabric-8.3.2.jar",
+  "modid": "craftedcore",
+  "env": "*"
+ },
+ {
+  "title": "Crafting Tweaks",
+  "slug": "crafting-tweaks",
+  "projectID": 233071,
+  "fileID": 8893527,
+  "file": "craftingtweaks-fabric-26.3-26.3.0.1.jar",
+  "modid": "craftingtweaks",
+  "env": "*"
+ },
+ {
+  "title": "CraftPresence",
+  "slug": "craftpresence",
+  "projectID": 297038,
+  "fileID": 8927420,
+  "file": "CraftPresence-2.7.1+26.3-fabric.jar",
+  "modid": "craftpresence",
+  "env": "client"
+ },
+ {
+  "title": "CreativeCore",
+  "slug": "creativecore",
+  "projectID": 257814,
+  "fileID": 9301845,
+  "file": "CreativeCore_FABRIC_v2.14.24_mc26.3.jar",
+  "modid": "creativecore",
+  "env": "*"
+ },
+ {
+  "title": "Cristel Lib",
+  "slug": "cristel-lib",
+  "projectID": 856996,
+  "fileID": 8921504,
+  "file": "cristellib-fabric-26.3-3.1.13.jar",
+  "modid": "cristellib",
+  "env": "*"
+ },
+ {
+  "title": "Cupboard",
+  "slug": "cupboard",
+  "projectID": 326652,
+  "fileID": 8890593,
+  "file": "cupboard-fabric-26.3-4.2.jar",
+  "modid": "cupboard",
+  "env": "*"
+ },
+ {
+  "title": "Dark Utilities",
+  "slug": "dark-utilities",
+  "projectID": 242195,
+  "fileID": 8996284,
+  "file": "DarkUtilities-fabric-MC26.3-26.3.0.1.jar",
+  "modid": "darkutils",
+  "env": "*"
+ },
+ {
+  "title": "Dawn Of Time",
+  "slug": "dawn-of-time",
+  "projectID": 312359,
+  "fileID": 9269584,
+  "file": "Dawn Of Time-fabric-26.3-1.11.0.jar",
+  "modid": "dawnoftimebuilder",
+  "env": "*"
+ },
+ {
+  "title": "Death Backup",
+  "slug": "death-backup",
+  "projectID": 411571,
+  "fileID": 9034498,
+  "file": "deathbackup-26.3.0-3.7.jar",
+  "modid": "deathbackup",
+  "env": "*"
+ },
+ {
+  "title": "Debugify",
+  "slug": "debugify",
+  "projectID": 596224,
+  "fileID": 8964260,
+  "file": "debugify-26.3.0.0.jar",
+  "modid": "debugify",
+  "env": "*"
+ },
+ {
+  "title": "Delight Lib",
+  "slug": "delight-lib",
+  "projectID": 1531135,
+  "fileID": 8897634,
+  "file": "delightlib-26.09.16-26.3-fabric.jar",
+  "modid": "delightlib",
+  "env": "*"
+ },
+ {
+  "title": "Diagonal Fences",
+  "slug": "diagonal-fences",
+  "projectID": 458048,
+  "fileID": 8953015,
+  "file": "diagonalfences-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "diagonalfences",
+  "env": "*"
+ },
+ {
+  "title": "Diagonal Walls",
+  "slug": "diagonal-walls",
+  "projectID": 969422,
+  "fileID": 8952992,
+  "file": "diagonalwalls-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "diagonalwalls",
+  "env": "*"
+ },
+ {
+  "title": "Diagonal Windows",
+  "slug": "diagonal-windows",
+  "projectID": 891328,
+  "fileID": 8953012,
+  "file": "diagonalwindows-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "diagonalwindows",
+  "env": "*"
+ },
+ {
+  "title": "Double Doors",
+  "slug": "double-doors",
+  "projectID": 348831,
+  "fileID": 9255529,
+  "file": "doubledoors-26.3.0-7.5.jar",
+  "modid": "doubledoors",
+  "env": "*"
+ },
+ {
+  "title": "Drippy Loading Screen",
+  "slug": "drippy-loading-screen",
+  "projectID": 511770,
+  "fileID": 8918061,
+  "file": "drippyloadingscreen_fabric_3.1.6_MC_26.3.jar",
+  "modid": "drippyloadingscreen",
+  "env": "*"
+ },
+ {
+  "title": "Dungeons and Taverns",
+  "slug": "dungeon-and-taverns",
+  "projectID": 853794,
+  "fileID": 9380298,
+  "file": "dungeons-and-taverns-6.1.0-Fabric.jar",
+  "modid": "mr_dungeons_andtaverns",
+  "env": "*"
+ },
+ {
+  "title": "Durability Tooltip",
+  "slug": "durability-tooltip",
+  "projectID": 511040,
+  "fileID": 9009548,
+  "file": "durabilitytooltip-1.2.0a-fabric-mc26.3.jar",
+  "modid": "durabilitytooltip",
+  "env": "*"
+ },
+ {
+  "title": "Dynamic FPS",
+  "slug": "dynamic-fps",
+  "projectID": 335493,
+  "fileID": 8888065,
+  "file": "dynamic-fps-3.11.10+minecraft-26.3.0-fabric.jar",
+  "modid": "dynamic_fps",
+  "env": "client"
+ },
+ {
+  "title": "Easy Anvils",
+  "slug": "easy-anvils",
+  "projectID": 682567,
+  "fileID": 9099338,
+  "file": "easyanvils-v26.3.1-mc26.3.x+fabric.jar",
+  "modid": "easyanvils",
+  "env": "*"
+ },
+ {
+  "title": "Easy Magic",
+  "slug": "easy-magic",
+  "projectID": 456239,
+  "fileID": 8958974,
+  "file": "easymagic-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "easymagic",
+  "env": "*"
+ },
+ {
+  "title": "Easy Shulker Boxes",
+  "slug": "easy-shulker-boxes",
+  "projectID": 594006,
+  "fileID": 9197931,
+  "file": "easyshulkerboxes-v26.3.3-mc26.3.x+fabric.jar",
+  "modid": "easyshulkerboxes",
+  "env": "*"
+ },
+ {
+  "title": "Ecologics",
+  "slug": "ecologics",
+  "projectID": 570463,
+  "fileID": 9314384,
+  "file": "Ecologics-NeoFab-26.3-2.7.2.jar",
+  "modid": "ecologics",
+  "env": "*"
+ },
+ {
+  "title": "Effortless Building",
+  "slug": "effortless-building",
+  "projectID": 302113,
+  "fileID": 9116950,
+  "file": "effortlessbuilding-fabric-26.3-4.3.jar",
+  "modid": "effortlessbuilding",
+  "env": "*"
+ },
+ {
+  "title": "Enchanting Infuser",
+  "slug": "enchanting-infuser",
+  "projectID": 551151,
+  "fileID": 8956358,
+  "file": "enchantinginfuser-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "enchantinginfuser",
+  "env": "*"
+ },
+ {
+  "title": "Enchantment Descriptions",
+  "slug": "enchantment-descriptions",
+  "projectID": 250419,
+  "fileID": 8993538,
+  "file": "EnchantmentDescriptions-fabric-MC26.3-26.3.0.2.jar",
+  "modid": "enchdesc",
+  "env": "client"
+ },
+ {
+  "title": "Entity Culling Fabric/Forge",
+  "slug": "entityculling",
+  "projectID": 448233,
+  "fileID": 9100315,
+  "file": "entityculling-fabric-1.11.3-mc26.3.jar",
+  "modid": "entityculling",
+  "env": "*"
+ },
+ {
+  "title": "EpheroLib",
+  "slug": "epherolib",
+  "projectID": 885449,
+  "fileID": 8913898,
+  "file": "epherolib-fabric-26.3-1.3.0.jar",
+  "modid": "epherolib",
+  "env": "*"
+ },
+ {
+  "title": "Explorations",
+  "slug": "explorations",
+  "projectID": 550247,
+  "fileID": 9302276,
+  "file": "explorations-fabric-26.3-1.6.5.jar",
+  "modid": "explorations",
+  "env": "*"
+ },
+ {
+  "title": "Explorer's Compass",
+  "slug": "explorers-compass",
+  "projectID": 491794,
+  "fileID": 8916807,
+  "file": "ExplorersCompass-26.3-2.5.2-fabric.jar",
+  "modid": "explorerscompass",
+  "env": "*"
+ },
+ {
+  "title": "Fabric API",
+  "slug": "fabric-api",
+  "projectID": 306612,
+  "fileID": 9295874,
+  "file": "fabric-api-0.165.0+26.3.jar",
+  "modid": "fabric-api",
+  "env": "*"
+ },
+ {
+  "title": "Fabric Capes",
+  "slug": "capes",
+  "projectID": 408481,
+  "fileID": 8892793,
+  "file": "capes-1.5.10+26.3.jar",
+  "modid": "capes",
+  "env": "client"
+ },
+ {
+  "title": "Fabric Language Kotlin",
+  "slug": "fabric-language-kotlin",
+  "projectID": 308769,
+  "fileID": 9106173,
+  "file": "fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+  "modid": "fabric-language-kotlin",
+  "env": "*"
+ },
+ {
+  "title": "Falling Leaves (Fabric)",
+  "slug": "falling-leaves-fabric",
+  "projectID": 417510,
+  "fileID": 8890526,
+  "file": "fallingleaves-2.0.8+26.3.jar",
+  "modid": "fallingleaves",
+  "env": "client"
+ },
+ {
+  "title": "FallingTree",
+  "slug": "falling-tree",
+  "projectID": 349559,
+  "fileID": 9264772,
+  "file": "FallingTree-26.3-25.jar",
+  "modid": "fallingtree",
+  "env": "*"
+ },
+ {
+  "title": "FancyMenu",
+  "slug": "fancymenu",
+  "projectID": 367706,
+  "fileID": 9002997,
+  "file": "fancymenu_fabric_3.9.14_MC_26.3.jar",
+  "modid": "fancymenu",
+  "env": "*"
+ },
+ {
+  "title": "Farmer's Delight Refabricated",
+  "slug": "farmers-delight-refabricated",
+  "projectID": 993166,
+  "fileID": 9312043,
+  "file": "FarmersDelight-26.3-3.6.30+refabricated.jar",
+  "modid": "farmersdelight",
+  "env": "*"
+ },
+ {
+  "title": "Farming for Blockheads",
+  "slug": "farming-for-blockheads",
+  "projectID": 261924,
+  "fileID": 8893542,
+  "file": "farmingforblockheads-fabric-26.3-26.3.0.1.jar",
+  "modid": "farmingforblockheads",
+  "env": "*"
+ },
+ {
+  "title": "Fast Item Frames",
+  "slug": "fast-item-frames",
+  "projectID": 1210171,
+  "fileID": 8942991,
+  "file": "fastitemframes-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "fastitemframes",
+  "env": "*"
+ },
+ {
+  "title": "FerriteCore (Fabric)",
+  "slug": "ferritecore-fabric",
+  "projectID": 459857,
+  "fileID": 7806040,
+  "file": "ferritecore-9.0.0-fabric.jar",
+  "modid": "ferritecore",
+  "env": "*"
+ },
+ {
+  "title": "fix GPU memory leak",
+  "slug": "fix-gpu-memory-leak",
+  "projectID": 882495,
+  "fileID": 8910991,
+  "file": "gpumemleakfix-fabric-26.3-1.9.jar",
+  "modid": "gpumemleakfix",
+  "env": "*"
+ },
+ {
+  "title": "Forge Config API Port",
+  "slug": "forge-config-api-port",
+  "projectID": 547434,
+  "fileID": 8938808,
+  "file": "ForgeConfigAPIPort-v26.3.1-mc26.3.x-Fabric.jar",
+  "modid": "forgeconfigapiport",
+  "env": "*"
+ },
+ {
+  "title": "Forgiving Void",
+  "slug": "forgiving-void",
+  "projectID": 271009,
+  "fileID": 8969811,
+  "file": "forgivingvoid-fabric-26.3-26.3.0.2.jar",
+  "modid": "forgivingvoid",
+  "env": "*"
+ },
+ {
+  "title": "Formations (Structure Library)",
+  "slug": "formations",
+  "projectID": 915115,
+  "fileID": 8888143,
+  "file": "formations-1.0.4-fabric-mc26.3.jar",
+  "modid": "formations",
+  "env": "*"
+ },
+ {
+  "title": "Friends&Foes (Fabric)",
+  "slug": "friends-and-foes",
+  "projectID": 551364,
+  "fileID": 9331872,
+  "file": "friendsandfoes-fabric-5.0.4+mc26.3.jar",
+  "modid": "friendsandfoes",
+  "env": "*"
+ },
+ {
+  "title": "Fusion (Connected Textures)",
+  "slug": "fusion-connected-textures",
+  "projectID": 854949,
+  "fileID": 9070339,
+  "file": "fusion-1.3.16-fabric-mc26.3.jar",
+  "modid": "fusion",
+  "env": "*"
+ },
+ {
+  "title": "Fzzy Config",
+  "slug": "fzzy-config",
+  "projectID": 1005914,
+  "fileID": 9049861,
+  "file": "fzzy_config-0.7.7+fix3+26.3.jar",
+  "modid": "fzzy_config",
+  "env": "*"
+ },
+ {
+  "title": "GeckoLib",
+  "slug": "geckolib",
+  "projectID": 388172,
+  "fileID": 8945630,
+  "file": "geckolib-fabric-26.3-5.5.7.jar",
+  "modid": "geckolib",
+  "env": "*"
+ },
+ {
+  "title": "Grind enchantments",
+  "slug": "grind-enchantments",
+  "projectID": 379680,
+  "fileID": 8889683,
+  "file": "grind-enchantments-4.2.2+26.3.jar",
+  "modid": "grindenchantments",
+  "env": "*"
+ },
+ {
+  "title": "Hang Glider",
+  "slug": "hang-glider",
+  "projectID": 852668,
+  "fileID": 8982630,
+  "file": "hangglider-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "hangglider",
+  "env": "*"
+ },
+ {
+  "title": "Healing Campfire",
+  "slug": "healing-campfire",
+  "projectID": 342623,
+  "fileID": 9374433,
+  "file": "healingcampfire-26.3.0-7.1.jar",
+  "modid": "healingcampfire",
+  "env": "*"
+ },
+ {
+  "title": "ImmediatelyFast",
+  "slug": "immediatelyfast",
+  "projectID": 686911,
+  "fileID": 8905047,
+  "file": "ImmediatelyFast-Fabric-1.17.1+26.3.jar",
+  "modid": "immediatelyfast",
+  "env": "client"
+ },
+ {
+  "title": "Inventory Profiles Next",
+  "slug": "inventory-profiles-next",
+  "projectID": 495267,
+  "fileID": 8990408,
+  "file": "InventoryProfilesNext-fabric-26.3-2.3.8.jar",
+  "modid": "inventoryprofilesnext",
+  "env": "client"
+ },
+ {
+  "title": "Iris Shaders",
+  "slug": "irisshaders",
+  "projectID": 455508,
+  "fileID": 9015108,
+  "file": "iris-fabric-1.11.7+mc26.3.jar",
+  "modid": "iris",
+  "env": "client"
+ },
+ {
+  "title": "Item Collectors",
+  "slug": "item-collectors",
+  "projectID": 395620,
+  "fileID": 8888012,
+  "file": "itemcollectors-1.1.12-fabric-mc26.3.jar",
+  "modid": "itemcollectors",
+  "env": "*"
+ },
+ {
+  "title": "Jade 🔍",
+  "slug": "jade",
+  "projectID": 324717,
+  "fileID": 9042194,
+  "file": "Jade-mc26.3-Fabric-26.3.5.jar",
+  "modid": "jade",
+  "env": "*"
+ },
+ {
+  "title": "JamLib",
+  "slug": "jamlib",
+  "projectID": 623764,
+  "fileID": 8914234,
+  "file": "jamlib-fabric-2.3.1+26.3.x.jar",
+  "modid": "jamlib",
+  "env": "*"
+ },
+ {
+  "title": "Jewelry (RPG Series)",
+  "slug": "jewelry",
+  "projectID": 910706,
+  "fileID": 9013380,
+  "file": "jewelry-fabric-2.5.1+26.3.jar",
+  "modid": "jewelry",
+  "env": "*"
+ },
+ {
+  "title": "Just Enough Items (JEI)",
+  "slug": "jei",
+  "projectID": 238222,
+  "fileID": 9207608,
+  "file": "jei-26.3-fabric-31.14.0.72.jar",
+  "modid": "jei",
+  "env": "*"
+ },
+ {
+  "title": "Just Enough Professions (JEP)",
+  "slug": "just-enough-professions-jep",
+  "projectID": 417645,
+  "fileID": 8906958,
+  "file": "JustEnoughProfessions-fabric-26.3-130.0.jar",
+  "modid": "justenoughprofessions",
+  "env": "*"
+ },
+ {
+  "title": "Just Enough Resources (JER)",
+  "slug": "just-enough-resources-jer",
+  "projectID": 240630,
+  "fileID": 9375678,
+  "file": "JustEnoughResources-Fabric-26.3-1.11.0.58.jar",
+  "modid": "jeresources",
+  "env": "*"
+ },
+ {
+  "title": "JustHammers",
+  "slug": "justhammers",
+  "projectID": 681606,
+  "fileID": 8991853,
+  "file": "just-hammers-fabric-26.3.0.1.jar",
+  "modid": "justhammers",
+  "env": "*"
+ },
+ {
+  "title": "Konkrete",
+  "slug": "konkrete",
+  "projectID": 410295,
+  "fileID": 8911219,
+  "file": "konkrete_fabric_1.11.1_MC_26.3.jar",
+  "modid": "konkrete",
+  "env": "*"
+ },
+ {
+  "title": "LambDynamicLights",
+  "slug": "lambdynamiclights",
+  "projectID": 393442,
+  "fileID": 8890400,
+  "file": "lambdynamiclights-4.13.0+26.3.jar",
+  "modid": "lambdynlights",
+  "env": "client"
+ },
+ {
+  "title": "Language Reload",
+  "slug": "language-reload",
+  "projectID": 527334,
+  "fileID": 9053230,
+  "file": "language-reload-1.7.8+26.3.jar",
+  "modid": "languagereload",
+  "env": "client"
+ },
+ {
+  "title": "Ledger",
+  "slug": "ledger",
+  "projectID": 491137,
+  "fileID": 9063084,
+  "file": "ledger-1.3.25.jar",
+  "modid": "ledger",
+  "env": "server"
+ },
+ {
+  "title": "libIPN",
+  "slug": "libipn",
+  "projectID": 679177,
+  "fileID": 8990254,
+  "file": "libIPN-fabric-26.3-6.9.0.jar",
+  "modid": "libipn",
+  "env": "client"
+ },
+ {
+  "title": "Lithium (Fabric/NeoForge)",
+  "slug": "lithium",
+  "projectID": 360438,
+  "fileID": 9357338,
+  "file": "lithium-fabric-0.26.3-mc26.3.jar",
+  "modid": "lithium",
+  "env": "*"
+ },
+ {
+  "title": "Lithostitched",
+  "slug": "lithostitched",
+  "projectID": 936015,
+  "fileID": 9154966,
+  "file": "lithostitched-2.0.6-fabric-26.3.jar",
+  "modid": "lithostitched",
+  "env": "*"
+ },
+ {
+  "title": "Lootr (Fabric)",
+  "slug": "lootr-fabric",
+  "projectID": 615106,
+  "fileID": 8987242,
+  "file": "lootr-fabric-26.3-1.25.42.124.jar",
+  "modid": "lootr",
+  "env": "*"
+ },
+ {
+  "title": "Lost Relics",
+  "slug": "lost-relics",
+  "projectID": 953036,
+  "fileID": 9255595,
+  "file": "lost-relics-fabric-26.3-r2.jar",
+  "modid": "lost_relics",
+  "env": "*"
+ },
+ {
+  "title": "Lovely Snails",
+  "slug": "lovely-snails",
+  "projectID": 499425,
+  "fileID": 9109563,
+  "file": "lovely_snails-1.4.0+26.3.jar",
+  "modid": "lovely_snails",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Bridges",
+  "slug": "macaws-bridges",
+  "projectID": 351725,
+  "fileID": 8959855,
+  "file": "mcw-bridges-3.1.2-mc26.3fabric.jar",
+  "modid": "mcwbridges",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Doors",
+  "slug": "macaws-doors",
+  "projectID": 378646,
+  "fileID": 9007648,
+  "file": "mcw-doors-1.1.5-mc26.3fabric.jar",
+  "modid": "mcwdoors",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Fences and Walls",
+  "slug": "macaws-fences-and-walls",
+  "projectID": 453925,
+  "fileID": 9007655,
+  "file": "mcw-fences-1.2.1-mc26.3fabric.jar",
+  "modid": "mcwfences",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Furniture",
+  "slug": "macaws-furniture",
+  "projectID": 359540,
+  "fileID": 9007571,
+  "file": "mcw-furniture-3.4.2-mc26.3fabric.jar",
+  "modid": "mcwfurnitures",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Lights and Lamps",
+  "slug": "macaws-lights-and-lamps",
+  "projectID": 502372,
+  "fileID": 9007651,
+  "file": "mcw-lights-1.1.5-mc26.3fabric.jar",
+  "modid": "mcwlights",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Paintings",
+  "slug": "macaws-paintings",
+  "projectID": 438116,
+  "fileID": 9007578,
+  "file": "mcw-paintings-1.1.0-mc26.3fabric.jar",
+  "modid": "mcwpaintings",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Paths and Pavings",
+  "slug": "macaws-paths-and-pavings",
+  "projectID": 629153,
+  "fileID": 9007561,
+  "file": "mcw-paths-1.1.1-mc26.3fabric.jar",
+  "modid": "mcwpaths",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Roofs",
+  "slug": "macaws-roofs",
+  "projectID": 352039,
+  "fileID": 9007603,
+  "file": "mcw-roofs-2.3.3-mc26.3fabric.jar",
+  "modid": "mcwroofs",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Stairs",
+  "slug": "macaws-stairs",
+  "projectID": 1119394,
+  "fileID": 9007662,
+  "file": "mcw-stairs-1.0.2-mc26.3fabric.jar",
+  "modid": "mcwstairs",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Trapdoors",
+  "slug": "macaws-trapdoors",
+  "projectID": 400933,
+  "fileID": 9007659,
+  "file": "mcw-trapdoors-1.1.5-mc26.3fabric.jar",
+  "modid": "mcwtrpdoors",
+  "env": "*"
+ },
+ {
+  "title": "Macaw's Windows",
+  "slug": "macaws-windows",
+  "projectID": 363569,
+  "fileID": 9007585,
+  "file": "mcw-windows-2.4.2-mc26.3fabric.jar",
+  "modid": "mcwwindows",
+  "env": "*"
+ },
+ {
+  "title": "Magic Vibe Decorations",
+  "slug": "magic-vibe-decorations",
+  "projectID": 900435,
+  "fileID": 9238933,
+  "file": "magic_vibe_decorations-4.0.0-fabric-26.3.jar",
+  "modid": "magic_vibe_decorations",
+  "env": "*"
+ },
+ {
+  "title": "Magnum Torch",
+  "slug": "magnum-torch",
+  "projectID": 593981,
+  "fileID": 8983502,
+  "file": "magnumtorch-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "magnumtorch",
+  "env": "*"
+ },
+ {
+  "title": "Melody",
+  "slug": "melody",
+  "projectID": 938643,
+  "fileID": 8912168,
+  "file": "melody_fabric_1.0.17_MC_26.3.jar",
+  "modid": "melody",
+  "env": "*"
+ },
+ {
+  "title": "Memory Settings",
+  "slug": "memory-settings",
+  "projectID": 526901,
+  "fileID": 8925000,
+  "file": "memorysettings-fabric-26.3-6.1.jar",
+  "modid": "memorysettings",
+  "env": "*"
+ },
+ {
+  "title": "MES - Moog's End Structures",
+  "slug": "moogs-end-structures",
+  "projectID": 892382,
+  "fileID": 8902211,
+  "file": "MoogsEndStructures-universal-1.21-2.1.1.jar",
+  "modid": "mes",
+  "env": "*"
+ },
+ {
+  "title": "MidnightLib",
+  "slug": "midnightlib",
+  "projectID": 488090,
+  "fileID": 9184500,
+  "file": "midnightlib-fabric-1.10.0+26.3.jar",
+  "modid": "midnightlib",
+  "env": "*"
+ },
+ {
+  "title": "MMV - Moog's Missing Villages",
+  "slug": "mmv-moogs-missing-villages",
+  "projectID": 1153951,
+  "fileID": 8939031,
+  "file": "MoogsMissingVillages-universal-1.21-2.2.0.jar",
+  "modid": "mmv",
+  "env": "*"
+ },
+ {
+  "title": "MNS - Moog's Nether Structures",
+  "slug": "mns-moogs-nether-structures",
+  "projectID": 967466,
+  "fileID": 8902210,
+  "file": "MoogsNetherStructures-universal-1.21-3.1.1.jar",
+  "modid": "mns",
+  "env": "*"
+ },
+ {
+  "title": "Mob Lassos",
+  "slug": "mob-lassos",
+  "projectID": 852670,
+  "fileID": 8963265,
+  "file": "moblassos-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "moblassos",
+  "env": "*"
+ },
+ {
+  "title": "Mod Menu",
+  "slug": "modmenu",
+  "projectID": 308702,
+  "fileID": 8958984,
+  "file": "modmenu-21.0.0.jar",
+  "modid": "modmenu",
+  "env": "client"
+ },
+ {
+  "title": "Moog's Structure Lib (moogs_structures)",
+  "slug": "moogs-structure-lib",
+  "projectID": 1337167,
+  "fileID": 9047029,
+  "file": "MoogsStructureLib-fabric-26.3-3.4.2.jar",
+  "modid": "moogs_structures",
+  "env": "*"
+ },
+ {
+  "title": "More Delight (Fabric)",
+  "slug": "more-delight-fabric",
+  "projectID": 964408,
+  "fileID": 8899187,
+  "file": "moredelight-26.09.16-26.3-fabric.jar",
+  "modid": "moredelight",
+  "env": "*"
+ },
+ {
+  "title": "More Villagers [Fabric]",
+  "slug": "more-villagers-fabric",
+  "projectID": 486080,
+  "fileID": 9182582,
+  "file": "morevillagers-fabric-8.2.1+26.3.jar",
+  "modid": "morevillagers",
+  "env": "*"
+ },
+ {
+  "title": "MoreCulling",
+  "slug": "moreculling",
+  "projectID": 630104,
+  "fileID": 9398872,
+  "file": "moreculling-fabric-26.3-1.9.1.jar",
+  "modid": "moreculling",
+  "env": "client"
+ },
+ {
+  "title": "Mouse Tweaks",
+  "slug": "mouse-tweaks",
+  "projectID": 60089,
+  "fileID": 8887995,
+  "file": "MouseTweaks-fabric-mc26.3-2.31.jar",
+  "modid": "mousetweaks",
+  "env": "client"
+ },
+ {
+  "title": "Moving Elevators",
+  "slug": "moving-elevators",
+  "projectID": 373051,
+  "fileID": 8887986,
+  "file": "movingelevators-1.4.12-fabric-mc26.3.jar",
+  "modid": "movingelevators",
+  "env": "*"
+ },
+ {
+  "title": "MSS - Moog's Soaring Structures",
+  "slug": "mss-moogs-soaring-structures",
+  "projectID": 1040210,
+  "fileID": 8931330,
+  "file": "MoogsSoaringStructures-universal-1.21-2.2.0.jar",
+  "modid": "mss",
+  "env": "*"
+ },
+ {
+  "title": "Mutant Monsters",
+  "slug": "mutant-monsters",
+  "projectID": 852665,
+  "fileID": 9084637,
+  "file": "mutantmonsters-v26.3.1-mc26.3.x+fabric.jar",
+  "modid": "mutantmonsters",
+  "env": "*"
+ },
+ {
+  "title": "MVS - Moog's Voyager Structures",
+  "slug": "moogs-voyager-structures",
+  "projectID": 656977,
+  "fileID": 8970306,
+  "file": "MoogsVoyagerStructures-universal-1.21-5.1.3.jar",
+  "modid": "mvs",
+  "env": "*"
+ },
+ {
+  "title": "Mythic Upgrades",
+  "slug": "mythic-upgrades",
+  "projectID": 663567,
+  "fileID": 8999865,
+  "file": "mythicupgrades-fabric-26.3-5.1.1.jar",
+  "modid": "mythicupgrades",
+  "env": "*"
+ },
+ {
+  "title": "Nanite Library",
+  "slug": "nanite-library",
+  "projectID": 1171906,
+  "fileID": 8989744,
+  "file": "nanite-library-fabric-26.3.0.6.jar",
+  "modid": "nanitelibrary",
+  "env": "*"
+ },
+ {
+  "title": "Naturalist",
+  "slug": "naturalist",
+  "projectID": 627986,
+  "fileID": 9280569,
+  "file": "naturalist-2.0.7-fabric-26.3.jar",
+  "modid": "naturalist",
+  "env": "*"
+ },
+ {
+  "title": "Nature's Compass",
+  "slug": "natures-compass",
+  "projectID": 252848,
+  "fileID": 8916820,
+  "file": "NaturesCompass-26.3-2.5.1-fabric.jar",
+  "modid": "naturescompass",
+  "env": "*"
+ },
+ {
+  "title": "Neruina - Ticking Entity Fixer",
+  "slug": "neruina",
+  "projectID": 851046,
+  "fileID": 9220608,
+  "file": "neruina-3.3.5+26.3-fabric.jar",
+  "modid": "neruina",
+  "env": "*"
+ },
+ {
+  "title": "No Chat Reports",
+  "slug": "no-chat-reports",
+  "projectID": 634062,
+  "fileID": 9017226,
+  "file": "NoChatReports-FABRIC-26.3-v2.21.0.jar",
+  "modid": "nochatreports",
+  "env": "*"
+ },
+ {
+  "title": "Not Enough Animations",
+  "slug": "not-enough-animations",
+  "projectID": 433760,
+  "fileID": 9396216,
+  "file": "notenoughanimations-fabric-1.12.7-mc26.3.jar",
+  "modid": "notenoughanimations",
+  "env": "*"
+ },
+ {
+  "title": "Not Enough Crashes (Fabric)",
+  "slug": "not-enough-crashes",
+  "projectID": 353890,
+  "fileID": 9173500,
+  "file": "notenoughcrashes-fabric-4.5.1+26.3.jar",
+  "modid": "notenoughcrashes",
+  "env": "*"
+ },
+ {
+  "title": "Not Enough Recipe Book [NERB]",
+  "slug": "notenoughrecipebook",
+  "projectID": 738663,
+  "fileID": 9372178,
+  "file": "nerb-fabric-0.5-26.3.jar",
+  "modid": "nerb",
+  "env": "*"
+ },
+ {
+  "title": "Overflowing Bars",
+  "slug": "overflowing-bars",
+  "projectID": 852662,
+  "fileID": 8981235,
+  "file": "overflowingbars-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "overflowingbars",
+  "env": "client"
+ },
+ {
+  "title": "Packet Fixer",
+  "slug": "packet-fixer",
+  "projectID": 689467,
+  "fileID": 8889627,
+  "file": "PacketFixer-fabric-3.3.6.jar",
+  "modid": "packetfixer",
+  "env": "*"
+ },
+ {
+  "title": "Paladins & Priests (RPG Series)",
+  "slug": "paladins-and-priests",
+  "projectID": 856548,
+  "fileID": 9111000,
+  "file": "paladins-fabric-3.1.4.1+26.3.jar",
+  "modid": "paladins",
+  "env": "*"
+ },
+ {
+  "title": "Particle Rain",
+  "slug": "particle-rain",
+  "projectID": 421897,
+  "fileID": 9113925,
+  "file": "particlerain-4.0.2+26.3-fabric.jar",
+  "modid": "particlerain",
+  "env": "client"
+ },
+ {
+  "title": "Pick Up Notifier",
+  "slug": "pick-up-notifier",
+  "projectID": 351441,
+  "fileID": 8955363,
+  "file": "pickupnotifier-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "pickupnotifier",
+  "env": "client"
+ },
+ {
+  "title": "Ping Wheel",
+  "slug": "ping-wheel",
+  "projectID": 734339,
+  "fileID": 8931641,
+  "file": "Ping-Wheel-1.12.2-fabric-26.3.jar",
+  "modid": "pingwheel",
+  "env": "*"
+ },
+ {
+  "title": "Player Animation Library",
+  "slug": "player-animation-library",
+  "projectID": 1283899,
+  "fileID": 9080979,
+  "file": "PlayerAnimationLibMerged-1.2.8+mc.26.3.jar",
+  "modid": "player_animation_library",
+  "env": "*"
+ },
+ {
+  "title": "Presence Footsteps",
+  "slug": "presence-footsteps",
+  "projectID": 334259,
+  "fileID": 8890634,
+  "file": "PresenceFootsteps-1.14.0+26.3.jar",
+  "modid": "presencefootsteps",
+  "env": "client"
+ },
+ {
+  "title": "Prickle",
+  "slug": "prickle",
+  "projectID": 1023259,
+  "fileID": 8960729,
+  "file": "PrickleMC-fabric-MC26.3-26.3.0.2.jar",
+  "modid": "prickle",
+  "env": "*"
+ },
+ {
+  "title": "Puzzles Lib",
+  "slug": "puzzles-lib",
+  "projectID": 495476,
+  "fileID": 9351613,
+  "file": "puzzleslib-v26.3.17-mc26.3.x+fabric.jar",
+  "modid": "puzzleslib",
+  "env": "*"
+ },
+ {
+  "title": "Quarry Reborn",
+  "slug": "quarry-reborn",
+  "projectID": 511254,
+  "fileID": 9071942,
+  "file": "quarry-reborn-26.3-1.2.2.jar",
+  "modid": "quarrymod",
+  "env": "*"
+ },
+ {
+  "title": "Ranged Weapon API",
+  "slug": "ranged-weapon-api",
+  "projectID": 962162,
+  "fileID": 9004410,
+  "file": "ranged_weapon_api-fabric-4.0.0+26.3.jar",
+  "modid": "ranged_weapon_api",
+  "env": "*"
+ },
+ {
+  "title": "Reborn Core",
+  "slug": "reborncore",
+  "projectID": 237903,
+  "fileID": 9298141,
+  "file": "RebornCore-6.2.1.jar",
+  "modid": "reborncore",
+  "env": "*"
+ },
+ {
+  "title": "Rechiseled",
+  "slug": "rechiseled",
+  "projectID": 558998,
+  "fileID": 9082520,
+  "file": "rechiseled-1.2.6a-fabric-mc26.3.jar",
+  "modid": "rechiseled",
+  "env": "*"
+ },
+ {
+  "title": "Reconnectible Chains",
+  "slug": "reconnectible-chains",
+  "projectID": 1451848,
+  "fileID": 9020479,
+  "file": "connectiblechains-2.4.4+26.3-fabric.jar",
+  "modid": "connectiblechains",
+  "env": "*"
+ },
+ {
+  "title": "Reese's Sodium Options",
+  "slug": "reeses-sodium-options",
+  "projectID": 511319,
+  "fileID": 8966771,
+  "file": "reeses-sodium-options-fabric-2.2.5+mc26.3.jar",
+  "modid": "reeses-sodium-options",
+  "env": "client"
+ },
+ {
+  "title": "Relics (RPG Series)",
+  "slug": "relics-rpg",
+  "projectID": 1204049,
+  "fileID": 9013377,
+  "file": "relics-fabric-1.4.1+26.3.jar",
+  "modid": "relics_rpgs",
+  "env": "*"
+ },
+ {
+  "title": "Repurposed Structures (Fabric)",
+  "slug": "repurposed-structures-fabric",
+  "projectID": 391366,
+  "fileID": 9131164,
+  "file": "repurposed_structures-7.8.4+26.3-fabric.jar",
+  "modid": "repurposed_structures",
+  "env": "*"
+ },
+ {
+  "title": "Resourceful Config",
+  "slug": "resourceful-config",
+  "projectID": 714059,
+  "fileID": 9086227,
+  "file": "ResourcefulConfig-6.0.2.jar",
+  "modid": "resourcefulconfig",
+  "env": "*"
+ },
+ {
+  "title": "Resourceful Lib",
+  "slug": "resourceful-lib",
+  "projectID": 570073,
+  "fileID": 8991147,
+  "file": "ResourcefulLib-6.0.1.jar",
+  "modid": "resourcefullib",
+  "env": "*"
+ },
+ {
+  "title": "Respawnable Pets",
+  "slug": "respawnable-pets",
+  "projectID": 319582,
+  "fileID": 8895205,
+  "file": "respawnable-pets-fabric-26.3-r1.jar",
+  "modid": "respawnable_pets",
+  "env": "*"
+ },
+ {
+  "title": "RightClickHarvest",
+  "slug": "rightclickharvest",
+  "projectID": 452834,
+  "fileID": 8914313,
+  "file": "rightclickharvest-fabric-4.6.2+26.3.x.jar",
+  "modid": "rightclickharvest",
+  "env": "*"
+ },
+ {
+  "title": "Rogues & Warriors (RPG Series)",
+  "slug": "rogues-and-warriors",
+  "projectID": 1048409,
+  "fileID": 9110999,
+  "file": "rogues-fabric-3.1.4.1+26.3.jar",
+  "modid": "rogues",
+  "env": "*"
+ },
+ {
+  "title": "Runes",
+  "slug": "rune-crafting",
+  "projectID": 775518,
+  "fileID": 9011353,
+  "file": "runes-fabric-1.3.2+26.3.jar",
+  "modid": "runes",
+  "env": "*"
+ },
+ {
+  "title": "Rustic Delight",
+  "slug": "rustic-delight",
+  "projectID": 1106612,
+  "fileID": 8906871,
+  "file": "rusticdelight-fabric-26.3-1.7.0.jar",
+  "modid": "rusticdelight",
+  "env": "*"
+ },
+ {
+  "title": "Scalable Cat's Force",
+  "slug": "scalable-cats-force",
+  "projectID": 320926,
+  "fileID": 8917525,
+  "file": "scalable-cats-force-fabric-6.0.0.jar",
+  "modid": "kotori_scala",
+  "env": "*"
+ },
+ {
+  "title": "ScalableLux",
+  "slug": "scalablelux",
+  "projectID": 1055925,
+  "fileID": 8895516,
+  "file": "ScalableLux-fabric-mc26.3-0.3.0-alpha.0.6-all.jar",
+  "modid": "scalablelux",
+  "env": "*"
+ },
+ {
+  "title": "Searchables",
+  "slug": "searchables",
+  "projectID": 858542,
+  "fileID": 9110866,
+  "file": "Searchables-fabric-26.3-1.0.3.jar",
+  "modid": "searchables",
+  "env": "client"
+ },
+ {
+  "title": "Server Performance - Smooth Chunk Save",
+  "slug": "smooth-chunk-save",
+  "projectID": 582327,
+  "fileID": 9255078,
+  "file": "smoothchunk-fabric-26.1-4.4.jar",
+  "modid": "smoothchunk",
+  "env": "*"
+ },
+ {
+  "title": "ShatterLib | OctoLib",
+  "slug": "shatterbyte-lib",
+  "projectID": 916747,
+  "fileID": 9011332,
+  "file": "shatterlib-fabric-0.7.0-beta.1+26.3.jar",
+  "modid": "shatterlib",
+  "env": "*"
+ },
+ {
+  "title": "Shogi",
+  "slug": "shogi",
+  "projectID": 1475746,
+  "fileID": 8978492,
+  "file": "shogi-fabric-26.3-26.3.0.3.jar",
+  "modid": "shogi",
+  "env": "*"
+ },
+ {
+  "title": "Shoulder Surfing Reloaded",
+  "slug": "shoulder-surfing-reloaded",
+  "projectID": 243190,
+  "fileID": 9389628,
+  "file": "ShoulderSurfing-Fabric-26.3-5.3.0.jar",
+  "modid": "shouldersurfing",
+  "env": "client"
+ },
+ {
+  "title": "Shulker Box Tooltip [Fabric/Forge/NeoForge]",
+  "slug": "shulkerboxtooltip",
+  "projectID": 315811,
+  "fileID": 9326210,
+  "file": "shulkerboxtooltip-fabric-5.4.3+26.3.jar",
+  "modid": "shulkerboxtooltip",
+  "env": "*"
+ },
+ {
+  "title": "Simple Magnets",
+  "slug": "simple-magnets",
+  "projectID": 394140,
+  "fileID": 8888008,
+  "file": "simplemagnets-1.1.12-fabric-mc26.3.jar",
+  "modid": "simplemagnets",
+  "env": "*"
+ },
+ {
+  "title": "Simple Voice Chat",
+  "slug": "simple-voice-chat",
+  "projectID": 416089,
+  "fileID": 9350669,
+  "file": "voicechat-fabric-2.6.27+26.3.jar",
+  "modid": "voicechat",
+  "env": "*"
+ },
+ {
+  "title": "Skin Layers 3D",
+  "slug": "skin-layers-3d",
+  "projectID": 521480,
+  "fileID": 9243683,
+  "file": "skinlayers3d-fabric-1.11.4-mc26.3.jar",
+  "modid": "skinlayers3d",
+  "env": "*"
+ },
+ {
+  "title": "Smooth Swapping",
+  "slug": "smooth-swapping",
+  "projectID": 513689,
+  "fileID": 8896134,
+  "file": "smoothswapping-0.9.11-26.3-fabric.jar",
+  "modid": "smoothswapping",
+  "env": "client"
+ },
+ {
+  "title": "Sodium",
+  "slug": "sodium",
+  "projectID": 394468,
+  "fileID": 8888037,
+  "file": "sodium-fabric-0.9.2+mc26.3.jar",
+  "modid": "sodium",
+  "env": "client"
+ },
+ {
+  "title": "Sodium Extra",
+  "slug": "sodium-extra",
+  "projectID": 447673,
+  "fileID": 9324192,
+  "file": "sodium-extra-fabric-0.9.5+mc26.3.jar",
+  "modid": "sodium-extra",
+  "env": "client"
+ },
+ {
+  "title": "Sound Physics Remastered",
+  "slug": "sound-physics-remastered",
+  "projectID": 535489,
+  "fileID": 9280065,
+  "file": "sound-physics-remastered-fabric-1.5.2+26.3.jar",
+  "modid": "sound_physics_remastered",
+  "env": "*"
+ },
+ {
+  "title": "spark",
+  "slug": "spark",
+  "projectID": 361579,
+  "fileID": 8918571,
+  "file": "spark-1.10.187-fabric.jar",
+  "modid": "spark",
+  "env": "*"
+ },
+ {
+  "title": "Spell Engine",
+  "slug": "spell-engine",
+  "projectID": 807653,
+  "fileID": 9012032,
+  "file": "spell_engine-fabric-1.10.9+26.3.jar",
+  "modid": "spell_engine",
+  "env": "*"
+ },
+ {
+  "title": "Spell Power Attributes",
+  "slug": "spell-power",
+  "projectID": 771265,
+  "fileID": 9004379,
+  "file": "spell_power-fabric-1.6.2+26.3.jar",
+  "modid": "spell_power",
+  "env": "*"
+ },
+ {
+  "title": "Starter Kit",
+  "slug": "starter-kit",
+  "projectID": 390717,
+  "fileID": 9259646,
+  "file": "starterkit-26.3.0-9.0.jar",
+  "modid": "starterkit",
+  "env": "*"
+ },
+ {
+  "title": "Stoneworks",
+  "slug": "stoneworks",
+  "projectID": 852663,
+  "fileID": 8985433,
+  "file": "stoneworks-v26.3.1-mc26.3.x+fabric.jar",
+  "modid": "stoneworks",
+  "env": "*"
+ },
+ {
+  "title": "Storage Delight (Fabric)",
+  "slug": "storage-delight-fabric",
+  "projectID": 978786,
+  "fileID": 9072545,
+  "file": "storagedelight-26.10.05-26.3-fabric.jar",
+  "modid": "storagedelight",
+  "env": "*"
+ },
+ {
+  "title": "Storage Drawers",
+  "slug": "storage-drawers",
+  "projectID": 223852,
+  "fileID": 9007424,
+  "file": "StorageDrawers-fabric-26.3.0.1.jar",
+  "modid": "storagedrawers",
+  "env": "*"
+ },
+ {
+  "title": "StrawberryLib",
+  "slug": "strawberrylib",
+  "projectID": 1218484,
+  "fileID": 8895101,
+  "file": "strawberrylib-fabric-26.3-r1.jar",
+  "modid": "strawberrylib",
+  "env": "*"
+ },
+ {
+  "title": "Structory",
+  "slug": "structory",
+  "projectID": 636540,
+  "fileID": 8968053,
+  "file": "Structory_26.3_v1.3.18+26.3.jar",
+  "modid": "structory",
+  "env": "*"
+ },
+ {
+  "title": "Structory: Towers",
+  "slug": "structory-towers",
+  "projectID": 783522,
+  "fileID": 8968055,
+  "file": "Structory_Towers_26.3_v1.0.19+26.3.jar",
+  "modid": "structory_towers",
+  "env": "*"
+ },
+ {
+  "title": "Structure Essentials",
+  "slug": "structure-essentials-forge-fabric",
+  "projectID": 832882,
+  "fileID": 9278616,
+  "file": "structureessentials-fabric-26.3-5.1.jar",
+  "modid": "structureessentials",
+  "env": "*"
+ },
+ {
+  "title": "Structure Layout Optimizer",
+  "slug": "structure-layout-optimizer",
+  "projectID": 1087831,
+  "fileID": 8891986,
+  "file": "structure_layout_optimizer-1.1.4+26.3-fabric.jar",
+  "modid": "structure_layout_optimizer",
+  "env": "*"
+ },
+ {
+  "title": "Structure Pool API",
+  "slug": "structure-pool-api",
+  "projectID": 927915,
+  "fileID": 9004387,
+  "file": "structure_pool_api-fabric-1.3.0+26.3.jar",
+  "modid": "structure_pool_api",
+  "env": "*"
+ },
+ {
+  "title": "Structurify - Structure Control",
+  "slug": "structurify",
+  "projectID": 1087551,
+  "fileID": 9144471,
+  "file": "structurify-fabric-2.0.43+mc26.3.jar",
+  "modid": "structurify",
+  "env": "*"
+ },
+ {
+  "title": "Subtle Effects",
+  "slug": "subtle-effects",
+  "projectID": 1023913,
+  "fileID": 9151765,
+  "file": "SubtleEffects-fabric-26.3-1.15.1-hotfix.1.jar",
+  "modid": "subtle_effects",
+  "env": "*"
+ },
+ {
+  "title": "SuperMartijn642's Config Lib",
+  "slug": "supermartijn642s-config-lib",
+  "projectID": 438332,
+  "fileID": 9009453,
+  "file": "supermartijn642configlib-1.1.8a-fabric-mc26.3.jar",
+  "modid": "supermartijn642configlib",
+  "env": "*"
+ },
+ {
+  "title": "SuperMartijn642's Core Lib",
+  "slug": "supermartijn642s-core-lib",
+  "projectID": 454372,
+  "fileID": 9389298,
+  "file": "supermartijn642corelib-1.1.26c-fabric-mc26.3.jar",
+  "modid": "supermartijn642corelib",
+  "env": "*"
+ },
+ {
+  "title": "Tech Reborn",
+  "slug": "techreborn",
+  "projectID": 233564,
+  "fileID": 9298142,
+  "file": "TechReborn-6.2.1.jar",
+  "modid": "techreborn",
+  "env": "*"
+ },
+ {
+  "title": "Tectonic",
+  "slug": "tectonic",
+  "projectID": 686836,
+  "fileID": 8995544,
+  "file": "tectonic-3.0.31-fabric-26.3.jar",
+  "modid": "tectonic",
+  "env": "*"
+ },
+ {
+  "title": "TerraBlender (Fabric)",
+  "slug": "terrablender-fabric",
+  "projectID": 565956,
+  "fileID": 9033895,
+  "file": "TerraBlender-fabric-26.3-26.3.0.0.9.jar",
+  "modid": "terrablender",
+  "env": "*"
+ },
+ {
+  "title": "Terralith",
+  "slug": "terralith",
+  "projectID": 513688,
+  "fileID": 8994208,
+  "file": "Terralith_26.3_v2.6.5+26.3.jar",
+  "modid": "terralith",
+  "env": "*"
+ },
+ {
+  "title": "Tesseract",
+  "slug": "tesseract",
+  "projectID": 379232,
+  "fileID": 9094677,
+  "file": "tesseract-1.0.39-fabric-mc26.3.jar",
+  "modid": "tesseract",
+  "env": "*"
+ },
+ {
+  "title": "The Graveyard (Fabric/Neoforge)",
+  "slug": "the-graveyard-fabric",
+  "projectID": 514468,
+  "fileID": 9346789,
+  "file": "graveyard-FABRIC-4.0.0+mc26.3.jar",
+  "modid": "graveyard",
+  "env": "*"
+ },
+ {
+  "title": "This Rocks!",
+  "slug": "this-rocks",
+  "projectID": 416283,
+  "fileID": 9399463,
+  "file": "rocks-fabric-1.10.0-26.3.jar",
+  "modid": "rocks",
+  "env": "*"
+ },
+ {
+  "title": "Tom's Simple Storage Mod (Fabric)",
+  "slug": "toms-storage-fabric",
+  "projectID": 396826,
+  "fileID": 9196713,
+  "file": "toms_storage_fabric-26.3-2.12.2.jar",
+  "modid": "toms_storage",
+  "env": "*"
+ },
+ {
+  "title": "Towns and Towers",
+  "slug": "towns-and-towers",
+  "projectID": 626761,
+  "fileID": 9341836,
+  "file": "t_and_t-fabric-neoforge-1.13.13.jar",
+  "modid": "t_and_t",
+  "env": "*"
+ },
+ {
+  "title": "Trade Cycling",
+  "slug": "trade-cycling",
+  "projectID": 570431,
+  "fileID": 9155650,
+  "file": "trade-cycling-fabric-1.0.23+26.3.jar",
+  "modid": "trade_cycling",
+  "env": "*"
+ },
+ {
+  "title": "Trading Post",
+  "slug": "trading-post",
+  "projectID": 539057,
+  "fileID": 8963775,
+  "file": "tradingpost-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "tradingpost",
+  "env": "*"
+ },
+ {
+  "title": "Trash Cans",
+  "slug": "trash-cans",
+  "projectID": 394535,
+  "fileID": 9389458,
+  "file": "trashcans-1.1.2a-fabric-mc26.3.jar",
+  "modid": "trashcans",
+  "env": "*"
+ },
+ {
+  "title": "Traveler's Backpack [Fabric]",
+  "slug": "travelers-backpack-fabric",
+  "projectID": 541171,
+  "fileID": 9345230,
+  "file": "travelersbackpack-fabric-26.3-11.4.2.jar",
+  "modid": "travelersbackpack",
+  "env": "*"
+ },
+ {
+  "title": "Trinkets Updated",
+  "slug": "trinkets-updated",
+  "projectID": 1509777,
+  "fileID": 8957515,
+  "file": "trinkets-4.2.0+26.3.jar",
+  "modid": "trinkets_updated",
+  "env": "*"
+ },
+ {
+  "title": "Ube's Delight",
+  "slug": "ubes-delight",
+  "projectID": 903894,
+  "fileID": 8991718,
+  "file": "ubesdelight-fabric-26.3-0.4.15.jar",
+  "modid": "ubesdelight",
+  "env": "*"
+ },
+ {
+  "title": "UniLib",
+  "slug": "unilib",
+  "projectID": 1056812,
+  "fileID": 8927392,
+  "file": "UniLib-1.2.1+26.3-fabric.jar",
+  "modid": "unilib",
+  "env": "client"
+ },
+ {
+  "title": "Variants&Ventures",
+  "slug": "variants-and-ventures",
+  "projectID": 981139,
+  "fileID": 9382889,
+  "file": "variantsandventures-fabric-1.0.29-mc26.3.jar",
+  "modid": "variantsandventures",
+  "env": "*"
+ },
+ {
+  "title": "Villager In A Bucket",
+  "slug": "villager-in-a-bucket",
+  "projectID": 956231,
+  "fileID": 8899876,
+  "file": "villagerinabucket-fabric-26.3-1.0.0.jar",
+  "modid": "villagerinabucket",
+  "env": "*"
+ },
+ {
+  "title": "VillagersTradingPlus",
+  "slug": "villagerstradingplus",
+  "projectID": 1635301,
+  "fileID": 9346754,
+  "file": "villagertradingplus-fabric-mc26.3-1.1.0.jar",
+  "modid": "villagertradingplus",
+  "env": "*"
+ },
+ {
+  "title": "Visual Workbench",
+  "slug": "visual-workbench",
+  "projectID": 500273,
+  "fileID": 8955388,
+  "file": "visualworkbench-v26.3.0-mc26.3.x+fabric.jar",
+  "modid": "visualworkbench",
+  "env": "*"
+ },
+ {
+  "title": "Visuality",
+  "slug": "visuality",
+  "projectID": 521126,
+  "fileID": 8930194,
+  "file": "visuality-0.7.15+26.3.jar",
+  "modid": "visuality",
+  "env": "client"
+ },
+ {
+  "title": "Waystones",
+  "slug": "waystones",
+  "projectID": 245755,
+  "fileID": 8893536,
+  "file": "waystones-fabric-26.3-26.3.0.1.jar",
+  "modid": "waystones",
+  "env": "*"
+ },
+ {
+  "title": "Wireless Chargers",
+  "slug": "wireless-chargers",
+  "projectID": 510656,
+  "fileID": 8888127,
+  "file": "wirelesschargers-1.0.10-fabric-mc26.3.jar",
+  "modid": "wirelesschargers",
+  "env": "*"
+ },
+ {
+  "title": "WITS (What Is This Structure?)",
+  "slug": "wits",
+  "projectID": 909375,
+  "fileID": 8891261,
+  "file": "wits-1.4.3+26.3-fabric.jar",
+  "modid": "wits",
+  "env": "*"
+ },
+ {
+  "title": "Wizards (RPG Series)",
+  "slug": "wizards",
+  "projectID": 734325,
+  "fileID": 9062861,
+  "file": "wizards-fabric-3.1.4+26.3.jar",
+  "modid": "wizards",
+  "env": "*"
+ },
+ {
+  "title": "Woodwalkers",
+  "slug": "woodwalkers",
+  "projectID": 868922,
+  "fileID": 9164641,
+  "file": "walkers-fabric-8.4.0.jar",
+  "modid": "walkers",
+  "env": "*"
+ },
+ {
+  "title": "WorldEdit",
+  "slug": "worldedit",
+  "projectID": 225608,
+  "fileID": 9187348,
+  "file": "worldedit-mod-7.4.6.jar",
+  "modid": "worldedit",
+  "env": "*"
+ },
+ {
+  "title": "WorldWeaver",
+  "slug": "worldweaver",
+  "projectID": 1037172,
+  "fileID": 9400437,
+  "file": "worldweaver-26.302.1.jar",
+  "modid": "wover",
+  "env": "*"
+ },
+ {
+  "title": "Xaero's Minimap",
+  "slug": "xaeros-minimap",
+  "projectID": 263420,
+  "fileID": 9323158,
+  "file": "xaerominimap-fabric-26.3-26.6.2.jar",
+  "modid": "xaerominimap",
+  "env": "*"
+ },
+ {
+  "title": "Xaero's World Map",
+  "slug": "xaeros-world-map",
+  "projectID": 317780,
+  "fileID": 9323219,
+  "file": "xaeroworldmap-fabric-26.3-1.47.2.jar",
+  "modid": "xaeroworldmap",
+  "env": "*"
+ },
+ {
+  "title": "XP Storage",
+  "slug": "xp-storage",
+  "projectID": 403434,
+  "fileID": 9399368,
+  "file": "xp_storage-1.6.2-26.3.jar",
+  "modid": "xp_storage",
+  "env": "*"
+ },
+ {
+  "title": "YetAnotherConfigLib",
+  "slug": "yacl",
+  "projectID": 667299,
+  "fileID": 8935498,
+  "file": "yet_another_config_lib_v3-3.9.7+26.3-fabric.jar",
+  "modid": "yet_another_config_lib_v3",
+  "env": "*"
+ },
+ {
+  "title": "Zoomify",
+  "slug": "zoomify",
+  "projectID": 574741,
+  "fileID": 8958174,
+  "file": "zoomify-2.16.3+26.3.jar",
+  "modid": "zoomify",
+  "env": "client"
+ }
+]
