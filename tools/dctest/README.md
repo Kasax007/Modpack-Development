@@ -54,7 +54,7 @@ A tiny Fabric mod that runs the whole pack in a client game test (`./gradlew run
 - `-Pscene=bccheck -Pout=DIR [-Pchecks=deck,hammock,compressor,sounds,boss,structures,trench,pets,dreamstar]`:
   `BcCheck` runs the Beach Craft / Dreamcraft checklist tests (raft deck carrying in turns, hammock, compressor crank,
   Leviathan fight in survival, trench mobs, natural structures, Tamagotchi pet homes, Dream Star, sounds).
-  Report `DIR/bccheck_report.json`. BcCheck has not been compiled yet.
+  Report `DIR/bccheck_report.json`.
 - `dcrun.sh NAME [-P...]`: one locked run (Xvfb :96); `DC_TIMEOUT=5400` for the long quest run.
 - Static part: `tools/qsource.py` (survival source of every quest item from all pack jars).
 - Upgrade test: `tools/prodtest/mk121.py` makes a V1.2.1 copy of the installed V1.3 instance (hard links).

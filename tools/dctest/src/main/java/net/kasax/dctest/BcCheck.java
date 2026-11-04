@@ -256,7 +256,7 @@ final class BcCheck {
         cmd(String.format(Locale.ROOT, "execute in %s run tp @a %d.5 %d %d.5 facing %d.5 %d.3 %d.5", dim, x - 2, y, z, x, y, z));
         waitDrawn(20);
         float hp = srv(s -> s.getPlayerList().getPlayers().get(0).getHealth());
-        long before = srv(s -> s.overworld().getDayTime());
+        long before = srv(s -> s.overworld().getOverworldClockTime());
         ctx.getInput().pressKey(o -> o.keyUse);
         ctx.waitTicks(30);
         boolean sleeping = srv(s -> s.getPlayerList().getPlayers().get(0).isSleeping());
@@ -266,7 +266,7 @@ final class BcCheck {
             long now = before;
             for (int i = 0; i < 30; i++) {
                 ctx.waitTicks(20);
-                now = srv(s -> s.overworld().getDayTime());
+                now = srv(s -> s.overworld().getOverworldClockTime());
                 if (now % 24000 < 12000 || now - before > 12000) break;
             }
             r.addProperty("day_time_before", before % 24000);
@@ -703,7 +703,7 @@ final class BcCheck {
             var holder = s.getRecipeManager().byKey(key);
             if (holder.isEmpty()) return "!not loaded";
             var ops = s.registryAccess().createSerializationContext(JsonOps.INSTANCE);
-            return net.minecraft.world.item.crafting.Recipe.CODEC.encodeStart(ops, holder.get().value()).result().map(Object::toString).orElse("?");
+            return net.minecraft.world.item.crafting.Recipe.DIRECT_CODEC.encodeStart(ops, holder.get().value()).result().map(Object::toString).orElse("?");
         });
         r.addProperty("recipe", recipe);
         boolean vanilla = srv(s -> s.getRecipeManager().byKey(ResourceKey.create(Registries.RECIPE, Identifier.parse("questsicons:dream_star_vanilla"))).isPresent());
