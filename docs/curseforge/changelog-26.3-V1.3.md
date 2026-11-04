@@ -22,7 +22,7 @@ My raft mod got its biggest update so far. The Endless Sea is no longer one empt
   lanterns, string lights, a ship cannon, treasure chests, a hammock and much more.
 - **The Seafarer's Almanac**, an in-game guide book for everything in Beach Craft.
 
-### New mod: Tamagotchi
+### New mod: Tamagotchi 1.2.0
 - Ten rare pets live in the world's structures: three dragons, the Frost Penguin, the Ember Pup, the Sculk Wisp, the
   Void Kitten, the Pebble Golem, the Hex Toad and the Mimic.
 - Tame one with a Tamagotchi Heart and look after it: feed it, play with it, keep it clean and let it sleep. A happy
@@ -74,7 +74,7 @@ My raft mod got its biggest update so far. The Endless Sea is no longer one empt
 - A few quests sat right on the line between two other quests; the maps are tidied up.
 
 ### Server
-- The server pack contains Beach Craft 3.0.0, Quest Icons 1.1.0, Tamagotchi and the new quest files.
+- The server pack contains Beach Craft 3.0.0, Quest Icons 1.1.0, Tamagotchi 1.2.0 and the new quest files.
 - To update an existing server, replace `mods/raft-*.jar` and `mods/QuestIcons-*.jar`, add `mods/tamagotchi-*.jar`
   and replace `config/questsicons/quests` - or use the new server pack.
 - **Existing worlds:** parts of the Endless Sea that you have already explored keep their old shape. Sail farther out
