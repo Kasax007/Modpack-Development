@@ -3,7 +3,7 @@
 	filename: "power"
 	title: "&54. Paths of Power"
 	subtitle: [
-		"&7Choose your class: wizard, paladin, archer or rogue."
+		"&7Wizard, paladin, archer or rogue?"
 	]
 	icon: "questsicons:icon_magic"
 	group: "5C66DB14A1ABD5AE"
@@ -36,7 +36,7 @@
 			id: "B19B75E1AAAF1E51"
 			title: "The Spell Binding Table"
 			x: 0.0d
-			y: 3.0d
+			y: 2.6d
 			shape: "square"
 			dependencies: ["8B0905B72719884C"]
 			description: [
@@ -57,6 +57,29 @@
 			]
 		}
 		{
+			id: "3516415A254F4A2F"
+			title: "A Book of Spells"
+			x: 1.5d
+			y: 4.2d
+			dependencies: ["B19B75E1AAAF1E51"]
+			optional: true
+			description: [
+				"&7Craft or find a &eSpell Book&7, bind a scroll to it and hold it in your offhand: its spells join the spells of your weapon. Every class has its own books and scrolls."
+			]
+			tasks: [
+				{ id: "EA4FE695F5A22124", type: "item", item: "#spell_engine:spell_books" }
+			]
+			rewards: [
+				{
+					id: "EA495A95F59CC792"
+					type: "item"
+					count: 16
+					item: "minecraft:lapis_lazuli"
+				}
+				{ id: "EA495B95F59CC945", type: "xp_levels", xp_levels: 5 }
+			]
+		}
+		{
 			id: "572E48FFC2DA92F7"
 			title: "&9Path of the Wizard"
 			icon: "wizards:staff_arcane"
@@ -71,7 +94,7 @@
 				{ id: "8170DC1954D3F77F", type: "item", item: "wizards:staff_arcane" }
 			]
 			rewards: [
-				{ id: "815CD81954C347A9", type: "item", item: "wizards:spell_scroll/arcane" }
+				{ id: "815CD81954C347A9", type: "item", item: "wizards:wand_arcane" }
 			]
 		}
 		{
@@ -103,7 +126,7 @@
 			id: "6B9FF2C3136544A4"
 			title: "Fire and Frost"
 			x: 5.0d
-			y: -2.0d
+			y: -2.4d
 			dependencies: ["572E48FFC2DA92F7"]
 			optional: true
 			description: [
@@ -140,7 +163,7 @@
 			id: "7619E5D6DB1F34E7"
 			title: "Crusader Plate"
 			x: 5.0d
-			y: -0.5d
+			y: -0.6d
 			dependencies: ["D5E700507682A69F"]
 			optional: true
 			description: [
@@ -181,7 +204,7 @@
 			id: "14C9402F7E860137"
 			title: "Ranger Gear"
 			x: 5.0d
-			y: 1.5d
+			y: 1.4d
 			dependencies: ["EBB6E5388905CA4F"]
 			optional: true
 			description: [
@@ -222,7 +245,7 @@
 			id: "6454F1176593351E"
 			title: "Assassin or Berserker"
 			x: 5.0d
-			y: 3.5d
+			y: 3.4d
 			dependencies: ["C820CFC7DDB7E912"]
 			optional: true
 			description: [
@@ -236,12 +259,121 @@
 			]
 		}
 		{
+			id: "3FF8685046D61F8E"
+			title: "Netherite Mastery"
+			x: 7.0d
+			y: -3.0d
+			shape: "diamond"
+			dependencies: ["6B9FF2C3136544A4", "7619E5D6DB1F34E7"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7The strongest magic weapons are made of netherite. You need a &eNetherite Upgrade Template&7: bastions in the Nether hide them, and a template, 7 diamonds and a netherrack make two."
+				"&7Then upgrade a staff: the quests around this one."
+			]
+			tasks: [
+				{ id: "3FC0A447C1340F0E", type: "item", item: "minecraft:netherite_upgrade_smithing_template" }
+			]
+			rewards: [
+				{
+					id: "3FAC2047C12285B8"
+					type: "item"
+					count: 4
+					item: "minecraft:diamond"
+				}
+			]
+		}
+		{
+			id: "E3E0042A7A1C5011"
+			title: "Netherite Arcane Staff"
+			x: 9.0d
+			y: -4.4d
+			dependencies: ["3FF8685046D61F8E"]
+			optional: true
+			description: [
+				"&7An &eArcane Staff&7 upgraded with netherite."
+				""
+				"&7Put the staff into a &esmithing table&7 with a &eNetherite Upgrade Template&7 and a netherite ingot. Netherite staves have more spell power than the plain ones."
+				""
+				"&d✦ Dream Star:&7 any netherite staff of a wizard or the Netherite Holy Staff of a priest is one of its ingredients."
+			]
+			tasks: [
+				{ id: "B3AA3FAB6FDC3E8F", type: "item", item: "wizards:staff_netherite_arcane" }
+			]
+			rewards: [
+				{ id: "B395BBAB6FCAB539", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "868D845EB14B671F"
+			title: "Netherite Fire Staff"
+			x: 9.0d
+			y: -3.28d
+			dependencies: ["3FF8685046D61F8E"]
+			optional: true
+			description: [
+				"&7A &eFire Staff&7 upgraded with netherite."
+				""
+				"&7Put the staff into a &esmithing table&7 with a &eNetherite Upgrade Template&7 and a netherite ingot. Netherite staves have more spell power than the plain ones."
+				""
+				"&d✦ Dream Star:&7 any netherite staff of a wizard or the Netherite Holy Staff of a priest is one of its ingredients."
+			]
+			tasks: [
+				{ id: "00FEAD51A55F8BD7", type: "item", item: "wizards:staff_netherite_fire" }
+			]
+			rewards: [
+				{ id: "00EAA951A54EDC01", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "6FFDC9AB0C3D96FF"
+			title: "Netherite Frost Staff"
+			x: 9.0d
+			y: -2.16d
+			dependencies: ["3FF8685046D61F8E"]
+			optional: true
+			description: [
+				"&7A &eFrost Staff&7 upgraded with netherite."
+				""
+				"&7Put the staff into a &esmithing table&7 with a &eNetherite Upgrade Template&7 and a netherite ingot. Netherite staves have more spell power than the plain ones."
+				""
+				"&d✦ Dream Star:&7 any netherite staff of a wizard or the Netherite Holy Staff of a priest is one of its ingredients."
+			]
+			tasks: [
+				{ id: "55F7247F20502FDE", type: "item", item: "wizards:staff_netherite_frost" }
+			]
+			rewards: [
+				{ id: "55E2A07F203EA688", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "B149A68EAF5F81D1"
+			title: "Netherite Holy Staff"
+			x: 9.0d
+			y: -1.04d
+			dependencies: ["3FF8685046D61F8E"]
+			optional: true
+			description: [
+				"&7A &eDiamond Holy Staff&7 (iron and diamonds) upgraded with netherite."
+				""
+				"&7Put the staff into a &esmithing table&7 with a &eNetherite Upgrade Template&7 and a netherite ingot. Netherite staves have more spell power than the plain ones."
+				""
+				"&d✦ Dream Star:&7 any netherite staff of a wizard or the Netherite Holy Staff of a priest is one of its ingredients."
+			]
+			tasks: [
+				{ id: "BC5224C65545CFD0", type: "item", item: "paladins:netherite_holy_staff" }
+			]
+			rewards: [
+				{ id: "BC6628C655567FA6", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
 			id: "EDB1BB1B2CE50049"
 			title: "Runes"
 			x: 7.0d
-			y: -1.5d
+			y: 0.6d
 			dependencies: ["572E48FFC2DA92F7", "D5E700507682A69F", "EBB6E5388905CA4F", "C820CFC7DDB7E912"]
 			dependency_requirement: "one_completed"
+			hide_dependency_lines: true
 			description: [
 				"&7Many spells cost &erunes&7. Craft them cheaply at the &eRune Crafting Altar&7 and keep them in a &eRune Pouch&7 (equipped in an accessory slot) so spells take them automatically."
 			]
@@ -262,9 +394,10 @@
 			id: "E7C6D22B40D298F8"
 			title: "Gems and Jewelry"
 			x: 7.0d
-			y: 1.5d
+			y: 2.6d
 			dependencies: ["572E48FFC2DA92F7", "D5E700507682A69F", "EBB6E5388905CA4F", "C820CFC7DDB7E912"]
 			dependency_requirement: "one_completed"
+			hide_dependency_lines: true
 			description: [
 				"&7Find gems like &cRuby&7, &9Sapphire&7 and &aJade&7 (Jewelry). Cut them at the &eJeweler's Kit&7, then add a &eSocket Mount&7 to armor at an anvil and insert the cut gem."
 				"&7Rings and necklaces go into your accessory slots for extra spell power, health or speed."
@@ -278,10 +411,28 @@
 			]
 		}
 		{
+			id: "3164989833AE2703"
+			title: "Relics"
+			x: 9.0d
+			y: 3.6d
+			dependencies: ["E7C6D22B40D298F8"]
+			optional: true
+			description: [
+				"&7&eRelics&7 (RPG Series) are trinkets you find in loot chests: lesser, medium, greater and superior relics. Some give a passive bonus, others an ability you use from the spell hotbar."
+				"&7Wear them in your accessory slots."
+			]
+			tasks: [
+				{ id: "8B14A6FCE612615E", type: "item", item: "#relics_rpgs:all" }
+			]
+			rewards: [
+				{ id: "8B0022FCE600D808", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
 			id: "AE4236D28806F0C1"
 			title: "Legendary Arsenal"
-			x: 9.0d
-			y: 0.0d
+			x: 11.0d
+			y: -1.0d
 			dependencies: ["EDB1BB1B2CE50049", "E7C6D22B40D298F8"]
 			optional: true
 			description: [
@@ -296,11 +447,28 @@
 			]
 		}
 		{
+			id: "E4EB0DAA8B3235CA"
+			title: "Epic Armor"
+			x: 7.0d
+			y: -4.4d
+			dependencies: ["3FF8685046D61F8E"]
+			optional: true
+			description: [
+				"&7&eArmory&7 (RPG Series) turns netherite class armor into epic sets at a smithing table: an &eEpic Armor Upgrade&7 template plus a &eLost&7 or &eForgotten Crystal&7 of your class. Templates and crystals are rare loot; diamonds copy a template."
+			]
+			tasks: [
+				{ id: "39EB85C1E27DD3D3", type: "item", item: "armory_rpgs:epic_armor_upgrade" }
+			]
+			rewards: [
+				{ id: "39F211C1E2832D65", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
 			id: "41D8D5D4AC2EFFE0"
 			title: "&5Awakened Power"
 			icon: "questsicons:quest_crown"
-			x: 11.0d
-			y: 0.0d
+			x: 13.6d
+			y: 0.6d
 			shape: "star"
 			size: 1.5d
 			dependencies: ["EDB1BB1B2CE50049", "E7C6D22B40D298F8"]

@@ -20,7 +20,7 @@
 			size: 1.3d
 			dependencies: ["8D5D63B9CBC9018C"]
 			description: [
-				"&7Terralith, Tectonic and Wilder Wild reshape the world. Hundreds of new structures wait out there."
+				"&7Terralith and Tectonic reshape the world. Hundreds of new structures wait out there."
 			]
 			tasks: [
 				{ id: "2434FF0E71DC15C1", type: "item", item: "minecraft:compass" }
@@ -64,6 +64,25 @@
 			]
 			rewards: [
 				{ id: "76CC67691F34DC7C", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "5BBEDB5CBAE19917"
+			title: "What Is This Place?"
+			x: 2.0d
+			y: 3.4d
+			dependencies: ["AD983859D41DDDC1"]
+			optional: true
+			description: [
+				"&7Standing in ruins and wondering what they are? Type &e/wits&7 (What Is This Structure?): it tells you the name of the structure around you and the mod it comes from."
+				""
+				"&7Tick the box when you tried it."
+			]
+			tasks: [
+				{ id: "45D4D95EA8974A8D", type: "checkmark", title: "I asked /wits" }
+			]
+			rewards: [
+				{ id: "45CDCD5EA891177B", type: "xp", xp: 40 }
 			]
 		}
 		{
@@ -137,6 +156,28 @@
 			]
 		}
 		{
+			id: "0662784D9EFEDF5C"
+			title: "Pillagers!"
+			x: 6.0d
+			y: 3.4d
+			dependencies: ["997B144F28EBABCA"]
+			optional: true
+			description: [
+				"&7&eTowns and Towers&7 gives every biome its own pillager outpost. Clear one and loot its tower. Their captains drop Ominous Bottles: drink one only if you want a raid."
+			]
+			tasks: [
+				{
+					id: "395D1E97B49FB582"
+					type: "structure"
+					title: "Find a pillager outpost"
+					structure: "#minecraft:pillager_outpost"
+				}
+			]
+			rewards: [
+				{ id: "3963AA97B4A50F14", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
 			id: "20D1AA10B17E733A"
 			title: "Bryce Canyon"
 			x: 4.0d
@@ -156,6 +197,28 @@
 			]
 			rewards: [
 				{ id: "5DC4B9F3DA22F497", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "6BF34755B18BFA42"
+			title: "Above the Clouds"
+			x: 4.0d
+			y: -3.4d
+			dependencies: ["20D1AA10B17E733A"]
+			optional: true
+			description: [
+				"&7&eTectonic&7 raises huge mountain ranges and carves deep valleys. Climb one of its peaks and enjoy the view."
+			]
+			tasks: [
+				{
+					id: "7EFEA0D66D4D098A"
+					type: "biome"
+					title: "Stand on a mountain"
+					biome: "#minecraft:is_mountain"
+				}
+			]
+			rewards: [
+				{ id: "7F058CD66D53063C", type: "item", item: "minecraft:spyglass" }
 			]
 		}
 		{
@@ -182,10 +245,96 @@
 			]
 		}
 		{
+			id: "E27915B70C595342"
+			title: "Castles and Keeps"
+			x: 8.0d
+			y: -2.0d
+			dependencies: ["552DE000CC5908DF"]
+			optional: true
+			description: [
+				"&7&eATi Structures&7, &eStructory&7 and &eMoog's&7 structures add castles, keeps, towers and ruined forts. Find a ruined castle."
+			]
+			tasks: [
+				{
+					id: "AC5874973151EB97"
+					type: "structure"
+					title: "Find a ruined castle"
+					structure: "ati_structures:ruined_castle"
+				}
+			]
+			rewards: [
+				{ id: "AC44709731413BC1", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "A9C603D47DBFA8A7"
+			title: "Islands in the Sky"
+			x: 8.0d
+			y: -3.4d
+			dependencies: ["E27915B70C595342"]
+			optional: true
+			description: [
+				"&7&eMoog's Soaring Structures&7 hangs islands, towers and castles high in the air, and &eExplorations&7 adds floating islands too. Bring a hang glider for the way down."
+			]
+			tasks: [
+				{
+					id: "666885FFE04B85D2"
+					type: "structure"
+					title: "Visit a sky castle tower"
+					structure: "mss:castle_tower"
+				}
+			]
+			rewards: [
+				{ id: "666F11FFE050DF64", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "A0EE2D2C87AA0662"
+			title: "Trial Chambers"
+			x: 8.0d
+			y: 3.4d
+			dependencies: ["0662784D9EFEDF5C", "7A2B7AA286DFF954"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7Deep below the surface lie the copper halls of the &eTrial Chambers&7. Beat the trial spawners for &eTrial Keys&7 and open the vaults."
+				"&7Rare pets of the &dTamagotchi&7 path hide here (the Mimic) and in woodland mansions."
+			]
+			tasks: [
+				{
+					id: "288DDC4A2C0FBC53"
+					type: "structure"
+					title: "Find the trial chambers"
+					structure: "minecraft:trial_chambers"
+				}
+				{ id: "288DDB4A2C0FBAA0", type: "item", item: "minecraft:trial_key" }
+			]
+			rewards: [
+				{ id: "2894684A2C1515E5", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "B92193CC97497C92"
+			title: "Lost Relics"
+			x: 11.0d
+			y: 2.0d
+			dependencies: ["DA723ADF9AFD498E"]
+			optional: true
+			description: [
+				"&7&eLost Relics&7 hides old artifacts with strange powers in &ejungle pyramids&7, like the &eSmoking Mirror&7, the &eCursed Amulet&7 or the &eTurquoise Eye&7. Read their tooltips before you use them..."
+			]
+			tasks: [
+				{ id: "ED863A57823B8926", type: "item", item: "#lost_relics:relics" }
+			]
+			rewards: [
+				{ id: "ED723657822AD950", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
 			id: "DA723ADF9AFD498E"
 			title: "&3World Traveller"
 			icon: "questsicons:quest_crown"
-			x: 8.0d
+			x: 11.0d
 			y: 0.0d
 			shape: "star"
 			size: 1.3d

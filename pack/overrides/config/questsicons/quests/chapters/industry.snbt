@@ -152,7 +152,7 @@
 			dependencies: ["8BE3C8D0132CA582", "D8310D5F907E2E80"]
 			description: [
 				"&7The &eGenerator&7 burns any fuel and makes energy. Put it next to a machine or connect it with &eInsulated Copper Cable&7."
-				"&7Store power in a &eBattery&7 or a &eLow Voltage SU&7."
+				"&7Store power in a &eBattery&7 or a &eBattery Box&7."
 			]
 			tasks: [
 				{ id: "D2EABFC98EA490F5", type: "item", item: "techreborn:solid_fuel_generator" }
@@ -211,7 +211,7 @@
 			y: 2.0d
 			dependencies: ["D769C915FFDF85B0"]
 			description: [
-				"&7A &eSolar Panel&7 makes energy during the day without fuel. Raft players can also use the makeshift solar panels of the sea (see &bThe Endless Sea&7)."
+				"&7A &eSolar Panel&7 makes energy during the day without fuel. Raft players can also use the makeshift solar panels and wind turbines of the sea (see &bThe Endless Sea&7)."
 			]
 			tasks: [
 				{
@@ -232,13 +232,30 @@
 			y: 2.0d
 			dependencies: ["6E28E09036B27A14"]
 			description: [
-				"&7A &eLow Voltage SU&7 stores lots of energy and feeds it to your machines."
+				"&7A &eBattery Box&7 stores lots of energy and feeds it to your machines."
 			]
 			tasks: [
 				{ id: "C88711D2BFDF49D8", type: "item", item: "techreborn:low_voltage_su" }
 			]
 			rewards: [
 				{ id: "C89B95D2BFF0D32E", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "BF3D0AFAE479C0AB"
+			title: "Bigger Batteries"
+			x: 10.0d
+			y: 4.0d
+			dependencies: ["6652546A53588B28"]
+			optional: true
+			description: [
+				"&7The &eMFE&7 holds far more energy than a Battery Box and moves it faster (medium voltage). Its big brothers are the &eMFSU&7 and, with a Lapotronic Orb, the &eAdjustable SU&7."
+			]
+			tasks: [
+				{ id: "4BFCC38818A37D1A", type: "item", item: "techreborn:medium_voltage_su" }
+			]
+			rewards: [
+				{ id: "4C032F8818A8A04C", type: "xp", xp: 150 }
 			]
 		}
 		{
@@ -263,6 +280,24 @@
 			]
 		}
 		{
+			id: "ADAA4E26D3400D72"
+			title: "Power Tools"
+			x: 6.0d
+			y: 3.5d
+			dependencies: ["D769C915FFDF85B0"]
+			optional: true
+			description: [
+				"&7The &eBasic Drill&7 and &eBasic Chainsaw&7 run on energy instead of durability. Charge them in a Battery Box (or wirelessly, see below) and dig through stone and trees in no time."
+			]
+			tasks: [
+				{ id: "B0806857470B03EA", type: "item", item: "techreborn:basic_drill" }
+				{ id: "B0806957470B059D", type: "item", item: "techreborn:basic_chainsaw" }
+			]
+			rewards: [
+				{ id: "B08754574711009C", type: "item", item: "techreborn:red_cell_battery" }
+			]
+		}
+		{
 			id: "4E67866B9F2EF9FF"
 			title: "Let the Machines Dig"
 			x: 12.0d
@@ -271,8 +306,8 @@
 			size: 1.4d
 			dependencies: ["6942DED3C807C6F8", "6652546A53588B28"]
 			description: [
-				"&7The &eQuarry&7 (Quarry Reborn) digs out a whole area for you. Place markers to mark the corners, put the quarry next to them and give it energy."
-				"&7Modules add pumps, item filters or even bedrock removal."
+				"&7&eQuarry Plus&7 (Additional Enchanted Miner) digs out a whole area for you. Place &eMarker Plus&7 blocks on the corners, put the quarry next to a marker and give it energy."
+				"&7Enchant it like a pickaxe (Efficiency, Fortune, Silk Touch) with the &eEnchantment Mover&7. Modules add a pump, a void filter or bedrock removal."
 			]
 			tasks: [
 				{ id: "A64A2227C3384AF1", type: "item", item: "quarryplus:quarry" }
@@ -285,6 +320,29 @@
 			]
 			rewards: [
 				{ id: "A65EA627C349D447", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "7B0DAC755038C5C2"
+			title: "Quarry Reborn"
+			x: 13.5d
+			y: 0.0d
+			dependencies: ["4E67866B9F2EF9FF"]
+			optional: true
+			description: [
+				"&7The other quarry of the pack: &eQuarry Reborn&7 digs a square hole below it, one layer after the other. Its screen takes &eQuarry Tubes&7, filler blocks for the hole and upgrades."
+				"&7Upgrades extend the range or add Fortune or Silk Touch."
+			]
+			tasks: [
+				{ id: "F232B9589E0DD894", type: "item", item: "quarrymod:quarry" }
+			]
+			rewards: [
+				{
+					id: "F22C2D589E087F02"
+					type: "item"
+					count: 16
+					item: "quarrymod:drill_tube"
+				}
 			]
 		}
 		{
@@ -307,6 +365,23 @@
 					count: 2
 					item: "minecraft:hopper"
 				}
+			]
+		}
+		{
+			id: "2BD9DF0A0EE67437"
+			title: "Take Out the Trash"
+			x: 12.0d
+			y: 4.5d
+			dependencies: ["DDBF7275DD4E8797"]
+			optional: true
+			description: [
+				"&7A &eTrash Can&7 deletes everything you put into it - items, liquids or energy. Connect it behind a quarry to get rid of cobblestone."
+			]
+			tasks: [
+				{ id: "6362F823053F992F", type: "item", item: "trashcans:item_trash_can" }
+			]
+			rewards: [
+				{ id: "634E7423052E0FD9", type: "xp", xp: 60 }
 			]
 		}
 		{
@@ -375,6 +450,28 @@
 			]
 		}
 		{
+			id: "CF1EDB2AA4C2A8B7"
+			title: "Tesseract"
+			x: 14.0d
+			y: 3.5d
+			dependencies: ["492C8289C503A659"]
+			optional: true
+			description: [
+				"&7Two &eTesseracts&7 on the same channel share items, fluids and energy over any distance, even across dimensions. Set the channel in its screen and make it private or public."
+			]
+			tasks: [
+				{
+					id: "EA0BBBFF148F3FB4"
+					type: "item"
+					count: 2
+					item: "tesseract:tesseract"
+				}
+			]
+			rewards: [
+				{ id: "EA04AFFF14890CA2", type: "xp", xp: 150 }
+			]
+		}
+		{
 			id: "A275507B819F6F4B"
 			title: "Wireless Charging"
 			x: 16.0d
@@ -390,6 +487,35 @@
 			]
 			rewards: [
 				{ id: "9F01F18EB03E0A4F", type: "xp", xp: 120 }
+			]
+		}
+		{
+			id: "FA18FC35BE798E28"
+			title: "Plates of Power"
+			x: 16.0d
+			y: 3.5d
+			dependencies: ["CF1EDB2AA4C2A8B7", "A275507B819F6F4B"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7&eDark Utilities&7 adds plates for every farm: &eVector Plates&7 push mobs and items in a direction, &eDamage Plates&7 hurt mobs standing on them and &eFilters&7 decide who may pass."
+				"&7Combine them with an Item Collector for a mob farm."
+			]
+			tasks: [
+				{
+					id: "CBA67D1D02F6946F"
+					type: "item"
+					count: 4
+					item: "darkutils:vector_plate"
+				}
+			]
+			rewards: [
+				{
+					id: "CB91F91D02E50B19"
+					type: "item"
+					count: 8
+					item: "darkutils:blank_plate"
+				}
 			]
 		}
 		{
@@ -410,6 +536,264 @@
 			rewards: [
 				{ id: "469D29FE56AD82F3", type: "item", item: "questsicons:epic_crate" }
 				{ id: "469D28FE56AD8140", type: "xp", xp: 400 }
+			]
+		}
+		{
+			id: "2D3661FF356D2366"
+			title: "Squeeze and Extract"
+			x: 6.0d
+			y: -4.0d
+			dependencies: ["D769C915FFDF85B0"]
+			description: [
+				"&7The &eCompressor&7 presses plates and dense materials, the &eExtractor&7 turns sap into rubber (three times as much as smelting). Most advanced parts start in one of them."
+			]
+			tasks: [
+				{ id: "3599A7884C337B63", type: "item", item: "techreborn:compressor" }
+				{ id: "3599A6884C3379B0", type: "item", item: "techreborn:extractor" }
+			]
+			rewards: [
+				{
+					id: "35A0B3884C39AE75"
+					type: "item"
+					count: 8
+					item: "techreborn:refined_iron_ingot"
+				}
+			]
+		}
+		{
+			id: "B8D2DC74CEED7C51"
+			title: "Advanced Circuits"
+			x: 8.0d
+			y: -4.0d
+			dependencies: ["2D3661FF356D2366"]
+			description: [
+				"&7An &eAdvanced Circuit&7 is an electronic circuit with glowstone, lapis and redstone around it. Almost every high-tier machine needs them."
+			]
+			tasks: [
+				{
+					id: "71401D2F016D07FF"
+					type: "item"
+					count: 4
+					item: "techreborn:advanced_circuit"
+				}
+			]
+			rewards: [
+				{
+					id: "712C192F015C5829"
+					type: "item"
+					count: 16
+					item: "minecraft:glowstone_dust"
+				}
+			]
+		}
+		{
+			id: "9CBC752D639FDCE2"
+			title: "Industrial Grinder"
+			x: 8.0d
+			y: -6.0d
+			shape: "hexagon"
+			dependencies: ["B8D2DC74CEED7C51"]
+			description: [
+				"&7Industrial machines are &emultiblocks&7: they need a frame of &eMachine Casings&7 around them. Open the machine and press the &ehologram&7 button - it shows where every casing goes."
+				"&7The &eIndustrial Grinder&7 needs water and gets even more out of each ore than the grinder, plus rare by-products."
+			]
+			tasks: [
+				{ id: "E31CEC4A77E12577", type: "item", item: "techreborn:industrial_grinder" }
+			]
+			rewards: [
+				{
+					id: "E308684A77CF9C21"
+					type: "item"
+					count: 8
+					item: "techreborn:basic_machine_casing"
+				}
+			]
+		}
+		{
+			id: "69959B0A0018CA6B"
+			title: "Industrial Blast Furnace"
+			x: 10.0d
+			y: -6.0d
+			shape: "hexagon"
+			dependencies: ["9CBC752D639FDCE2"]
+			description: [
+				"&7Hotter than any furnace: the &eIndustrial Blast Furnace&7 melts &esteel&7, titanium and iridium. It is a multiblock too - heating coils in its casing raise the heat."
+			]
+			tasks: [
+				{ id: "18359B8F0E3A2880", type: "item", item: "techreborn:industrial_blast_furnace" }
+			]
+			rewards: [
+				{
+					id: "184A1F8F0E4BB1D6"
+					type: "item"
+					count: 4
+					item: "techreborn:cupronickel_heating_coil"
+				}
+			]
+		}
+		{
+			id: "AA91BEE095774033"
+			title: "The Assembling Machine"
+			x: 10.0d
+			y: -4.0d
+			dependencies: ["B8D2DC74CEED7C51"]
+			description: [
+				"&7The &eAssembling Machine&7 joins two parts into one: industrial circuits, energy crystals, data chips and more."
+			]
+			tasks: [
+				{ id: "F397103B670F1F34", type: "item", item: "techreborn:assembly_machine" }
+			]
+			rewards: [
+				{ id: "F390043B6708EC22", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "51E7C8C36DCBF047"
+			title: "Chemical Reactor"
+			x: 12.0d
+			y: -4.0d
+			dependencies: ["AA91BEE095774033"]
+			description: [
+				"&7The &eChemical Reactor&7 mixes elements. Feed it 32 redstone and a diamond to grow a &eSynthetic Redstone Crystal&7."
+			]
+			tasks: [
+				{ id: "D21DE5A57AC49323", type: "item", item: "techreborn:chemical_reactor" }
+				{
+					id: "D21DE4A57AC49170"
+					type: "item"
+					count: 2
+					item: "techreborn:synthetic_redstone_crystal"
+				}
+			]
+			rewards: [
+				{
+					id: "D224F1A57ACAC635"
+					type: "item"
+					count: 4
+					item: "minecraft:redstone_block"
+				}
+			]
+		}
+		{
+			id: "A9592E7B3625E1FA"
+			title: "Energy Crystal"
+			x: 14.0d
+			y: -4.0d
+			dependencies: ["51E7C8C36DCBF047"]
+			description: [
+				"&7In the Assembling Machine, 2 synthetic redstone crystals and a silicon plate become an &eEnergy Crystal&7, a battery with a lot of room."
+			]
+			tasks: [
+				{ id: "E041AE2D314D30BB", type: "item", item: "techreborn:energy_crystal" }
+			]
+			rewards: [
+				{ id: "E048BA2D315363CD", type: "xp", xp: 250 }
+			]
+		}
+		{
+			id: "432BACAD1534CB6E"
+			title: "Iridium"
+			x: 12.0d
+			y: -6.0d
+			shape: "diamond"
+			dependencies: ["69959B0A0018CA6B"]
+			description: [
+				"&7&eIridium Ore&7 is rare and only found deep below Y=0. Smelt the raw iridium in the blast furnace, press the ingots into &eIridium Plates&7 and combine them with advanced alloy plates and diamond dust into an &eIridium Alloy Ingot&7."
+			]
+			tasks: [
+				{
+					id: "7FBA828F24E632B9"
+					type: "item"
+					count: 4
+					item: "techreborn:raw_iridium"
+				}
+			]
+			rewards: [
+				{ id: "7FCF068F24F7BC0F", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "74C0C8E5346EB05B"
+			title: "Implosion Compressor"
+			x: 14.0d
+			y: -6.0d
+			shape: "hexagon"
+			dependencies: ["432BACAD1534CB6E"]
+			description: [
+				"&7Only an explosion is strong enough: the &eImplosion Compressor&7 (a multiblock) squeezes an iridium alloy ingot with 8 TNT into an &eIridium Alloy Plate&7."
+			]
+			tasks: [
+				{ id: "DB49B96BD5722928", type: "item", item: "techreborn:implosion_compressor" }
+				{ id: "DB49BA6BD5722ADB", type: "item", item: "techreborn:iridium_alloy_plate" }
+			]
+			rewards: [
+				{
+					id: "DB5DBD6BD582D8FE"
+					type: "item"
+					count: 16
+					item: "minecraft:tnt"
+				}
+			]
+		}
+		{
+			id: "19F4AA8EDB4F5200"
+			title: "Industrial Circuits"
+			x: 16.0d
+			y: -4.0d
+			dependencies: ["A9592E7B3625E1FA"]
+			description: [
+				"&7An advanced circuit and a &eplatinum plate&7 make an &eIndustrial Circuit&7 in the Assembling Machine. Platinum comes from sheldonite ore in the End, or as a by-product when the Industrial Grinder grinds iridium ore."
+			]
+			tasks: [
+				{
+					id: "549B8D4D26276618"
+					type: "item"
+					count: 2
+					item: "techreborn:industrial_circuit"
+				}
+			]
+			rewards: [
+				{ id: "54B0114D2638EF6E", type: "xp", xp: 250 }
+			]
+		}
+		{
+			id: "57882505B3E47312"
+			title: "Lapotron Crystal"
+			x: 18.0d
+			y: -4.0d
+			shape: "diamond"
+			dependencies: ["19F4AA8EDB4F5200"]
+			description: [
+				"&7Six &eLazurite Plates&7, two industrial circuits and an energy crystal make a &eLapotron Crystal&7. Lazurite dust comes from lapis: spin it in the Industrial Centrifuge, or grind lapis ore in the Industrial Grinder."
+			]
+			tasks: [
+				{ id: "A37590E12739D9E9", type: "item", item: "techreborn:lapotron_crystal" }
+			]
+			rewards: [
+				{ id: "A38994E1274A89BF", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "ADB3B5FADA7B9278"
+			title: "&dLapotronic Energy Orb"
+			x: 19.5d
+			y: -5.5d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["57882505B3E47312", "74C0C8E5346EB05B"]
+			description: [
+				"&d&o\"A whole storm of energy, caught in a sphere.\""
+				""
+				"&7Surround an &eIridium Alloy Plate&7 with &e8 Lapotron Crystals&7. The &eLapotronic Energy Orb&7 stores an enormous amount of energy and is the heart of the best Tech Reborn gear."
+				""
+				"&d✦ Dream Star:&7 the orb is one of its ingredients. Keep one for the epilogue."
+			]
+			tasks: [
+				{ id: "BA3B7F9B4E378056", type: "item", item: "techreborn:lapotronic_orb" }
+			]
+			rewards: [
+				{ id: "BA26FB9B4E25F700", type: "item", item: "questsicons:legendary_crate" }
+				{ id: "BA26FC9B4E25F8B3", type: "xp", xp: 500 }
 			]
 		}
 	]

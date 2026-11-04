@@ -119,6 +119,26 @@
 			]
 		}
 		{
+			id: "40F166866F7A2CF9"
+			title: "Carry On"
+			x: 4.5d
+			y: -3.3d
+			dependencies: ["8B55AF41550E7976"]
+			optional: true
+			description: [
+				"&7Moving house? Sneak and right-click a chest, a furnace or a small animal with &eboth hands empty&7: you pick it up, with everything inside (&eCarry On&7)."
+				"&7Right-click a spot to set it down again."
+				""
+				"&7Tick the box once you carried something."
+			]
+			tasks: [
+				{ id: "2DD42BA408171EB9", type: "checkmark", title: "I carried something" }
+			]
+			rewards: [
+				{ id: "2DE8AFA40828A80F", type: "xp", xp: 30 }
+			]
+		}
+		{
 			id: "5B8A9655BDDE8E52"
 			title: "Hunger Pangs"
 			x: 6.5d
@@ -161,6 +181,29 @@
 					type: "item"
 					count: 3
 					item: "minecraft:lantern"
+				}
+			]
+		}
+		{
+			id: "4CA441B213E5C76F"
+			title: "A Warm Fire"
+			x: 4.5d
+			y: 3.3d
+			dependencies: ["4377A30B557AA41F"]
+			optional: true
+			description: [
+				"&7A lit campfire slowly &eheals&7 everyone who stands close to it (&eHealing Campfire&7). Put one in the middle of your camp and rest there after a fight."
+				"&7Campfires also cook food without fuel."
+			]
+			tasks: [
+				{ id: "B2897DB32709FC2B", type: "item", item: "minecraft:campfire" }
+			]
+			rewards: [
+				{
+					id: "B29009B3270F55BD"
+					type: "item"
+					count: 4
+					item: "minecraft:cooked_chicken"
 				}
 			]
 		}
@@ -275,6 +318,7 @@
 				"&d&o\"Gather your strength, Dreamer. Each chapter of this book is a part of the Dream that needs you.\""
 				""
 				"&7New chapters are now open on the left. The &dThe Dream&7 chapters tell the story, the &bSide Paths&7 are optional and explain the other mods."
+				"&7At the very end waits the &dDream Star&7, the trophy of Dreamcraft. Its recipe needs treasures from the whole pack, so every chapter brings you closer."
 			]
 			tasks: [ ]
 			rewards: [

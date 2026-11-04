@@ -56,6 +56,34 @@
 			]
 		}
 		{
+			id: "CA46FD58C561595B"
+			title: "Stoneworks"
+			x: 4.0d
+			y: -3.0d
+			dependencies: ["0974E18CC2E9F310"]
+			optional: true
+			description: [
+				"&7&eStoneworks&7 gives every stone bricks, tiles, pavers, shingles and plates. Put any stone into a &estonecutter&7 and browse."
+			]
+			tasks: [
+				{ id: "7C1EDBAF99A36EAD", type: "item", item: "minecraft:stonecutter" }
+				{
+					id: "7C1EDAAF99A36CFA"
+					type: "item"
+					count: 16
+					item: "stoneworks:andesite_tiles"
+				}
+			]
+			rewards: [
+				{
+					id: "7C184FAF999E151B"
+					type: "item"
+					count: 64
+					item: "minecraft:andesite"
+				}
+			]
+		}
+		{
 			id: "2F11A820AB49A8D8"
 			title: "Building Wand"
 			x: 2.0d
@@ -111,7 +139,7 @@
 				{ id: "E55196D1F0273427", type: "item", item: "chalk:white_chalk" }
 			]
 			rewards: [
-				{ id: "E53D12D1F015AAD1", type: "item", item: "chalk:yellow_chalk" }
+				{ id: "E53D12D1F015AAD1", type: "item", item: "chalk:white_glow_chalk" }
 			]
 		}
 		{
@@ -130,6 +158,57 @@
 			]
 			rewards: [
 				{ id: "C188F07A9C98B637", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "F4CDF02310F51120"
+			title: "Furnish It"
+			x: 6.0d
+			y: 2.5d
+			dependencies: ["42324CAF63E9FA31"]
+			description: [
+				"&7&eMacaw's Furniture&7 makes chairs, tables, desks, wardrobes, drawers and whole kitchens from every wood. Drawers and wardrobes are real storage."
+			]
+			tasks: [
+				{
+					id: "E23636A78B759EBE"
+					type: "item"
+					count: 2
+					item: "mcwfurnitures:oak_chair"
+				}
+				{ id: "E23637A78B75A071", type: "item", item: "mcwfurnitures:oak_table" }
+			]
+			rewards: [
+				{
+					id: "E22232A78B64EEE8"
+					type: "item"
+					count: 32
+					item: "minecraft:oak_planks"
+				}
+			]
+		}
+		{
+			id: "F9FD34E49AD44400"
+			title: "In the Details"
+			x: 8.0d
+			y: 2.5d
+			dependencies: ["F4CDF02310F51120"]
+			optional: true
+			description: [
+				"&7Doors, fences, stairs and trapdoors of the Macaw's mods, paths and pavings for your streets, and &eBeautify&7 blinds, trellises and picture frames. Diagonal fences, walls and glass panes (Diagonal Fences, Walls and Windows) connect by themselves."
+			]
+			tasks: [
+				{ id: "39086A3D4A1260B3", type: "item", item: "mcwdoors:oak_barn_door" }
+				{
+					id: "3908693D4A125F00"
+					type: "item"
+					count: 16
+					item: "mcwpaths:andesite_flagstone"
+				}
+				{ id: "39086C3D4A126419", type: "item", item: "beautify:oak_blinds" }
+			]
+			rewards: [
+				{ id: "390F763D4A1893C5", type: "item", item: "questsicons:common_crate" }
 			]
 		}
 		{
@@ -160,6 +239,28 @@
 			]
 		}
 		{
+			id: "F9D94DE5EC1A00C6"
+			title: "Magic Vibes"
+			x: 6.0d
+			y: -3.0d
+			dependencies: ["E11009A3A8411EDC"]
+			optional: true
+			description: [
+				"&7&eMagic Vibe Decorations&7 is pure atmosphere: crystal lamps, fairy lights, witchy bookshelves, crystal balls and plushies. Look through its creative tab or JEI."
+			]
+			tasks: [
+				{ id: "4A76174DC7AA30FF", type: "item", item: "magic_vibe_decorations:ametrine_crystal_lamp" }
+			]
+			rewards: [
+				{
+					id: "4A62134DC7998129"
+					type: "item"
+					count: 16
+					item: "minecraft:amethyst_shard"
+				}
+			]
+		}
+		{
 			id: "E11009A3A8411EDC"
 			title: "Dawn of Time"
 			x: 6.0d
@@ -177,10 +278,40 @@
 			]
 		}
 		{
+			id: "C737B64A7C58B1E4"
+			title: "Hang in There"
+			x: 8.0d
+			y: -2.0d
+			dependencies: ["E11009A3A8411EDC", "AF7BF712ECED33A3"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7Right-click a fence or wall with an &eiron chain&7, then another one: &eReconnectible Chains&7 hangs a chain between them, sagging like a real one."
+				"&7&eArmor Statues&7: sneak and right-click an armor stand with an empty hand to pose it."
+			]
+			tasks: [
+				{
+					id: "72490ABD26300552"
+					type: "item"
+					count: 8
+					item: "minecraft:iron_chain"
+				}
+				{ id: "72490BBD26300705", type: "item", item: "minecraft:armor_stand" }
+			]
+			rewards: [
+				{
+					id: "724F96BD26355EE4"
+					type: "item"
+					count: 4
+					item: "minecraft:lantern"
+				}
+			]
+		}
+		{
 			id: "376E8EA3D91AB18A"
 			title: "&6Master Builder"
 			icon: "questsicons:quest_crown"
-			x: 8.0d
+			x: 10.0d
 			y: 0.0d
 			shape: "star"
 			size: 1.3d

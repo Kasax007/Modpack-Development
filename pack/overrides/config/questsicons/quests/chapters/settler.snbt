@@ -22,7 +22,7 @@
 			description: [
 				"&d&o\"A dreamer without a home wanders forever. Settle down.\""
 				""
-				"&7This chapter is about your first base: farming, cooking, animals and travel."
+				"&7This chapter is about your first base: farming, cooking, animals, villagers and travel."
 			]
 			tasks: [ ]
 			rewards: [
@@ -50,6 +50,28 @@
 			rewards: [
 				{
 					id: "9059AA8B7D342E1E"
+					type: "item"
+					count: 16
+					item: "minecraft:bone_meal"
+				}
+			]
+		}
+		{
+			id: "FE72233EC340B363"
+			title: "Watering Can"
+			x: 0.0d
+			y: -2.4d
+			dependencies: ["888E3C1881693962"]
+			optional: true
+			description: [
+				"&7A &eWatering Can&7 (Additional Additions) makes crops grow faster. Fill it at any water, then hold right-click over your field and watch the water drops fall."
+			]
+			tasks: [
+				{ id: "960CA80515330FC9", type: "item", item: "additionaladditions:watering_can" }
+			]
+			rewards: [
+				{
+					id: "96212C051544991F"
 					type: "item"
 					count: 16
 					item: "minecraft:bone_meal"
@@ -164,8 +186,8 @@
 		{
 			id: "E39B04A8BAC71EE9"
 			title: "A Feast for Friends"
-			x: 8.0d
-			y: -1.0d
+			x: 6.4d
+			y: -0.5d
 			dependencies: ["B72E65180A66810D"]
 			optional: true
 			description: [
@@ -227,6 +249,28 @@
 			]
 		}
 		{
+			id: "368AB5B5FF8E8BAC"
+			title: "Chicken Nest"
+			x: 2.0d
+			y: 4.2d
+			dependencies: ["0A538C429591E4FA"]
+			optional: true
+			description: [
+				"&7Chickens near a &eChicken Nest&7 lay their eggs right into it. No more eggs lying around in the grass."
+			]
+			tasks: [
+				{ id: "8BCEDBF0E8262C1F", type: "item", item: "farmingforblockheads:chicken_nest" }
+			]
+			rewards: [
+				{
+					id: "8BBA57F0E814A2C9"
+					type: "item"
+					count: 16
+					item: "minecraft:wheat_seeds"
+				}
+			]
+		}
+		{
 			id: "7EB1DF7351645850"
 			title: "Catch Them All"
 			x: 6.0d
@@ -268,6 +312,31 @@
 					id: "A71808AB5102844B"
 					type: "item"
 					count: 12
+					item: "minecraft:emerald"
+				}
+			]
+		}
+		{
+			id: "715D36923AF71B42"
+			title: "New Jobs in Town"
+			x: 7.6d
+			y: 2.6d
+			dependencies: ["774B0CED866E81A4"]
+			optional: true
+			description: [
+				"&7&eMore Villagers&7 adds new professions. Place a new workstation near a villager without a job: the &eForestry Bench&7, &eMining Bench&7, &eGardening Table&7, &eHunting Post&7, &eOceanography Table&7 and &eBlueprint Table&7 make foresters, miners, florists, hunters, oceanographers and engineers."
+				"&7Bad offers? &eTrade Cycling&7 adds a button to the trading screen that rolls new offers, as long as nobody has traded with that villager yet."
+				""
+				"&7Tick the box when a villager took one of the new jobs."
+			]
+			tasks: [
+				{ id: "DAC5532E94ACD5F5", type: "checkmark", title: "A villager took a new job" }
+			]
+			rewards: [
+				{
+					id: "DABE472E94A6A2E3"
+					type: "item"
+					count: 8
 					item: "minecraft:emerald"
 				}
 			]

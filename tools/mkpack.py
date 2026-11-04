@@ -1,15 +1,44 @@
-"""mkpack.py VERSION QUESTICONS_FILE_ID [BEACHCRAFT_FILE_ID] : build the Dreamcraft client modpack and the server pack.
+"""mkpack.py VERSION QUESTICONS_FILE_ID [BEACHCRAFT_FILE_ID [TAMAGOTCHI_FILE_ID]] : build the Dreamcraft client modpack
+and the server pack.
 
 Client pack: manifest.json (all CurseForge mods), modlist.html, overrides/ (configs, menu, quests, own jars).
 Server pack: a ready folder with the server-capable mods, configs, the Fabric server launcher and start scripts.
+
+Own mods: Quest Icons and Beach Craft come from CurseForge when their file id is given ('-' = ship the jar from
+$SP/ownjars inside the client pack instead); the server pack always takes their jars from $SP/ownjars.
+Tamagotchi is a normal CurseForge mod of the pack: its file id is in pack/mods.json (TAMAGOTCHI_PROJECT); a fourth
+argument overrides it. The server pack gets exactly that CurseForge file (cached in $SP/jars, downloaded if missing);
+a tamagotchi jar in $SP/ownjars is only for the test client (tools/dc_prepare.py).
 """
-import json, os, sys, zipfile, shutil, glob, html, time
+import json, os, sys, zipfile, shutil, glob, html, time, urllib.request, urllib.parse
 SP = '/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad'
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MC, LOADER = '26.3', '0.20.1'
+TAMAGOTCHI_PROJECT = 1758309
 version = sys.argv[1]                      # e.g. "V1"
 qi_file = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2] != '-' else None
 raft_file = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3] != '-' else None   # Raft = CurseForge 'Beach Craft' (1010922)
+tama = next(m for m in json.load(open(f'{REPO}/pack/mods.json')) if m['projectID'] == TAMAGOTCHI_PROJECT)
+tama_file = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[4] != '-' else tama['fileID']
 db = json.load(open(f'{SP}/packdb.json'))
+
+
+def cf_jar(pid, fid):
+    """The jar of one CurseForge file, from the cache $SP/jars/<file id>-<name> or downloaded (name from cfwidget)."""
+    hit = glob.glob(f'{SP}/jars/{fid}-*.jar')
+    if hit:
+        return hit[0]
+    req = urllib.request.Request(f'https://api.cfwidget.com/{pid}', headers={'User-Agent': 'curl/8.5.0'})
+    files = json.loads(urllib.request.urlopen(req, timeout=60).read())['files']
+    f = next((f for f in files if f['id'] == fid), None)
+    if f is None:
+        sys.exit(f'CurseForge file {fid} of project {pid} is unknown to cfwidget (not approved yet?). '
+                 f'Put the jar at {SP}/jars/{fid}-<file name>.jar and run again.')
+    url = f"https://edge.forgecdn.net/files/{fid // 1000}/{fid % 1000}/{urllib.parse.quote(f['name'])}"
+    path = f"{SP}/jars/{fid}-{f['name']}"
+    data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'curl/8.5.0'}), timeout=300).read()
+    open(path, 'wb').write(data)
+    return path
 client_only = set(json.load(open(f'{SP}/client_only.json')))
 OUT = f'{SP}/out'
 os.makedirs(OUT, exist_ok=True)
@@ -26,6 +55,10 @@ if qi_file:
 if raft_file:
     files.append({'projectID': 1010922, 'fileID': raft_file, 'required': True, 'isLocked': False})
     rows.append(('Beach Craft (Raft)', 'beach-craft'))
+files.append({'projectID': TAMAGOTCHI_PROJECT, 'fileID': tama_file, 'required': True, 'isLocked': False})
+rows.append((tama['title'], tama['slug']))
+tama_jar = cf_jar(TAMAGOTCHI_PROJECT, tama_file)
+print('Tamagotchi: CurseForge file', tama_file, '->', os.path.basename(tama_jar))
 rows.sort(key=lambda r: r[0].lower())
 manifest = {'minecraft': {'version': MC, 'modLoaders': [{'id': f'fabric-{LOADER}', 'primary': True}]},
             'manifestType': 'minecraftModpack', 'manifestVersion': 1, 'name': f'Dreamcraft {MC}', 'version': version,
@@ -46,6 +79,7 @@ with zipfile.ZipFile(client_zip, 'w', zipfile.ZIP_DEFLATED) as z:
     for j in sorted(glob.glob(f'{SP}/ownjars/*.jar')):
         if 'QuestIcons' in j and qi_file: continue          # comes from CurseForge
         if os.path.basename(j).startswith('raft-') and raft_file: continue
+        if os.path.basename(j).startswith('tamagotchi-'): continue   # always from CurseForge (manifest)
         z.write(j, 'overrides/mods/' + os.path.basename(j))
 print('client pack', client_zip, os.path.getsize(client_zip) // 1024, 'KB,', len(files), 'CurseForge mods')
 
@@ -105,7 +139,9 @@ with zipfile.ZipFile(server_zip, 'w', zipfile.ZIP_DEFLATED) as z:
         if not i or i['env'] == 'client' or i['id'] in client_only: continue
         z.write(v['path'], f"{root}/mods/{v['file']}"); n += 1
     for j in sorted(glob.glob(f'{SP}/ownjars/*.jar')):
+        if os.path.basename(j).startswith('tamagotchi-'): continue   # the server gets the CurseForge file below
         z.write(j, f'{root}/mods/' + os.path.basename(j)); n += 1
+    z.write(tama_jar, f'{root}/mods/' + os.path.basename(tama_jar).split('-', 1)[1]); n += 1
     for sub in ('config',):
         src = f'{SP}/pack/overrides/{sub}'
         if os.path.isdir(src):

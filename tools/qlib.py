@@ -1,5 +1,5 @@
 """Tiny DSL that writes Quest Icons / FTB-style SNBT quest files."""
-import os, json
+import os, json, re
 
 def fnv(s):
     h = 0xcbf29ce484222325
@@ -18,6 +18,10 @@ ORDER = ["id", "type", "filename", "title", "subtitle", "icon", "group", "order_
 
 def q(s):
     return '"' + s.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n') + '"'
+
+def key(k):
+    """Bare key when the mod's reader allows it, else quoted (e.g. component ids like "minecraft:custom_data")."""
+    return k if re.fullmatch(r'[A-Za-z0-9_\-.+]+', k) else q(k)
 
 def keyorder(k):
     return (ORDER.index(k), '') if k in ORDER else (len(ORDER), k)
@@ -46,8 +50,8 @@ def w(v, d=0):
             return '{ }'
         keys = sorted(v, key=keyorder)
         if d > 0 and len(v) <= 3 and all(simple(v[k]) for k in v):
-            return '{ ' + ', '.join(f'{k}: {w(v[k], d + 1)}' for k in keys) + ' }'
-        return '{\n' + ''.join(f'{t * (d + 1)}{k}: {w(v[k], d + 1)}\n' for k in keys) + t * d + '}'
+            return '{ ' + ', '.join(f'{key(k)}: {w(v[k], d + 1)}' for k in keys) + ' }'
+        return '{\n' + ''.join(f'{t * (d + 1)}{key(k)}: {w(v[k], d + 1)}\n' for k in keys) + t * d + '}'
     raise TypeError(v)
 
 # ------------------------------------------------------------------ tasks
@@ -57,17 +61,21 @@ def item(i, n=1, consume=False):
     if consume: t['consume_items'] = True
     return t
 
-def check(title=None):
+def check(title=None, icon=None):
     t = {'type': 'checkmark'}
     if title: t['title'] = title
+    if icon: t['icon'] = icon
     return t
 
-def kill(e, n=1):
-    return {'type': 'kill', 'entity': e, 'value': n}
+def kill(e, n=1, icon=None):
+    t = {'type': 'kill', 'entity': e, 'value': n}
+    if icon: t['icon'] = icon
+    return t
 
-def adv(a, title=None):
+def adv(a, title=None, icon=None):
     t = {'type': 'advancement', 'advancement': a}
     if title: t['title'] = title
+    if icon: t['icon'] = icon
     return t
 
 def dim(dm, title=None):
@@ -90,10 +98,11 @@ def xp(levels, consume=False):
     if consume: t['consume'] = True
     return t
 
-def observe(b, timer=40, entity=False, title=None):
+def observe(b, timer=40, entity=False, title=None, icon=None):
     t = {'type': 'observation', 'observe': b, 'timer': timer}
     if entity: t['entity'] = True
     if title: t['title'] = title
+    if icon: t['icon'] = icon
     return t
 
 def stat(s, n, title=None):
@@ -173,7 +182,7 @@ class Chapter:
         return hid('q/' + self.key + ':' + key)
 
     def quest(self, key, title, x, y, desc, tasks, rewards=(), icon=None, deps=(), shape=None, size=None, subtitle=None,
-              optional=False, any_dep=False, hide=False):
+              optional=False, any_dep=False, hide=False, hide_lines=False):
         qd = {'id': self.qid(key), 'title': title, 'x': float(x), 'y': float(y), 'description': list(desc)}
         if icon: qd['icon'] = icon
         if shape: qd['shape'] = shape
@@ -183,6 +192,7 @@ class Chapter:
         if any_dep: qd['dependency_requirement'] = 'one_completed'
         if optional: qd['optional'] = True
         if hide: qd['hide_until_deps_complete'] = True
+        if hide_lines: qd['hide_dependency_lines'] = True
         qd['tasks'] = [dict(t, id=hid(f'{qd["id"]}/t{n}')) for n, t in enumerate(tasks)]
         if rewards:
             qd['rewards'] = [dict(r, id=hid(f'{qd["id"]}/r{n}')) for n, r in enumerate(rewards)]

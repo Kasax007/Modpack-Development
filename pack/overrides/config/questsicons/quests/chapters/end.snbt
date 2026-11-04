@@ -112,6 +112,26 @@
 			]
 		}
 		{
+			id: "05CA2D60BDE082C9"
+			title: "The Dragon Egg"
+			icon: "minecraft:dragon_egg"
+			x: 6.0d
+			y: -2.5d
+			dependencies: ["774735F23D32F447"]
+			optional: true
+			description: [
+				"&7After the first fight the &5Dragon Egg&7 sits on top of the exit portal. It teleports away when you hit it, so push it with a piston: then it drops as an item."
+				""
+				"&d✦ Dream Star:&7 a Dragon Egg or a Dragon Head is one of its ingredients. There is only one egg per world, so on a server a friend may want a head instead."
+			]
+			tasks: [
+				{ id: "47766CCA37D05A98", type: "item", item: "minecraft:dragon_egg" }
+			]
+			rewards: [
+				{ id: "478AF0CA37E1E3EE", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
 			id: "019D514B0B995817"
 			title: "The Outer Islands"
 			x: 8.0d
@@ -130,6 +150,71 @@
 			]
 			rewards: [
 				{ id: "D884407A0834F2D9", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "E045DC2AD9AAE30C"
+			title: "Metals of the End"
+			x: 10.0d
+			y: -2.0d
+			dependencies: ["019D514B0B995817"]
+			description: [
+				"&7Build an &eEnd Stone Smelter&7 (BetterEnd). It alloys iron and ender dust into &eTerminite&7, and terminite with netherite into &eAeternium&7, the toughest metal of the End."
+				"&7Thallasium ore lies in the End stone too."
+			]
+			tasks: [
+				{ id: "4412DEFB0BC11F24", type: "item", item: "betterend:end_stone_smelter" }
+				{
+					id: "4412DFFB0BC120D7"
+					type: "item"
+					count: 4
+					item: "betterend:terminite_ingot"
+				}
+			]
+			rewards: [
+				{ id: "440C52FB0BBBC592", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "F0A1399EDEC5EFD2"
+			title: "Aeternium"
+			x: 12.0d
+			y: -3.6d
+			dependencies: ["E045DC2AD9AAE30C"]
+			optional: true
+			description: [
+				"&7An &eAeternium Ingot&7 makes the best tools, hammers and armor of BetterEnd. Many RPG Series weapons also take it as repair material."
+			]
+			tasks: [
+				{ id: "7B6C7274C2A0777A", type: "item", item: "betterend:aeternium_ingot" }
+			]
+			rewards: [
+				{ id: "7B735E74C2A6742C", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "489B15ED0B0FE58D"
+			title: "On Eternal Paths"
+			x: 12.0d
+			y: -2.0d
+			dependencies: ["E045DC2AD9AAE30C"]
+			optional: true
+			description: [
+				"&7Somewhere in the End stands an &eEternal Portal&7, a ruin of runed flavolite. Light it with an &eEternal Crystal&7 (made in an &eInfusion Ritual&7) and it takes you between worlds."
+				""
+				"&7Find one of these ancient portals."
+			]
+			tasks: [
+				{
+					id: "2E093EAC255AD6A0"
+					type: "advancement"
+					title: "Discover an eternal portal"
+					icon: "betterend:eternal_crystal"
+					advancement: "betterend:portal"
+				}
+			]
+			rewards: [
+				{ id: "2E1DC2AC256C5FF6", type: "item", item: "questsicons:epic_crate" }
 			]
 		}
 		{
@@ -182,6 +267,80 @@
 			]
 		}
 		{
+			id: "755C7838E28AF89E"
+			title: "A Dragon's Head"
+			icon: "minecraft:dragon_head"
+			x: 10.0d
+			y: 3.6d
+			dependencies: ["7538B596ECD56BC3"]
+			optional: true
+			description: [
+				"&7The bow of every &eEnd ship&7 carries a &5Dragon Head&7. Wear it, hang it on a wall, or power it with redstone and watch its jaw move."
+				""
+				"&d✦ Dream Star:&7 a Dragon Head or the Dragon Egg is one of its ingredients. Every End ship has a head, so there is one for everybody."
+			]
+			tasks: [
+				{ id: "E47B47DBAD18ABA6", type: "item", item: "minecraft:dragon_head" }
+			]
+			rewards: [
+				{ id: "E46743DBAD07FBD0", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "47B5C52A044DDFEC"
+			title: "Boxes in Boxes"
+			x: 8.0d
+			y: 3.6d
+			dependencies: ["7538B596ECD56BC3"]
+			optional: true
+			description: [
+				"&7Two shulker shells and a chest make a &eShulker Box&7 that keeps its contents when you break it. With &eEasy Shulker Boxes&7 you can look into one and take items out right from your inventory."
+			]
+			tasks: [
+				{ id: "10562A6BFCC7D737", type: "item", item: "minecraft:shulker_box" }
+			]
+			rewards: [
+				{
+					id: "1041A66BFCB64DE1"
+					type: "item"
+					count: 2
+					item: "minecraft:shulker_shell"
+				}
+			]
+		}
+		{
+			id: "B0465C41BFFC33EF"
+			title: "A Kitten from the Void"
+			x: 6.0d
+			y: 3.6d
+			dependencies: ["7538B596ECD56BC3"]
+			optional: true
+			description: [
+				"&7In some End cities waits the &5Void Kitten&7, one of the rarest pets of &eTamagotchi&7: it pulls dropped items into its backpack. See the &dTamagotchi&7 side path."
+				""
+				"&7Spot a Void Kitten."
+			]
+			tasks: [
+				{
+					id: "4B85601C0C25CB8D"
+					type: "observation"
+					title: "Spot a Void Kitten"
+					icon: "tamagotchi:void_kitten_plush"
+					entity: true
+					observe: "tamagotchi:void_kitten"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "4B7E541C0C1F987B"
+					type: "item"
+					count: 4
+					item: "tamagotchi:fish_crackers"
+				}
+			]
+		}
+		{
 			id: "31E96F5B7FFD58FC"
 			title: "&5The Dream Is Free"
 			icon: "questsicons:quest_crown"
@@ -193,7 +352,7 @@
 			description: [
 				"&d&o\"You did it. The dragon is gone and the Dream breathes again. But dreams never truly end...\""
 				""
-				"&7Continue with the &dEpilogue&7 for the hardest challenges."
+				"&7Continue with the &dEpilogue&7 for the hardest challenges and the Dream Star."
 			]
 			tasks: [ ]
 			rewards: [

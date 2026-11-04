@@ -91,6 +91,28 @@
 			]
 		}
 		{
+			id: "3B55D0342D83B13B"
+			title: "Nether Rubies"
+			x: 4.0d
+			y: -3.6d
+			dependencies: ["F8E053E08B0F4ABC"]
+			optional: true
+			description: [
+				"&7&eBetterNether&7 hides &cNether Ruby Ore&7 in the Nether. Rubies make BetterNether tools and armor, and the &eRuby Fire Staff&7 and &eRuby Holy Staff&7 of the RPG classes. &eCincinnasite&7 makes tools, lanterns, bars and the Cincinnasite Forge."
+			]
+			tasks: [
+				{
+					id: "659EA94A8F42241B"
+					type: "item"
+					count: 4
+					item: "betternether:nether_ruby"
+				}
+			]
+			rewards: [
+				{ id: "65A5354A8F477DAD", type: "xp", xp: 120 }
+			]
+		}
+		{
 			id: "5AA62E7BBF5DBC81"
 			title: "The Fortress"
 			x: 4.0d
@@ -146,13 +168,37 @@
 			]
 		}
 		{
+			id: "E306281137E2A83A"
+			title: "Strange Locals"
+			x: 6.0d
+			y: -3.6d
+			dependencies: ["3B55D0342D83B13B", "2F2E15DBA1BF4309"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7BetterNether brings its own creatures: &eNagas&7 that shoot at you from afar, &eJungle Skeletons&7 in the nether jungles, floating &eHydrogen Jellyfish&7 and even &eFlying Pigs&7."
+				"&7Defeat a naga."
+			]
+			tasks: [
+				{
+					id: "1DB45B6ED9283D18"
+					type: "kill"
+					entity: "betternether:naga"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "1DC8DF6ED939C66E", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
 			id: "ADF6B78966EC7751"
 			title: "Bastion Remnant"
 			x: 4.0d
 			y: 2.0d
 			dependencies: ["1367205BCBCB52B7"]
 			description: [
-				"&7Bastions are full of piglins and treasure. Careful with the brutes."
+				"&7Bastions are full of piglins and treasure. Careful with the brutes. Their chests also hold the &eNetherite Upgrade Template&7."
 			]
 			tasks: [
 				{
@@ -164,6 +210,28 @@
 			]
 			rewards: [
 				{ id: "A03D07B862F8AAEB", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "1AFD47A50921885C"
+			title: "A City in the Fire"
+			x: 4.0d
+			y: 3.6d
+			dependencies: ["ADF6B78966EC7751"]
+			optional: true
+			description: [
+				"&7Huge, crumbling &eNether Cities&7 (BetterNether) and the &eMega Fortress&7 of Moog's Nether Structures are worth a long walk. Lootr keeps their chests fresh for every player."
+			]
+			tasks: [
+				{
+					id: "F925C69F94C2E3B5"
+					type: "structure"
+					title: "Find a nether city"
+					structure: "betternether:nether_city"
+				}
+			]
+			rewards: [
+				{ id: "F91EBA9F94BCB0A3", type: "item", item: "questsicons:epic_crate" }
 			]
 		}
 		{
@@ -225,6 +293,38 @@
 			]
 			rewards: [
 				{ id: "D21EDB4F917C6089", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "32263D502FC504EC"
+			title: "A Friend in the Flames"
+			x: 10.0d
+			y: -2.0d
+			dependencies: ["75A3111A2E29875A"]
+			optional: true
+			description: [
+				"&7In some nether fortresses lives the &6Ember Pup&7, one of the rare pets of &eTamagotchi&7. It swims through lava and keeps you from burning. See the &dTamagotchi&7 side path."
+				""
+				"&7Spot an Ember Pup."
+			]
+			tasks: [
+				{
+					id: "A6A4D0D04000C98F"
+					type: "observation"
+					title: "Spot an Ember Pup"
+					icon: "tamagotchi:ember_pup_plush"
+					entity: true
+					observe: "tamagotchi:ember_pup"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "A6904CD03FEF4039"
+					type: "item"
+					count: 4
+					item: "tamagotchi:ember_jerky"
+				}
 			]
 		}
 		{

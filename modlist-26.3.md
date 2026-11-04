@@ -1,6 +1,7 @@
 # Dreamcraft 26.3 - mod list
 
-249 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
+250 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
+Tamagotchi, Quest Icons and Beach Craft are my own mods.
 
 | Mod | File | Side |
 | --- | --- | --- |
@@ -220,6 +221,7 @@
 | [Subtle Effects](https://www.curseforge.com/minecraft/mc-mods/subtle-effects) | SubtleEffects-fabric-26.3-1.15.1-hotfix.1.jar | both |
 | [SuperMartijn642's Config Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib) | supermartijn642configlib-1.1.8a-fabric-mc26.3.jar | both |
 | [SuperMartijn642's Core Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib) | supermartijn642corelib-1.1.26c-fabric-mc26.3.jar | both |
+| [Tamagotchi](https://www.curseforge.com/minecraft/mc-mods/tamagotchi) | tamagotchi-1.1.0.jar | both |
 | [Tech Reborn](https://www.curseforge.com/minecraft/mc-mods/techreborn) | TechReborn-6.2.1.jar | both |
 | [Tectonic](https://www.curseforge.com/minecraft/mc-mods/tectonic) | tectonic-3.0.31-fabric-26.3.jar | both |
 | [TerraBlender (Fabric)](https://www.curseforge.com/minecraft/mc-mods/terrablender-fabric) | TerraBlender-fabric-26.3-26.3.0.0.9.jar | both |

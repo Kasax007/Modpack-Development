@@ -12,6 +12,16 @@ A tiny Fabric mod that runs the whole pack in a client game test (`./gradlew run
   around the player are loaded and drawn, so nothing loads in on screen.
 - `-Pnostills=1`: no landscape stills. With shaders, every window resize costs native memory.
 - `-Pxmx=5G`: heap of the test client. More than 6 GB once got the process killed in the container.
+- Quest scene (`-Pscene=quests`):
+  - `-Pchapters=all` (or chapter file names): one screenshot per chapter of the quest book, as a click in the chapter
+    list shows it. `-Pwin=1920x1080 -Pgui=4,2` sets the window and the GUI scales, one round of screenshots per scale
+    (4 is what 1920×1080 gets on "Auto").
+  - `-Pquests=<hex ids>`: opens these quests one by one.
+  - `-Pvisit=raft:raftdim -Plocate=raft:old_lighthouse,...`: teleports into a dimension, waits for the chunks, takes
+    a screenshot and runs `/locate structure` there (the answers are in the log).
+  - `-Pdump=FILE`: writes the ids the running pack has (items, mobs, advancements, structures, biomes, dimensions,
+    tags) as JSON, logs whether the Dream Star recipes loaded and whether an item with components (a bookmarked
+    almanac) parses. `tools/qcheck.py --game FILE` checks the quests against the dump.
 
 ## Shots
 

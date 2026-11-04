@@ -20,7 +20,7 @@
 			size: 1.3d
 			dependencies: ["9A338F1FA9ED4C5F"]
 			description: [
-				"&7&eNaturalist&7, &eFriends&Foes&7, &eEcologics&7 and more fill the world with animals - and monsters."
+				"&7&eNaturalist&7, &eFriends&&Foes&7, &eEcologics&7 and more fill the world with animals - and monsters."
 			]
 			tasks: [
 				{ id: "EF31CF18350DE9B3", type: "checkmark" }
@@ -43,6 +43,7 @@
 					id: "B9ED318374CEF401"
 					type: "observation"
 					title: "Watch a butterfly"
+					icon: "naturalist:butterfly_spawn_egg"
 					entity: true
 					observe: "naturalist:butterfly"
 					timer: 40
@@ -72,6 +73,7 @@
 					id: "B168E491386DD47D"
 					type: "observation"
 					title: "Spot a bear"
+					icon: "naturalist:bear_spawn_egg"
 					entity: true
 					observe: "naturalist:bear"
 					timer: 40
@@ -87,6 +89,67 @@
 			]
 		}
 		{
+			id: "E22A525C58F97B81"
+			title: "Safari"
+			x: 6.0d
+			y: -3.0d
+			dependencies: ["C00DDAACF02E1D63"]
+			optional: true
+			description: [
+				"&7Naturalist brings the savanna to life: &eelephants&7, &egiraffes&7, &ezebras&7, &erhinos&7 and &elions&7 roam the grasslands. Lions are not as friendly as they look."
+			]
+			tasks: [
+				{
+					id: "FE93F14E137E35F3"
+					type: "observation"
+					title: "Spot an elephant"
+					icon: "naturalist:elephant_spawn_egg"
+					entity: true
+					observe: "naturalist:elephant"
+					timer: 40
+				}
+				{
+					id: "FE93F04E137E3440"
+					type: "observation"
+					title: "Spot a giraffe"
+					icon: "naturalist:giraffe_spawn_egg"
+					entity: true
+					observe: "naturalist:giraffe"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "FE9AFD4E13846905"
+					type: "item"
+					count: 4
+					item: "minecraft:hay_block"
+				}
+			]
+		}
+		{
+			id: "BFC49EEE3BD4AEC8"
+			title: "Bug Net"
+			x: 6.0d
+			y: -1.5d
+			dependencies: ["C00DDAACF02E1D63"]
+			optional: true
+			description: [
+				"&7A &eCapture Net&7 (Naturalist) catches butterflies, fireflies and other small critters. Release them in your garden."
+			]
+			tasks: [
+				{ id: "6F1DCFBA0DB40397", type: "item", item: "naturalist:capture_net" }
+			]
+			rewards: [
+				{
+					id: "6F09CBBA0DA353C1"
+					type: "item"
+					count: 4
+					item: "minecraft:glass_bottle"
+				}
+			]
+		}
+		{
 			id: "66BABC465A66A849"
 			title: "Moobloom"
 			x: 2.0d
@@ -94,13 +157,14 @@
 			dependencies: ["CEAEB6BD91389E2F"]
 			optional: true
 			description: [
-				"&7A cow covered in flowers (Friends&Foes). Bees love it."
+				"&7A cow covered in flowers (Friends&&Foes). Bees love it."
 			]
 			tasks: [
 				{
 					id: "82D9559A75EF9F7A"
 					type: "observation"
 					title: "Find a moobloom"
+					icon: "friendsandfoes:moobloom_spawn_egg"
 					entity: true
 					observe: "friendsandfoes:moobloom"
 					timer: 40
@@ -112,6 +176,36 @@
 					type: "item"
 					count: 4
 					item: "minecraft:sunflower"
+				}
+			]
+		}
+		{
+			id: "F38C375F24CD7AFC"
+			title: "Little Helpers"
+			x: 4.0d
+			y: 4.0d
+			dependencies: ["66BABC465A66A849"]
+			optional: true
+			description: [
+				"&7&eFriends&&Foes&7 brings back the mob vote losers: the &eTuff Golem&7 holds and shows off an item you give it, and the grumpy &eGlare&7 floats to dark spots where monsters could spawn. You can even tame a glare."
+			]
+			tasks: [
+				{
+					id: "79E0D04B7E24D469"
+					type: "observation"
+					title: "Find a glare"
+					icon: "friendsandfoes:glare_spawn_egg"
+					entity: true
+					observe: "friendsandfoes:glare"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "79F4D44B7E35843F"
+					type: "item"
+					count: 16
+					item: "minecraft:copper_ingot"
 				}
 			]
 		}
@@ -131,6 +225,7 @@
 					id: "464BC321652503FE"
 					type: "observation"
 					title: "Find a penguin"
+					icon: "ecologics:penguin_spawn_egg"
 					entity: true
 					observe: "ecologics:penguin"
 					timer: 40
@@ -146,6 +241,31 @@
 			]
 		}
 		{
+			id: "107475714CFB63FA"
+			title: "The Slow Lane"
+			x: 6.0d
+			y: 2.0d
+			dependencies: ["283067CBFC01C9EF"]
+			optional: true
+			description: [
+				"&7Snails (&eLovely Snails&7) can be saddled and ridden - slowly. With a chest on their back they carry your things."
+			]
+			tasks: [
+				{
+					id: "4D0DF56A2405B2D1"
+					type: "observation"
+					title: "Find a snail"
+					icon: "lovely_snails:snail_spawn_egg"
+					entity: true
+					observe: "lovely_snails:snail"
+					timer: 40
+				}
+			]
+			rewards: [
+				{ id: "4D22796A24173C27", type: "item", item: "minecraft:saddle" }
+			]
+		}
+		{
 			id: "01191CEDCFCE1F8E"
 			title: "A Loyal Friend"
 			x: 2.0d
@@ -153,6 +273,7 @@
 			dependencies: ["CEAEB6BD91389E2F"]
 			description: [
 				"&7Tame a wolf or cat. With &eRespawnable Pets&7 your pet comes back to life if it dies."
+				"&7Want something rarer? The &dTamagotchi&7 side path is all about the ten rare pets of the Dream."
 			]
 			tasks: [
 				{
@@ -167,9 +288,52 @@
 			]
 		}
 		{
+			id: "4B7DD30792AE280C"
+			title: "Walk in Their Shoes"
+			x: 0.0d
+			y: 2.5d
+			dependencies: ["CEAEB6BD91389E2F"]
+			optional: true
+			description: [
+				"&7&eWoodwalkers&7 lets you become a mob. Look at a creature and hold &eU&7 for a few seconds: it becomes your second shape. Press &eG&7 to turn into it and back."
+				"&7Fly as a bat, swim as a dolphin, climb as a spider. The keys are under Controls > Woodwalkers."
+				""
+				"&7Tick the box after your first transformation."
+			]
+			tasks: [
+				{ id: "D3FDD76970E360A7", type: "checkmark", title: "I walked as a mob" }
+			]
+			rewards: [
+				{ id: "D3E9536970D1D751", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "017A95F24A0AD8DF"
+			title: "New Faces in the Dark"
+			x: 0.0d
+			y: 4.5d
+			dependencies: ["4B7DD30792AE280C"]
+			optional: true
+			description: [
+				"&7&eVariants&&Ventures&7 adds new undead: the icy &eGelid&7, the leafy &eThicket&7, the swampy &eMurk&7 and the mossy &eVerdant&7. Each has its own trick."
+				"&7Defeat a Gelid in the snow."
+			]
+			tasks: [
+				{
+					id: "4011C4B605FAF76B"
+					type: "kill"
+					entity: "variantsandventures:gelid"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "401850B6060050FD", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
 			id: "F80BABC0024848C2"
 			title: "Mutant Zombie"
-			x: 6.0d
+			x: 8.0d
 			y: 0.0d
 			shape: "heart"
 			dependencies: ["01191CEDCFCE1F8E"]
@@ -189,9 +353,67 @@
 			]
 		}
 		{
+			id: "C41D8843E0D384C3"
+			title: "The Whole Mutant Family"
+			x: 10.0d
+			y: -2.0d
+			shape: "heart"
+			dependencies: ["F80BABC0024848C2"]
+			optional: true
+			description: [
+				"&7The &eMutant Skeleton&7 drops bones for its own armor, the &eMutant Creeper&7 leaves &eCreeper Shards&7, and the &eMutant Enderman&7 throws blocks at you. Defeat one of each."
+			]
+			tasks: [
+				{
+					id: "AAAF95C3DBF70E4D"
+					type: "kill"
+					entity: "mutantmonsters:mutant_skeleton"
+					value: 1
+				}
+				{
+					id: "AAAF94C3DBF70C9A"
+					type: "kill"
+					entity: "mutantmonsters:mutant_creeper"
+					value: 1
+				}
+				{
+					id: "AAAF93C3DBF70AE7"
+					type: "kill"
+					entity: "mutantmonsters:mutant_enderman"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "AAA889C3DBF0DB3B", type: "item", item: "questsicons:legendary_crate" }
+			]
+		}
+		{
+			id: "59A66421D5F39A19"
+			title: "The Wildfire"
+			x: 10.0d
+			y: 2.0d
+			shape: "heart"
+			dependencies: ["F80BABC0024848C2"]
+			optional: true
+			description: [
+				"&7In the Nether, the &eWildfire&7 (Friends&&Foes) commands its blazes from a &ecitadel&7. Break its shields, defeat it and claim the fiery &eWildfire Crown&7."
+			]
+			tasks: [
+				{
+					id: "79F769F91E1CCDC4"
+					type: "kill"
+					entity: "friendsandfoes:wildfire"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "79F05DF91E169AB2", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
 			id: "096824BEC464EF65"
 			title: "The Lich"
-			x: 8.0d
+			x: 12.0d
 			y: 0.0d
 			shape: "heart"
 			size: 1.4d

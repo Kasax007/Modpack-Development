@@ -108,6 +108,29 @@
 			]
 		}
 		{
+			id: "F727F02072062365"
+			title: "Necoium"
+			x: 4.0d
+			y: -4.0d
+			dependencies: ["63DEF6A77A117641"]
+			optional: true
+			description: [
+				"&7&eMythic Upgrades&7 hides &eNecoium Ore&7 deep in the overworld. Smelt the raw necoium into ingots."
+				"&7Its gems grow in crystal geodes: aquamarine, citrine, topaz and peridot underground, ruby and sapphire in the Nether, ametrine and jade in the End. &e4 gems and 4 necoium ingots&7 make one mythic ingot, which upgrades netherite gear."
+			]
+			tasks: [
+				{
+					id: "4F294C96FDFC4631"
+					type: "item"
+					count: 4
+					item: "mythicupgrades:necoium_ingot"
+				}
+			]
+			rewards: [
+				{ id: "4F3DD096FE0DCF87", type: "xp", xp: 80 }
+			]
+		}
+		{
 			id: "622E8CC4278079B6"
 			title: "Deepslate"
 			x: 4.0d
@@ -239,6 +262,28 @@
 			]
 		}
 		{
+			id: "A163A4CDA3AE75AF"
+			title: "Crafting Terminal"
+			x: 8.0d
+			y: 4.0d
+			dependencies: ["2FDB22C9D06AD0A0"]
+			optional: true
+			description: [
+				"&7Swap your Storage Terminal for a &eCrafting Terminal&7: it has a crafting grid that takes the ingredients straight out of your connected chests, and JEI's &e+&7 button fills it for you."
+			]
+			tasks: [
+				{ id: "D7D03D5CC747982C", type: "item", item: "toms_storage:crafting_terminal" }
+			]
+			rewards: [
+				{
+					id: "D7C9515CC7419B7A"
+					type: "item"
+					count: 16
+					item: "toms_storage:inventory_cable"
+				}
+			]
+		}
+		{
 			id: "44E9C4AE8A7DC72B"
 			title: "Drawers"
 			x: 10.0d
@@ -306,6 +351,29 @@
 			]
 			rewards: [
 				{ id: "2EAB2E8E21FA3F3D", type: "xp_levels", xp_levels: 10 }
+			]
+		}
+		{
+			id: "3DAFEBDB1278245F"
+			title: "A Kinder Anvil"
+			x: 10.0d
+			y: -4.0d
+			dependencies: ["2712C7E8A3D2BCB5"]
+			optional: true
+			description: [
+				"&7With &eEasy Anvils&7, renaming costs nothing, there is no \"Too Expensive!\" limit any more and enchanted books cost half the levels. Items you leave in the anvil stay in it."
+				"&7A damaged anvil? Right-click it with an iron block to repair it by one stage."
+			]
+			tasks: [
+				{ id: "2292F5932761B3DA", type: "item", item: "minecraft:anvil" }
+			]
+			rewards: [
+				{
+					id: "229961932766D70C"
+					type: "item"
+					count: 8
+					item: "minecraft:experience_bottle"
+				}
 			]
 		}
 		{

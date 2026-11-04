@@ -1944,6 +1944,15 @@
   "env": "*"
  },
  {
+  "title": "Tamagotchi",
+  "slug": "tamagotchi",
+  "projectID": 1758309,
+  "fileID": 9399713,
+  "file": "tamagotchi-1.1.0.jar",
+  "modid": "tamagotchi",
+  "env": "*"
+ },
+ {
   "title": "Tech Reborn",
   "slug": "techreborn",
   "projectID": 233564,

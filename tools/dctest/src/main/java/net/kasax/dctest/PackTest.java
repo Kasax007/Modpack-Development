@@ -95,16 +95,39 @@ public class PackTest implements FabricClientGameTest {
         LOG.info("[dctest] done");
     }
 
-    /** Opens chapters and quests of the real quest book through reflection-free key presses and commands. */
+    /**
+     * Opens the real quest book: optional registry dump (-Pdump=FILE), screenshots of chapters (-Pchapters=all or
+     * filenames, at -Pwin=WxH and -Pgui=scale) and of single quests (-Pquests=hex ids).
+     */
     private void questScene(ClientGameTestContext ctx) {
+        String win = System.getProperty("dc.win", "");
+        if (win.matches("\\d+x\\d+")) {
+            String[] wh = win.split("x");
+            ctx.getInput().resizeWindow(Integer.parseInt(wh[0]), Integer.parseInt(wh[1]));
+        }
+        String[] guis = System.getProperty("dc.gui", "0").split(",");
+        int gui = Integer.parseInt(guis[0].trim());
+        ctx.runOnClient(mc -> {
+            mc.options.guiScale().set(gui);
+            mc.resizeGui();
+        });
         try (TestSingleplayerContext sp = ctx.worldBuilder().setUseConsistentSettings(false).adjustSettings(s -> {
             s.setGameMode(WorldCreationUiState.SelectedGameMode.CREATIVE);
             s.setAllowCommands(true);
         }).create()) {
             ctx.waitTicks(100);
+            String dump = System.getProperty("dc.dump", "");
+            if (!dump.isBlank()) {
+                sp.getServer().runOnServer(server -> {
+                    try {
+                        RegDump.write(server, java.nio.file.Path.of(dump));
+                    } catch (Exception e) {
+                        LOG.warn("[dctest] registry dump failed", e);
+                    }
+                });
+            }
             sp.getServer().runCommand("quests complete 69EBF5E4D7E44EE2 @a");
             ctx.waitTicks(20);
-            String[] chapters = {"14B4AA34E0B85D82"};
             ctx.getInput().pressKey(com.mojang.blaze3d.platform.InputConstants.KEY_J);
             ctx.waitTicks(30);
             ctx.takeScreenshot("q_00_book");
@@ -113,6 +136,43 @@ public class PackTest implements FabricClientGameTest {
                 screenClass = Class.forName("net.kasax.questsicons.client.gui.QuestBookScreen");
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
+            }
+            String chapters = System.getProperty("dc.chapters", "");
+            if (!chapters.isBlank()) {
+                java.util.List<String> names = ctx.computeOnClient(mc -> chapterNames());
+                java.util.Set<String> want = new java.util.HashSet<>(java.util.List.of(chapters.split(",")));
+                for (String g : guis) {   // one round of screenshots per GUI scale
+                    int scale = Integer.parseInt(g.trim());
+                    ctx.runOnClient(mc -> {
+                        mc.options.guiScale().set(scale);
+                        mc.resizeGui();
+                    });
+                    ctx.waitTicks(10);
+                    int c = 1;
+                    for (String name : names) {
+                        if (!chapters.equals("all") && !want.contains(name)) continue;
+                        ctx.runOnClient(mc -> selectChapter(mc, screenClass, name));
+                        ctx.waitTicks(10);
+                        ctx.takeScreenshot(String.format("q_g%d_c%02d_%s", scale, c++, name));
+                    }
+                }
+            }
+            String visit = System.getProperty("dc.visit", "");
+            if (!visit.isBlank()) {   // e.g. raft:raftdim: does the dimension generate in the full pack?
+                ctx.setScreen(() -> null);
+                sp.getServer().runCommand("execute in " + visit + " run tp @a 0 130 0");
+                for (int i = 0; i < 60; i++) {
+                    ctx.waitTicks(20);
+                    if (i > 5 && ctx.computeOnClient(mc -> mc.levelRenderer.hasRenderedAllSections())) break;
+                }
+                ctx.takeScreenshot("q_visit");
+                for (String s : System.getProperty("dc.locate", "").split(",")) {
+                    if (!s.isBlank()) sp.getServer().runCommand("execute in " + visit + " run locate structure " + s.trim());
+                }
+                ctx.waitTicks(100);
+                LOG.info("[dctest] visited {}", visit);
+                ctx.getInput().pressKey(com.mojang.blaze3d.platform.InputConstants.KEY_J);
+                ctx.waitTicks(30);
             }
             String[] quests = System.getProperty("dc.quests", "").split(",");
             int n = 1;
@@ -132,6 +192,38 @@ public class PackTest implements FabricClientGameTest {
                 ctx.waitTicks(10);
                 ctx.takeScreenshot(String.format("q_%02d_%s", n++, q.trim()));
             }
+        }
+    }
+
+    /** File names of the chapters of the quest book the client received, in book order. */
+    private static java.util.List<String> chapterNames() {
+        java.util.List<String> out = new java.util.ArrayList<>();
+        try {
+            Object book = Class.forName("net.kasax.questsicons.client.ClientQuests").getField("book").get(null);
+            for (Object ch : (java.util.List<?>) book.getClass().getField("chapters").get(book)) {
+                out.add((String) ch.getClass().getField("filename").get(ch));
+            }
+        } catch (Exception e) {
+            LOG.warn("[dctest] reading the chapters failed", e);
+        }
+        return out;
+    }
+
+    /** Shows one chapter in the open quest book, the way a click on it in the chapter list does. */
+    private static void selectChapter(Minecraft mc, Class<?> screenClass, String name) {
+        var screen = mc.gui.screen();
+        if (screen == null || !screenClass.isInstance(screen)) return;
+        try {
+            Object book = Class.forName("net.kasax.questsicons.client.ClientQuests").getField("book").get(null);
+            for (Object ch : (java.util.List<?>) book.getClass().getField("chapters").get(book)) {
+                if (!name.equals(ch.getClass().getField("filename").get(ch))) continue;
+                var m = screenClass.getDeclaredMethod("selectChapter", ch.getClass());
+                m.setAccessible(true);
+                m.invoke(screen, ch);
+                LOG.info("[dctest] chapter {} shown", name);
+            }
+        } catch (Exception e) {
+            LOG.warn("[dctest] selectChapter failed", e);
         }
     }
 }

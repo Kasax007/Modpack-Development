@@ -1,0 +1,752 @@
+{
+	id: "7B49254BC08A65ED"
+	filename: "pets"
+	title: "&dTamagotchi"
+	subtitle: [
+		"&7Ten rare pets hide in the world. Find them all!"
+	]
+	icon: "tamagotchi:tamagotchi_heart"
+	group: "1C49159F2FE9E643"
+	order_index: 13
+	default_quest_shape: "heart"
+	quests: [
+		{
+			id: "56EDC7CC65844061"
+			title: "&dTamagotchi"
+			icon: "tamagotchi:tamagotchi_heart"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["9A338F1FA9ED4C5F"]
+			description: [
+				"&d&o\"Not every creature of the Dream is wild. Some only wait for a friend.\""
+				""
+				"&7&eTamagotchi&7 adds ten rare pets. Find one, tame it with a &eTamagotchi Heart&7 and look after it - feed it, play with it, keep it clean and let it sleep - and it follows you, carries a backpack, helps you fight and has a special talent."
+				"&7Craft a heart: five red dye around an amethyst shard."
+				""
+				"&d✦ Dream Star:&7 a Tamagotchi Heart is one of its ingredients. Hearts are cheap: craft another one for the star later."
+			]
+			tasks: [
+				{ id: "2B73D9D2891B9730", type: "item", item: "tamagotchi:tamagotchi_heart" }
+			]
+			rewards: [
+				{
+					id: "2B885DD2892D2086"
+					type: "item"
+					count: 8
+					item: "tamagotchi:pet_kibble"
+				}
+			]
+		}
+		{
+			id: "29A831CD2A3D6EAA"
+			title: "The Tamacon"
+			x: 0.0d
+			y: -2.6d
+			dependencies: ["56EDC7CC65844061"]
+			description: [
+				"&7A book, pink dye and redstone make the &eTamacon&7, the in-game guide to everything: every pet and where it lives, care, controls, toys, food and furniture."
+			]
+			tasks: [
+				{ id: "E6810BDAAF08151C", type: "item", item: "tamagotchi:tamacon" }
+			]
+			rewards: [
+				{ id: "E67A1FDAAF02186A", type: "xp", xp: 50 }
+			]
+		}
+		{
+			id: "7EE114252FBDA389"
+			title: "Pets in Hiding"
+			icon: "questsicons:icon_map"
+			x: 4.5d
+			y: 0.0d
+			shape: "diamond"
+			dependencies: ["56EDC7CC65844061"]
+			description: [
+				"&7Pets live in structures, but not in every one: each structure rolls once whether a pet lives there. Wild pets stay near their home and never despawn, so look inside and all around the building."
+				"&7In Dreamcraft they also live in the look-alikes of these structures from other mods, like the pyramids, witch huts, mineshafts and mansions of Repurposed Structures."
+				"&7Hold a Tamagotchi Heart and wild pets come closer. The cute ones run away when hit; the Ember Pup, Sculk Wisp and Mimic bite back."
+				""
+				"&7Around this quest are the ten pets. Spot each one in the wild."
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "FC058D8BDFA7D955", type: "xp", xp: 50 }
+			]
+		}
+		{
+			id: "D450458A913E5FD0"
+			title: "Desert Dragon"
+			icon: "tamagotchi:desert_dragon_plush"
+			x: 4.5d
+			y: -2.7d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &edesert pyramids (40%)&7."
+				"&7Talent - &eEmber Roast&7: hand it raw food or raw ore and it roasts or smelts it with a little puff of flame."
+				"&7Fights with a puff of fire that sets enemies alight. It flies after you when that is faster. Sand and sun make it happy."
+				""
+				"&7Spot a Desert Dragon in the wild."
+			]
+			tasks: [
+				{
+					id: "BE66743A7762D986"
+					type: "observation"
+					title: "Spot a Desert Dragon"
+					icon: "tamagotchi:desert_dragon_plush"
+					entity: true
+					observe: "tamagotchi:desert_dragon"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "BE51F03A77515030"
+					type: "item"
+					count: 4
+					item: "tamagotchi:dragon_fruit"
+				}
+			]
+		}
+		{
+			id: "5B1224D8060239C4"
+			title: "Jungle Dragon"
+			icon: "tamagotchi:jungle_dragon_plush"
+			x: 6.09d
+			y: -2.18d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &ejungle temples (40%)&7."
+				"&7Talent - &eGreen Thumb&7: crops and saplings around it grow."
+				"&7Fights with a poison bite. Leaf wings, a hibiscus flower and a very green thumb."
+				""
+				"&7Spot a Jungle Dragon in the wild."
+			]
+			tasks: [
+				{
+					id: "5654026F6F930F45"
+					type: "observation"
+					title: "Spot a Jungle Dragon"
+					icon: "tamagotchi:jungle_dragon_plush"
+					entity: true
+					observe: "tamagotchi:jungle_dragon"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "564CF66F6F8CDC33"
+					type: "item"
+					count: 4
+					item: "tamagotchi:dragon_fruit"
+				}
+			]
+		}
+		{
+			id: "E9DFC9740360D3EB"
+			title: "Tide Dragon"
+			icon: "tamagotchi:tide_dragon_plush"
+			x: 7.07d
+			y: -0.83d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &eocean monuments (50%)&7."
+				"&7Talent - &eTide Blessing&7: while you swim near it you get Water Breathing and Dolphin's Grace."
+				"&7Fights with a bubble blast that knocks enemies back. It swims as well as it flies. Bring it along when you dive!"
+				""
+				"&7Spot a Tide Dragon in the wild."
+			]
+			tasks: [
+				{
+					id: "9B8DCE9F4A04903C"
+					type: "observation"
+					title: "Spot a Tide Dragon"
+					icon: "tamagotchi:tide_dragon_plush"
+					entity: true
+					observe: "tamagotchi:tide_dragon"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "9B86E29F49FE938A"
+					type: "item"
+					count: 4
+					item: "tamagotchi:fish_crackers"
+				}
+			]
+		}
+		{
+			id: "FC19320B4B912678"
+			title: "Frost Penguin"
+			icon: "tamagotchi:frost_penguin_plush"
+			x: 7.07d
+			y: 0.83d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &eigloos (45%)&7."
+				"&7Talent - &eFrost Steps&7: while it follows you, water freezes under your feet."
+				"&7Fights with a volley of snowballs that slows enemies. On snow and ice it belly-slides."
+				""
+				"&7Spot a Frost Penguin in the wild."
+			]
+			tasks: [
+				{
+					id: "F444A0F881CF0411"
+					type: "observation"
+					title: "Spot a Frost Penguin"
+					icon: "tamagotchi:frost_penguin_plush"
+					entity: true
+					observe: "tamagotchi:frost_penguin"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "F45924F881E08D67"
+					type: "item"
+					count: 4
+					item: "tamagotchi:fish_crackers"
+				}
+			]
+		}
+		{
+			id: "5821E6F9C919CE9C"
+			title: "Ember Pup"
+			icon: "tamagotchi:ember_pup_plush"
+			x: 6.09d
+			y: 2.18d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &enether fortresses (30%)&7."
+				"&7Talent - &eWarm Heart&7: when you catch fire it gives you Fire Resistance."
+				"&7Fights with a burning bite. Fire and lava cannot hurt it, and it swims through lava."
+				""
+				"&7Spot an Ember Pup in the wild."
+			]
+			tasks: [
+				{
+					id: "79C64BD1ACE8F3AE"
+					type: "observation"
+					title: "Spot an Ember Pup"
+					icon: "tamagotchi:ember_pup_plush"
+					entity: true
+					observe: "tamagotchi:ember_pup"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "79B1C7D1ACD76A58"
+					type: "item"
+					count: 4
+					item: "tamagotchi:ember_jerky"
+				}
+			]
+		}
+		{
+			id: "3F4A8FA3EB5DCD39"
+			title: "Sculk Wisp"
+			icon: "tamagotchi:sculk_wisp_plush"
+			x: 4.5d
+			y: 2.7d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &eancient cities (50%)&7."
+				"&7Talent - &eEcho Sense&7: its sonar ping makes hostile mobs nearby glow through walls."
+				"&7Fights with a sonic chirp. It floats, and it is so quiet that sculk sensors never notice it. Mind the warden on the way!"
+				""
+				"&7Spot a Sculk Wisp in the wild."
+			]
+			tasks: [
+				{
+					id: "4A8887D50B68D629"
+					type: "observation"
+					title: "Spot a Sculk Wisp"
+					icon: "tamagotchi:sculk_wisp_plush"
+					entity: true
+					observe: "tamagotchi:sculk_wisp"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "4A9C8BD50B7985FF"
+					type: "item"
+					count: 4
+					item: "tamagotchi:glow_gummy"
+				}
+			]
+		}
+		{
+			id: "6FDE580353D21BA9"
+			title: "Void Kitten"
+			icon: "tamagotchi:void_kitten_plush"
+			x: 2.91d
+			y: 2.18d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &eend cities (30%)&7."
+				"&7Talent - &eItem Magnet&7: while you are near, it pulls dropped items into its backpack or teleports them to you."
+				"&7Fights with a blink strike: it teleports next to the enemy. If it gets lost it simply teleports back to you."
+				""
+				"&7Spot a Void Kitten in the wild."
+			]
+			tasks: [
+				{
+					id: "D2663ADD44DC126A"
+					type: "observation"
+					title: "Spot a Void Kitten"
+					icon: "tamagotchi:void_kitten_plush"
+					entity: true
+					observe: "tamagotchi:void_kitten"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "D26D26DD44E20F1C"
+					type: "item"
+					count: 4
+					item: "tamagotchi:fish_crackers"
+				}
+			]
+		}
+		{
+			id: "A7A64E88E14272B0"
+			title: "Pebble Golem"
+			icon: "tamagotchi:pebble_golem_plush"
+			x: 1.93d
+			y: 0.83d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &etrail ruins (35%) and mineshafts (8%)&7."
+				"&7Talent - &eOre Sniffer&7: it sniffs out the best ore nearby, modded ores too, and makes it glow through the walls."
+				"&7Fights with a heavy ground slam. Slow, but very tough."
+				""
+				"&7Spot a Pebble Golem in the wild."
+			]
+			tasks: [
+				{
+					id: "C1EFA990907EE317"
+					type: "observation"
+					title: "Spot a Pebble Golem"
+					icon: "tamagotchi:pebble_golem_plush"
+					entity: true
+					observe: "tamagotchi:pebble_golem"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "C1DBA590906E3341"
+					type: "item"
+					count: 4
+					item: "tamagotchi:rock_candy"
+				}
+			]
+		}
+		{
+			id: "CC09DBEF8327163D"
+			title: "Hex Toad"
+			icon: "tamagotchi:hex_toad_plush"
+			x: 1.93d
+			y: -0.83d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &eswamp huts (45%)&7."
+				"&7Talent - &eBrew Buddy&7: when it is happy it brews you a random helpful potion effect now and then."
+				"&7Fights with a hex tongue that weakens. It hops everywhere and loves rain and swamps."
+				""
+				"&7Spot a Hex Toad in the wild."
+			]
+			tasks: [
+				{
+					id: "F5E7E9E86D773D64"
+					type: "observation"
+					title: "Spot a Hex Toad"
+					icon: "tamagotchi:hex_toad_plush"
+					entity: true
+					observe: "tamagotchi:hex_toad"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "F5E15DE86D71E3D2"
+					type: "item"
+					count: 4
+					item: "tamagotchi:glow_gummy"
+				}
+			]
+		}
+		{
+			id: "117174FDDF780614"
+			title: "Mimic"
+			icon: "tamagotchi:mimic_plush"
+			x: 2.91d
+			y: -2.18d
+			dependencies: ["7EE114252FBDA389"]
+			optional: true
+			description: [
+				"&7Lives in &etrial chambers (30%) and woodland mansions (60%)&7."
+				"&7Talent - &eTreasure Belly&7: it has 27 slots of belly storage (54 with a backpack) and coughs up little treasures."
+				"&7Fights with a big chomp. A living chest! Do not try to open it."
+				""
+				"&7Spot a Mimic in the wild."
+			]
+			tasks: [
+				{
+					id: "56E5A1115BDB58F1"
+					type: "observation"
+					title: "Spot a Mimic"
+					icon: "tamagotchi:mimic_plush"
+					entity: true
+					observe: "tamagotchi:mimic"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "56FA25115BECE247"
+					type: "item"
+					count: 4
+					item: "tamagotchi:golden_biscuit"
+				}
+			]
+		}
+		{
+			id: "521A66951BF7C1C2"
+			title: "A New Best Friend"
+			icon: "tamagotchi:tamagotchi_heart"
+			x: 9.5d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["7EE114252FBDA389"]
+			description: [
+				"&7Right-click a wild pet with the Tamagotchi Heart to tame it. \"♥ ... trusts you now!\""
+				"&7Right-click with an empty hand to pet it. &eSneak + right-click&7 opens the pet screen: needs, mood, bond, talent, backpack and the Sit / Follow / Wander buttons."
+				"&7Leads and name tags work like on any pet."
+			]
+			tasks: [
+				{
+					id: "7FC242752C552108"
+					type: "advancement"
+					title: "Tame a pet"
+					icon: "tamagotchi:tamagotchi_heart"
+					advancement: "tamagotchi:first_friend"
+				}
+			]
+			rewards: [
+				{ id: "7FD6C6752C66AA5E", type: "item", item: "questsicons:rare_crate" }
+				{
+					id: "7FD6C7752C66AC11"
+					type: "item"
+					count: 16
+					item: "tamagotchi:pet_kibble"
+				}
+			]
+		}
+		{
+			id: "BB822A9E22441ECE"
+			title: "Beep Beep!"
+			icon: "tamagotchi:tama_pager"
+			x: 11.5d
+			y: -2.0d
+			dependencies: ["521A66951BF7C1C2"]
+			description: [
+				"&7Your first pet comes with a free &eTama Pager&7. Right-click your pet with it: stay or follow. Use it in the air to open the screen of your nearest pet, up to 64 blocks away."
+				"&7While it is in your inventory it beeps when a pet is hungry, bored, sleepy, dirty or hurt."
+			]
+			tasks: [
+				{
+					id: "A688AFE2EFE75F1B"
+					type: "advancement"
+					title: "Get a Tama Pager"
+					icon: "tamagotchi:tama_pager"
+					advancement: "tamagotchi:pager"
+				}
+			]
+			rewards: [
+				{ id: "A68F3BE2EFECB8AD", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "97FAD407493510FF"
+			title: "Feeding Time"
+			x: 11.5d
+			y: 2.0d
+			dependencies: ["521A66951BF7C1C2"]
+			description: [
+				"&7Every pet has four needs from 0 to 100: &eHunger&7, &eFun&7, &eEnergy&7 and &eHygiene&7. Together they make its mood. Happy pets use their talent, sad ones do not, and miserable pets refuse to fight."
+				"&7&ePet Kibble&7 (wheat with meat or fish) feeds every pet. A &eFood Bowl&7 filled with food feeds hungry pets by themselves. Pets eat modded food too."
+			]
+			tasks: [
+				{
+					id: "8039EB8845511548"
+					type: "item"
+					count: 8
+					item: "tamagotchi:pet_kibble"
+				}
+				{ id: "8039EC88455116FB", type: "item", item: "tamagotchi:food_bowl" }
+			]
+			rewards: [
+				{
+					id: "804E6F8845629E9E"
+					type: "item"
+					count: 16
+					item: "tamagotchi:pet_kibble"
+				}
+			]
+		}
+		{
+			id: "514DDCCE51C879F2"
+			title: "Favourite Treats"
+			x: 11.5d
+			y: 4.0d
+			dependencies: ["97FAD407493510FF"]
+			optional: true
+			description: [
+				"&7Favourite treats feed more, heal more and give bond: &eDragon Fruit&7 (the dragons), &eFish Crackers&7 (Tide Dragon, Frost Penguin, Void Kitten), &eEmber Jerky&7 (Ember Pup), &eRock Candy&7 (Pebble Golem), &eGlow Gummy&7 (Sculk Wisp, Hex Toad) and the &eGolden Biscuit&7 (Mimic)."
+			]
+			tasks: [
+				{ id: "28592DD9F1BE649C", type: "item", item: "tamagotchi:dragon_fruit" }
+				{ id: "28592ED9F1BE664F", type: "item", item: "tamagotchi:fish_crackers" }
+				{ id: "28592FD9F1BE6802", type: "item", item: "tamagotchi:ember_jerky" }
+				{ id: "285930D9F1BE69B5", type: "item", item: "tamagotchi:rock_candy" }
+				{ id: "285929D9F1BE5DD0", type: "item", item: "tamagotchi:glow_gummy" }
+				{ id: "28592AD9F1BE5F83", type: "item", item: "tamagotchi:golden_biscuit" }
+			]
+			rewards: [
+				{ id: "285241D9F1B867EA", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "8DF647727A85A5C9"
+			title: "Playtime"
+			x: 13.5d
+			y: 2.0d
+			dependencies: ["97FAD407493510FF"]
+			description: [
+				"&7Bored pets are sad pets. Hold right-click with the &eLaser Pointer&7 and they chase the red dot, throw the &eSqueaky Ball&7 and they fetch it, wave the &eFeather Wand&7 and they jump for it. Pets also play with each other."
+			]
+			tasks: [
+				{ id: "A75C12DD71112CB9", type: "item", item: "tamagotchi:laser_pointer" }
+				{ id: "A75C11DD71112B06", type: "item", item: "tamagotchi:squeaky_ball" }
+				{ id: "A75C10DD71112953", type: "item", item: "tamagotchi:feather_wand" }
+			]
+			rewards: [
+				{ id: "A77096DD7122B60F", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "561A681E5C4BE8B8"
+			title: "Squeaky Clean"
+			x: 13.5d
+			y: 0.0d
+			dependencies: ["97FAD407493510FF"]
+			description: [
+				"&7Groom your pet with a &ePet Brush&7, or fill a &ePet Bath&7 with a water bucket: dirty pets hop in and come out clean."
+			]
+			tasks: [
+				{ id: "4C399BC5FCA839DE", type: "item", item: "tamagotchi:pet_brush" }
+				{ id: "4C399CC5FCA83B91", type: "item", item: "tamagotchi:pet_bath" }
+			]
+			rewards: [
+				{
+					id: "4C2517C5FC96B088"
+					type: "item"
+					count: 8
+					item: "minecraft:white_wool"
+				}
+			]
+		}
+		{
+			id: "35275D89A0D0B5B6"
+			title: "Sweet Dreams"
+			x: 15.5d
+			y: 2.0d
+			dependencies: ["8DF647727A85A5C9", "561A681E5C4BE8B8"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7Pets sleep in a &ePet Bed&7, a &ePet Basket&7 or a &eDragon Nest&7 at night or when they are tired. They rest faster next to a plush of their own kind. Click a bed or basket with a dye to recolour it."
+			]
+			tasks: [
+				{ id: "71145D324FA57BCD", type: "item", item: "tamagotchi:pet_bed" }
+			]
+			rewards: [
+				{
+					id: "710D51324F9F48BB"
+					type: "item"
+					count: 16
+					item: "tamagotchi:pet_kibble"
+				}
+			]
+		}
+		{
+			id: "8A0F1CDFCE3C488D"
+			title: "A Backpack for Your Pet"
+			x: 13.5d
+			y: -2.0d
+			dependencies: ["BB822A9E22441ECE"]
+			description: [
+				"&7&eSneak + right-click&7 your pet with a chest: it wears a backpack with 27 slots. Open it in the pet screen."
+				"&7&eGolden apples&7 in the backpack are special: when your health gets low, your pet runs to you and feeds you one. Other food is its own lunch box for fights."
+				"&7Sneak + right-click with shears takes the backpack off - and everything inside spills out!"
+				""
+				"&7Tick the box when your pet wears a backpack."
+			]
+			tasks: [
+				{ id: "38ABD478C9426CC5", type: "item", item: "minecraft:chest" }
+				{ id: "38ABD378C9426B12", type: "checkmark", title: "My pet wears a backpack" }
+			]
+			rewards: [
+				{
+					id: "38A4C878C93C39B3"
+					type: "item"
+					count: 2
+					item: "minecraft:golden_apple"
+				}
+			]
+		}
+		{
+			id: "C01D6EEC743BD812"
+			title: "Hidden Talents"
+			x: 15.5d
+			y: -2.0d
+			dependencies: ["8A0F1CDFCE3C488D"]
+			description: [
+				"&7Every pet has a &etalent&7 (the pet screen names it). A happy pet uses it by itself, and &ebond&7 - the hearts on the screen, which grow with every bit of care - makes it recharge faster."
+				"&7The Desert Dragon smelts, the Jungle Dragon grows crops, the Pebble Golem sniffs out ores, the Void Kitten collects items, the Mimic stores them..."
+				""
+				"&7Tick the box when you saw your pet's talent."
+			]
+			tasks: [
+				{ id: "A3607256CD85A224", type: "checkmark", title: "My pet used its talent" }
+			]
+			rewards: [
+				{ id: "A359E656CD804892", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "86540283701B1EAF"
+			title: "Brave Little Friend"
+			x: 17.5d
+			y: -2.0d
+			dependencies: ["C01D6EEC743BD812"]
+			optional: true
+			description: [
+				"&7Your pet fights with you like a wolf, each pet in its own style. Below a third of its health it runs to you and eats from its backpack to heal."
+				"&7A tamed pet never dies: it faints and curls up into a &eTama Egg&7 that keeps its name, needs, bond and backpack. Use the egg on a block to wake it up - or put it in a &ePet Incubator&7, which hatches it fully healed in thirty seconds."
+			]
+			tasks: [
+				{ id: "B91BB2F267C83AB5", type: "item", item: "tamagotchi:pet_incubator" }
+			]
+			rewards: [
+				{ id: "B914A6F267C207A3", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "8F3230FA8F40B18F"
+			title: "Pet Paradise"
+			x: 17.5d
+			y: 2.0d
+			dependencies: ["35275D89A0D0B5B6"]
+			optional: true
+			description: [
+				"&7Pets use furniture by themselves: bored pets bounce on the &eBouncy Mushroom&7 (so can you!), run in the &eRunning Wheel&7 (it gives a redstone signal) and scratch the &eScratching Post&7. The &ePet House&7 shelters them from rain and thunder."
+			]
+			tasks: [
+				{ id: "B0C39A92C4C6B316", type: "item", item: "tamagotchi:bouncy_mushroom" }
+				{ id: "B0C39B92C4C6B4C9", type: "item", item: "tamagotchi:running_wheel" }
+				{ id: "B0C39892C4C6AFB0", type: "item", item: "tamagotchi:scratching_post" }
+				{ id: "B0C39992C4C6B163", type: "item", item: "tamagotchi:pet_house" }
+			]
+			rewards: [
+				{ id: "B0AF1692C4B529C0", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "86B743ACBE0B3218"
+			title: "Pet Gadgets"
+			x: 17.5d
+			y: 4.0d
+			dependencies: ["8F3230FA8F40B18F"]
+			optional: true
+			description: [
+				"&7The &eTreat Dispenser&7 shoots a treat to the hungriest pet on a redstone pulse, and the pet jumps and catches it. Bored pets open the &eToy Box&7 and play with the toys inside. The &ePet Flap&7 lets your pets through a wall and blocks everyone else."
+			]
+			tasks: [
+				{ id: "6B044EF1E0129B13", type: "item", item: "tamagotchi:treat_dispenser" }
+				{ id: "6B044DF1E0129960", type: "item", item: "tamagotchi:toy_box" }
+				{ id: "6B0450F1E0129E79", type: "item", item: "tamagotchi:pet_flap" }
+			]
+			rewards: [
+				{ id: "6B0ADAF1E017F4A5", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "3F4D75CFB894B440"
+			title: "Plushies and Portraits"
+			x: 15.5d
+			y: 4.0d
+			dependencies: ["35275D89A0D0B5B6"]
+			optional: true
+			description: [
+				"&7There is a plush of every pet: squeeze it, and lonely pets come and cuddle it. Hang a &ePet Portrait&7 and click it: it paints your nearest pet with its name. The &eEgg Lamp&7 is a cosy night light."
+			]
+			tasks: [
+				{ id: "39F5FD3C75DF1465", type: "item", item: "tamagotchi:pet_portrait" }
+				{ id: "39F5FC3C75DF12B2", type: "item", item: "tamagotchi:egg_lamp" }
+			]
+			rewards: [
+				{ id: "39EF713C75D9BAD3", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "41B68F61A7899786"
+			title: "&dGotta Pet 'Em All"
+			icon: "questsicons:quest_crown"
+			x: 9.5d
+			y: 3.6d
+			shape: "heart"
+			size: 1.8d
+			dependencies: ["521A66951BF7C1C2"]
+			description: [
+				"&d&o\"Ten pets, ten friends. The Dream has never been so cosy.\""
+				""
+				"&7Tame all ten pets. The rarest live in only three of ten &eend cities&7 (Void Kitten), &enether fortresses&7 (Ember Pup) and &etrial chambers&7 (Mimic, more often in woodland mansions). The Pebble Golem hides in trail ruins and, rarely, mineshafts."
+				"&7Use the Explorer's Compass, and keep a few hearts with you."
+			]
+			tasks: [
+				{
+					id: "C5203B62A13F928D"
+					type: "advancement"
+					title: "Tame all ten pets"
+					icon: "tamagotchi:tamagotchi_heart"
+					advancement: "tamagotchi:all_pets"
+				}
+			]
+			rewards: [
+				{
+					id: "C5192F62A1395F7B"
+					type: "item"
+					count: 2
+					item: "questsicons:legendary_crate"
+				}
+				{ id: "C5192E62A1395DC8", type: "xp", xp: 1000 }
+			]
+		}
+	]
+}

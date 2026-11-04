@@ -16,5 +16,7 @@
 		{ count: 3, item: "minecraft:emerald", weight: 6 }
 		{ count: 12, item: "farmersdelight:rope", weight: 5 }
 		{ count: 4, item: "minecraft:lantern", weight: 6 }
+		{ count: 8, item: "tamagotchi:pet_kibble", weight: 4 }
+		{ count: 8, item: "raft:rope", weight: 4 }
 	]
 }

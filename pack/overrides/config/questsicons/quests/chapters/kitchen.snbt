@@ -56,6 +56,28 @@
 			]
 		}
 		{
+			id: "B3E4EBBA62A78F9E"
+			title: "Rice Paddies"
+			x: 0.0d
+			y: -2.4d
+			dependencies: ["C95A406A7C9F21B9"]
+			optional: true
+			description: [
+				"&7Plant &eRice&7 in shallow water, one block deep. It grows up out of the water into &eRice Panicles&7. Cooked rice is the base of many Farmer's Delight and Ube's Delight meals."
+			]
+			tasks: [
+				{
+					id: "D01D238109A8FEBE"
+					type: "item"
+					count: 8
+					item: "farmersdelight:rice_panicle"
+				}
+			]
+			rewards: [
+				{ id: "D0091F8109984EE8", type: "item", item: "farmersdelight:rice_bag" }
+			]
+		}
+		{
 			id: "2CFD3D19EAF6701E"
 			title: "More Delight"
 			x: 4.0d
@@ -95,6 +117,28 @@
 			]
 		}
 		{
+			id: "1560E8D627E6CFD7"
+			title: "Morning Coffee"
+			x: 6.0d
+			y: 1.5d
+			dependencies: ["A502A7A9E80B66CD"]
+			optional: true
+			description: [
+				"&7Find &eCoffee Beans&7 in the jungle (Rustic Delight), roast them in a furnace and brew &eCoffee&7 in the cooking pot from 3 roasted beans. Try the coffee cookies and cheesecake too."
+			]
+			tasks: [
+				{ id: "B1B1252588CCD5C7", type: "item", item: "rusticdelight:coffee" }
+			]
+			rewards: [
+				{
+					id: "B19CA12588BB4C71"
+					type: "item"
+					count: 4
+					item: "farmersdelight:cabbage"
+				}
+			]
+		}
+		{
 			id: "F48AFBDC098A09B7"
 			title: "Ube's Delight"
 			x: 6.0d
@@ -115,6 +159,51 @@
 			]
 			rewards: [
 				{ id: "99A0B05D03D12768", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "528AA23ABA41CD6E"
+			title: "Sweet Little Things"
+			x: 6.0d
+			y: -2.6d
+			dependencies: ["2CFD3D19EAF6701E"]
+			optional: true
+			description: [
+				"&7&eAdditional Additions&7 cooks up quick snacks: &eFried Eggs&7, &eChicken Nuggets&7, &eHoneyed Apples&7 and &eBerry Pie&7."
+			]
+			tasks: [
+				{ id: "5CB3A82E4F4380DF", type: "item", item: "additionaladditions:berry_pie" }
+				{ id: "5CB3A72E4F437F2C", type: "item", item: "additionaladditions:honeyed_apple" }
+			]
+			rewards: [
+				{
+					id: "5C9F242E4F31F789"
+					type: "item"
+					count: 16
+					item: "minecraft:sweet_berries"
+				}
+			]
+		}
+		{
+			id: "38972FB6EB07C5B0"
+			title: "Maple Syrup"
+			x: 8.0d
+			y: -2.6d
+			dependencies: ["528AA23ABA41CD6E"]
+			optional: true
+			description: [
+				"&7&eEcologics&7: put a &eSpile&7 into a sappy maple log and collect the &eMaple Sap&7 with a bucket. Pour it into a cauldron above something hot (a campfire or a stove works) and fill a bottle with the syrup. Pancakes, maple cookies and maple pie are waiting."
+			]
+			tasks: [
+				{ id: "B65B1D2BB8CB1DC3", type: "item", item: "ecologics:maple_syrup_bottle" }
+			]
+			rewards: [
+				{
+					id: "B661A92BB8D07755"
+					type: "item"
+					count: 16
+					item: "minecraft:sugar"
+				}
 			]
 		}
 		{
@@ -142,7 +231,7 @@
 			id: "830FA23804143CB5"
 			title: "Fertilizer"
 			x: 4.0d
-			y: 2.0d
+			y: 2.5d
 			dependencies: ["D99F21DEEDE7056B"]
 			description: [
 				"&7Farming for Blockheads fertilizers make farmland rich (more crops), healthy (faster growth) or stable (never trampled)."
@@ -168,7 +257,7 @@
 			id: "B9F1D07E2E04A291"
 			title: "Sprinkler"
 			x: 6.0d
-			y: 2.0d
+			y: 3.5d
 			dependencies: ["830FA23804143CB5"]
 			optional: true
 			description: [
@@ -197,6 +286,45 @@
 			]
 			rewards: [
 				{ id: "AB55035DBA2AC80D", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "85E6E30CFB10FDCD"
+			title: "Ovens and Toasters"
+			x: 10.6d
+			y: -1.5d
+			dependencies: ["1BFF05DDA508CD5E"]
+			optional: true
+			description: [
+				"&7Add a &eToaster&7, a &eSpice Rack&7 and a &eMilk Jar&7 to the kitchen. The cooking table counts what is in them, and a &eCow in a Jar&7 (JEI tells you how) keeps the milk coming."
+			]
+			tasks: [
+				{ id: "FDE1ED35AC0E13FD", type: "item", item: "cookingforblockheads:toaster" }
+				{ id: "FDE1EC35AC0E124A", type: "item", item: "cookingforblockheads:milk_jar" }
+			]
+			rewards: [
+				{ id: "FDDB6135AC08BA6B", type: "item", item: "minecraft:milk_bucket" }
+			]
+		}
+		{
+			id: "F4511D2B75806A2B"
+			title: "Master Chef"
+			icon: "questsicons:quest_crown"
+			x: 10.6d
+			y: 1.5d
+			shape: "star"
+			size: 1.2d
+			dependencies: ["1BFF05DDA508CD5E"]
+			description: [
+				"&7Earn the &eChef's Hat&7. Cook a meal from three different add-ons and tick the box - you are the best cook of the Dream."
+			]
+			tasks: [
+				{ id: "F3117CF09741CD12", type: "item", item: "cookingforblockheads:chef_hat" }
+				{ id: "F3117DF09741CEC5", type: "checkmark", title: "I cooked my way through the add-ons" }
+			]
+			rewards: [
+				{ id: "F31808F0974726A4", type: "item", item: "questsicons:rare_crate" }
+				{ id: "F31809F097472857", type: "xp", xp: 150 }
 			]
 		}
 	]

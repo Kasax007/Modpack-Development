@@ -3,7 +3,7 @@
 	filename: "sea"
 	title: "&b6. The Endless Sea"
 	subtitle: [
-		"&7A drowned dream: rafts, sharks and floating treasure."
+		"&7A drowned dream: rafts, reefs and wrecks."
 	]
 	icon: "questsicons:icon_raft"
 	group: "5C66DB14A1ABD5AE"
@@ -20,9 +20,10 @@
 			size: 1.5d
 			dependencies: ["70AE548090DE3D9A"]
 			description: [
-				"&d&o\"Part of the Dream has drowned. Only an ocean is left, and the people who lived there now drift on rafts.\""
+				"&d&o\"Part of the Dream has drowned. Only an ocean is left: islands, reefs and wrecks, and the people who once lived there are gone.\""
 				""
-				"&7This chapter is the &eRaft&7 mod: a whole dimension of open sea, inspired by the survival game Raft. To get there you need a portal of &edriftwood&7, lit with an &eEnergy Staff&7."
+				"&7This chapter is &eBeach Craft&7: a whole ocean dimension with islands, coral reefs and deep trenches, its own creatures, a story and a boss at the bottom of the sea."
+				"&7To get there you need a portal of &edriftwood&7, lit with an &eEnergy Staff&7. Its parts come from the oceans of the overworld."
 			]
 			tasks: [
 				{ id: "58B48DEF8B4CEB54", type: "item", item: "minecraft:fishing_rod" }
@@ -39,11 +40,11 @@
 		{
 			id: "0552514B4B499414"
 			title: "Ancient Broken Ring"
-			x: 2.0d
-			y: -2.0d
+			x: 1.5d
+			y: -1.2d
 			dependencies: ["A86C5C17B948EC6E"]
 			description: [
-				"&7Strange old rings lie on the sea floor of the Dream. You can find them in &eshipwreck treasure&7, &eburied treasure&7, &eocean ruins&7 - and sometimes while fishing."
+				"&7Strange old rings lie on the sea floor of the Dream. You find them in &eshipwreck treasure&7, &eburied treasure&7 and &eocean ruins&7 - and sometimes they bite on your fishing line."
 			]
 			tasks: [
 				{ id: "32E4BE4AD5846D79", type: "item", item: "raft:ancient_broken_ring" }
@@ -58,13 +59,29 @@
 			]
 		}
 		{
+			id: "7B326BE48009D350"
+			title: "Ancient Crystal"
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["A86C5C17B948EC6E"]
+			description: [
+				"&7Shipwreck treasure chests often hold an &eAncient Crystal&7. Look for wrecks on beaches and in oceans."
+			]
+			tasks: [
+				{ id: "CC3AE7E2F213B1C4", type: "item", item: "raft:ancient_crystal" }
+			]
+			rewards: [
+				{ id: "CC33DBE2F20D7EB2", type: "xp", xp: 80 }
+			]
+		}
+		{
 			id: "39C94812D13095F6"
 			title: "Ancient Energy"
-			x: 4.0d
-			y: -2.0d
+			x: 3.0d
+			y: -1.2d
 			dependencies: ["0552514B4B499414"]
 			description: [
-				"&7Smelt the ring. What is left is pure &eAncient Energy&7."
+				"&7Smelt the ring. What is left is pure &eAncient Energy&7. You need one for the staff and one for every four portal frames."
 			]
 			tasks: [
 				{
@@ -79,29 +96,13 @@
 			]
 		}
 		{
-			id: "7B326BE48009D350"
-			title: "Ancient Crystal"
-			x: 2.0d
-			y: 2.0d
-			dependencies: ["A86C5C17B948EC6E"]
-			description: [
-				"&7Shipwreck treasure chests often hold an &eAncient Crystal&7. Look for wrecks on beaches and in oceans."
-			]
-			tasks: [
-				{ id: "CC3AE7E2F213B1C4", type: "item", item: "raft:ancient_crystal" }
-			]
-			rewards: [
-				{ id: "CC33DBE2F20D7EB2", type: "xp", xp: 80 }
-			]
-		}
-		{
 			id: "972382373B131948"
 			title: "Driftwood"
-			x: 4.0d
-			y: 2.0d
+			x: 1.5d
+			y: 1.2d
 			dependencies: ["A86C5C17B948EC6E"]
 			description: [
-				"&7Dark &eDriftwood&7 stumps stand on sandy beaches. Chop the logs - you will need plenty."
+				"&7Short, dark &eDriftwood&7 stumps stand on sandy beaches. Chop the logs - you will need plenty."
 			]
 			tasks: [
 				{
@@ -123,12 +124,12 @@
 		{
 			id: "A8434A17B925C8C4"
 			title: "The Energy Staff"
-			x: 6.0d
-			y: -1.0d
+			x: 4.5d
+			y: -1.2d
 			shape: "diamond"
 			dependencies: ["39C94812D13095F6", "7B326BE48009D350"]
 			description: [
-				"&7An &eEnergy Staff&7 channels ancient energy. It lights the portal to the sea."
+				"&7Ancient Energy on top, an Ancient Crystal in the middle and a stick at the bottom: the &eEnergy Staff&7 channels ancient energy. It lights portals 64 times."
 			]
 			tasks: [
 				{ id: "C2213D8A186D237F", type: "item", item: "raft:energy_staff" }
@@ -145,11 +146,11 @@
 		{
 			id: "8249014F5E0233EF"
 			title: "Portal Frames"
-			x: 6.0d
-			y: 1.0d
-			dependencies: ["39C94812D13095F6", "972382373B131948"]
+			x: 4.5d
+			y: 1.2d
+			dependencies: ["972382373B131948"]
 			description: [
-				"&7Four driftwood logs around one ancient energy give &e4 Driftwood Portal Frames&7. Build a frame like a nether portal (at least 4 wide and 5 high, corners not needed)."
+				"&7Four driftwood logs around one Ancient Energy make &e4 Driftwood Portal Frames&7. Build the frame like a nether portal, with at least 2 by 3 empty blocks inside."
 			]
 			tasks: [
 				{
@@ -167,7 +168,7 @@
 			id: "A0214A98C4426668"
 			title: "&bBeyond the Horizon"
 			icon: "raft:driftwood_portal_frame"
-			x: 8.0d
+			x: 6.0d
 			y: 0.0d
 			shape: "star"
 			size: 1.4d
@@ -175,13 +176,15 @@
 			description: [
 				"&d&o\"Breathe in. Smell the salt? Welcome to the Endless Sea.\""
 				""
-				"&7Right-click the frame with the Energy Staff and step through. You arrive on a small driftwood platform high above the waves."
+				"&7Right-click the frame with the Energy Staff and step through. You land on a driftwood platform high above the waves, with a portal back home."
+				"&7On a new platform a castaway's chest is waiting for you. Open it!"
+				"&7Later, the &eRaft Dimension Teleporter&7 (5 titanium ingots and 2 Ancient Energy) takes you to the sea and back home without a portal, 64 times."
 			]
 			tasks: [
 				{
 					id: "E2F62155607C9745"
 					type: "dimension"
-					title: "Enter the Raft dimension"
+					title: "Enter the Endless Sea"
 					dimension: "raft:raftdim"
 				}
 			]
@@ -201,13 +204,458 @@
 			]
 		}
 		{
-			id: "F64EF14B43706CC2"
-			title: "Rope"
-			x: 10.0d
-			y: -3.0d
+			id: "8C14D5A43E08F8BB"
+			title: "The Castaway"
+			icon: "raft:expedition_journal"
+			x: 7.6d
+			y: 0.0d
 			dependencies: ["A0214A98C4426668"]
 			description: [
-				"&7Two palm leaves (or string) make &eRope&7. Palm leaves sometimes drop rope by themselves."
+				"&d&o\"Someone was here before you. They left you a chest.\""
+				""
+				"&7Open the chest on your arrival platform: a note, a chart, food, a paddle, a hook and the &eExpedition Journal&7."
+				"&7Use the journal to read your current goal and a hint. It follows your progress by itself."
+				"&7Your platform is older than Beach Craft 3? Then craft the journal: a book, a compass and paper."
+				""
+				"&7The story chapters of the sea follow below, one quest each. Reward: an almanac that opens at its spoiler-free story chapter."
+			]
+			tasks: [
+				{
+					id: "ACAF4CE238001446"
+					type: "advancement"
+					title: "Find the Expedition Journal"
+					icon: "raft:expedition_journal"
+					advancement: "raft:story/castaway"
+				}
+			]
+			rewards: [
+				{
+					id: "AC9AC8E237EE8AF0"
+					type: "item"
+					item: {
+						id: "raft:seafarers_almanac"
+						components: {
+							"minecraft:custom_data": { almanac: "story" }
+						}
+					}
+				}
+				{ id: "AC9AC9E237EE8CA3", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "35B489311891E8F2"
+			title: "Keeper of the Light"
+			icon: "raft:lighthouse_lens"
+			x: 9.4d
+			y: 0.0d
+			dependencies: ["8C14D5A43E08F8BB"]
+			description: [
+				"&7Follow the chart from the castaway chest to the &3Old Lighthouse&7 on a rocky isle. Climb it, look around and read what the keeper left behind."
+				""
+				"&7Every story chest holds a chart to the next place. Lost it? Sneak and use the &eExpedition Journal&7 at sea for a fresh chart (once every 5 minutes)."
+			]
+			tasks: [
+				{
+					id: "C119196220B90317"
+					type: "advancement"
+					title: "Reach the Old Lighthouse"
+					icon: "raft:lighthouse_lens"
+					advancement: "raft:story/lighthouse"
+				}
+			]
+			rewards: [
+				{ id: "C105156220A85341", type: "item", item: "questsicons:common_crate" }
+				{ id: "C105146220A8518E", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "EE579435A4C90B59"
+			title: "Saltmere"
+			icon: "raft:paper_lantern_orange"
+			x: 11.2d
+			y: 0.0d
+			dependencies: ["35B489311891E8F2"]
+			description: [
+				"&7The next chart leads to &3Saltmere&7, a fishing village on stilts above a glowing reef. Walk its decks and huts, and take what was left for whoever comes next - a &eDiving Helmet&7 among it."
+			]
+			tasks: [
+				{
+					id: "C2BD109558609014"
+					type: "advancement"
+					title: "Visit Saltmere"
+					icon: "raft:paper_lantern_orange"
+					advancement: "raft:story/saltmere"
+				}
+			]
+			rewards: [
+				{ id: "C2B68495585B3682", type: "item", item: "questsicons:common_crate" }
+				{ id: "C2B68595585B3835", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "D98DEF571D5F0CA4"
+			title: "The Coral Sigil"
+			icon: "raft:coral_sigil"
+			x: 11.2d
+			y: -1.5d
+			shape: "diamond"
+			dependencies: ["EE579435A4C90B59"]
+			description: [
+				"&7The first of four &eTide Sigils&7 is kept somewhere in Saltmere. Sigils are too precious to lose: dropped, they never despawn, burn or explode."
+			]
+			tasks: [
+				{
+					id: "37D982DB62F7A064"
+					type: "advancement"
+					title: "Take the Coral Sigil"
+					icon: "raft:coral_sigil"
+					advancement: "raft:story/coral_sigil"
+				}
+			]
+			rewards: [
+				{ id: "37D2F6DB62F246D2", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "90A15879BF6E8FBA"
+			title: "Deep Science"
+			icon: "raft:research_terminal"
+			x: 13.0d
+			y: 0.0d
+			dependencies: ["EE579435A4C90B59"]
+			description: [
+				"&7Now the story goes below the waves: dive to &3Helix Research Station&7 on the sea floor. Wear the helmet, bring an &eOxygen Tank&7 and a light - the deep is dark. Look for the airlock."
+			]
+			tasks: [
+				{
+					id: "085356C2490F11E2"
+					type: "advancement"
+					title: "Dive to Helix Research Station"
+					icon: "raft:research_terminal"
+					advancement: "raft:story/helix"
+				}
+			]
+			rewards: [
+				{ id: "085A62C2491544F4", type: "item", item: "questsicons:rare_crate" }
+				{ id: "085A63C2491546A7", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "FAEFDA08BEEED035"
+			title: "The Pearl Sigil"
+			icon: "raft:pearl_sigil"
+			x: 13.0d
+			y: -1.5d
+			shape: "diamond"
+			dependencies: ["90A15879BF6E8FBA", "D98DEF571D5F0CA4"]
+			description: [
+				"&7The second sigil is locked away inside the station. Read the &eResearch Terminals&7: the people of Helix wrote down a lot."
+			]
+			tasks: [
+				{
+					id: "7FD39368306530C4"
+					type: "advancement"
+					title: "Recover the Pearl Sigil"
+					icon: "raft:pearl_sigil"
+					advancement: "raft:story/pearl_sigil"
+				}
+			]
+			rewards: [
+				{ id: "7FCC8768305EFDB2", type: "xp", xp: 250 }
+			]
+		}
+		{
+			id: "AB9DEC20A42AC1A7"
+			title: "The Drowned City"
+			icon: "raft:asphalt_line"
+			x: 14.8d
+			y: 0.0d
+			dependencies: ["90A15879BF6E8FBA"]
+			description: [
+				"&7&3Port Solace&7 lies on the drowned shelf, a whole city under water. Its towers reach up to the surface. Its streets are not empty, so come prepared."
+			]
+			tasks: [
+				{
+					id: "6DB33B11CEE2C4BA"
+					type: "advancement"
+					title: "Explore Port Solace"
+					icon: "raft:asphalt_line"
+					advancement: "raft:story/port_solace"
+				}
+			]
+			rewards: [
+				{ id: "6DBA2711CEE8C16C", type: "item", item: "questsicons:rare_crate" }
+				{ id: "6DBA2811CEE8C31F", type: "xp", xp: 250 }
+			]
+		}
+		{
+			id: "97C9D5EB65DAB9C0"
+			title: "The Storm Sigil"
+			icon: "raft:storm_sigil"
+			x: 14.8d
+			y: -1.5d
+			shape: "diamond"
+			dependencies: ["AB9DEC20A42AC1A7", "FAEFDA08BEEED035"]
+			description: [
+				"&7The third sigil waits in the city. A hint: look up, not down."
+			]
+			tasks: [
+				{
+					id: "128BB4B5ED01DF9A"
+					type: "advancement"
+					title: "Claim the Storm Sigil"
+					icon: "raft:storm_sigil"
+					advancement: "raft:story/storm_sigil"
+				}
+			]
+			rewards: [
+				{ id: "129220B5ED0702CC", type: "xp", xp: 300 }
+			]
+		}
+		{
+			id: "CD9E4281C4ACB4D9"
+			title: "Through Fire"
+			icon: "raft:glowing_tidestone"
+			x: 16.6d
+			y: 0.0d
+			dependencies: ["AB9DEC20A42AC1A7"]
+			description: [
+				"&7On a volcanic isle of black sand and ash stands the &3Ashen Forge&7. Lava runs through its halls and ember crabs guard it: bring Fire Resistance."
+			]
+			tasks: [
+				{
+					id: "95B1AE0D550948F8"
+					type: "advancement"
+					title: "Enter the Ashen Forge"
+					icon: "raft:glowing_tidestone"
+					advancement: "raft:story/ashen_forge"
+				}
+			]
+			rewards: [
+				{ id: "95C6320D551AD24E", type: "item", item: "questsicons:rare_crate" }
+				{ id: "95C6330D551AD401", type: "xp", xp: 300 }
+			]
+		}
+		{
+			id: "484F186D1A301322"
+			title: "The Ember Sigil"
+			icon: "raft:ember_sigil"
+			x: 16.6d
+			y: -1.5d
+			shape: "diamond"
+			dependencies: ["CD9E4281C4ACB4D9", "97C9D5EB65DAB9C0"]
+			description: [
+				"&7The last sigil is hidden deep in the forge. Mind the lava!"
+			]
+			tasks: [
+				{
+					id: "C4F4101546477912"
+					type: "advancement"
+					title: "Carry the Ember Sigil out"
+					icon: "raft:ember_sigil"
+					advancement: "raft:story/ember_sigil"
+				}
+			]
+			rewards: [
+				{ id: "C4FA9C15464CD2A4", type: "xp", xp: 350 }
+			]
+		}
+		{
+			id: "98AE9A1BBE409E5D"
+			title: "The Coral Temple"
+			icon: "raft:tidestone_pillar"
+			x: 18.4d
+			y: 0.0d
+			dependencies: ["CD9E4281C4ACB4D9"]
+			description: [
+				"&7On the reef floor an old temple of the Tidewardens is overgrown with coral: the &3Coral Temple&7. Moray eels live in its walls."
+			]
+			tasks: [
+				{
+					id: "A92F272DF53E6D92"
+					type: "advancement"
+					title: "Find the Coral Temple"
+					icon: "raft:tidestone_pillar"
+					advancement: "raft:story/coral_temple"
+				}
+			]
+			rewards: [
+				{ id: "A935B32DF543C724", type: "item", item: "questsicons:epic_crate" }
+				{ id: "A935B42DF543C8D7", type: "xp", xp: 350 }
+			]
+		}
+		{
+			id: "CE287FB924340205"
+			title: "The Tidewarden Key"
+			icon: "raft:tidewarden_key"
+			x: 18.4d
+			y: -1.5d
+			shape: "diamond"
+			size: 1.3d
+			dependencies: ["98AE9A1BBE409E5D", "484F186D1A301322"]
+			description: [
+				"&7Put the four sigils into the &eTidewarden Altar&7 one by one. With all four inside it forges the &eTidewarden Key&7. The key is never used up; a key for a friend needs four new sigils."
+			]
+			tasks: [
+				{
+					id: "C0389517104841D8"
+					type: "advancement"
+					title: "Forge the Tidewarden Key"
+					icon: "raft:tidewarden_key"
+					advancement: "raft:story/tidewarden_key"
+				}
+			]
+			rewards: [
+				{ id: "C04D19171059CB2E", type: "xp", xp: 400 }
+			]
+		}
+		{
+			id: "4CC04CE7BCF6A37D"
+			title: "The Abyssal Sanctum"
+			icon: "raft:tide_seal"
+			x: 20.2d
+			y: 0.0d
+			dependencies: ["CE287FB924340205"]
+			description: [
+				"&7The last chart leads into the deepest trench. The &3Abyssal Sanctum&7 is closed by a shimmering &eTide Seal&7 that nothing can break - only the key opens it."
+				"&7Bring your best gear, food, a full tank and the helmet lamp. What waits inside is no ordinary sea creature."
+			]
+			tasks: [
+				{
+					id: "2A0B664DAF535387"
+					type: "advancement"
+					title: "Reach the Abyssal Sanctum"
+					icon: "raft:tide_seal"
+					advancement: "raft:story/abyssal_sanctum"
+				}
+			]
+			rewards: [
+				{ id: "29F6E24DAF41CA31", type: "item", item: "questsicons:epic_crate" }
+				{ id: "29F6E14DAF41C87E", type: "xp", xp: 400 }
+			]
+		}
+		{
+			id: "9A4E4664D88186D8"
+			title: "&bThe Leviathan"
+			icon: "raft:leviathan_trophy"
+			x: 22.0d
+			y: 0.0d
+			shape: "heart"
+			size: 1.8d
+			dependencies: ["4CC04CE7BCF6A37D"]
+			description: [
+				"&d&o\"Here it is, Dreamer. The nightmare that drowned the sea.\""
+				""
+				"&7Use the &eTidewarden Key&7 on the &eLeviathan Altar&7 at the edge of the pool to wake it, and fight on the stone ring around the water."
+				"&7It cannot be hurt while it circles deep in the pool. When it lies stranded after a leap, strike! The almanac has a full chapter on the fight (it warns you first)."
+			]
+			tasks: [
+				{
+					id: "7E8C495B6B991A3A"
+					type: "advancement"
+					title: "Defeat the Leviathan"
+					icon: "raft:leviathan_trophy"
+					advancement: "raft:story/leviathan"
+				}
+			]
+			rewards: [
+				{ id: "7E93355B6B9F16EC", type: "item", item: "questsicons:legendary_crate" }
+				{ id: "7E93365B6B9F189F", type: "xp_levels", xp_levels: 20 }
+			]
+		}
+		{
+			id: "65AD8F79A7344E8A"
+			title: "&dHeart of the Tide"
+			icon: "raft:heart_of_the_tide"
+			x: 24.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.4d
+			dependencies: ["9A4E4664D88186D8"]
+			description: [
+				"&7The Leviathan leaves the &eHeart of the Tide&7, its scales and a trophy. Placed as a block, the heart gives every swimmer within 32 blocks Conduit Power and Dolphin's Grace."
+				"&7To fight again (or with friends), bring the key and an Ancient Crystal to the altar."
+				""
+				"&d✦ Dream Star:&7 the Heart of the Tide is one of its ingredients. Keep it, or pick it up again for the epilogue."
+			]
+			tasks: [
+				{ id: "4A77F9BC27D915F5", type: "item", item: "raft:heart_of_the_tide" }
+			]
+			rewards: [
+				{ id: "4A70EDBC27D2E2E3", type: "item", item: "questsicons:epic_crate" }
+				{ id: "4A70ECBC27D2E130", type: "xp", xp: 500 }
+			]
+		}
+		{
+			id: "EBC93426398D18F2"
+			title: "Tidebreaker"
+			x: 24.0d
+			y: -1.8d
+			dependencies: ["65AD8F79A7344E8A"]
+			optional: true
+			description: [
+				"&7Four &eLeviathan Scales&7, a titanium ingot and a trident make the &eTidebreaker&7: 9 damage, +50% against sea creatures, and in water or rain you hold use to surge ahead."
+			]
+			tasks: [
+				{ id: "F9446D65AFB0ACE1", type: "item", item: "raft:tidebreaker" }
+			]
+			rewards: [
+				{ id: "F958F165AFC23637", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "5C29D1C20B1A09A6"
+			title: "&bMaster of the Sea"
+			icon: "questsicons:quest_crown"
+			x: 24.0d
+			y: 1.8d
+			shape: "star"
+			size: 1.5d
+			dependencies: ["65AD8F79A7344E8A"]
+			description: [
+				"&d&o\"The sea is calm again. Raise your flag, keeper of the tides - the Dream is almost whole.\""
+			]
+			tasks: [
+				{ id: "36E971E4A2035CE7", type: "item", item: "raft:raft_flag" }
+			]
+			rewards: [
+				{ id: "36D4EDE4A1F1D391", type: "item", item: "questsicons:epic_crate" }
+				{ id: "36D4ECE4A1F1D1DE", type: "xp", xp: 400 }
+			]
+		}
+		{
+			id: "56466073B048ED95"
+			title: "The Seafarer's Almanac"
+			icon: "raft:seafarers_almanac"
+			x: 6.2d
+			y: -3.0d
+			shape: "diamond"
+			dependencies: ["A0214A98C4426668"]
+			description: [
+				"&7The moment you arrive, a &eSeafarer's Almanac&7 lands in your bag: the guide to the sea, from rafts and diving to every creature. Click a chapter to open it."
+				"&7Lost it? Craft a new one from a book and kelp or driftwood. Some quests here give you an almanac that opens right at the page you need."
+			]
+			tasks: [
+				{ id: "925E9C6ACEAA396E", type: "item", item: "raft:seafarers_almanac" }
+			]
+			rewards: [
+				{ id: "924A186ACE98B018", type: "xp", xp: 50 }
+				{
+					id: "924A196ACE98B1CB"
+					type: "item"
+					count: 3
+					item: "raft:fresh_water"
+				}
+			]
+		}
+		{
+			id: "F64EF14B43706CC2"
+			title: "Rope"
+			x: 7.8d
+			y: -3.0d
+			dependencies: ["56466073B048ED95"]
+			description: [
+				"&7Two palm leaves or three string make &eRope&7. Palm leaves sometimes drop rope by themselves."
 			]
 			tasks: [
 				{
@@ -229,11 +677,11 @@
 		{
 			id: "A304177AED91E42B"
 			title: "Expand the Raft"
-			x: 12.0d
+			x: 9.4d
 			y: -3.0d
 			dependencies: ["F64EF14B43706CC2"]
 			description: [
-				"&7&eRaft Foundations&7 (planks bound with rope) float your base. &eReinforced Foundations&7 are sturdier."
+				"&7Seven planks with rope in the top and bottom middle make &e4 Raft Foundations&7. They float, so build your raft outwards from the platform."
 			]
 			tasks: [
 				{
@@ -253,16 +701,136 @@
 			]
 		}
 		{
+			id: "52155A1D777B4DB5"
+			title: "Shark Proof"
+			x: 11.0d
+			y: -3.0d
+			dependencies: ["A304177AED91E42B"]
+			description: [
+				"&7A foundation and 2 scrap metal make a &eReinforced Foundation&7. Sharks never bite them, so put them on the edges of your raft."
+			]
+			tasks: [
+				{
+					id: "95C9A0A215A13F32"
+					type: "item"
+					count: 8
+					item: "raft:reinforced_foundation"
+				}
+			]
+			rewards: [
+				{
+					id: "95D0ACA215A77244"
+					type: "item"
+					count: 6
+					item: "raft:scrap_metal"
+				}
+			]
+		}
+		{
+			id: "FF2B67FFEE9B6D8B"
+			title: "&cBruce"
+			x: 12.6d
+			y: -3.0d
+			shape: "heart"
+			size: 1.2d
+			dependencies: ["52155A1D777B4DB5"]
+			description: [
+				"&d&o\"Something circles your raft. It is patient. It is hungry.\""
+				""
+				"&7&cBruce the shark&7 hunts swimmers and circles rafts that people stand on. Every 15 to 45 seconds he bites an edge foundation, and after 4 bites it breaks. Hit him and he swims away for a while."
+				"&7On a server, &e/gamerule raft:shark_bites false&7 stops the biting."
+			]
+			tasks: [
+				{
+					id: "FD52DD34D69B4E54"
+					type: "kill"
+					entity: "raft:shark"
+					value: 1
+				}
+			]
+			rewards: [
+				{
+					id: "FD4C5134D695F4C2"
+					type: "item"
+					count: 4
+					item: "raft:cooked_shark_meat"
+				}
+				{ id: "FD4C5234D695F675", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "39DEDDC586312982"
+			title: "Hammerhead"
+			x: 14.2d
+			y: -3.0d
+			shape: "heart"
+			dependencies: ["FF2B67FFEE9B6D8B"]
+			optional: true
+			description: [
+				"&7The &eHammerhead Shark&7 lives deeper in the open sea: 20 hearts, and it hits harder than Bruce."
+			]
+			tasks: [
+				{
+					id: "8E9F97C967B8C490"
+					type: "kill"
+					entity: "raft:hammerhead_shark"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "8EB39BC967C97466", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "829273C5F8C83D28"
+			title: "Shark Trophy"
+			x: 15.8d
+			y: -3.0d
+			dependencies: ["FF2B67FFEE9B6D8B"]
+			optional: true
+			description: [
+				"&7Three planks on three shark teeth make a &eShark Jaw Trophy&7 for your wall. Bruce would be proud."
+			]
+			tasks: [
+				{ id: "B815E1208FA6C413", type: "item", item: "raft:shark_jaw_trophy" }
+			]
+			rewards: [
+				{ id: "B81C6D208FAC1DA5", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "566CD39EB3306E79"
+			title: "Plastic Hook"
+			x: 7.8d
+			y: -4.5d
+			dependencies: ["56466073B048ED95"]
+			description: [
+				"&7The current carries planks, palm leaves, plastic and scrap metal past you, from west to east. Now and then lost loot drifts by, and rarely a &eMessage in a Bottle&7 or a &eSupply Barrel&7 - use them to open them."
+				"&7Hold use with the &ePlastic Hook&7 to pull floating items towards you, up to 12 blocks away."
+			]
+			tasks: [
+				{ id: "3B2D4471607EAE44", type: "item", item: "raft:plastic_hook" }
+			]
+			rewards: [
+				{
+					id: "3B26387160787B32"
+					type: "item"
+					count: 6
+					item: "raft:scrap_metal"
+				}
+			]
+		}
+		{
 			id: "855F0669307C19CA"
 			title: "Item Catcher"
 			icon: "raft:net"
-			x: 10.0d
-			y: -1.0d
+			x: 9.4d
+			y: -4.5d
 			shape: "hexagon"
-			dependencies: ["A0214A98C4426668"]
+			dependencies: ["566CD39EB3306E79"]
 			description: [
-				"&7Debris drifts past you all the time: planks, palm leaves, plastic and scrap. An &eItem Catcher&7 in the water catches it for you."
-				"&7Put a &eNet&7 into it and it also fishes &eUnrefined Ocean Garbage&7 out of the sea. Smelt it into a &eTrash Cube&7 and right-click to see what is inside."
+				"&7Put an &eItem Catcher&7 in the water and it catches the debris that drifts into it. It holds one kind of item at a time, so empty it often - hoppers can take the catch out."
+				"&7With an &eItem Catcher Net&7 inside it also fishes up Unrefined Ocean Garbage about every 30 seconds. A net lasts 32 catches. Smelt the garbage into a &eTrash Cube&7 and use it for 1 to 3 surprises."
 			]
 			tasks: [
 				{ id: "25014F8D96295126", type: "item", item: "raft:item_catcher" }
@@ -278,34 +846,52 @@
 			]
 		}
 		{
-			id: "566CD39EB3306E79"
-			title: "Plastic Hook"
-			x: 12.0d
-			y: -1.0d
+			id: "7917CC5FBB3D841B"
+			title: "Receiver"
+			x: 11.0d
+			y: -4.5d
 			dependencies: ["855F0669307C19CA"]
 			description: [
-				"&7Hold right-click with the &ePlastic Hook&7 to pull floating debris to you, like in the real game."
+				"&7Use the &eReceiver&7 for the direction and distance to the nearest floating driftwood. Out at sea it is the best source of driftwood logs."
+				"&7It needs a &eCircuit Board&7 (copper, a slime ball and plastic) and a titanium nugget."
 			]
 			tasks: [
-				{ id: "3B2D4471607EAE44", type: "item", item: "raft:plastic_hook" }
+				{ id: "1120ACBC12061EB1", type: "item", item: "raft:receiver" }
 			]
 			rewards: [
+				{ id: "113530BC1217A807", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "38EA3B7A88D1623B"
+			title: "Driftwood Ahoy!"
+			x: 12.6d
+			y: -4.5d
+			shape: "diamond"
+			dependencies: ["7917CC5FBB3D841B"]
+			description: [
+				"&7Follow the receiver to the floating driftwood and haul the logs aboard."
+			]
+			tasks: [
 				{
-					id: "3B26387160787B32"
+					id: "CE45169C7C71A3B0"
 					type: "item"
-					count: 6
-					item: "raft:scrap_metal"
+					count: 16
+					item: "raft:driftwood_log"
 				}
+			]
+			rewards: [
+				{ id: "CE599A9C7C832D06", type: "item", item: "questsicons:rare_crate" }
 			]
 		}
 		{
 			id: "851A5F35AEE3F509"
 			title: "Fresh Water"
-			x: 10.0d
-			y: 1.0d
-			dependencies: ["A0214A98C4426668"]
+			x: 7.8d
+			y: -6.0d
+			dependencies: ["56466073B048ED95"]
 			description: [
-				"&7Sea water is no good. A &eWater Purifier&7 turns water bottles into &eFresh Water&7 (a bucket gives three). Fresh water fills you up a little."
+				"&7Sea water is no good. A &eWater Purifier&7 turns water bottles into &eFresh Water&7; a water bucket gives three. It burns planks, logs, coal or charcoal."
 			]
 			tasks: [
 				{ id: "9F75F4038452EDAC", type: "item", item: "raft:water_purifier" }
@@ -328,11 +914,11 @@
 		{
 			id: "1118183A72E5E5D6"
 			title: "Simple Grill"
-			x: 12.0d
-			y: 1.0d
+			x: 9.4d
+			y: -6.0d
 			dependencies: ["851A5F35AEE3F509"]
 			description: [
-				"&7The &eSimple Grill&7 cooks two foods at once, 50% faster than a campfire. It burns planks, logs or coal."
+				"&7The &eSimple Grill&7 cooks two foods at once, 50% faster than a campfire. Use it with fuel first, then with raw food."
 			]
 			tasks: [
 				{ id: "B330A7B35D81220D", type: "item", item: "raft:simple_grill" }
@@ -349,11 +935,12 @@
 		{
 			id: "6CDB4BB06ADC6102"
 			title: "A Floating Farm"
-			x: 10.0d
-			y: 3.0d
-			dependencies: ["851A5F35AEE3F509"]
+			x: 11.0d
+			y: -6.0d
+			dependencies: ["1118183A72E5E5D6"]
 			description: [
-				"&7&eCrop Plots&7 are always watered and can never be trampled - perfect for a raft. A &eScarecrow&7 keeps monsters from spawning within 24 blocks and protects crops around it."
+				"&7&eCrop Plots&7 are farmland that is always watered and never trampled, and crops grow about 50% faster on them."
+				"&7Seagulls peck at crops and set them back one stage, unless a &eScarecrow&7 stands within 16 blocks. It also stops monsters from spawning within 24 blocks."
 			]
 			tasks: [
 				{
@@ -374,14 +961,40 @@
 			]
 		}
 		{
+			id: "A308824852D87170"
+			title: "Pineapples"
+			x: 12.6d
+			y: -6.0d
+			dependencies: ["6CDB4BB06ADC6102"]
+			description: [
+				"&7Wild &ePineapple Bushes&7 grow on the islands; the fruit is ready when it is golden. Plant a &ePineapple Crown&7 on farmland or a crop plot to grow your own."
+			]
+			tasks: [
+				{
+					id: "FC3D5F3EC917A124"
+					type: "item"
+					count: 4
+					item: "raft:pineapple"
+				}
+			]
+			rewards: [
+				{
+					id: "FC36D33EC9124792"
+					type: "item"
+					count: 2
+					item: "raft:pineapple_crown"
+				}
+			]
+		}
+		{
 			id: "12B81BA9BAC2D069"
 			title: "Island Drinks"
-			x: 12.0d
-			y: 3.0d
-			dependencies: ["6CDB4BB06ADC6102"]
+			x: 14.2d
+			y: -6.0d
+			dependencies: ["A308824852D87170"]
 			optional: true
 			description: [
-				"&7Coconut milk heals over time. A Piña Colada... well, try it."
+				"&7Pick coconuts from palm leaves; they grow back after about 20 minutes. &eCoconut Milk&7 gives Regeneration, a &ePina Colada&7 gives Speed."
 			]
 			tasks: [
 				{ id: "C797ADDD6068D935", type: "item", item: "raft:coconut_milk" }
@@ -392,115 +1005,205 @@
 			]
 		}
 		{
-			id: "FF2B67FFEE9B6D8B"
-			title: "&cBruce"
-			x: 14.0d
-			y: -2.0d
-			shape: "heart"
-			size: 1.3d
-			dependencies: ["566CD39EB3306E79"]
+			id: "212CEB9C540E9BE6"
+			title: "Beach Builder"
+			icon: "raft:weathered_planks"
+			x: 4.6d
+			y: -3.0d
+			dependencies: ["56466073B048ED95"]
 			description: [
-				"&d&o\"Something circles your raft. It is patient. It is hungry.\""
-				""
-				"&7&cBruce the shark&7 attacks swimmers. Defeat him for shark meat and teeth - and keep your feet out of the water."
+				"&7Beach Craft has a whole harbour of new blocks; the Building and Decoration tabs show them all."
+				"&7&eWeathered Planks&7: 4 driftwood or palm planks around bone meal. &eTeak Planks&7: dark oak and palm planks. Both come with stairs, slabs, fences, gates, a door and a hatch."
 			]
 			tasks: [
 				{
-					id: "FD52DD34D69B4E54"
-					type: "kill"
-					entity: "raft:shark"
-					value: 1
-				}
-			]
-			rewards: [
-				{
-					id: "FD4C5134D695F4C2"
-					type: "item"
-					count: 4
-					item: "raft:cooked_shark_meat"
-				}
-				{ id: "FD4C5234D695F675", type: "item", item: "questsicons:rare_crate" }
-			]
-		}
-		{
-			id: "829273C5F8C83D28"
-			title: "Shark Trophy"
-			x: 16.0d
-			y: -2.0d
-			dependencies: ["FF2B67FFEE9B6D8B"]
-			optional: true
-			description: [
-				"&7Hang a &eShark Jaw Trophy&7 on your wall. Bruce would be proud."
-			]
-			tasks: [
-				{ id: "B815E1208FA6C413", type: "item", item: "raft:shark_jaw_trophy" }
-			]
-			rewards: [
-				{ id: "B81C6D208FAC1DA5", type: "xp", xp: 100 }
-			]
-		}
-		{
-			id: "7917CC5FBB3D841B"
-			title: "Receiver"
-			x: 14.0d
-			y: 0.0d
-			dependencies: ["566CD39EB3306E79", "1118183A72E5E5D6"]
-			description: [
-				"&7Right-click the &eReceiver&7 to get the direction and distance to the nearest floating driftwood. Out at sea it is the best source of driftwood logs."
-			]
-			tasks: [
-				{ id: "1120ACBC12061EB1", type: "item", item: "raft:receiver" }
-			]
-			rewards: [
-				{ id: "113530BC1217A807", type: "xp", xp: 150 }
-			]
-		}
-		{
-			id: "38EA3B7A88D1623B"
-			title: "Driftwood Ahoy!"
-			x: 16.0d
-			y: 0.0d
-			shape: "diamond"
-			dependencies: ["7917CC5FBB3D841B"]
-			description: [
-				"&7Follow the receiver to the floating driftwood and haul the logs aboard. On the way, dive down: shipwrecks on the sea floor hide treasure."
-			]
-			tasks: [
-				{
-					id: "CE45169C7C71A3B0"
+					id: "F720BFB10956E737"
 					type: "item"
 					count: 16
-					item: "raft:driftwood_log"
+					item: "raft:weathered_planks"
+				}
+				{
+					id: "F720BEB10956E584"
+					type: "item"
+					count: 16
+					item: "raft:teak_planks"
 				}
 			]
 			rewards: [
-				{ id: "CE599A9C7C832D06", type: "item", item: "questsicons:rare_crate" }
+				{
+					id: "F70C3BB109455DE1"
+					type: "item"
+					count: 16
+					item: "minecraft:bone_meal"
+				}
 			]
 		}
 		{
-			id: "6FCBA528C1715246"
-			title: "Paddle Power"
-			x: 14.0d
-			y: 2.0d
-			dependencies: ["1118183A72E5E5D6"]
+			id: "998AE717B18C87D3"
+			title: "Coral and Tidestone"
+			x: 3.0d
+			y: -3.0d
+			dependencies: ["212CEB9C540E9BE6"]
 			description: [
-				"&7In a boat, right-click with a &ePaddle&7 for a push forward. Island hopping made easy."
+				"&7&eCoral Stone&7 (stone and coral blocks) comes polished and as plain or mossy bricks. &eTidestone&7 (stone and prismarine shards) also comes cracked, chiseled and as pillars, and &eGlowing Tidestone&7 shines with light 10."
+				"&7Four &eSea Glass Shards&7 from the beaches make Aqua Sea Glass; dye it blue or green."
 			]
 			tasks: [
-				{ id: "06FE8DF31DC717D6", type: "item", item: "raft:paddle" }
+				{
+					id: "DD3106DB1E2EC99D"
+					type: "item"
+					count: 16
+					item: "raft:coral_stone_bricks"
+				}
+				{
+					id: "DD3105DB1E2EC7EA"
+					type: "item"
+					count: 16
+					item: "raft:tidestone_bricks"
+				}
+				{
+					id: "DD3104DB1E2EC637"
+					type: "item"
+					count: 4
+					item: "raft:aqua_sea_glass"
+				}
 			]
 			rewards: [
-				{ id: "06EA09F31DB58E80", type: "xp", xp: 80 }
+				{
+					id: "DD29FADB1E28968B"
+					type: "item"
+					count: 16
+					item: "minecraft:prismarine_shard"
+				}
+			]
+		}
+		{
+			id: "8A92EDDA180EE30D"
+			title: "Island Lights"
+			x: 4.6d
+			y: -4.5d
+			dependencies: ["212CEB9C540E9BE6"]
+			description: [
+				"&7&ePaper Lanterns&7 glow with light 14, &eString Lights&7 and neon tubes with 12, ship lanterns and jelly lamps with 15. Tiki torches, buoys and a lighthouse lens are there too."
+				"&7The &eHammock&7 lets you rest by day and sleep by night, and it sets your respawn point. Chairs, cushions and the deck chair: right-click to sit."
+			]
+			tasks: [
+				{
+					id: "6F32B1F7BC1D17FA"
+					type: "item"
+					count: 4
+					item: "raft:paper_lantern_red"
+				}
+				{
+					id: "6F32B2F7BC1D19AD"
+					type: "item"
+					count: 4
+					item: "raft:string_lights_warm"
+				}
+				{ id: "6F32AFF7BC1D1494", type: "item", item: "raft:hammock" }
+			]
+			rewards: [
+				{
+					id: "6F399DF7BC2314AC"
+					type: "item"
+					count: 8
+					item: "raft:rope"
+				}
+			]
+		}
+		{
+			id: "0E42D8559DC9768B"
+			title: "Pirate Style"
+			x: 3.0d
+			y: -4.5d
+			dependencies: ["8A92EDDA180EE30D", "998AE717B18C87D3"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7The &eShip Cannon&7 fires &eCannonballs&7 (an iron ingot and gunpowder make 4): 8 damage and no broken blocks."
+				"&7Ring the Ship Bell, raise a Jolly Roger, fill a &eTreasure Chest&7 (27 stacks) and stack Gold Coins into piles, 9 coins each."
+			]
+			tasks: [
+				{ id: "5E5E055CD5DC9DB1", type: "item", item: "raft:ship_cannon" }
+				{
+					id: "5E5E045CD5DC9BFE"
+					type: "item"
+					count: 8
+					item: "raft:cannonball"
+				}
+				{ id: "5E5E035CD5DC9A4B", type: "item", item: "raft:treasure_chest" }
+			]
+			rewards: [
+				{
+					id: "5E72895CD5EE2707"
+					type: "item"
+					count: 8
+					item: "minecraft:gunpowder"
+				}
+			]
+		}
+		{
+			id: "CC7DEA17CE1DD93D"
+			title: "Steel and City"
+			x: 1.4d
+			y: -3.0d
+			dependencies: ["998AE717B18C87D3"]
+			optional: true
+			description: [
+				"&7Riveted and Rusty Hull, Corrugated Metal, Steel Beams, &eCatwalks&7, Railings, &ePortholes&7, Bulkhead Doors and Metal Hatches (both open by hand), pipes with valves, Shipping Containers, Cracked Concrete and Asphalt with lane lines."
+				"&7Control panels, server racks and satellite dishes blink and hum on your walls."
+			]
+			tasks: [
+				{
+					id: "982748717FC1E684"
+					type: "item"
+					count: 2
+					item: "raft:porthole"
+				}
+				{
+					id: "982749717FC1E837"
+					type: "item"
+					count: 4
+					item: "raft:catwalk"
+				}
+			]
+			rewards: [
+				{
+					id: "98203C717FBBB372"
+					type: "item"
+					count: 8
+					item: "raft:scrap_metal"
+				}
+			]
+		}
+		{
+			id: "587025197556E949"
+			title: "An Aquarium"
+			x: 1.4d
+			y: -4.5d
+			dependencies: ["0E42D8559DC9768B", "CC7DEA17CE1DD93D"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7Glass, a tropical fish, planks and sand make an &eAquarium&7 with fish swimming inside. It glows softly in the dark."
+			]
+			tasks: [
+				{ id: "96389C9BD8F98F67", type: "item", item: "raft:aquarium" }
+			]
+			rewards: [
+				{ id: "9624189BD8E80611", type: "item", item: "questsicons:common_crate" }
 			]
 		}
 		{
 			id: "364B3A6273E47AED"
 			title: "Titanium"
-			x: 18.0d
-			y: 0.0d
+			x: 17.4d
+			y: -4.5d
+			shape: "diamond"
 			dependencies: ["38EA3B7A88D1623B"]
 			description: [
-				"&7Titanium ore hides deep under the sea floor - you need a diamond pickaxe. The &eMetal Detector&7 tells you how deep it is. Smelt the raw titanium into ingots."
+				"&7&eTitanium Ore&7 is only found in the raft dimension, below y 20 under the sea floor. Mine it with a diamond pickaxe and smelt the raw titanium."
+				"&7The &eMetal Detector&7 (titanium and a circuit board) tells you at which height the next titanium ore below you lies."
 			]
 			tasks: [
 				{
@@ -517,12 +1220,12 @@
 		{
 			id: "8B34D48F4E3CDCFD"
 			title: "Titanium Armor"
-			x: 20.0d
-			y: -1.5d
+			x: 19.0d
+			y: -6.0d
 			dependencies: ["364B3A6273E47AED"]
 			optional: true
 			description: [
-				"&7A full set of titanium armor is as strong as diamond and gives Water Breathing, Dolphin's Grace and Conduit Power."
+				"&7A full set of titanium armor gives &eWater Breathing&7, &eDolphin's Grace&7 and &eConduit Power&7."
 			]
 			tasks: [
 				{ id: "F47B2EB7B8F58409", type: "item", item: "raft:titanium_helmet" }
@@ -537,11 +1240,12 @@
 		{
 			id: "5ABB63C44A39F1DF"
 			title: "Sun Power"
-			x: 20.0d
-			y: 1.5d
+			x: 19.0d
+			y: -3.0d
 			dependencies: ["364B3A6273E47AED"]
 			description: [
-				"&7Raft has its own energy: a &eMakeshift Solar Panel&7 makes 10 FE per tick, a &eMakeshift Battery&7 stores 1,000,000 FE, cables carry it - and they also work with Tech Reborn machines."
+				"&7The sea has its own small tech line on &eFE&7, so Tech Reborn machines connect too."
+				"&7A &eMakeshift Solar Panel&7 makes 10 FE per tick - and over the Endless Sea the sun never sets. A &eMakeshift Battery&7 stores 1,000,000 FE. Copper Cable carries 128 FE per tick, Titanium Cable 512."
 			]
 			tasks: [
 				{ id: "FB245E0E7357952C", type: "item", item: "raft:makeshift_solar_panel" }
@@ -557,14 +1261,36 @@
 			]
 		}
 		{
+			id: "79EFBA76E5A70945"
+			title: "Wind Turbine"
+			x: 20.6d
+			y: -3.0d
+			dependencies: ["5ABB63C44A39F1DF"]
+			description: [
+				"&7The &eWind Turbine&7 makes 20 FE per tick. It needs free air in the 3 by 3 area in front of its rotor and a spot above y 90. Your raft floats at y 100, so it works right on deck."
+			]
+			tasks: [
+				{ id: "884494FB41F2CB61", type: "item", item: "raft:wind_turbine" }
+			]
+			rewards: [
+				{
+					id: "885918FB420454B7"
+					type: "item"
+					count: 2
+					item: "raft:circuit_board"
+				}
+			]
+		}
+		{
 			id: "5C8FB2F9DC235146"
 			title: "Raft Quarry"
-			x: 22.0d
-			y: 1.5d
-			dependencies: ["5ABB63C44A39F1DF"]
+			x: 22.2d
+			y: -3.0d
+			dependencies: ["79EFBA76E5A70945"]
 			optional: true
 			description: [
-				"&7The raft &eQuarry&7 mines an 11x11 area for 1000 FE per block."
+				"&7The raft &eQuarry&7 digs an 11 by 11 hole down to the bottom of the world for 1,000 FE per block. A chest on top collects the drops."
+				"&7The &eTitanium Furnace&7 smelts 32 times faster and doubles every result."
 			]
 			tasks: [
 				{ id: "83F6C16F7426A209", type: "item", item: "raft:quarry" }
@@ -574,14 +1300,481 @@
 			]
 		}
 		{
-			id: "073FDCED799C1CE0"
-			title: "Songs of the Sea"
-			x: 18.0d
-			y: 3.0d
-			dependencies: ["38EA3B7A88D1623B"]
+			id: "6FCBA528C1715246"
+			title: "Small Boats"
+			x: 7.6d
+			y: 1.8d
+			dependencies: ["8C14D5A43E08F8BB"]
+			description: [
+				"&7The &ePalm Boat&7 and the &eDriftwood Raft&7 are made like vanilla boats, with a chest version too. In a boat, the &ePaddle&7 gives you a push forward."
+			]
+			tasks: [
+				{ id: "06FE8DF31DC717D6", type: "item", item: "raft:paddle" }
+			]
+			rewards: [
+				{ id: "06EA09F31DB58E80", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "A8CB64408AF2FFAD"
+			title: "The Expedition Raft"
+			x: 9.2d
+			y: 1.8d
+			shape: "hexagon"
+			size: 1.2d
+			dependencies: ["6FCBA528C1715246"]
+			description: [
+				"&7Six Raft Foundations, 2 rope and a paddle: the &eExpedition Raft&7 is a big 3 by 3 raft with four seats and 27 storage slots (sneak and use it). The first one to board sits at the helm and steers."
+				"&7It never sinks, never tips over, and sharks cannot hurt it. Friends standing on the deck ride along. To pick it up, hit it 3 times within 2 seconds, or once while sneaking."
+				""
+				"&7Reward: an almanac that opens at the Sailing chapter."
+			]
+			tasks: [
+				{ id: "566B6E97205C4F86", type: "item", item: "raft:expedition_raft" }
+				{
+					id: "566B6F97205C5139"
+					type: "advancement"
+					title: "Take the helm"
+					icon: "raft:raft_sail"
+					advancement: "raft:adventure/set_sail"
+				}
+			]
+			rewards: [
+				{
+					id: "5656EA97204AC630"
+					type: "item"
+					item: {
+						id: "raft:seafarers_almanac"
+						components: {
+							"minecraft:custom_data": { almanac: "sailing" }
+						}
+					}
+				}
+				{ id: "5656EB97204AC7E3", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "2467C4523684D587"
+			title: "Raft Sail"
+			x: 10.8d
+			y: 1.8d
+			dependencies: ["A8CB64408AF2FFAD"]
+			description: [
+				"&7Use an upgrade item on the raft; each one shows on the raft. A &eRaft Sail&7 (rope, sail canvas and palm logs) makes it 50% faster sailing ahead."
+			]
+			tasks: [
+				{ id: "7A7C9B5D1448D618", type: "item", item: "raft:raft_sail" }
+			]
+			rewards: [
+				{
+					id: "7A911F5D145A5F6E"
+					type: "item"
+					count: 8
+					item: "raft:rope"
+				}
+			]
+		}
+		{
+			id: "CE423B243F3DF5DC"
+			title: "Raft Engine"
+			x: 12.4d
+			y: 1.8d
+			dependencies: ["2467C4523684D587"]
+			description: [
+				"&7The &eRaft Engine&7 (titanium, scrap metal, a circuit board and a furnace) makes the raft more than twice as fast. It burns furnace fuel from the fuel slot in the raft menu while you drive."
+				"&7With sail and engine your raft is more than twice as fast as a boat."
+			]
+			tasks: [
+				{ id: "08E200E2CEF28333", type: "item", item: "raft:raft_engine" }
+			]
+			rewards: [
+				{
+					id: "08E90CE2CEF8B645"
+					type: "item"
+					count: 4
+					item: "minecraft:coal_block"
+				}
+			]
+		}
+		{
+			id: "405543850FBEED1E"
+			title: "Anchor and Cargo"
+			x: 14.0d
+			y: 1.8d
+			dependencies: ["CE423B243F3DF5DC"]
+			description: [
+				"&7Drop the &eRaft Anchor&7 with the lever in the raft menu, and the raft stays where it is - perfect above a dive spot. A &eRaft Cargo Crate&7 adds 27 more storage slots."
+			]
+			tasks: [
+				{ id: "30781761A8B8C82A", type: "item", item: "raft:raft_anchor" }
+				{ id: "30781861A8B8C9DD", type: "item", item: "raft:raft_crate" }
+			]
+			rewards: [
+				{ id: "307F0361A8BEC4DC", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "29D123A755C90DF7"
+			title: "Raft Lanterns"
+			x: 15.6d
+			y: 1.8d
+			dependencies: ["405543850FBEED1E"]
 			optional: true
 			description: [
-				"&7Three music discs hide in shipwrecks. Collect them all."
+				"&7&eRaft Lanterns&7 add lantern posts and rope rails to your raft. Sailing at night has never looked better."
+			]
+			tasks: [
+				{ id: "2B11291190BD84CE", type: "item", item: "raft:raft_lantern" }
+			]
+			rewards: [
+				{ id: "2AFCA51190ABFB78", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "516BB6E05AD64453"
+			title: "Diving Helmet"
+			x: 6.0d
+			y: 3.3d
+			dependencies: ["A0214A98C4426668"]
+			description: [
+				"&7Copper, gold and a glass pane make the &eDiving Helmet&7: under water you see much farther. With a tank you breathe from the tank. Saltmere has one waiting for you, too."
+				""
+				"&7Reward: an almanac that opens at the Diving chapter."
+			]
+			tasks: [
+				{ id: "B66E484F4E3CDDB7", type: "item", item: "raft:diving_helmet" }
+			]
+			rewards: [
+				{
+					id: "B659C44F4E2B5461"
+					type: "item"
+					item: {
+						id: "raft:seafarers_almanac"
+						components: {
+							"minecraft:custom_data": { almanac: "diving" }
+						}
+					}
+				}
+				{ id: "B659C34F4E2B52AE", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "8275513A79A6AA56"
+			title: "Deep Breath"
+			x: 7.6d
+			y: 3.3d
+			dependencies: ["516BB6E05AD64453"]
+			description: [
+				"&7An &eOxygen Tank&7 holds 2 minutes of air. It only works together with the helmet; the bar on the tank and a gauge on the screen show what is left."
+				"&7It refills when your head is above the water, or in a bubble column: a normal tank is full again in 3 seconds. Bubble Vents and soul sand make bubble columns."
+			]
+			tasks: [
+				{ id: "C62C5BCF0C6A1AC8", type: "item", item: "raft:oxygen_tank" }
+				{
+					id: "C62C5CCF0C6A1C7B"
+					type: "advancement"
+					title: "Wear helmet and tank"
+					icon: "raft:diving_helmet"
+					advancement: "raft:adventure/deep_breath"
+				}
+			]
+			rewards: [
+				{ id: "C640DFCF0C7BA41E", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "77298851D463E04B"
+			title: "Wetsuit and Flippers"
+			x: 9.2d
+			y: 3.3d
+			dependencies: ["8275513A79A6AA56"]
+			description: [
+				"&7The &eWetsuit&7 lets you mine three times faster under water, and jellyfish cannot sting you. &eFlippers&7 make you swim much faster, but walk 25% slower on land."
+				"&7Wear helmet, tank, wetsuit and flippers for Dolphin's Grace while swimming."
+			]
+			tasks: [
+				{ id: "8C3FDB23BF33031D", type: "item", item: "raft:wetsuit" }
+				{ id: "8C3FDA23BF33016A", type: "item", item: "raft:flippers" }
+			]
+			rewards: [
+				{
+					id: "8C38CF23BF2CD00B"
+					type: "item"
+					count: 16
+					item: "minecraft:dried_kelp"
+				}
+			]
+		}
+		{
+			id: "9F4346D14CBE085B"
+			title: "Air Compressor"
+			x: 10.8d
+			y: 3.3d
+			dependencies: ["77298851D463E04B"]
+			description: [
+				"&7Put a tank in the &eAir Compressor&7 and it fills it with FE from a neighbour: a cable, battery, solar panel or wind turbine. No power? Sneak and use it with an empty hand, or press the crank in its menu. Each turn adds 5 seconds of air."
+			]
+			tasks: [
+				{ id: "6BFF3935FDB03656", type: "item", item: "raft:air_compressor" }
+			]
+			rewards: [
+				{ id: "6BEAB535FD9EAD00", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "5817B67BF179BAC8"
+			title: "Helmet Lamp"
+			icon: "raft:angler_lure"
+			x: 12.4d
+			y: 3.3d
+			dependencies: ["9F4346D14CBE085B"]
+			description: [
+				"&7&eAnglerfish&7 lurk in the dark of the Abyssal Trench and drop an &eAngler Lure&7. Craft your Diving Helmet with the lure: under water you can then see in the dark deep sea."
+				""
+				"&7Defeat an anglerfish, then tick the box when your helmet has its lamp."
+			]
+			tasks: [
+				{
+					id: "3D6D95A32180244F"
+					type: "kill"
+					entity: "raft:anglerfish"
+					value: 1
+				}
+				{
+					id: "3D6D94A32180229C"
+					type: "checkmark"
+					title: "My helmet has a lamp"
+					icon: "raft:diving_helmet"
+				}
+			]
+			rewards: [
+				{ id: "3D5911A3216E9AF9", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "F12A7576DE7E7D1D"
+			title: "Harpoon Gun"
+			x: 14.0d
+			y: 3.3d
+			dependencies: ["5817B67BF179BAC8"]
+			description: [
+				"&7The &eHarpoon Gun&7 shoots harpoons from your inventory: 8 damage under water, 4 in the air, one shot per second. Pick the harpoons up again after the hunt."
+				"&7Iron, a stick and string make 4 harpoons; an Urchin Spine, a stick and string make 2."
+			]
+			tasks: [
+				{ id: "D81027930AAB091E", type: "item", item: "raft:harpoon_gun" }
+				{
+					id: "D81028930AAB0AD1"
+					type: "item"
+					count: 8
+					item: "raft:harpoon"
+				}
+			]
+			rewards: [
+				{
+					id: "D7FBA3930A997FC8"
+					type: "item"
+					count: 8
+					item: "raft:harpoon"
+				}
+			]
+		}
+		{
+			id: "91462B41552A3AE5"
+			title: "Deep Diver"
+			x: 15.6d
+			y: 3.3d
+			dependencies: ["F12A7576DE7E7D1D"]
+			optional: true
+			description: [
+				"&7Hold use under water and the &eSea Scooter&7 pulls you where you look; its 3,000 FE last about 75 seconds (charge it in the compressor)."
+				"&7The &eTitanium Oxygen Tank&7 holds 6 minutes of air and protects like an iron chestplate."
+			]
+			tasks: [
+				{ id: "E9C6178CE715251C", type: "item", item: "raft:sea_scooter" }
+				{ id: "E9C6188CE71526CF", type: "item", item: "raft:titanium_oxygen_tank" }
+			]
+			rewards: [
+				{ id: "E9BF2B8CE70F286A", type: "item", item: "questsicons:epic_crate" }
+			]
+		}
+		{
+			id: "2AB3E71399F33C39"
+			title: "Sunken Ruins"
+			x: 6.0d
+			y: 4.8d
+			dependencies: ["516BB6E05AD64453"]
+			description: [
+				"&7Away from the story there are many smaller places, with loot, logs and a bit of danger. Small Tidewarden ruins lie on the reefs."
+				"&7Not sure where you are? The almanac's &eIslands & Wrecks&7 chapter lists them all."
+			]
+			tasks: [
+				{
+					id: "C5C1E9B392183EF5"
+					type: "structure"
+					title: "Find sunken ruins"
+					structure: "raft:sunken_ruins"
+				}
+			]
+			rewards: [
+				{ id: "C5BADDB392120BE3", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "D523B0AB5D85EB09"
+			title: "The Broken Freighter"
+			x: 7.6d
+			y: 4.8d
+			dependencies: ["2AB3E71399F33C39"]
+			description: [
+				"&7A rusty cargo ship lies broken in two on the sea floor, with shipping containers everywhere."
+			]
+			tasks: [
+				{
+					id: "C9BBBBA542711657"
+					type: "structure"
+					title: "Explore a cargo ship wreck"
+					structure: "raft:wreck_cargo_ship"
+				}
+			]
+			rewards: [
+				{ id: "C9A7B7A542606681", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "44E7F0EF1121E6E0"
+			title: "Lost Flight"
+			x: 8.4d
+			y: 6.3d
+			dependencies: ["D523B0AB5D85EB09"]
+			optional: true
+			description: [
+				"&7Some planes never arrived: their wrecks rest in the kelp forests and on the open sea floor."
+			]
+			tasks: [
+				{
+					id: "F05E35DF0AA01946"
+					type: "structure"
+					title: "Find a sunken plane"
+					structure: "raft:sunken_plane"
+				}
+			]
+			rewards: [
+				{ id: "F049B1DF0A8E8FF0", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "B9FBC4A2AB15E2CC"
+			title: "Ghost Ship"
+			x: 9.2d
+			y: 4.8d
+			dependencies: ["D523B0AB5D85EB09"]
+			description: [
+				"&7Old pirate galleons lie tilted on the floor of the wreck graveyards, full of drowned corsairs. Their chests sometimes hold &eSaltjaw's Treasure Chart&7."
+			]
+			tasks: [
+				{
+					id: "3CF121C7C2628ABD"
+					type: "advancement"
+					title: "Explore a galleon wreck"
+					icon: "raft:jolly_roger"
+					advancement: "raft:adventure/ghost_ship"
+				}
+				{
+					id: "3CF120C7C262890A"
+					type: "advancement"
+					title: "Find a pirate gold coin"
+					icon: "raft:gold_coin"
+					advancement: "raft:adventure/pirate_gold"
+				}
+			]
+			rewards: [
+				{ id: "3CEA95C7C25D312B", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "8ABBE1DA1831D3BD"
+			title: "Saltjaw's Gold"
+			x: 10.8d
+			y: 4.8d
+			shape: "diamond"
+			dependencies: ["B9FBC4A2AB15E2CC"]
+			description: [
+				"&7Follow the treasure chart to the hidden &ePirate Cove&7 of \"Saltjaw\" Brannigan, carved into an island. Corsairs guard the gold."
+			]
+			tasks: [
+				{
+					id: "1DA8593B20030E72"
+					type: "advancement"
+					title: "Find the pirate cove"
+					icon: "raft:treasure_chest"
+					advancement: "raft:adventure/saltjaws_gold"
+				}
+			]
+			rewards: [
+				{ id: "1DAF653B20094184", type: "item", item: "questsicons:epic_crate" }
+				{
+					id: "1DAF663B20094337"
+					type: "item"
+					count: 9
+					item: "raft:gold_coin"
+				}
+			]
+		}
+		{
+			id: "7EAF10B8F6C1BAB0"
+			title: "Rusted Giant"
+			x: 12.4d
+			y: 4.8d
+			dependencies: ["8ABBE1DA1831D3BD"]
+			description: [
+				"&7Giant old &eRusted Rigs&7 stand on steel legs in the open sea, with cranes, containers, terminals and a radio. Listen to what the radio says."
+			]
+			tasks: [
+				{
+					id: "8887DD144401F747"
+					type: "advancement"
+					title: "Climb aboard a rig"
+					icon: "raft:rusty_pipe_valve"
+					advancement: "raft:adventure/rusted_giant"
+				}
+			]
+			rewards: [
+				{ id: "8873591443F06DF1", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "4B0929D7B11DE923"
+			title: "Cold Outpost"
+			x: 14.0d
+			y: 4.8d
+			dependencies: ["7EAF10B8F6C1BAB0"]
+			optional: true
+			description: [
+				"&7In the frost floes, researchers left a hut on an iceberg. Penguins keep it company now."
+			]
+			tasks: [
+				{
+					id: "B847055D2AF5F18A"
+					type: "structure"
+					title: "Find an iceberg outpost"
+					structure: "raft:iceberg_outpost"
+				}
+			]
+			rewards: [
+				{ id: "B84DF15D2AFBEE3C", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "073FDCED799C1CE0"
+			title: "Songs of the Sea"
+			x: 15.6d
+			y: 4.8d
+			dependencies: ["4B0929D7B11DE923", "7EAF10B8F6C1BAB0"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7Three music discs hide in the beach shacks of the islands and in the apartments and shops of Port Solace. Collect them all."
 			]
 			tasks: [
 				{ id: "11FDDACA2DA28DF5", type: "item", item: "raft:lofi_beat_music_disc" }
@@ -593,23 +1786,260 @@
 			]
 		}
 		{
-			id: "5C29D1C20B1A09A6"
-			title: "&bMaster of the Sea"
-			icon: "questsicons:quest_crown"
-			x: 24.0d
-			y: 0.0d
-			shape: "star"
-			size: 1.5d
-			dependencies: ["364B3A6273E47AED", "FF2B67FFEE9B6D8B"]
+			id: "FA9BEFDA575A7BF8"
+			title: "Crab Dinner"
+			icon: "raft:crab_claw"
+			x: 4.4d
+			y: 3.3d
+			dependencies: ["A0214A98C4426668"]
 			description: [
-				"&d&o\"The sea respects you now. The Dream is almost whole.\""
+				"&7The sea is full of life. Most creatures are peaceful; a few bite back. The almanac has a page for each one."
+				"&7&eCrabs&7 scuttle sideways along the beaches; sprint close and they dig into the sand, hit one and it pinches back. Cook a &eCrab Claw&7 and eat it."
+				""
+				"&7Reward: an almanac that opens at the Creatures chapter."
 			]
 			tasks: [
-				{ id: "36E971E4A2035CE7", type: "item", item: "raft:raft_flag" }
+				{
+					id: "A85E5A23C42BEEDB"
+					type: "observation"
+					title: "Watch a crab"
+					icon: "raft:crab_spawn_egg"
+					entity: true
+					observe: "raft:crab"
+					timer: 40
+				}
+				{
+					id: "A85E5923C42BED28"
+					type: "advancement"
+					title: "Eat a cooked crab claw"
+					icon: "raft:cooked_crab_claw"
+					advancement: "raft:adventure/crab_dinner"
+				}
 			]
 			rewards: [
-				{ id: "36D4EDE4A1F1D391", type: "item", item: "questsicons:epic_crate" }
-				{ id: "36D4ECE4A1F1D1DE", type: "xp", xp: 400 }
+				{
+					id: "A864E623C431486D"
+					type: "item"
+					item: {
+						id: "raft:seafarers_almanac"
+						components: {
+							"minecraft:custom_data": { almanac: "creatures" }
+						}
+					}
+				}
+				{
+					id: "A864E523C43146BA"
+					type: "item"
+					count: 4
+					item: "raft:cooked_crab_claw"
+				}
+			]
+		}
+		{
+			id: "466C337550368ED9"
+			title: "Seagulls"
+			x: 2.8d
+			y: 3.3d
+			dependencies: ["FA9BEFDA575A7BF8"]
+			description: [
+				"&7&eSeagulls&7 fly in flocks over islands and rafts. They peck at crops without a scarecrow nearby - and they snatch food that lies on the ground!"
+			]
+			tasks: [
+				{
+					id: "0A2BD990C9AF40D7"
+					type: "observation"
+					title: "Watch a seagull"
+					icon: "raft:seagull_spawn_egg"
+					entity: true
+					observe: "raft:seagull"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "0A17D590C99E9101"
+					type: "item"
+					count: 8
+					item: "minecraft:feather"
+				}
+			]
+		}
+		{
+			id: "6DD34358FADBCF06"
+			title: "Penguins on Ice"
+			x: 1.2d
+			y: 3.3d
+			dependencies: ["466C337550368ED9"]
+			optional: true
+			description: [
+				"&7&ePenguins&7 waddle over the frost floes, slide on their bellies and dive for fish. Feed them cod and they have chicks: grey and fluffy."
+			]
+			tasks: [
+				{
+					id: "A8633B5AD1ACBB33"
+					type: "observation"
+					title: "Watch a penguin"
+					icon: "raft:penguin_spawn_egg"
+					entity: true
+					observe: "raft:penguin"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "A86A475AD1B2EE45"
+					type: "item"
+					count: 8
+					item: "minecraft:cod"
+				}
+			]
+		}
+		{
+			id: "B6CD7320AA6A9270"
+			title: "Sea Otters"
+			x: 4.4d
+			y: 4.8d
+			dependencies: ["FA9BEFDA575A7BF8"]
+			description: [
+				"&7&eSea Otters&7 float on their backs in the kelp forests and crack shells on their bellies with a stone. Feed one a seashell and it follows you for a while, and now and then it brings you a pearl."
+			]
+			tasks: [
+				{
+					id: "60FAA76B7F0D1A46"
+					type: "observation"
+					title: "Watch a sea otter"
+					icon: "raft:sea_otter_spawn_egg"
+					entity: true
+					observe: "raft:sea_otter"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "60E6236B7EFB90F0"
+					type: "item"
+					count: 4
+					item: "raft:seashell"
+				}
+			]
+		}
+		{
+			id: "9FF1344B12982DEC"
+			title: "Reef Life"
+			x: 2.8d
+			y: 4.8d
+			dependencies: ["B6CD7320AA6A9270"]
+			description: [
+				"&7&eManta Rays&7 glide through the warm coral shallows in slow loops. &eMoray Eels&7 hide in holes of reefs and ruins with only their head out: swim within 4 blocks and they lunge."
+			]
+			tasks: [
+				{
+					id: "686DBD5260175E73"
+					type: "observation"
+					title: "Watch a manta ray"
+					icon: "raft:manta_ray_spawn_egg"
+					entity: true
+					observe: "raft:manta_ray"
+					timer: 40
+				}
+				{
+					id: "686DBC5260175CC0"
+					type: "observation"
+					title: "Spot a moray eel"
+					icon: "raft:moray_eel_spawn_egg"
+					entity: true
+					observe: "raft:moray_eel"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "6874C952601D9185"
+					type: "item"
+					count: 2
+					item: "raft:pearl"
+				}
+			]
+		}
+		{
+			id: "6E599C9EEEA8FA60"
+			title: "Jellyfish"
+			x: 1.2d
+			y: 4.8d
+			dependencies: ["9FF1344B12982DEC"]
+			optional: true
+			description: [
+				"&7&eJellyfish&7 drift with the current: white moon jellies, red crimson jellies and glow jellies that light up the dark lagoons. Touching one stings (Poison for 3 seconds) unless you wear a wetsuit."
+				"&7Two jelly blobs make a slime ball; glow jelly makes glow ink sacs and Jelly Lamps."
+			]
+			tasks: [
+				{
+					id: "779D0661F798041D"
+					type: "observation"
+					title: "Watch a jellyfish"
+					icon: "raft:jellyfish_spawn_egg"
+					entity: true
+					observe: "raft:jellyfish"
+					timer: 40
+				}
+			]
+			rewards: [
+				{
+					id: "7795FA61F791D10B"
+					type: "item"
+					count: 4
+					item: "minecraft:slime_ball"
+				}
+			]
+		}
+		{
+			id: "9F71D0FA76A16EEB"
+			title: "Whale Watcher"
+			icon: "minecraft:spyglass"
+			x: 4.4d
+			y: 6.3d
+			dependencies: ["B6CD7320AA6A9270"]
+			description: [
+				"&7A huge, gentle &eWhale&7 cruises a few blocks below the surface of the open sea. It comes up every minute or two to breathe and spout, and sings now and then."
+				"&7Watch one through a &espyglass&7."
+			]
+			tasks: [
+				{
+					id: "E384B1FCD062A7FF"
+					type: "advancement"
+					title: "Watch a whale through a spyglass"
+					icon: "minecraft:spyglass"
+					advancement: "raft:adventure/whale_watcher"
+				}
+			]
+			rewards: [
+				{ id: "E370ADFCD051F829", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "AFF3217BD4BB5FD9"
+			title: "Cursed Crew"
+			x: 2.8d
+			y: 6.3d
+			dependencies: ["9F71D0FA76A16EEB"]
+			description: [
+				"&7&eDrowned Corsairs&7 are undead pirates of Saltjaw's crew. They swim like drowned, do not burn in the sun, fight with cutlasses and even climb onto rafts. They drop gold coins and sometimes a &eCutlass&7."
+			]
+			tasks: [
+				{
+					id: "30068F0E634CE3B6"
+					type: "kill"
+					entity: "raft:drowned_corsair"
+					value: 3
+				}
+			]
+			rewards: [
+				{
+					id: "2FF20B0E633B5A60"
+					type: "item"
+					count: 6
+					item: "raft:gold_coin"
+				}
 			]
 		}
 	]

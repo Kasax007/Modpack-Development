@@ -37,6 +37,8 @@
 			dependencies: ["65AE4E721C3EAFF3"]
 			description: [
 				"&7Summon and defeat the Wither. Fight it underground so it cannot fly away."
+				""
+				"&d✦ Dream Star:&7 its &eNether Star&7 is one of the ingredients. Build your beacon with this one and fight it again later, or keep it."
 			]
 			tasks: [
 				{
@@ -79,7 +81,7 @@
 			dependencies: ["65AE4E721C3EAFF3"]
 			optional: true
 			description: [
-				"&7&eMythic Upgrades&7 adds crystal geodes deep underground and in the Nether. Their ingots (ametrine, aquamarine, citrine...) upgrade netherite gear with powerful effects."
+				"&7&eMythic Upgrades&7 grows crystal geodes underground (aquamarine, citrine, topaz, peridot), in the Nether (ruby, sapphire) and in the End (ametrine, jade). Four gems and four necoium ingots make a mythic ingot, and its smithing template upgrades netherite gear with powerful effects."
 			]
 			tasks: [
 				{ id: "5A1EBFCB560453A7", type: "item", item: "mythicupgrades:ametrine_ingot" }
@@ -144,6 +146,8 @@
 			dependencies: ["07C05FA1ABE391ED", "3A3CFB2044752686"]
 			description: [
 				"&d&o\"You are no longer a dreamer. You are the Dream itself. Thank you for playing Dreamcraft.\""
+				""
+				"&7Your reward includes &etwo Quest Crowns&7. The &dDream Star&7 uses one of them up, so the other one stays with you."
 			]
 			tasks: [
 				{ id: "3DC96FBF59A7EF75", type: "checkmark", title: "Finish the journey" }
@@ -156,6 +160,260 @@
 					item: "questsicons:legendary_crate"
 				}
 				{ id: "3DC262BF59A1BAB0", type: "item", item: "questsicons:quest_crown" }
+				{ id: "3DC265BF59A1BFC9", type: "item", item: "questsicons:quest_crown" }
+			]
+		}
+		{
+			id: "CFB4C619A4FA37A8"
+			title: "&dThe Dream Star"
+			icon: "questsicons:dream_star"
+			x: 10.5d
+			y: 0.0d
+			shape: "star"
+			size: 1.6d
+			dependencies: ["333033678726C7C7"]
+			description: [
+				"&d&o\"One dream is left, Dreamer. Gather a treasure from every corner of the Dream and bind them into a star.\""
+				""
+				"&7The &dDream Star&7 is the trophy of Dreamcraft. It shines, cannot burn and never despawns. Its recipe uses eight treasures from the whole pack:"
+				"&7&e2 Ametrine Ingots&7, a &eQuest Crown&7, a &enetherite staff&7, a &eNether Star&7, a &eLapotronic Energy Orb&7, a &eTamagotchi Heart&7, a &eDragon Egg or Dragon Head&7 and the &eHeart of the Tide&7."
+				"&7The quests around the star tell you where each one comes from. Press &eR&7 on the Dream Star in JEI to see the recipe."
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "AECD03A945AAF049", type: "xp", xp: 500 }
+			]
+		}
+		{
+			id: "FD2FB934265DD061"
+			title: "The Quest Crown"
+			icon: "questsicons:quest_crown"
+			x: 15.99d
+			y: -2.4d
+			dependencies: ["CFB4C619A4FA37A8"]
+			hide_dependency_lines: true
+			description: [
+				"&7The &eQuest Crown&7 has no recipe. It is your reward for &6Master of Dreams&7, which gave you two: one for the star, one to keep."
+			]
+			tasks: [
+				{ id: "076EAB91E6085CE6", type: "item", item: "questsicons:quest_crown" }
+			]
+			rewards: [
+				{ id: "075AA791E5F7AD10", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "94DA6F23FEFE704D"
+			title: "Ametrine Ingots"
+			x: 14.01d
+			y: -2.4d
+			dependencies: ["CFB4C619A4FA37A8"]
+			hide_dependency_lines: true
+			description: [
+				"&7&eAmetrine&7 (Mythic Upgrades) is the gem of the End: its ore and its crystal geodes hide in the End stone. Mine the ore for Ametrine."
+				"&7&eNecoium Ore&7 lies deep in the overworld; smelt the raw necoium. &e4 Ametrine + 4 Necoium Ingots&7 make one Ametrine Ingot. You need &etwo&7."
+			]
+			tasks: [
+				{
+					id: "3E447796E808B834"
+					type: "item"
+					count: 2
+					item: "mythicupgrades:ametrine_ingot"
+				}
+			]
+			rewards: [
+				{ id: "3E3D6B96E8028522", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "BC2F76E707C8A153"
+			title: "Lapotronic Energy Orb"
+			x: 17.4d
+			y: -0.99d
+			dependencies: ["CFB4C619A4FA37A8"]
+			hide_dependency_lines: true
+			description: [
+				"&7The top of Tech Reborn: 8 Lapotron Crystals around an Iridium Alloy Plate. Chapter &e3. Sparks of Industry&7 walks you there step by step."
+			]
+			tasks: [
+				{ id: "224909ABFDA82074", type: "item", item: "techreborn:lapotronic_orb" }
+			]
+			rewards: [
+				{ id: "2241FDABFDA1ED62", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "76A6695776ABBEF2"
+			title: "Heart of the Tide"
+			x: 17.4d
+			y: 0.99d
+			dependencies: ["CFB4C619A4FA37A8"]
+			hide_dependency_lines: true
+			description: [
+				"&7The &bLeviathan&7 at the bottom of the Endless Sea guards it. Follow the story of &e6. The Endless Sea&7 to the Abyssal Sanctum and win it back."
+				"&7Placed as a block it gives every swimmer nearby Conduit Power - but the star needs it in your hand."
+			]
+			tasks: [
+				{ id: "3A41FAE211BA40A6", type: "item", item: "raft:heart_of_the_tide" }
+			]
+			rewards: [
+				{ id: "3A2DF6E211A990D0", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "557620FEAB5FA961"
+			title: "A Dragon's Treasure"
+			icon: "minecraft:dragon_egg"
+			x: 15.99d
+			y: 2.4d
+			dependencies: ["05CA2D60BDE082C9", "755C7838E28AF89E"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7A &eDragon Egg&7 or a &eDragon Head&7. This quest completes when you have finished &eThe Dragon Egg&7 or &eA Dragon's Head&7 in chapter 7: the egg waits on the exit portal after the first dragon fight, a head hangs on every End ship."
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "48E79B3A30FA6DC5", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "A3516701D783F2CA"
+			title: "Tamagotchi Heart"
+			x: 14.01d
+			y: 2.4d
+			dependencies: ["CFB4C619A4FA37A8"]
+			hide_dependency_lines: true
+			description: [
+				"&7Five red dye around an amethyst shard. It tames the rare pets of the &dTamagotchi&7 side path - craft a fresh one for the star."
+			]
+			tasks: [
+				{ id: "5D9C8BB8AAB9C8E4", type: "item", item: "tamagotchi:tamagotchi_heart" }
+			]
+			rewards: [
+				{ id: "5D95FFB8AAB46F52", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "3FD3219B045B9E04"
+			title: "A Netherite Staff"
+			icon: "wizards:staff_netherite_arcane"
+			x: 12.6d
+			y: -0.99d
+			dependencies: ["E3E0042A7A1C5011", "868D845EB14B671F", "6FFDC9AB0C3D96FF", "B149A68EAF5F81D1"]
+			dependency_requirement: "one_completed"
+			description: [
+				"&7A &eNetherite Arcane, Fire or Frost Staff&7 of a wizard or the &eNetherite Holy Staff&7 of a priest. This quest completes when you have finished one of the netherite staff quests in &e4. Paths of Power&7."
+			]
+			tasks: [ ]
+			rewards: [
+				{ id: "549E2101FE112265", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "CCB7FA20D7AA8828"
+			title: "Nether Star"
+			x: 12.6d
+			y: 0.99d
+			dependencies: ["CFB4C619A4FA37A8"]
+			hide_dependency_lines: true
+			description: [
+				"&7Summon the &eWither&7 once more and defeat it. Its star is the bright centre of the Dream Star."
+			]
+			tasks: [
+				{ id: "58E3CF6CD72DD1B3", type: "item", item: "minecraft:nether_star" }
+			]
+			rewards: [
+				{ id: "58EADB6CD73404C5", type: "xp", xp: 200 }
+			]
+		}
+		{
+			id: "8409D55D3F08F8B5"
+			title: "&d✦ Living the Dream ✦"
+			icon: "questsicons:dream_star"
+			x: 15.0d
+			y: 0.0d
+			shape: "star"
+			size: 2.4d
+			dependencies: ["FD2FB934265DD061", "94DA6F23FEFE704D", "BC2F76E707C8A153", "76A6695776ABBEF2", "557620FEAB5FA961", "A3516701D783F2CA", "3FD3219B045B9E04", "CCB7FA20D7AA8828"]
+			description: [
+				"&d&o\"Eight treasures, one star. This is what your journey looks like, Dreamer.\""
+				""
+				"&7Craft the &dDream Star&7: Ametrine, Crown, Ametrine on top, staff, Nether Star and Lapotronic Orb in the middle, Tamagotchi Heart, Dragon Egg or Head and Heart of the Tide at the bottom."
+				"&7It unlocks the challenge &5Living the Dream&7."
+			]
+			tasks: [
+				{ id: "D19F5972CABD3E03", type: "item", item: "questsicons:dream_star" }
+			]
+			rewards: [
+				{ id: "D1A5E572CAC29795", type: "item", item: "questsicons:legendary_crate" }
+				{ id: "D1A5E472CAC295E2", type: "xp_levels", xp_levels: 30 }
+			]
+		}
+		{
+			id: "6BDA2881A2B5F00F"
+			title: "A Place of Honour"
+			icon: "questsicons:dream_star_pedestal"
+			x: 19.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.4d
+			dependencies: ["8409D55D3F08F8B5"]
+			description: [
+				"&7Craft a &eDream Star Pedestal&7 (gold, amethyst, a quartz pillar and polished blackstone) and right-click it with the star. It floats, turns slowly, sparkles and lights up the room. Take it back with an empty hand."
+				""
+				"&7Look at your star on its pedestal for a moment."
+			]
+			tasks: [
+				{ id: "51B0CEA16B47570A", type: "item", item: "questsicons:dream_star_pedestal" }
+				{
+					id: "51B0CFA16B4758BD"
+					type: "observation"
+					title: "Admire your Dream Star on its pedestal"
+					observe: "questsicons:dream_star_pedestal"
+					timer: 60
+				}
+			]
+			rewards: [
+				{ id: "51B7BAA16B4D53BC", type: "item", item: "questsicons:legendary_crate" }
+			]
+		}
+		{
+			id: "705244380660B762"
+			title: "&6&lThe Dreamer's Legacy"
+			icon: "questsicons:icon_trophy"
+			x: 21.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.8d
+			dependencies: ["6BDA2881A2B5F00F"]
+			description: [
+				"&d&o\"The star shines, and so does the Dream. Wherever you go next, Dreamer - you can always come back here.\""
+				""
+				"&7You finished Dreamcraft. Thank you for playing! Show your star to your friends, and share a screenshot with us on Discord."
+			]
+			tasks: [
+				{ id: "ECA3D5892C5CB5FE", type: "checkmark", title: "Thank you, Dreamkeeper" }
+			]
+			rewards: [
+				{
+					id: "EC8FD1892C4C0628"
+					type: "item"
+					count: 3
+					item: "questsicons:legendary_crate"
+				}
+				{ id: "EC8FD2892C4C07DB", type: "xp_levels", xp_levels: 50 }
+				{
+					id: "EC8FD3892C4C098E"
+					type: "item"
+					count: 2
+					item: "minecraft:enchanted_golden_apple"
+				}
+				{
+					id: "EC8FD4892C4C0B41"
+					type: "item"
+					count: 64
+					item: "minecraft:firework_rocket"
+				}
 			]
 		}
 	]

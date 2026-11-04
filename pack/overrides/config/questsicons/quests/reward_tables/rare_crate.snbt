@@ -16,5 +16,7 @@
 		{ item: "minecraft:trial_key", weight: 6 }
 		{ count: 2, item: "jewelry:ruby", weight: 5 }
 		{ count: 2, item: "jewelry:sapphire", weight: 5 }
+		{ item: "tamagotchi:tamagotchi_heart", weight: 4 }
+		{ count: 3, item: "raft:titanium_ingot", weight: 4 }
 	]
 }

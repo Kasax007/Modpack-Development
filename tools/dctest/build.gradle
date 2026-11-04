@@ -26,6 +26,12 @@ loom {
 			if (project.hasProperty('quests')) vmArg "-Ddc.quests=${project.property('quests')}"
 			if (project.hasProperty('rd')) vmArg "-Ddc.rd=${project.property('rd')}"
 			if (project.hasProperty('nostills')) vmArg "-Ddc.nostills=true"
+			if (project.hasProperty('chapters')) vmArg "-Ddc.chapters=${project.property('chapters')}"
+			if (project.hasProperty('dump')) vmArg "-Ddc.dump=${project.property('dump')}"
+			if (project.hasProperty('win')) vmArg "-Ddc.win=${project.property('win')}"
+			if (project.hasProperty('gui')) vmArg "-Ddc.gui=${project.property('gui')}"
+			if (project.hasProperty('visit')) vmArg "-Ddc.visit=${project.property('visit')}"
+			if (project.hasProperty('locate')) vmArg "-Ddc.locate=${project.property('locate')}"
 		}
 	}
 }
