@@ -70,6 +70,7 @@ My raft mod got its biggest update so far. The Endless Sea is no longer one empt
   which is not in the pack.
 - Two rewards named items that do not exist in Minecraft 26.3, so they gave nothing: "Path of the Wizard" now gives an
   Arcane Wand, "Chalk Marks" a Glowing Chalk.
+- Two quests wrote "Friendsoes" instead of Friends&Foes (the "&F" was read as a colour code).
 - A few quests sat right on the line between two other quests; the maps are tidied up.
 
 ### Server
