@@ -42,3 +42,19 @@ A tiny Fabric mod that runs the whole pack in a client game test (`./gradlew run
 - The integrated server ticks in real time while a frame takes 0.5–2 s to render. Server-side processes run ahead of
   the film clock.
 - `KeyFix` fills key bindings that are registered late, so the game test's option reset does not crash.
+
+## Quest check and checklist tests (added 4.11.2026, first full run still to do)
+
+- `-Pscene=qrun -Pplan=FILE -Pout=DIR [-Pqonly=chapter,chapter:key] [-Pdata=FILE]`: `QuestRun` works through all
+  quests of `tools/qrun_plan.py` in dependency order and fulfils every task like a player (items, kills by the player,
+  located structures/biomes/dimensions visited, creatures looked at, checkmarks and hand-ins through the book's own
+  network action), waits for Quest Icons to complete the quest and claims the rewards. Report `DIR/qrun_report.json`,
+  `[qrun]` lines in the log. `-Pdata` (`DataDump`) writes the final loot tables (with what mods add in code) and the
+  natural spawns per biome.
+- `-Pscene=bccheck -Pout=DIR [-Pchecks=deck,hammock,compressor,sounds,boss,structures,trench,pets,dreamstar]`:
+  `BcCheck` runs the Beach Craft / Dreamcraft checklist tests (raft deck carrying in turns, hammock, compressor crank,
+  Leviathan fight in survival, trench mobs, natural structures, Tamagotchi pet homes, Dream Star, sounds).
+  Report `DIR/bccheck_report.json`. BcCheck has not been compiled yet.
+- `dcrun.sh NAME [-P...]`: one locked run (Xvfb :96); `DC_TIMEOUT=5400` for the long quest run.
+- Static part: `tools/qsource.py` (survival source of every quest item from all pack jars).
+- Upgrade test: `tools/prodtest/mk121.py` makes a V1.2.1 copy of the installed V1.3 instance (hard links).

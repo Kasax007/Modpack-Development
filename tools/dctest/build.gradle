@@ -32,6 +32,11 @@ loom {
 			if (project.hasProperty('gui')) vmArg "-Ddc.gui=${project.property('gui')}"
 			if (project.hasProperty('visit')) vmArg "-Ddc.visit=${project.property('visit')}"
 			if (project.hasProperty('locate')) vmArg "-Ddc.locate=${project.property('locate')}"
+			if (project.hasProperty('plan')) vmArg "-Ddc.plan=${project.property('plan')}"
+			if (project.hasProperty('qonly')) vmArg "-Ddc.qonly=${project.property('qonly')}"
+			if (project.hasProperty('data')) vmArg "-Ddc.data=${project.property('data')}"
+			if (project.hasProperty('seed')) vmArg "-Ddc.seed=${project.property('seed')}"
+			if (project.hasProperty('checks')) vmArg "-Ddc.checks=${project.property('checks')}"
 		}
 	}
 }

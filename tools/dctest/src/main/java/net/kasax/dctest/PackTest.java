@@ -53,6 +53,10 @@ public class PackTest implements FabricClientGameTest {
             questScene(ctx);
             return;
         }
+        if (scene.equals("qrun") || scene.equals("bccheck")) {
+            qrunScene(ctx, scene);
+            return;
+        }
         // The Drippy overlay only shows while resources load: trigger a reload and catch it.
         ctx.runOnClient(mc -> { mc.reloadResourcePacks(); });
         ctx.waitTicks(2);
@@ -193,6 +197,47 @@ public class PackTest implements FabricClientGameTest {
                 ctx.takeScreenshot(String.format("q_%02d_%s", n++, q.trim()));
             }
         }
+    }
+
+    /**
+     * The in-game quest check (see QuestRun): -Pplan=FILE (from tools/qrun_plan.py), -Pout=DIR, -Pqonly=chapters/keys;
+     * -Pdata=FILE also writes the final loot tables and natural spawns (DataDump).
+     */
+    private void qrunScene(ClientGameTestContext ctx, String scene) {
+        int rd = Integer.parseInt(System.getProperty("dc.rd", "6"));
+        ctx.runOnClient(mc -> mc.options.renderDistance().set(rd));
+        try (TestSingleplayerContext sp = ctx.worldBuilder().setUseConsistentSettings(false).adjustSettings(s -> {
+            s.setSeed(System.getProperty("dc.seed", "dreamcraft"));
+            s.setGameMode(WorldCreationUiState.SelectedGameMode.CREATIVE);
+            s.setAllowCommands(true);
+            s.setDifficulty(Difficulty.NORMAL);
+        }).create()) {
+            ctx.waitTicks(100);
+            String data = System.getProperty("dc.data", "");
+            if (!data.isBlank()) sp.getServer().runOnServer(server -> {
+                try {
+                    DataDump.write(server, java.nio.file.Path.of(data));
+                } catch (Exception e) {
+                    LOG.warn("[dctest] data dump failed", e);
+                }
+            });
+            if (scene.equals("bccheck")) {
+                try {
+                    new BcCheck(ctx, sp, java.nio.file.Path.of(System.getProperty("dc.out", "bccheck"))).run();
+                } catch (Exception e) {
+                    LOG.warn("[bccheck] run failed", e);
+                }
+            }
+            String plan = System.getProperty("dc.plan", "");
+            if (!plan.isBlank()) {
+                try {
+                    new QuestRun(ctx, sp, java.nio.file.Path.of(System.getProperty("dc.out", "qrun"))).run(java.nio.file.Path.of(plan));
+                } catch (Exception e) {
+                    LOG.warn("[qrun] run failed", e);
+                }
+            }
+        }
+        LOG.info("[dctest] qrun scene done");
     }
 
     /** File names of the chapters of the quest book the client received, in book order. */
