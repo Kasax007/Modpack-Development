@@ -1,0 +1,315 @@
+{
+	id: "81054BABFDACB381"
+	filename: "qol"
+	title: "&eQuality of Life"
+	subtitle: [
+		"&7Little helpers that save time: storage, sorting, maps and more."
+	]
+	icon: "upgraded-iron-chests:diamond_chest"
+	group: "1C49159F2FE9E643"
+	order_index: 14
+	default_quest_shape: "hexagon"
+	quests: [
+		{
+			id: "93C17F5186699551"
+			title: "&eQuality of Life"
+			icon: "upgraded-iron-chests:iron_chest"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["8B55AF41550E7976"]
+			description: [
+				"&7Dreamcraft is full of small helpers that save you a lot of time. This path shows the best of them, one by one."
+			]
+			tasks: [
+				{
+					id: "16979BBD1CE7042E"
+					type: "item"
+					count: 2
+					item: "minecraft:chest"
+				}
+			]
+			rewards: [
+				{ id: "168317BD1CD57AD8", type: "xp", xp: 30 }
+			]
+		}
+		{
+			id: "D75FD54385BF92A7"
+			title: "Iron Chest"
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["93C17F5186699551"]
+			description: [
+				"&7&eUpgraded Iron Chests&7: surround a chest with eight iron ingots and you get an &eIron Chest&7 with much more room. Two side by side make a double chest."
+			]
+			tasks: [
+				{ id: "A8C83B1080958082", type: "item", item: "upgraded-iron-chests:iron_chest" }
+			]
+			rewards: [
+				{
+					id: "A8CEC710809ADA14"
+					type: "item"
+					count: 8
+					item: "minecraft:iron_ingot"
+				}
+			]
+		}
+		{
+			id: "1FA5450035F0C463"
+			title: "Gold Chest"
+			x: 4.0d
+			y: -3.0d
+			dependencies: ["D75FD54385BF92A7"]
+			description: [
+				"&7Upgrade it: four gold ingots and four iron ingots around an Iron Chest make a &eGold Chest&7."
+			]
+			tasks: [
+				{ id: "C2ECB6D62197F94E", type: "item", item: "upgraded-iron-chests:gold_chest" }
+			]
+			rewards: [
+				{
+					id: "C2D832D621866FF8"
+					type: "item"
+					count: 4
+					item: "minecraft:gold_ingot"
+				}
+			]
+		}
+		{
+			id: "E33B4AD0F4763D43"
+			title: "Diamond Chest"
+			x: 6.0d
+			y: -3.0d
+			dependencies: ["1FA5450035F0C463"]
+			description: [
+				"&7Diamonds and gold around a Gold Chest give a &eDiamond Chest&7. Every upgraded chest is immune to fire and lava."
+			]
+			tasks: [
+				{ id: "061F54A4D20029E7", type: "item", item: "upgraded-iron-chests:diamond_chest" }
+			]
+			rewards: [
+				{ id: "060AD0A4D1EEA091", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "09DE9BFFED59450D"
+			title: "Netherite Chest"
+			x: 8.0d
+			y: -3.0d
+			dependencies: ["E33B4AD0F4763D43"]
+			optional: true
+			description: [
+				"&7The biggest of them all: netherite ingots and diamonds around a Diamond Chest make a &eNetherite Chest&7."
+			]
+			tasks: [
+				{ id: "050688EC0BA14167", type: "item", item: "upgraded-iron-chests:netherite_chest" }
+			]
+			rewards: [
+				{ id: "04F204EC0B8FB811", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "7B783676256E294E"
+			title: "Safe Chest"
+			x: 4.0d
+			y: -1.0d
+			dependencies: ["D75FD54385BF92A7"]
+			optional: true
+			description: [
+				"&7A &eSafe Chest&7 (iron bars, gold and iron around an Iron Chest) is locked with a passcode. Other players cannot break it, and hoppers or pipes cannot reach into it. The &eDiamond Safe Chest&7 holds even more."
+			]
+			tasks: [
+				{ id: "505ECD06A3457A46", type: "item", item: "upgraded-iron-chests:safe_chest" }
+			]
+			rewards: [
+				{
+					id: "504A4906A333F0F0"
+					type: "item"
+					count: 4
+					item: "minecraft:gold_ingot"
+				}
+			]
+		}
+		{
+			id: "FCD21A5DFBF4DEDB"
+			title: "Find My Item"
+			x: 6.0d
+			y: -1.0d
+			dependencies: ["D75FD54385BF92A7"]
+			description: [
+				"&7Open an upgraded chest: the search field finds any item, the rarity filter sorts by rarity, and &eQuick Stack&7 and &eDump&7 move your items into nearby chests with one click."
+				"&7Link chests to see their contents from one place and let the chest point you to the item you are looking for."
+			]
+			tasks: [
+				{ id: "5748628AF022A419", type: "checkmark", title: "I tried the search and Quick Stack" }
+			]
+			rewards: [
+				{ id: "575CE68AF0342D6F", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "D43315274447D89B"
+			title: "Bigger Drawers"
+			x: 8.0d
+			y: -1.0d
+			dependencies: ["FCD21A5DFBF4DEDB"]
+			optional: true
+			description: [
+				"&7&eStorage Drawers&7 grow with &eStorage Upgrades&7 from obsidian (I) up to netherite (VII). Open a drawer and put the upgrades into its slots. A &eDrawer Key&7 locks a drawer to its item."
+			]
+			tasks: [
+				{ id: "4E27D20AF851BA25", type: "item", item: "storagedrawers:iron_storage_upgrade" }
+			]
+			rewards: [
+				{
+					id: "4E21460AF84C6093"
+					type: "item"
+					count: 4
+					item: "minecraft:obsidian"
+				}
+			]
+		}
+		{
+			id: "7445D7DC6039331D"
+			title: "Tidy Up"
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["93C17F5186699551"]
+			description: [
+				"&7&eInventory Profiles Next&7 sorts your inventory and any open chest with one key (see Controls). &eMouse Tweaks&7: hold right-click and drag to spread items, scroll over a stack to move it, shift-drag to move many stacks."
+			]
+			tasks: [
+				{ id: "1CFE56B2430A6AD5", type: "checkmark", title: "I sorted a chest" }
+			]
+			rewards: [
+				{ id: "1CF7CAB243051143", type: "xp", xp: 40 }
+			]
+		}
+		{
+			id: "EA53D2DACD852C71"
+			title: "Crafting Tweaks"
+			x: 4.0d
+			y: 2.0d
+			dependencies: ["7445D7DC6039331D"]
+			description: [
+				"&7&eCrafting Tweaks&7 adds small buttons next to every crafting grid: rotate the recipe, spread the items evenly or clear the grid. JEI's &e+&7 button fills the grid for you."
+			]
+			tasks: [
+				{ id: "7A1DC02F4F88D326", type: "checkmark", title: "I used the crafting buttons" }
+			]
+			rewards: [
+				{ id: "7A09BC2F4F782350", type: "xp", xp: 40 }
+			]
+		}
+		{
+			id: "0451A7EA8DACCB39"
+			title: "Boxes in Boxes"
+			x: 4.0d
+			y: 3.5d
+			dependencies: ["7445D7DC6039331D"]
+			optional: true
+			description: [
+				"&7&eShulker Box Tooltip&7 shows what is inside a shulker box when you hover over it, and &eEasy Shulker Boxes&7 opens a shulker box straight from your inventory."
+			]
+			tasks: [
+				{ id: "076322DC343B626D", type: "checkmark", title: "I looked into a shulker box" }
+			]
+			rewards: [
+				{ id: "075C96DC343608DB", type: "xp", xp: 40 }
+			]
+		}
+		{
+			id: "75AB2A6EBAD81500"
+			title: "Easy Harvest"
+			x: 6.0d
+			y: 2.0d
+			dependencies: ["EA53D2DACD852C71"]
+			description: [
+				"&7&eRightClickHarvest&7: right-click ripe crops to harvest and replant them in one go. &eFallingTree&7: chop the lowest log and the whole tree comes down (sneak to cut a single log)."
+			]
+			tasks: [
+				{ id: "4871DD4F3EC1DF0A", type: "checkmark", title: "I harvested with a right-click" }
+			]
+			rewards: [
+				{
+					id: "4878C94F3EC7DBBC"
+					type: "item"
+					count: 16
+					item: "minecraft:bone_meal"
+				}
+			]
+		}
+		{
+			id: "2F9EA6EFF129CEDA"
+			title: "Never Lost"
+			x: 2.0d
+			y: 4.0d
+			dependencies: ["93C17F5186699551"]
+			description: [
+				"&7&eXaero's Minimap&7 shows the land around you, &eXaero's World Map&7 (key &eM&7) everything you have explored. Set a waypoint at your base and at every place you want to find again."
+			]
+			tasks: [
+				{ id: "5545E1073B0B2E6D", type: "checkmark", title: "I set a waypoint" }
+			]
+			rewards: [
+				{ id: "553F55073B05D4DB", type: "item", item: "minecraft:compass" }
+			]
+		}
+		{
+			id: "815DAA161FE61A6D"
+			title: "Light and Safety"
+			x: 6.0d
+			y: 4.0d
+			dependencies: ["2F9EA6EFF129CEDA", "75AB2A6EBAD81500"]
+			dependency_requirement: "one_completed"
+			optional: true
+			description: [
+				"&7With &eLambDynamicLights&7 a torch in your hand lights up the area around you. A &eMagnum Torch&7 stops monsters from spawning in a wide area around your base."
+			]
+			tasks: [
+				{ id: "1B92ADD586A4DDD7", type: "item", item: "magnumtorch:diamond_magnum_torch" }
+			]
+			rewards: [
+				{ id: "1B7EA9D586942E01", type: "item", item: "questsicons:common_crate" }
+			]
+		}
+		{
+			id: "E77CC49AFF0E4FAB"
+			title: "At a Glance"
+			x: 8.0d
+			y: 2.0d
+			dependencies: ["75AB2A6EBAD81500"]
+			optional: true
+			description: [
+				"&7&eAppleSkin&7 shows how much a food fills you up, right on the hunger bar. &eZoomify&7 zooms in with &eC&7 - scroll to zoom further."
+			]
+			tasks: [
+				{ id: "2D97C9504269FA8D", type: "checkmark", title: "I zoomed in" }
+			]
+			rewards: [
+				{ id: "2D90BD504263C77B", type: "xp", xp: 30 }
+			]
+		}
+		{
+			id: "A7A74028BB8B774F"
+			title: "&eLife Made Easy"
+			icon: "questsicons:quest_crown"
+			x: 10.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["E33B4AD0F4763D43", "75AB2A6EBAD81500"]
+			description: [
+				"&7Big chests, sorted inventories and a map full of waypoints: life in the dream just got a lot easier."
+			]
+			tasks: [
+				{ id: "90B589C7F1B09BDA", type: "checkmark", title: "My base is tidy" }
+			]
+			rewards: [
+				{ id: "90BBF5C7F1B5BF0C", type: "item", item: "questsicons:rare_crate" }
+				{ id: "90BBF6C7F1B5C0BF", type: "xp", xp: 150 }
+			]
+		}
+	]
+}

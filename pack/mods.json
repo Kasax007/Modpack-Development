@@ -2097,6 +2097,15 @@
   "env": "client"
  },
  {
+  "title": "Upgraded Iron Chests",
+  "slug": "upgraded-iron-chests",
+  "projectID": 1535273,
+  "fileID": 9288126,
+  "file": "upgraded-iron-chests-1.5.1.jar",
+  "modid": "upgraded-iron-chests",
+  "env": "*"
+ },
+ {
   "title": "Variants&Ventures",
   "slug": "variants-and-ventures",
   "projectID": 981139,

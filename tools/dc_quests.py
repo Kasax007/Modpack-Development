@@ -830,6 +830,60 @@ for extra in ('dc_quests_raft.py', 'dc_quests_pets.py'):
     if os.path.exists(os.path.join(HERE, extra)):
         exec(open(os.path.join(HERE, extra)).read())
 
+# =====================================================================================================
+# Side path - Quality of Life (since V1.4)
+UIC = 'upgraded-iron-chests:'
+q = B.chapter('qol', '&eQuality of Life', UIC + 'diamond_chest', ['&7Little helpers that save time: storage, sorting, maps and more.'], PATHS, 'hexagon')
+q.quest('start', '&eQuality of Life', 0, 0, [
+    TIP + 'Dreamcraft is full of small helpers that save you a lot of time. This path shows the best of them, one by one.'],
+    [item('minecraft:chest', 2)], [rxp(30)], icon=UIC + 'iron_chest', deps=['prologue:table'], shape='star', size=1.3)
+q.quest('iron_chest', 'Iron Chest', 2, -2, [
+    TIP + '&eUpgraded Iron Chests&7: surround a chest with eight iron ingots and you get an &eIron Chest&7 with much more room. Two side by side make a double chest.'],
+    [item(UIC + 'iron_chest')], [give('minecraft:iron_ingot', 8)], deps=['start'])
+q.quest('gold_chest', 'Gold Chest', 4, -3, [
+    TIP + 'Upgrade it: four gold ingots and four iron ingots around an Iron Chest make a &eGold Chest&7.'],
+    [item(UIC + 'gold_chest')], [give('minecraft:gold_ingot', 4)], deps=['iron_chest'])
+q.quest('diamond_chest', 'Diamond Chest', 6, -3, [
+    TIP + 'Diamonds and gold around a Gold Chest give a &eDiamond Chest&7. Every upgraded chest is immune to fire and lava.'],
+    [item(UIC + 'diamond_chest')], [crate('common')], deps=['gold_chest'])
+q.quest('netherite_chest', 'Netherite Chest', 8, -3, [
+    TIP + 'The biggest of them all: netherite ingots and diamonds around a Diamond Chest make a &eNetherite Chest&7.'],
+    [item(UIC + 'netherite_chest')], [crate('rare')], deps=['diamond_chest'], optional=True)
+q.quest('safe', 'Safe Chest', 4, -1, [
+    TIP + 'A &eSafe Chest&7 (iron bars, gold and iron around an Iron Chest) is locked with a passcode. Other players cannot break it, and hoppers or pipes cannot reach into it. The &eDiamond Safe Chest&7 holds even more.'],
+    [item(UIC + 'safe_chest')], [give('minecraft:gold_ingot', 4)], deps=['iron_chest'], optional=True)
+q.quest('search', 'Find My Item', 6, -1, [
+    TIP + 'Open an upgraded chest: the search field finds any item, the rarity filter sorts by rarity, and &eQuick Stack&7 and &eDump&7 move your items into nearby chests with one click.',
+    TIP + 'Link chests to see their contents from one place and let the chest point you to the item you are looking for.'],
+    [check('I tried the search and Quick Stack')], [rxp(60)], deps=['iron_chest'])
+q.quest('drawers', 'Bigger Drawers', 8, -1, [
+    TIP + '&eStorage Drawers&7 grow with &eStorage Upgrades&7 from obsidian (I) up to netherite (VII). Open a drawer and put the upgrades into its slots. A &eDrawer Key&7 locks a drawer to its item.'],
+    [item('storagedrawers:iron_storage_upgrade')], [give('minecraft:obsidian', 4)], deps=['search'], optional=True)
+q.quest('sorting', 'Tidy Up', 2, 2, [
+    TIP + '&eInventory Profiles Next&7 sorts your inventory and any open chest with one key (see Controls). &eMouse Tweaks&7: hold right-click and drag to spread items, scroll over a stack to move it, shift-drag to move many stacks.'],
+    [check('I sorted a chest')], [rxp(40)], deps=['start'])
+q.quest('crafting', 'Crafting Tweaks', 4, 2, [
+    TIP + '&eCrafting Tweaks&7 adds small buttons next to every crafting grid: rotate the recipe, spread the items evenly or clear the grid. JEI\'s &e+&7 button fills the grid for you.'],
+    [check('I used the crafting buttons')], [rxp(40)], deps=['sorting'])
+q.quest('shulker', 'Boxes in Boxes', 4, 3.5, [
+    TIP + '&eShulker Box Tooltip&7 shows what is inside a shulker box when you hover over it, and &eEasy Shulker Boxes&7 opens a shulker box straight from your inventory.'],
+    [check('I looked into a shulker box')], [rxp(40)], deps=['sorting'], optional=True)
+q.quest('harvest', 'Easy Harvest', 6, 2, [
+    TIP + '&eRightClickHarvest&7: right-click ripe crops to harvest and replant them in one go. &eFallingTree&7: chop the lowest log and the whole tree comes down (sneak to cut a single log).'],
+    [check('I harvested with a right-click')], [give('minecraft:bone_meal', 16)], deps=['crafting'])
+q.quest('minimap', 'Never Lost', 2, 4, [
+    TIP + '&eXaero\'s Minimap&7 shows the land around you, &eXaero\'s World Map&7 (key &eM&7) everything you have explored. Set a waypoint at your base and at every place you want to find again.'],
+    [check('I set a waypoint')], [give('minecraft:compass')], deps=['start'])
+q.quest('light', 'Light and Safety', 6, 4, [
+    TIP + 'With &eLambDynamicLights&7 a torch in your hand lights up the area around you. A &eMagnum Torch&7 stops monsters from spawning in a wide area around your base.'],
+    [item('magnumtorch:diamond_magnum_torch')], [crate('common')], deps=['minimap', 'harvest'], any_dep=True, optional=True)
+q.quest('glance', 'At a Glance', 8, 2, [
+    TIP + '&eAppleSkin&7 shows how much a food fills you up, right on the hunger bar. &eZoomify&7 zooms in with &eC&7 - scroll to zoom further.'],
+    [check('I zoomed in')], [rxp(30)], deps=['harvest'], optional=True)
+q.quest('done', '&eLife Made Easy', 10, 0, [TIP + 'Big chests, sorted inventories and a map full of waypoints: life in the dream just got a lot easier.'],
+        [check('My base is tidy')], [crate('rare'), rxp(150)], deps=['diamond_chest', 'harvest'], shape='star', size=1.3, icon='questsicons:quest_crown')
+
+
 def task_icons():
     """By default the book shows wheat for advancement tasks and a spyglass for looking at a mob: use fitting icons."""
     for ch in B.chapters:
@@ -844,7 +898,7 @@ def task_icons():
 task_icons()
 
 # Story chapters first, then side paths (sidebar order).
-order = ['prologue', 'settler', 'deep', 'industry', 'power', 'nether', 'sea', 'end', 'epilogue', 'kitchen', 'builder', 'atlas', 'creatures', 'pets']
+order = ['prologue', 'settler', 'deep', 'industry', 'power', 'nether', 'sea', 'end', 'epilogue', 'kitchen', 'builder', 'atlas', 'creatures', 'pets', 'qol']
 B.chapters.sort(key=lambda ch: order.index(ch.key) if ch.key in order else 99)
 
 DATA = {'title': '&dDreamcraft &7- Quest Book', 'icon': 'questsicons:quest_book', 'default_quest_shape': 'circle',
