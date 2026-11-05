@@ -338,7 +338,7 @@
 			shape: "heart"
 			dependencies: ["01191CEDCFCE1F8E"]
 			description: [
-				"&7&eMutant Monsters&7 are huge, fast and dangerous. Defeat a Mutant Zombie - their drops make legendary gear like the Hulk Hammer."
+				"&7&eMutant Monsters&7 are huge, fast and dangerous. A Mutant Zombie gets back up after it falls: kill it while it burns (Fire Aspect, flint and steel, lava) or knock it down again until it stays down. Its drops make legendary gear like the Hulk Hammer."
 			]
 			tasks: [
 				{

@@ -291,7 +291,8 @@ final class QuestRun {
             case "stat" -> {
                 String stat = t.get("stat").getAsString();
                 srv(s -> {
-                    player(s).awardStat(Identifier.parse(stat), (int) need);
+                    Identifier id = BuiltInRegistries.CUSTOM_STAT.getValue(Identifier.parse(stat));   // the registered instance
+                    player(s).awardStat(id, (int) need);
                     return null;
                 });
                 return null;
@@ -351,8 +352,8 @@ final class QuestRun {
         });
         if (made.startsWith("!")) return made.substring(1);
         ctx.waitTicks(5);
-        if (made.equals("e")) cmd("execute as @a at @s run tp @s ~ ~ ~ facing entity @e[type=" + what + ",limit=1,sort=nearest] eyes");
-        else cmd("execute as @a at @s run tp @s ~ ~ ~ facing ~3 ~0.5 ~");
+        if (made.equals("e")) cmd("execute as @a at @s anchored eyes run tp @s ~ ~ ~ facing entity @e[type=" + what + ",limit=1,sort=nearest] eyes");
+        else cmd("execute as @a at @s anchored eyes run tp @s ~ ~ ~ facing ~3 ~0.5 ~");
         boolean seen = waitTask(tid, need, (int) need + 200);
         if (made.equals("e")) cmd("execute at @a run kill @e[type=" + what + ",distance=..10]");
         else cmd("execute at @a run setblock ~3 ~ ~ air");
@@ -371,6 +372,8 @@ final class QuestRun {
             e.setPos(p.getX() + 4, p.getY(), p.getZ());
             level.addFreshEntity(e);
             DamageSource src = p.damageSources().playerAttack(p);
+            // burning when it dies: mobs that get back up (Mutant Zombie) then stay down, others do not care
+            le.igniteForTicks(200);
             le.hurtServer(level, src, 1.0e6f);
             if (le.isAlive()) le.hurtServer(level, src, 1.0e6f);
             if (le.isAlive()) {

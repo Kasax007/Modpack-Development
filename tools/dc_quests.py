@@ -790,7 +790,7 @@ c.quest('variants', 'New Faces in the Dark', 0, 4.5, [
     TIP + '&eVariants&&Ventures&7 adds new undead: the icy &eGelid&7, the leafy &eThicket&7, the swampy &eMurk&7 and the mossy &eVerdant&7. Each has its own trick.',
     TIP + 'Defeat a Gelid in the snow.'],
     [kill('variantsandventures:gelid')], [crate('common')], deps=['walkers'], optional=True)
-c.quest('mutant', 'Mutant Zombie', 8, 0, [TIP + '&eMutant Monsters&7 are huge, fast and dangerous. Defeat a Mutant Zombie - their drops make legendary gear like the Hulk Hammer.'],
+c.quest('mutant', 'Mutant Zombie', 8, 0, [TIP + '&eMutant Monsters&7 are huge, fast and dangerous. A Mutant Zombie gets back up after it falls: kill it while it burns (Fire Aspect, flint and steel, lava) or knock it down again until it stays down. Its drops make legendary gear like the Hulk Hammer.'],
         [kill('mutantmonsters:mutant_zombie')], [crate('epic')], deps=['pet'], shape='heart')
 c.quest('mutants', 'The Whole Mutant Family', 10, -2, [
     TIP + 'The &eMutant Skeleton&7 drops bones for its own armor, the &eMutant Creeper&7 leaves &eCreeper Shards&7, and the &eMutant Enderman&7 throws blocks at you. Defeat one of each.'],

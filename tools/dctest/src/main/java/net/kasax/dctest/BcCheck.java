@@ -253,7 +253,7 @@ final class BcCheck {
         cmd("execute in " + dim + " run setblock " + (x + 1) + " " + y + " " + z + " raft:hammock[facing=east,part=head]");
         cmd("gamemode survival @a");
         if (expectSleep) cmd("time set 13000");
-        cmd(String.format(Locale.ROOT, "execute in %s run tp @a %d.5 %d %d.5 facing %d.5 %d.3 %d.5", dim, x - 2, y, z, x, y, z));
+        cmd(String.format(Locale.ROOT, "execute in %s as @a anchored eyes run tp @s %d.5 %d %d.5 facing %d.5 %d.3 %d.5", dim, x - 2, y, z, x, y, z));
         waitDrawn(20);
         float hp = srv(s -> s.getPlayerList().getPlayers().get(0).getHealth());
         long before = srv(s -> s.overworld().getOverworldClockTime());
@@ -303,7 +303,7 @@ final class BcCheck {
         });
         cmd("setblock " + x + " " + y + " " + z + " raft:air_compressor[facing=west]");
         cmd("gamemode survival @a");
-        cmd(String.format(Locale.ROOT, "execute in minecraft:overworld run tp @a %d.5 %d %d.5 facing %d.5 %d.5 %d.5", x - 2, y, z, x, y, z));
+        cmd(String.format(Locale.ROOT, "execute in minecraft:overworld as @a anchored eyes run tp @s %d.5 %d %d.5 facing %d.5 %d.5 %d.5", x - 2, y, z, x, y, z));
         cmd("item replace entity @a hotbar.0 with raft:oxygen_tank");
         cmd("item replace entity @a hotbar.1 with minecraft:air");
         waitDrawn(20);
@@ -396,7 +396,7 @@ final class BcCheck {
             return null;
         });
         cmd("setblock " + ax + " " + ay + " " + az + " raft:leviathan_altar[facing=east]");
-        cmd(String.format(Locale.ROOT, "execute in minecraft:overworld run tp @a %d.5 %d %d.5 facing %d.5 %d.4 %d.5", ax - 2, ay, az, ax, ay, az));
+        cmd(String.format(Locale.ROOT, "execute in minecraft:overworld as @a anchored eyes run tp @s %d.5 %d %d.5 facing %d.5 %d.4 %d.5", ax - 2, ay, az, ax, ay, az));
         waitDrawn(30);
         cmd("gamemode survival @a");
         cmd("effect give @a minecraft:resistance infinite 4 true");
@@ -454,7 +454,7 @@ final class BcCheck {
         cmd("execute in minecraft:overworld run kill @e[type=raft:tideling]");
         cmd("execute in minecraft:overworld run kill @e[type=item,x=" + ax + ",y=" + ay + ",z=" + az + ",distance=..80]");
         // second summon: without a crystal nothing happens, with one it works and the crystal is used up
-        cmd(String.format(Locale.ROOT, "execute in minecraft:overworld run tp @a %d.5 %d %d.5 facing %d.5 %d.4 %d.5", ax - 2, ay, az, ax, ay, az));
+        cmd(String.format(Locale.ROOT, "execute in minecraft:overworld as @a anchored eyes run tp @s %d.5 %d %d.5 facing %d.5 %d.4 %d.5", ax - 2, ay, az, ax, ay, az));
         ctx.waitTicks(20);
         ctx.getInput().pressKey(o -> o.keyUse);
         ctx.waitTicks(40);
