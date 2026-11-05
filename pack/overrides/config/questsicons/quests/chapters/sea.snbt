@@ -269,6 +269,59 @@
 			]
 		}
 		{
+			id: "AAAF5A9A34227A4A"
+			title: "A Friendly Face"
+			x: 9.4d
+			y: -1.5d
+			dependencies: ["35B489311891E8F2"]
+			description: [
+				"&7People live in the old places of the Endless Sea: Keeper Fenn at the Old Lighthouse, Nalu and Old Tamo in Saltmere, and more. &eRight-click&7 them to talk."
+				"&7Ask about their place, about your next step in the story and for rumours. Most of them trade for pirate gold and pearls, and they have a welcome gift for you."
+			]
+			tasks: [
+				{
+					id: "F35C37C6E0F64781"
+					type: "advancement"
+					title: "Talk to someone on the Endless Sea"
+					icon: "raft:keeper_fenn_spawn_egg"
+					advancement: "raft:adventure/new_friend"
+				}
+			]
+			rewards: [
+				{
+					id: "F3703BC6E106F757"
+					type: "item"
+					count: 4
+					item: "raft:gold_coin"
+				}
+				{ id: "F3703AC6E106F5A4", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "7DAB8DE191B7B789"
+			title: "Every Soul Aboard"
+			x: 7.6d
+			y: -1.5d
+			dependencies: ["AAAF5A9A34227A4A"]
+			optional: true
+			description: [
+				"&7Eight people stayed on the Endless Sea. Find them all: in the lighthouse, in Saltmere, in the Ashen Forge, behind the counter of a tiki bar, at a camp fire, in an iceberg outpost and on a rig."
+			]
+			tasks: [
+				{
+					id: "120ADBED4F26E783"
+					type: "advancement"
+					title: "Meet all eight people of the sea"
+					icon: "raft:nalu_spawn_egg"
+					advancement: "raft:adventure/every_soul"
+				}
+			]
+			rewards: [
+				{ id: "121167ED4F2C4115", type: "item", item: "questsicons:rare_crate" }
+				{ id: "121166ED4F2C3F62", type: "xp", xp: 250 }
+			]
+		}
+		{
 			id: "EE579435A4C90B59"
 			title: "Saltmere"
 			icon: "raft:paper_lantern_orange"
@@ -1419,7 +1472,6 @@
 			x: 15.6d
 			y: 1.8d
 			dependencies: ["405543850FBEED1E"]
-			optional: true
 			description: [
 				"&7&eRaft Lanterns&7 add lantern posts and rope rails to your raft. Sailing at night has never looked better."
 			]
@@ -1428,6 +1480,74 @@
 			]
 			rewards: [
 				{ id: "2AFCA51190ABFB78", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "AB0F46DF0C261C84"
+			title: "Your Own Raft"
+			x: 17.2d
+			y: 1.8d
+			shape: "hexagon"
+			size: 1.2d
+			dependencies: ["29D123A755C90DF7"]
+			description: [
+				"&7Now build a raft of your own, block by block. Look at open water and place a &eRaft Foundation&7, then set more against its sides. Floors, walls, chests, furnaces, crops and redstone: everything on the foundations sails along and keeps working at sea."
+				"&7Set a &eHelm&7 (Ship Wheel on a stick on 3 planks) on the raft facing the bow and use it to set sail. W and S sail, A and D steer. Use the wheel again to drop anchor: the raft becomes blocks again, just as it was."
+				""
+				"&7Reward: an almanac that opens at the page \"Your Own Raft\"."
+			]
+			tasks: [
+				{ id: "F8800ADC799DBC9E", type: "item", item: "raft:helm" }
+				{
+					id: "F8800BDC799DBE51"
+					type: "advancement"
+					title: "Set sail on a raft you built"
+					icon: "raft:helm"
+					advancement: "raft:adventure/shipwright"
+				}
+			]
+			rewards: [
+				{
+					id: "F86B86DC798C3348"
+					type: "item"
+					item: {
+						id: "raft:seafarers_almanac"
+						components: {
+							"minecraft:custom_data": { almanac: "sailing/shipwright" }
+						}
+					}
+				}
+				{
+					id: "F86B87DC798C34FB"
+					type: "item"
+					count: 16
+					item: "raft:raft_foundation"
+				}
+				{ id: "F86B88DC798C36AE", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "14D8D0BB4D2E5082"
+			title: "Wind and Engine"
+			x: 18.8d
+			y: 1.8d
+			dependencies: ["AB0F46DF0C261C84"]
+			description: [
+				"&7A raft you built needs power. An &eOar&7 on the deck edge rows, a &eSail&7 catches the wind (stack sails for a taller mast, every sail counts) and the &eRaft Motor&7 is the strongest. Feed the motor furnace fuel, even while you sail."
+				"&7Heavy rafts need more power: they are slower and turn more slowly."
+			]
+			tasks: [
+				{ id: "F14BB9BF00D12BFF", type: "item", item: "raft:sail" }
+				{ id: "F14BB8BF00D12A4C", type: "item", item: "raft:raft_motor" }
+			]
+			rewards: [
+				{
+					id: "F137B5BF00C07C29"
+					type: "item"
+					count: 4
+					item: "minecraft:coal_block"
+				}
+				{ id: "F137B4BF00C07A76", type: "xp", xp: 150 }
 			]
 		}
 		{

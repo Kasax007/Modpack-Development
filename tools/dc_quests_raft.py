@@ -60,6 +60,13 @@ r.quest('lighthouse', 'Keeper of the Light', 9.4, 0, [
     TIP + 'Follow the chart from the castaway chest to the ' + SEA + 'Old Lighthouse&7 on a rocky isle. Climb it, look around and read what the keeper left behind.',
     '', STORY_TIP],
     [adv('raft:story/lighthouse', 'Reach the Old Lighthouse')], [crate('common'), rxp(100)], deps=['castaway'], icon='raft:lighthouse_lens')
+r.quest('friend', 'A Friendly Face', 9.4, -1.5, [
+    TIP + 'People live in the old places of the Endless Sea: Keeper Fenn at the Old Lighthouse, Nalu and Old Tamo in Saltmere, and more. &eRight-click&7 them to talk.',
+    TIP + 'Ask about their place, about your next step in the story and for rumours. Most of them trade for pirate gold and pearls, and they have a welcome gift for you.'],
+    [adv('raft:adventure/new_friend', 'Talk to someone on the Endless Sea', icon='raft:keeper_fenn_spawn_egg')], [give('raft:gold_coin', 4), rxp(100)], deps=['lighthouse'])
+r.quest('every_soul', 'Every Soul Aboard', 7.6, -1.5, [
+    TIP + 'Eight people stayed on the Endless Sea. Find them all: in the lighthouse, in Saltmere, in the Ashen Forge, behind the counter of a tiki bar, at a camp fire, in an iceberg outpost and on a rig.'],
+    [adv('raft:adventure/every_soul', 'Meet all eight people of the sea', icon='raft:nalu_spawn_egg')], [crate('rare'), rxp(250)], deps=['friend'], optional=True)
 r.quest('saltmere', 'Saltmere', 11.2, 0, [
     TIP + 'The next chart leads to ' + SEA + 'Saltmere&7, a fishing village on stilts above a glowing reef. Walk its decks and huts, and take what was left for whoever comes next - a &eDiving Helmet&7 among it.'],
     [adv('raft:story/saltmere', 'Visit Saltmere')], [crate('common'), rxp(150)], deps=['lighthouse'], icon='raft:paper_lantern_orange')
@@ -236,7 +243,20 @@ r.quest('cargo', 'Anchor and Cargo', 14, 1.8, [
     TIP + 'Drop the &eRaft Anchor&7 with the lever in the raft menu, and the raft stays where it is - perfect above a dive spot. A &eRaft Cargo Crate&7 adds 27 more storage slots.'],
     [item('raft:raft_anchor'), item('raft:raft_crate')], [crate('rare')], deps=['engine'])
 r.quest('lanterns', 'Raft Lanterns', 15.6, 1.8, [TIP + '&eRaft Lanterns&7 add lantern posts and rope rails to your raft. Sailing at night has never looked better.'],
-        [item('raft:raft_lantern')], [rxp(100)], deps=['cargo'], optional=True)
+        [item('raft:raft_lantern')], [rxp(100)], deps=['cargo'])
+
+# --------------------------------------------------------------------------------------------- your own raft (Beach Craft 3.1)
+r.quest('own_raft', 'Your Own Raft', 17.2, 1.8, [
+    TIP + 'Now build a raft of your own, block by block. Look at open water and place a &eRaft Foundation&7, then set more against its sides. Floors, walls, chests, furnaces, crops and redstone: everything on the foundations sails along and keeps working at sea.',
+    TIP + 'Set a &eHelm&7 (Ship Wheel on a stick on 3 planks) on the raft facing the bow and use it to set sail. W and S sail, A and D steer. Use the wheel again to drop anchor: the raft becomes blocks again, just as it was.',
+    '',
+    TIP + 'Reward: an almanac that opens at the page "Your Own Raft".'],
+    [item('raft:helm'), adv('raft:adventure/shipwright', 'Set sail on a raft you built', icon='raft:helm')],
+    [give(almanac('sailing/shipwright')), give('raft:raft_foundation', 16), rxp(150)], deps=['lanterns'], shape='hexagon', size=1.2)
+r.quest('own_raft_power', 'Wind and Engine', 18.8, 1.8, [
+    TIP + 'A raft you built needs power. An &eOar&7 on the deck edge rows, a &eSail&7 catches the wind (stack sails for a taller mast, every sail counts) and the &eRaft Motor&7 is the strongest. Feed the motor furnace fuel, even while you sail.',
+    TIP + 'Heavy rafts need more power: they are slower and turn more slowly.'],
+    [item('raft:sail'), item('raft:raft_motor')], [give('minecraft:coal_block', 4), rxp(150)], deps=['own_raft'])
 
 # --------------------------------------------------------------------------------------------- diving
 r.quest('helmet', 'Diving Helmet', 6, 3.3, [
