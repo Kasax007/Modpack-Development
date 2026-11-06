@@ -39,7 +39,11 @@ head = summit[:HEAD_END]
 def title_layout(i):
     h = head
     h = re.sub(r'identifier = title_screen\n', 'identifier = title_screen\n', h)
-    h = setkeys_meta(h, randommode='true', randomonlyfirsttime='true', is_enabled='true', layout_index=str(i))
+    # Custom elements behind vanilla: the sidebar band is a custom image. Drawn above the vanilla widgets it tinted
+    # Singleplayer, Multiplayer, Options and Quit Game (vanilla buttons) purple, while Mods and Rent a Server (custom
+    # buttons after the band) stayed bright (fixed in V1.4.1).
+    h = setkeys_meta(h, randommode='true', randomonlyfirsttime='true', is_enabled='true', layout_index=str(i),
+                     render_custom_elements_behind_vanilla='true')
     # The layout is drawn at GUI scale 2 on a 1920x1080 window (960x540 GUI units). Auto-scaling turns that scale
     # into scale 2 * min(window / 1920x1080), so smaller windows (the default 854x480, 1366x768) show the whole menu
     # instead of cutting off the lower buttons.

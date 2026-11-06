@@ -2,3 +2,8 @@
 # python
 __pycache__/
 *.pyc
+
+# production test (tools/prodtest): downloaded pack, installed instance, report
+tools/prodtest/instance/
+tools/prodtest/*.zip
+tools/prodtest/report.json
