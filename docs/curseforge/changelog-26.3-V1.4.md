@@ -8,7 +8,10 @@
 - **People of the Sea**: eight people live in the old places of the Endless Sea. Talk to them, ask for a hint for your
   next step in the story, get a welcome gift and trade for pirate gold and pearls.
 - **Sounds and music**: every creature and machine has its own sounds, and the sea has its own music by day and by
-  night, for its places and for the fight against the Leviathan (music by Kevin MacLeod, CC BY 4.0).
+  night, for its places and for the fight against the Leviathan (music by Kevin MacLeod, CC BY 4.0). The Raft Motor
+  hums louder the faster you sail.
+- **Creatures**: seagull flocks fly in a loose V in long curves, moray eels wait level in their holes and lunge,
+  and crabs visibly dig themselves in when you sprint at them.
 - **Day and night** in the Endless Sea, structures that fit into the islands, the Coral Temple always under water,
   six new island plants, and a Sea Scooter that runs three times as long.
 - **Places stay whole**: basalt, ash, lava, trees and ore veins no longer grow into structures (the rooms of the Ashen
