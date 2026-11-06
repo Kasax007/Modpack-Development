@@ -11,6 +11,9 @@
   night, for its places and for the fight against the Leviathan (music by Kevin MacLeod, CC BY 4.0).
 - **Day and night** in the Endless Sea, structures that fit into the islands, the Coral Temple always under water,
   six new island plants, and a Sea Scooter that runs three times as long.
+- **Places stay whole**: basalt, ash, lava, trees and ore veins no longer grow into structures (the rooms of the Ashen
+  Forge stay free), places no longer overlap (no Rusted Rig on the Abyssal Sanctum), and tiki bars and castaway camps
+  only stand on flat ground. Checked block by block at 95 places in two worlds.
 
 ### New mod: Upgraded Iron Chests
 - Iron, Gold, Diamond and Netherite Chests with much more room. They are immune to fire and lava.
