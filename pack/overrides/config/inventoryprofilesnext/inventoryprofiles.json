@@ -1,0 +1,22 @@
+{
+    "ModSettings": {
+        "first_run": false,
+        "highlight_foused_items": false,
+        "highlight_clicking_slot": false,
+        "enable_profiles": false
+    },
+    "GuiSettings": {
+        "enable_profiles_ui": false,
+        "enable_inventory_settings_button": false,
+        "enable_inventory_editor_button": false,
+        "show_continuous_crafting_checkbox": false,
+        "show_fast_rename_checkbox": false,
+        "show_sort_in_columns_button": false,
+        "show_sort_in_rows_button": false,
+        "show_move_all_button": false
+    },
+    "AutoRefillSettings": {
+        "auto_refill_enable_indicator_icons": false,
+        "auto_refill_enable_horbar_indicator_icons": false
+    }
+}
