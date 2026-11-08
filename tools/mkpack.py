@@ -121,6 +121,8 @@ readme = f"""Dreamcraft {MC} {version} - Server Pack
    with Fabric Loader {LOADER} and all {{n}} mods.
 
 RAM: 6-8 GB recommended (edit start.bat / set DREAMCRAFT_RAM=10G for start.sh).
+Players: a new Minecraft {MC} server starts with a whitelist. Add your friends in the console with
+   whitelist add <name>   - or set white-list=false in server.properties.
 Quests: config/questsicons/quests (same files as the client pack).
 Need a server? BisectHosting - code KASAX007 for 25% off: https://bisecthosting.com/kasax007
 """
