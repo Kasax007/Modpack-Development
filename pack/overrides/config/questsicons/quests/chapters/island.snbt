@@ -102,12 +102,7 @@
 				"&7He drops gold, scrap metal and often a harpoon gun."
 			]
 			tasks: [
-				{
-					id: "BF8260D0DB295AD8"
-					type: "kill"
-					entity: "raft:scavenger_chief"
-					value: 1
-				}
+				{ id: "BF8260D0DB295AD8", type: "checkmark", title: "Defeat the Scavenger Chief" }
 			]
 			rewards: [
 				{ id: "BF96E4D0DB3AE42E", type: "item", item: "questsicons:rare_crate" }
@@ -157,12 +152,7 @@
 				"&7It drops pearls, sea glass, prismarine and now and then Ancient Energy."
 			]
 			tasks: [
-				{
-					id: "55DD2DB381674504"
-					type: "kill"
-					entity: "raft:reef_warden"
-					value: 1
-				}
+				{ id: "55DD2DB381674504", type: "checkmark", title: "Defeat the Reef Warden" }
 			]
 			rewards: [
 				{ id: "55D621B3816111F2", type: "item", item: "questsicons:epic_crate" }

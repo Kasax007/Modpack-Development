@@ -1,5 +1,7 @@
 # Side path - Island Life (Beach Craft 3.2 and 3.3, mod id raft). Executed inside dc_quests.py (shares its names).
 # Facts follow the mod's changelogs 3.2.0 and 3.3.0 (Kasax_Raft_Mod docs/curseforge) and its almanac.
+# The Scavenger Chief and the Reef Warden are elite scavengers and reef guardians (no entity type of their own), so
+# their quests are a checkbox.
 # Layout: the start in the middle; danger (guards and mini-bosses) below it, sailing to the right, cozy living above,
 # the island kitchen at the top, gear and gadgets to the left.
 
@@ -23,7 +25,7 @@ il.quest('reef_guardian', 'Reef Guardians', 3.6, 1.8, [
 il.quest('chief', 'The Scavenger Chief', 3.6, 3.4, [
     TIP + 'The elite of a scavenger gang wears iron armour and swings an iron sword. He guards the rusted rig and Port Solace, with a boss bar of his own.',
     TIP + 'He drops gold, scrap metal and often a harpoon gun.'],
-    [kill('raft:scavenger_chief')], [crate('rare'), rxp(150)], deps=['guards'], optional=True, icon='minecraft:iron_sword')
+    [check('Defeat the Scavenger Chief')], [crate('rare'), rxp(150)], deps=['guards'], optional=True, icon='minecraft:iron_sword')
 il.quest('captain', 'The Corsair Captain', 5.4, 1.8, [
     TIP + 'Saltjaw\'s cove and the galleon wreck are held by corsair crews and their &eCorsair Captain&7: bigger, armoured, with a cutlass. At half health he blows his horn, and two corsairs climb out of the deep to help him.',
     TIP + 'He always drops his cutlass and a purse of gold, often a harpoon.'],
@@ -31,7 +33,7 @@ il.quest('captain', 'The Corsair Captain', 5.4, 1.8, [
 il.quest('warden', 'The Reef Warden', 7.2, 1.8, [
     TIP + 'A huge reef guardian keeps the &5Coral Temple&7: 80 health, armour 8 and a beam that hits for 7. Fight it from cover and strike while its beam charges elsewhere.',
     TIP + 'It drops pearls, sea glass, prismarine and now and then Ancient Energy.'],
-    [kill('raft:reef_warden')], [crate('epic'), rxp(250)], deps=['captain'], optional=True, icon='raft:reef_guardian_spawn_egg')
+    [check('Defeat the Reef Warden')], [crate('epic'), rxp(250)], deps=['captain'], optional=True, icon='raft:reef_guardian_spawn_egg')
 
 # --------------------------------------------------------------------------------------------- sailing (right)
 il.quest('mast', 'Sail and Mast', 1.8, 0, [
