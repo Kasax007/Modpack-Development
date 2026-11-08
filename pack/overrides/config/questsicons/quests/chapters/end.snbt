@@ -316,7 +316,7 @@
 			dependencies: ["7538B596ECD56BC3"]
 			optional: true
 			description: [
-				"&7In some End cities waits the &5Void Kitten&7, one of the rarest pets of &eTamagotchi&7: it pulls dropped items into its backpack. See the &dTamagotchi&7 side path."
+				"&7In some End cities waits the &5Void Kitten&7, one of the rarest pets of &eTamacraft&7: it pulls dropped items into its backpack. See the &dTamacraft&7 side path."
 				""
 				"&7Spot a Void Kitten."
 			]
@@ -325,9 +325,9 @@
 					id: "4B85601C0C25CB8D"
 					type: "observation"
 					title: "Spot a Void Kitten"
-					icon: "tamagotchi:void_kitten_plush"
+					icon: "tamacraft:void_kitten_plush"
 					entity: true
-					observe: "tamagotchi:void_kitten"
+					observe: "tamacraft:void_kitten"
 					timer: 40
 				}
 			]
@@ -336,7 +336,7 @@
 					id: "4B7E541C0C1F987B"
 					type: "item"
 					count: 4
-					item: "tamagotchi:fish_crackers"
+					item: "tamacraft:fish_crackers"
 				}
 			]
 		}

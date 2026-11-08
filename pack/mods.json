@@ -1944,12 +1944,12 @@
   "env": "*"
  },
  {
-  "title": "Tamagotchi",
-  "slug": "tamagotchi",
+  "title": "Tamacraft",
+  "slug": "tamacraft",
   "projectID": 1758309,
-  "fileID": 9431312,
-  "file": "tamagotchi-1.2.0.jar",
-  "modid": "tamagotchi",
+  "fileID": 9501672,
+  "file": "tamacraft-1.3.0.jar",
+  "modid": "tamacraft",
   "env": "*"
  },
  {

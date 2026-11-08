@@ -303,7 +303,7 @@
 			dependencies: ["75A3111A2E29875A"]
 			optional: true
 			description: [
-				"&7In some nether fortresses lives the &6Ember Pup&7, one of the rare pets of &eTamagotchi&7. It swims through lava and keeps you from burning. See the &dTamagotchi&7 side path."
+				"&7In some nether fortresses lives the &6Ember Pup&7, one of the rare pets of &eTamacraft&7. It swims through lava and keeps you from burning. See the &dTamacraft&7 side path."
 				""
 				"&7Spot an Ember Pup."
 			]
@@ -312,9 +312,9 @@
 					id: "A6A4D0D04000C98F"
 					type: "observation"
 					title: "Spot an Ember Pup"
-					icon: "tamagotchi:ember_pup_plush"
+					icon: "tamacraft:ember_pup_plush"
 					entity: true
-					observe: "tamagotchi:ember_pup"
+					observe: "tamacraft:ember_pup"
 					timer: 40
 				}
 			]
@@ -323,7 +323,7 @@
 					id: "A6904CD03FEF4039"
 					type: "item"
 					count: 4
-					item: "tamagotchi:ember_jerky"
+					item: "tamacraft:ember_jerky"
 				}
 			]
 		}

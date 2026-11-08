@@ -104,8 +104,8 @@ r.quest('sanctum', 'The Abyssal Sanctum', 20.2, 0, [
 r.quest('leviathan', '&bThe Leviathan', 22, 0, [
     KEEPER + '"Here it is, Dreamer. The nightmare that drowned the sea."',
     '',
-    TIP + 'Use the &eTidewarden Key&7 on the &eLeviathan Altar&7 at the edge of the pool to wake it, and fight on the stone ring around the water.',
-    TIP + 'It cannot be hurt while it circles deep in the pool. When it lies stranded after a leap, strike! The almanac has a full chapter on the fight (it warns you first).'],
+    TIP + 'Use the &eTidewarden Key&7 on the &eLeviathan Altar&7 at the edge of the pool to wake it, and fight on the stone ring around the water. The altar keeps the key: every fight needs a new one.',
+    TIP + 'It keeps to the deep of its pool and cannot be hurt while it circles. It only rises to spit, roar or lunge, each with a warning - and when it lies stranded after a leap, strike! It hits hard (750 health, angry Tidelings): bring strong armour, healing and your best weapon. The almanac has a full chapter on the fight (it warns you first).'],
     [adv('raft:story/leviathan', 'Defeat the Leviathan')], [crate('legendary'), levels(20)], deps=['sanctum'], shape='heart', size=1.8, icon='raft:leviathan_trophy')
 r.quest('heart', '&dHeart of the Tide', 24, 0, [
     TIP + 'The Leviathan leaves the &eHeart of the Tide&7, its scales and a trophy. Placed as a block, the heart gives every swimmer within 32 blocks Conduit Power and Dolphin\'s Grace.',
@@ -145,12 +145,12 @@ r.quest('hammerhead', 'Hammerhead', 14.2, -3, [
 r.quest('trophy', 'Shark Trophy', 15.8, -3, [TIP + 'Three planks on three shark teeth make a &eShark Jaw Trophy&7 for your wall. Bruce would be proud.'],
         [item('raft:shark_jaw_trophy')], [rxp(100)], deps=['shark'], optional=True)
 r.quest('hook', 'Plastic Hook', 7.8, -4.5, [
-    TIP + 'The current carries planks, palm leaves, plastic and scrap metal past you, from west to east. Now and then lost loot drifts by, and rarely a &eMessage in a Bottle&7 or a &eSupply Barrel&7 - use them to open them.',
+    TIP + 'Now and then the current carries a plank, palm leaves, plastic or scrap metal past you, from west to east. Most materials come from the islands and from the chests of the places and their guards. Rarely a &eMessage in a Bottle&7 or a &eSupply Barrel&7 drifts by - use them to open them.',
     TIP + 'Hold use with the &ePlastic Hook&7 to pull floating items towards you, up to 12 blocks away.'],
     [item('raft:plastic_hook')], [give('raft:scrap_metal', 6)], deps=['almanac'])
 r.quest('catcher', 'Item Catcher', 9.4, -4.5, [
-    TIP + 'Put an &eItem Catcher&7 in the water and it catches the debris that drifts into it. It holds one kind of item at a time, so empty it often - hoppers can take the catch out.',
-    TIP + 'With an &eItem Catcher Net&7 inside it also fishes up Unrefined Ocean Garbage about every 30 seconds. A net lasts 32 catches. Smelt the garbage into a &eTrash Cube&7 and use it for 1 to 3 surprises.'],
+    TIP + 'Build an &eItem Catcher&7 into a raft of your own (see &bYour Own Raft&7): it only catches while the raft sails - the debris it sails through, and now and then a catch out of the sea, more the faster you sail. It holds one kind of item at a time, so empty it often - hoppers can take the catch out.',
+    TIP + 'With an &eItem Catcher Net&7 inside it also fishes up Unrefined Ocean Garbage while you sail. A net lasts 32 catches. Smelt the garbage into a &eTrash Cube&7 and use it for 1 to 3 surprises.'],
     [item('raft:item_catcher'), item('raft:net')], [give('raft:plastic', 8)], deps=['hook'], shape='hexagon', icon='raft:net')
 r.quest('receiver', 'Receiver', 11, -4.5, [
     TIP + 'Use the &eReceiver&7 for the direction and distance to the nearest floating driftwood. Out at sea it is the best source of driftwood logs.',
@@ -248,13 +248,13 @@ r.quest('lanterns', 'Raft Lanterns', 15.6, 1.8, [TIP + '&eRaft Lanterns&7 add la
 # --------------------------------------------------------------------------------------------- your own raft (Beach Craft 3.1)
 r.quest('own_raft', 'Your Own Raft', 17.2, 1.8, [
     TIP + 'Now build a raft of your own, block by block. Look at open water and place a &eRaft Foundation&7, then set more against its sides. Floors, walls, chests, furnaces, crops and redstone: everything on the foundations sails along and keeps working at sea.',
-    TIP + 'Set a &eHelm&7 (Ship Wheel on a stick on 3 planks) on the raft facing the bow and use it to set sail. W and S sail, A and D steer. Use the wheel again to drop anchor: the raft becomes blocks again, just as it was.',
+    TIP + 'Set a &eHelm&7 (Ship Wheel on a stick on 3 planks) on the raft facing the bow and use it to set sail. W and S sail, A and D steer. To moor, use the wheel while you steer, or sneak and use the helm: the raft becomes blocks again, just as it was.',
     '',
     TIP + 'Reward: an almanac that opens at the page "Your Own Raft".'],
     [item('raft:helm'), adv('raft:adventure/shipwright', 'Set sail on a raft you built', icon='raft:helm')],
     [give(almanac('sailing/shipwright')), give('raft:raft_foundation', 16), rxp(150)], deps=['lanterns'], shape='hexagon', size=1.2)
 r.quest('own_raft_power', 'Wind and Engine', 18.8, 1.8, [
-    TIP + 'A raft you built needs power. An &eOar&7 on the deck edge rows, a &eSail&7 catches the wind (stack sails for a taller mast, every sail counts) and the &eRaft Motor&7 is the strongest. Feed the motor furnace fuel, even while you sail.',
+    TIP + 'A raft you built needs power. An &eOar&7 on the deck edge rows, &eSails&7 catch the wind (set them next to a &eMast&7: they join into one big sheet, and every block of sail counts) and the &eRaft Motor&7 is the strongest. Click the motor to put furnace fuel in, even while you sail.',
     TIP + 'Heavy rafts need more power: they are slower and turn more slowly.'],
     [item('raft:sail'), item('raft:raft_motor')], [give('minecraft:coal_block', 4), rxp(150)], deps=['own_raft'])
 

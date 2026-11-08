@@ -599,8 +599,8 @@
 			description: [
 				"&d&o\"Here it is, Dreamer. The nightmare that drowned the sea.\""
 				""
-				"&7Use the &eTidewarden Key&7 on the &eLeviathan Altar&7 at the edge of the pool to wake it, and fight on the stone ring around the water."
-				"&7It cannot be hurt while it circles deep in the pool. When it lies stranded after a leap, strike! The almanac has a full chapter on the fight (it warns you first)."
+				"&7Use the &eTidewarden Key&7 on the &eLeviathan Altar&7 at the edge of the pool to wake it, and fight on the stone ring around the water. The altar keeps the key: every fight needs a new one."
+				"&7It keeps to the deep of its pool and cannot be hurt while it circles. It only rises to spit, roar or lunge, each with a warning - and when it lies stranded after a leap, strike! It hits hard (750 health, angry Tidelings): bring strong armour, healing and your best weapon. The almanac has a full chapter on the fight (it warns you first)."
 			]
 			tasks: [
 				{
@@ -858,7 +858,7 @@
 			y: -4.5d
 			dependencies: ["56466073B048ED95"]
 			description: [
-				"&7The current carries planks, palm leaves, plastic and scrap metal past you, from west to east. Now and then lost loot drifts by, and rarely a &eMessage in a Bottle&7 or a &eSupply Barrel&7 - use them to open them."
+				"&7Now and then the current carries a plank, palm leaves, plastic or scrap metal past you, from west to east. Most materials come from the islands and from the chests of the places and their guards. Rarely a &eMessage in a Bottle&7 or a &eSupply Barrel&7 drifts by - use them to open them."
 				"&7Hold use with the &ePlastic Hook&7 to pull floating items towards you, up to 12 blocks away."
 			]
 			tasks: [
@@ -882,8 +882,8 @@
 			shape: "hexagon"
 			dependencies: ["566CD39EB3306E79"]
 			description: [
-				"&7Put an &eItem Catcher&7 in the water and it catches the debris that drifts into it. It holds one kind of item at a time, so empty it often - hoppers can take the catch out."
-				"&7With an &eItem Catcher Net&7 inside it also fishes up Unrefined Ocean Garbage about every 30 seconds. A net lasts 32 catches. Smelt the garbage into a &eTrash Cube&7 and use it for 1 to 3 surprises."
+				"&7Build an &eItem Catcher&7 into a raft of your own (see &bYour Own Raft&7): it only catches while the raft sails - the debris it sails through, and now and then a catch out of the sea, more the faster you sail. It holds one kind of item at a time, so empty it often - hoppers can take the catch out."
+				"&7With an &eItem Catcher Net&7 inside it also fishes up Unrefined Ocean Garbage while you sail. A net lasts 32 catches. Smelt the garbage into a &eTrash Cube&7 and use it for 1 to 3 surprises."
 			]
 			tasks: [
 				{ id: "25014F8D96295126", type: "item", item: "raft:item_catcher" }
@@ -1492,7 +1492,7 @@
 			dependencies: ["29D123A755C90DF7"]
 			description: [
 				"&7Now build a raft of your own, block by block. Look at open water and place a &eRaft Foundation&7, then set more against its sides. Floors, walls, chests, furnaces, crops and redstone: everything on the foundations sails along and keeps working at sea."
-				"&7Set a &eHelm&7 (Ship Wheel on a stick on 3 planks) on the raft facing the bow and use it to set sail. W and S sail, A and D steer. Use the wheel again to drop anchor: the raft becomes blocks again, just as it was."
+				"&7Set a &eHelm&7 (Ship Wheel on a stick on 3 planks) on the raft facing the bow and use it to set sail. W and S sail, A and D steer. To moor, use the wheel while you steer, or sneak and use the helm: the raft becomes blocks again, just as it was."
 				""
 				"&7Reward: an almanac that opens at the page \"Your Own Raft\"."
 			]
@@ -1533,7 +1533,7 @@
 			y: 1.8d
 			dependencies: ["AB0F46DF0C261C84"]
 			description: [
-				"&7A raft you built needs power. An &eOar&7 on the deck edge rows, a &eSail&7 catches the wind (stack sails for a taller mast, every sail counts) and the &eRaft Motor&7 is the strongest. Feed the motor furnace fuel, even while you sail."
+				"&7A raft you built needs power. An &eOar&7 on the deck edge rows, &eSails&7 catch the wind (set them next to a &eMast&7: they join into one big sheet, and every block of sail counts) and the &eRaft Motor&7 is the strongest. Click the motor to put furnace fuel in, even while you sail."
 				"&7Heavy rafts need more power: they are slower and turn more slowly."
 			]
 			tasks: [

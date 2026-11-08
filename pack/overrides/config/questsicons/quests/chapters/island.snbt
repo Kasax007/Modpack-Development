@@ -1,0 +1,505 @@
+{
+	id: "1D251C79F9C1D736"
+	filename: "island"
+	title: "&bIsland Life"
+	subtitle: [
+		"&7Guards and pirates, sails and anchors, a cozy home, an island kitchen and new gear."
+	]
+	icon: "raft:thatch_parasol"
+	group: "1C49159F2FE9E643"
+	order_index: 15
+	default_quest_shape: "hexagon"
+	quests: [
+		{
+			id: "5A842BF26F504A36"
+			title: "&bIsland Life"
+			icon: "raft:thatch_parasol"
+			x: 0.0d
+			y: 0.0d
+			shape: "star"
+			size: 1.3d
+			dependencies: ["8C14D5A43E08F8BB"]
+			description: [
+				"&d&o\"The sea is more than a road to the Leviathan, Dreamer. Stay a while.\""
+				""
+				"&7This path shows what the islands of the &bEndless Sea&7 offer besides the story: guarded places and their captains, a sail for your own raft, a cozy home that heals you, crops and a kitchen, and gear for an islander."
+			]
+			tasks: [
+				{ id: "0A7B861F2F395E45", type: "checkmark", title: "Off to the islands" }
+			]
+			rewards: [
+				{ id: "0A747A1F2F332B33", type: "xp", xp: 30 }
+			]
+		}
+		{
+			id: "74D74A09EEE584D4"
+			title: "Guarded Places"
+			icon: "raft:scavenger_spawn_egg"
+			x: 1.8d
+			y: 1.8d
+			dependencies: ["5A842BF26F504A36"]
+			description: [
+				"&7Most places of the sea are guarded. The first time you come close, a warning sounds - a shout, a horn, the hum of the reef - and two seconds later the guards appear around the unopened chests."
+				"&7The guards get tougher the further the story leads you: scavengers with fists, wooden blades or bows at the start, stone blades and reef guardians in the middle, corsair crews at the end. Easy has one guard less, Hard one more; Saltmere, the castaway camp and the sanctum stay quiet."
+			]
+			tasks: [
+				{
+					id: "B16609E21D203BE4"
+					type: "kill"
+					entity: "raft:scavenger"
+					value: 3
+				}
+			]
+			rewards: [
+				{
+					id: "B15F7DE21D1AE252"
+					type: "item"
+					count: 6
+					item: "raft:gold_coin"
+				}
+				{ id: "B15F7EE21D1AE405", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "CAB4CADF433572A2"
+			title: "Reef Guardians"
+			icon: "raft:reef_guardian_spawn_egg"
+			x: 3.6d
+			y: 1.8d
+			dependencies: ["74D74A09EEE584D4"]
+			description: [
+				"&7A &eReef Guardian&7 is a guardian overgrown with coral. It charges its beam for a few seconds before it hits - watch the glow and break its line of sight. Its spikes hurt."
+				"&7They guard the sunken ruins, the wrecks, the Helix Station, the rusted rigs and the Coral Temple. They drop prismarine, sea glass and pearls."
+			]
+			tasks: [
+				{
+					id: "861B8C3FA378E007"
+					type: "kill"
+					entity: "raft:reef_guardian"
+					value: 2
+				}
+			]
+			rewards: [
+				{
+					id: "8607083FA36756B1"
+					type: "item"
+					count: 8
+					item: "minecraft:prismarine_shard"
+				}
+				{ id: "8607073FA36754FE", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "EB9A9AD359DB914F"
+			title: "The Scavenger Chief"
+			icon: "minecraft:iron_sword"
+			x: 3.6d
+			y: 3.4d
+			dependencies: ["74D74A09EEE584D4"]
+			optional: true
+			description: [
+				"&7The elite of a scavenger gang wears iron armour and swings an iron sword. He guards the rusted rig and Port Solace, with a boss bar of his own."
+				"&7He drops gold, scrap metal and often a harpoon gun."
+			]
+			tasks: [
+				{
+					id: "BF8260D0DB295AD8"
+					type: "kill"
+					entity: "raft:scavenger_chief"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "BF96E4D0DB3AE42E", type: "item", item: "questsicons:rare_crate" }
+				{ id: "BF96E5D0DB3AE5E1", type: "xp", xp: 150 }
+			]
+		}
+		{
+			id: "0CCBFE26B6F4E156"
+			title: "The Corsair Captain"
+			icon: "raft:cutlass"
+			x: 5.4d
+			y: 1.8d
+			dependencies: ["CAB4CADF433572A2"]
+			optional: true
+			description: [
+				"&7Saltjaw's cove and the galleon wreck are held by corsair crews and their &eCorsair Captain&7: bigger, armoured, with a cutlass. At half health he blows his horn, and two corsairs climb out of the deep to help him."
+				"&7He always drops his cutlass and a purse of gold, often a harpoon."
+			]
+			tasks: [
+				{
+					id: "88CA620867A99F50"
+					type: "kill"
+					entity: "raft:corsair_captain"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "88DE660867BA4F26", type: "item", item: "questsicons:rare_crate" }
+				{
+					id: "88DE670867BA50D9"
+					type: "item"
+					count: 12
+					item: "raft:gold_coin"
+				}
+			]
+		}
+		{
+			id: "A6FD106A86A7E02B"
+			title: "The Reef Warden"
+			icon: "raft:reef_guardian_spawn_egg"
+			x: 7.2d
+			y: 1.8d
+			dependencies: ["0CCBFE26B6F4E156"]
+			optional: true
+			description: [
+				"&7A huge reef guardian keeps the &5Coral Temple&7: 80 health, armour 8 and a beam that hits for 7. Fight it from cover and strike while its beam charges elsewhere."
+				"&7It drops pearls, sea glass, prismarine and now and then Ancient Energy."
+			]
+			tasks: [
+				{
+					id: "55DD2DB381674504"
+					type: "kill"
+					entity: "raft:reef_warden"
+					value: 1
+				}
+			]
+			rewards: [
+				{ id: "55D621B3816111F2", type: "item", item: "questsicons:epic_crate" }
+				{ id: "55D622B3816113A5", type: "xp", xp: 250 }
+			]
+		}
+		{
+			id: "A07EAE393771F3E7"
+			title: "Sail and Mast"
+			icon: "raft:sail"
+			x: 1.8d
+			y: 0.0d
+			dependencies: ["5A842BF26F504A36"]
+			description: [
+				"&7For a raft you built yourself (see &bYour Own Raft&7 in the Endless Sea): a &eMast&7 is a pole you stack as high as you like. Set &eSails&7 next to it, side by side and on top of each other: they join into one big sheet, and every block of sail adds wind power."
+				"&7Use a sail with an empty hand to furl it - the canvas rolls up under the yard and the raft no longer catches the wind. Use it again to set it."
+			]
+			tasks: [
+				{
+					id: "E995F94D24B1424C"
+					type: "item"
+					count: 4
+					item: "raft:mast"
+				}
+				{
+					id: "E995FA4D24B143FF"
+					type: "item"
+					count: 4
+					item: "raft:sail"
+				}
+			]
+			rewards: [
+				{
+					id: "E98F8D4D24AC1F1A"
+					type: "item"
+					count: 8
+					item: "raft:rope"
+				}
+				{ id: "E98F8E4D24AC20CD", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "ED64B300AA8DF243"
+			title: "Anchor Winch"
+			x: 3.6d
+			y: 0.0d
+			dependencies: ["A07EAE393771F3E7"]
+			description: [
+				"&7Set an &eAnchor Winch&7 on the deck edge, anchor over the side. Use it to drop the anchor: a sailing raft stops and holds its position, even when the helmsman pushes on. Use it again to raise it and sail on."
+				"&7To moor, use the wheel while you steer (or sneak and use it): the raft becomes blocks again."
+			]
+			tasks: [
+				{ id: "2A3D8CCF877F7BDF", type: "item", item: "raft:anchor_winch" }
+			]
+			rewards: [
+				{
+					id: "2A2908CF876DF289"
+					type: "item"
+					count: 4
+					item: "minecraft:iron_ingot"
+				}
+				{ id: "2A2907CF876DF0D6", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "AC556A4B8EE5C382"
+			title: "Make Yourself at Home"
+			icon: "raft:palm_bench"
+			x: 1.8d
+			y: -1.8d
+			dependencies: ["5A842BF26F504A36"]
+			description: [
+				"&7Sit on any seat or cushion, or lie in a hammock or bed: after 3 seconds you are &eRested&7. You heal half a heart every 4 seconds and get hungry 25% slower."
+				"&7Rested lasts 2 minutes plus 1 minute per comfort point. Every kind of cozy thing within 6 blocks adds one: seats, tables, lights, fires, rugs, plants, shade, music, storage, wall decor and a view of the water. The old decorations count too."
+			]
+			tasks: [
+				{ id: "C102D00A00D8079E", type: "item", item: "raft:palm_bench" }
+				{ id: "C102D10A00D80951", type: "item", item: "raft:hurricane_lantern" }
+			]
+			rewards: [
+				{
+					id: "C0EE4C0A00C67E48"
+					type: "item"
+					count: 2
+					item: "raft:shell_candle"
+				}
+				{ id: "C0EE4D0A00C67FFB", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "BD9897E08F80EECD"
+			title: "Island Music"
+			x: 3.6d
+			y: -1.8d
+			dependencies: ["AC556A4B8EE5C382"]
+			optional: true
+			description: [
+				"&7The &eSteel Drum&7 plays the next note of an island tune with every right-click or redstone pulse. The &eConch Shell&7 blows a horn that carries far over the water. Both count as music for your comfort."
+			]
+			tasks: [
+				{ id: "01BE62EF27E12365", type: "item", item: "raft:steel_drum" }
+				{ id: "01BE61EF27E121B2", type: "item", item: "raft:conch_shell" }
+			]
+			rewards: [
+				{ id: "01B7D6EF27DBC9D3", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "3AE4172B1BAFBB83"
+			title: "Shelves and Baskets"
+			x: 0.0d
+			y: -1.8d
+			dependencies: ["AC556A4B8EE5C382"]
+			optional: true
+			description: [
+				"&7Palm, teak and weathered &eShelves&7 show three items and work like vanilla shelves. The &eWicker Basket&7 holds 9 stacks and keeps them when you pick it up, like a shulker box."
+				"&7Put a &eServing Plate&7 on a table: it holds up to 4 portions of one food. Right-click with an empty hand to eat one when you are hungry."
+			]
+			tasks: [
+				{ id: "8F72005C8FC7A63A", type: "item", item: "raft:wicker_basket" }
+				{ id: "8F72015C8FC7A7ED", type: "item", item: "raft:serving_plate" }
+			]
+			rewards: [
+				{ id: "8F78EC5C8FCDA2EC", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "A15E448BDEE28FB1"
+			title: "Island Crops"
+			icon: "raft:banana"
+			x: 1.8d
+			y: -3.6d
+			dependencies: ["AC556A4B8EE5C382"]
+			description: [
+				"&7Wild &eSweet Potatoes&7, &eChili&7, &eBananas&7 and &eRice&7 grow on the palm, jungle, mangrove and volcanic isles (in newly explored chunks). Seeds also come with flotsam barrels, supply barrels, island chests and overworld shipwrecks."
+				"&7Plant them on farmland or a crop plot; each has four stages. A raw chili gives 10 seconds of Fire Resistance."
+			]
+			tasks: [
+				{ id: "903CBBDCB7738C49", type: "item", item: "raft:sweet_potato" }
+				{ id: "903CBADCB7738A96", type: "item", item: "raft:chili_pepper" }
+				{ id: "903CB9DCB77388E3", type: "item", item: "raft:banana" }
+				{ id: "903CB8DCB7738730", type: "item", item: "raft:rice" }
+			]
+			rewards: [
+				{
+					id: "90513FDCB785159F"
+					type: "item"
+					count: 16
+					item: "minecraft:bone_meal"
+				}
+				{ id: "90513EDCB78513EC", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "5302BE638407FDB2"
+			title: "Sea Grapes"
+			x: 0.0d
+			y: -3.6d
+			dependencies: ["A15E448BDEE28FB1"]
+			optional: true
+			description: [
+				"&7&eSea Grapes&7 grow under water in the Coral Shallows and the Glowing Lagoon. Plant them on sand or gravel in the sea; when ripe, right-click to pick 2 or 3 bunches - they grow back."
+			]
+			tasks: [
+				{
+					id: "44F8AC5A1BCEF313"
+					type: "item"
+					count: 3
+					item: "raft:sea_grapes"
+				}
+			]
+			rewards: [
+				{ id: "44FF385A1BD44CA5", type: "xp", xp: 60 }
+			]
+		}
+		{
+			id: "E801ED7ED758C409"
+			title: "The Cooking Pot"
+			icon: "raft:island_curry"
+			x: 3.6d
+			y: -3.6d
+			dependencies: ["A15E448BDEE28FB1"]
+			description: [
+				"&7Set the &eCooking Pot&7 on a campfire, fire, brazier, simple grill, magma or lava, add up to 4 ingredients one by one and it cooks in 10 seconds. Serve with bowls; sneak-click with an empty hand takes the ingredients back."
+				"&7&eIsland Curry&7: cooked rice, chili, sweet potato and coconut (3 bowls, Regeneration). &eSeafood Chowder&7: a fish, crab claw or eel fillet, sweet potato, kelp and sea grapes (3 bowls, Water Breathing)."
+			]
+			tasks: [
+				{ id: "8C3DB40112FCDA67", type: "item", item: "raft:cooking_pot" }
+				{ id: "8C3DB30112FCD8B4", type: "item", item: "raft:island_curry" }
+			]
+			rewards: [
+				{
+					id: "8C29300112EB5111"
+					type: "item"
+					count: 8
+					item: "minecraft:bowl"
+				}
+				{ id: "8C292F0112EB4F5E", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "838DA669164DFA15"
+			title: "Fish Trap"
+			x: 5.4d
+			y: -3.6d
+			dependencies: ["E801ED7ED758C409"]
+			description: [
+				"&7Put a &eFish Trap&7 in open water (at least 12 water blocks around it). Every 1 to 2 minutes it catches cod, salmon, tropical fish, crab claws, shells, kelp or sea grapes. Bait inside makes it twice as fast, and hoppers can empty it."
+			]
+			tasks: [
+				{ id: "090D5046E2246117", type: "item", item: "raft:fish_trap" }
+			]
+			rewards: [
+				{
+					id: "08F94C46E213B141"
+					type: "item"
+					count: 8
+					item: "raft:fish_bait"
+				}
+				{ id: "08F94B46E213AF8E", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "B100EE245FC4737A"
+			title: "Driftwood Boomerang"
+			x: -1.8d
+			y: 1.8d
+			dependencies: ["5A842BF26F504A36"]
+			description: [
+				"&7Throw the &eDriftwood Boomerang&7: it flies about 18 blocks, hits for 5 and comes back to you, even through walls. On the way it picks up to 3 stacks of floating items, so it fetches debris from the water."
+			]
+			tasks: [
+				{ id: "4FFAE017EBBD72A3", type: "item", item: "raft:boomerang" }
+			]
+			rewards: [
+				{ id: "5001EC17EBC3A5B5", type: "xp", xp: 80 }
+			]
+		}
+		{
+			id: "F65D4651902CE8C9"
+			title: "Machete and Spear"
+			x: -3.6d
+			y: 1.8d
+			dependencies: ["B100EE245FC4737A"]
+			optional: true
+			description: [
+				"&7The &eMachete&7 swings fast (5.5 damage) and cuts leaves, plants, bamboo, vines and crops in a blink. The &eShark Tooth Spear&7 jabs and charges like any spear, as strong as an iron one."
+			]
+			tasks: [
+				{ id: "27E19439BFA0750C", type: "item", item: "raft:machete" }
+				{ id: "27E19539BFA076BF", type: "item", item: "raft:shark_tooth_spear" }
+			]
+			rewards: [
+				{ id: "27DB2839BF9B51DA", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "AF30B16355EB8744"
+			title: "Shell Armour"
+			icon: "raft:shell_chestplate"
+			x: -1.8d
+			y: -1.8d
+			dependencies: ["5A842BF26F504A36"]
+			description: [
+				"&7&eShell Armour&7 from seashells: 13 armour points, between chainmail and iron, with a little toughness. The full set gives Resistance I while you are in water."
+			]
+			tasks: [
+				{ id: "05F0980A25543838", type: "item", item: "raft:shell_helmet" }
+				{ id: "05F0990A255439EB", type: "item", item: "raft:shell_chestplate" }
+				{ id: "05F09A0A25543B9E", type: "item", item: "raft:shell_leggings" }
+				{ id: "05F09B0A25543D51", type: "item", item: "raft:shell_boots" }
+			]
+			rewards: [
+				{ id: "06051C0A2565C18E", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "281789E5EF34BCF1"
+			title: "Explorer's Outfit"
+			icon: "raft:explorer_helmet"
+			x: -3.6d
+			y: -1.8d
+			dependencies: ["AF30B16355EB8744"]
+			optional: true
+			description: [
+				"&7Hat, jacket, trousers and boots from sail canvas: 7 armour points like leather. The full outfit makes you 10% faster and gives Luck I for better fishing and loot."
+			]
+			tasks: [
+				{ id: "0F440DDB6DFBA1C9", type: "item", item: "raft:explorer_helmet" }
+				{ id: "0F440CDB6DFBA016", type: "item", item: "raft:explorer_chestplate" }
+				{ id: "0F440BDB6DFB9E63", type: "item", item: "raft:explorer_leggings" }
+				{ id: "0F440ADB6DFB9CB0", type: "item", item: "raft:explorer_boots" }
+			]
+			rewards: [
+				{ id: "0F5891DB6E0D2B1F", type: "item", item: "questsicons:rare_crate" }
+			]
+		}
+		{
+			id: "6FAF44E46490AABB"
+			title: "Finders Keepers"
+			icon: "raft:wreck_compass"
+			x: -1.8d
+			y: 0.0d
+			dependencies: ["5A842BF26F504A36"]
+			description: [
+				"&7Right-click the &eWreck Compass&7 and its needle turns to the nearest shipwreck within about 1000 blocks - galleons, cargo ships, fishing boats, sunken planes and overworld wrecks - and it tells you how far it is."
+				"&7The &eCaptain's Spyglass&7 zooms twice as far as a spyglass and shows the distance to what you look at."
+			]
+			tasks: [
+				{ id: "E9059C594795E137", type: "item", item: "raft:wreck_compass" }
+				{ id: "E9059B594795DF84", type: "item", item: "raft:captains_spyglass" }
+			]
+			rewards: [
+				{ id: "E8F11859478457E1", type: "xp", xp: 100 }
+			]
+		}
+		{
+			id: "242E052EB1309824"
+			title: "Golden Lure"
+			x: -3.6d
+			y: 0.0d
+			dependencies: ["6FAF44E46490AABB"]
+			optional: true
+			description: [
+				"&7Keep &eFish Bait&7 with your fishing rod for faster bites (like Lure I). The &eGolden Lure&7 also brings better treasure (like Luck of the Sea II). One is used per cast."
+			]
+			tasks: [
+				{ id: "6FA78ECBF0CA4E72", type: "item", item: "raft:golden_lure" }
+			]
+			rewards: [
+				{
+					id: "6FAE9ACBF0D08184"
+					type: "item"
+					count: 16
+					item: "raft:fish_bait"
+				}
+			]
+		}
+	]
+}

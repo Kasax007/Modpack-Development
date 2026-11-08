@@ -3,7 +3,8 @@
 python3 tools/dc_quests.py OUT_DIR writes the book (data.snbt, chapters/, reward_tables/). The quest ids are hashes of
 "<chapter key>:<quest key>", so keep the keys: renaming one resets that quest for everybody. Rewards are numbered in
 order, so add new rewards at the end of a list instead of changing the old ones (players who claimed them keep them).
-Chapter 6 (Beach Craft) is in dc_quests_raft.py, the Tamagotchi side path in dc_quests_pets.py.
+Chapter 6 (Beach Craft) is in dc_quests_raft.py, the Tamacraft side path in dc_quests_pets.py and the Island Life
+side path (Beach Craft 3.2 and 3.3) in dc_quests_island.py.
 """
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
@@ -472,10 +473,10 @@ n.quest('advanced', 'Advanced Netherite', 10, 1, [
     TIP + '&eAdvanced Netherite&7 upgrades netherite tools and armor further with iron, gold, emerald or diamond: each tier gives more durability and special bonuses.'],
     [item('advancednetherite:netherite_diamond_ingot')], [crate('epic')], deps=['netherite'], optional=True)
 n.quest('pup', 'A Friend in the Flames', 10, -2, [
-    TIP + 'In some nether fortresses lives the &6Ember Pup&7, one of the rare pets of &eTamagotchi&7. It swims through lava and keeps you from burning. See the &dTamagotchi&7 side path.',
+    TIP + 'In some nether fortresses lives the &6Ember Pup&7, one of the rare pets of &eTamacraft&7. It swims through lava and keeps you from burning. See the &dTamacraft&7 side path.',
     '',
     TIP + 'Spot an Ember Pup.'],
-    [observe('tamagotchi:ember_pup', 40, entity=True, title='Spot an Ember Pup')], [give('tamagotchi:ember_jerky', 4)], deps=['wither_skull'], optional=True)
+    [observe('tamacraft:ember_pup', 40, entity=True, title='Spot an Ember Pup')], [give('tamacraft:ember_jerky', 4)], deps=['wither_skull'], optional=True)
 n.quest('wither_skull', 'Skulls of the Wither', 8, -1, [TIP + 'Wither skeletons in fortresses sometimes drop their skulls. Three of them... you know.'],
         [item('minecraft:wither_skeleton_skull', 3)], [crate('rare')], deps=['fortress'])
 n.quest('done', '&cForged in Fire', 12, 0, [KEEPER + '"The fever cools. Now find the place where the Dream ends."'],
@@ -531,10 +532,10 @@ e.quest('shulker', 'Boxes in Boxes', 8, 3.6, [
     TIP + 'Two shulker shells and a chest make a &eShulker Box&7 that keeps its contents when you break it. With &eEasy Shulker Boxes&7 you can look into one and take items out right from your inventory.'],
     [item('minecraft:shulker_box')], [give('minecraft:shulker_shell', 2)], deps=['city'], optional=True)
 e.quest('kitten', 'A Kitten from the Void', 6, 3.6, [
-    TIP + 'In some End cities waits the &5Void Kitten&7, one of the rarest pets of &eTamagotchi&7: it pulls dropped items into its backpack. See the &dTamagotchi&7 side path.',
+    TIP + 'In some End cities waits the &5Void Kitten&7, one of the rarest pets of &eTamacraft&7: it pulls dropped items into its backpack. See the &dTamacraft&7 side path.',
     '',
     TIP + 'Spot a Void Kitten.'],
-    [observe('tamagotchi:void_kitten', 40, entity=True, title='Spot a Void Kitten')], [give('tamagotchi:fish_crackers', 4)], deps=['city'], optional=True)
+    [observe('tamacraft:void_kitten', 40, entity=True, title='Spot a Void Kitten')], [give('tamacraft:fish_crackers', 4)], deps=['city'], optional=True)
 e.quest('done', '&5The Dream Is Free', 12, 0, [
     KEEPER + '"You did it. The dragon is gone and the Dream breathes again. But dreams never truly end..."',
     '',
@@ -571,7 +572,7 @@ x.quest('dream', '&dThe Dream Star', 10.5, 0, [
     KEEPER + '"One dream is left, Dreamer. Gather a treasure from every corner of the Dream and bind them into a star."',
     '',
     TIP + 'The &dDream Star&7 is the trophy of Dreamcraft. It shines, cannot burn and never despawns. Its recipe uses eight treasures from the whole pack:',
-    TIP + '&e2 Ametrine Ingots&7, a &eQuest Crown&7, a &enetherite staff&7, a &eNether Star&7, a &eLapotronic Energy Orb&7, a &eTamagotchi Heart&7, a &eDragon Egg or Dragon Head&7 and the &eHeart of the Tide&7.',
+    TIP + '&e2 Ametrine Ingots&7, a &eQuest Crown&7, a &enetherite staff&7, a &eNether Star&7, a &eLapotronic Energy Orb&7, a &eTamacraft Heart&7, a &eDragon Egg or Dragon Head&7 and the &eHeart of the Tide&7.',
     TIP + 'The quests around the star tell you where each one comes from. Press &eR&7 on the Dream Star in JEI to see the recipe.'],
     [], [rxp(500)], deps=['master'], shape='star', size=1.6, icon='questsicons:dream_star')
 STAR_X, STAR_Y, RING = 15, 0, 2.6
@@ -597,9 +598,9 @@ x.quest('star_tide', 'Heart of the Tide', *ring(22.5), [
 x.quest('star_dragon', 'A Dragon\'s Treasure', *ring(67.5), [
     TIP + 'A &eDragon Egg&7 or a &eDragon Head&7. This quest completes when you have finished &eThe Dragon Egg&7 or &eA Dragon\'s Head&7 in chapter 7: the egg waits on the exit portal after the first dragon fight, a head hangs on every End ship.'],
     [], [rxp(200)], deps=['end:egg', 'end:head'], any_dep=True, icon='minecraft:dragon_egg')
-x.quest('star_heart', 'Tamagotchi Heart', *ring(112.5), [
-    TIP + 'Five red dye around an amethyst shard. It tames the rare pets of the &dTamagotchi&7 side path - craft a fresh one for the star.'],
-    [item('tamagotchi:tamagotchi_heart')], [rxp(100)], deps=['dream'], hide_lines=True)
+x.quest('star_heart', 'Tamacraft Heart', *ring(112.5), [
+    TIP + 'Five red dye around an amethyst shard. It tames the rare pets of the &dTamacraft&7 side path - craft a fresh one for the star.'],
+    [item('tamacraft:tamacraft_heart')], [rxp(100)], deps=['dream'], hide_lines=True)
 x.quest('star_staff', 'A Netherite Staff', *ring(-157.5), [
     TIP + 'A &eNetherite Arcane, Fire or Frost Staff&7 of a wizard or the &eNetherite Holy Staff&7 of a priest. This quest completes when you have finished one of the netherite staff quests in &e4. Paths of Power&7.'],
     [], [rxp(200)], deps=['power:staff_arcane', 'power:staff_fire', 'power:staff_frost', 'power:staff_holy'], any_dep=True, icon='wizards:staff_netherite_arcane')
@@ -609,7 +610,7 @@ x.quest('star_nether', 'Nether Star', *ring(157.5), [
 x.quest('star', '&d✦ Living the Dream ✦', STAR_X, STAR_Y, [
     KEEPER + '"Eight treasures, one star. This is what your journey looks like, Dreamer."',
     '',
-    TIP + 'Craft the &dDream Star&7: Ametrine, Crown, Ametrine on top, staff, Nether Star and Lapotronic Orb in the middle, Tamagotchi Heart, Dragon Egg or Head and Heart of the Tide at the bottom.',
+    TIP + 'Craft the &dDream Star&7: Ametrine, Crown, Ametrine on top, staff, Nether Star and Lapotronic Orb in the middle, Tamacraft Heart, Dragon Egg or Head and Heart of the Tide at the bottom.',
     TIP + 'It unlocks the challenge &5Living the Dream&7.'],
     [item('questsicons:dream_star')], [crate('legendary'), levels(30)],
     deps=['star_crown', 'star_ametrine', 'star_orb', 'star_tide', 'star_dragon', 'star_heart', 'star_staff', 'star_nether'],
@@ -743,7 +744,7 @@ a.quest('skies', 'Islands in the Sky', 8, -3.4, [
     [struct('mss:castle_tower', 'Visit a sky castle tower')], [crate('epic')], deps=['castle'], optional=True)
 a.quest('trial', 'Trial Chambers', 8, 3.4, [
     TIP + 'Deep below the surface lie the copper halls of the &eTrial Chambers&7. Beat the trial spawners for &eTrial Keys&7 and open the vaults.',
-    TIP + 'Rare pets of the &dTamagotchi&7 path hide here (the Mimic) and in woodland mansions.'],
+    TIP + 'Rare pets of the &dTamacraft&7 path hide here (the Mimic) and in woodland mansions.'],
     [struct('minecraft:trial_chambers', 'Find the trial chambers'), item('minecraft:trial_key')], [crate('epic')], deps=['outpost', 'tavern'], any_dep=True, optional=True)
 a.quest('relics', 'Lost Relics', 11, 2, [
     TIP + '&eLost Relics&7 hides old artifacts with strange powers in &ejungle pyramids&7, like the &eSmoking Mirror&7, the &eCursed Amulet&7 or the &eTurquoise Eye&7. Read their tooltips before you use them...'],
@@ -778,7 +779,7 @@ c.quest('snail', 'The Slow Lane', 6, 2, [
     TIP + 'Snails (&eLovely Snails&7) can be saddled and ridden - slowly. With a chest on their back they carry your things.'],
     [observe('lovely_snails:snail', 40, entity=True, title='Find a snail')], [give('minecraft:saddle')], deps=['penguin'], optional=True)
 c.quest('pet', 'A Loyal Friend', 2, 0, [TIP + 'Tame a wolf or cat. With &eRespawnable Pets&7 your pet comes back to life if it dies.',
-                                         TIP + 'Want something rarer? The &dTamagotchi&7 side path is all about the ten rare pets of the Dream.'],
+                                         TIP + 'Want something rarer? The &dTamacraft&7 side path is all about the ten rare pets of the Dream.'],
         [item('minecraft:bone', 8)], [give('minecraft:name_tag')], deps=['start'])
 c.quest('walkers', 'Walk in Their Shoes', 0, 2.5, [
     TIP + '&eWoodwalkers&7 lets you become a mob. Look at a creature and hold &eU&7 for a few seconds: it becomes your second shape. Press &eG&7 to turn into it and back.',
@@ -808,12 +809,12 @@ B.table('common_crate', '&fCommon Crate', 'questsicons:common_crate', [
     ('minecraft:bread', 8, 20), ('minecraft:cooked_beef', 6, 15), ('minecraft:torch', 32, 20), ('minecraft:iron_ingot', 4, 15),
     ('minecraft:coal', 16, 15), ('minecraft:arrow', 24, 10), ('minecraft:bone_meal', 16, 10), ('minecraft:leather', 6, 8),
     ('minecraft:gold_ingot', 3, 8), ('minecraft:apple', 6, 10), ('minecraft:name_tag', 1, 2), ('minecraft:emerald', 3, 6),
-    ('farmersdelight:rope', 12, 5), ('minecraft:lantern', 4, 6), ('tamagotchi:pet_kibble', 8, 4), ('raft:rope', 8, 4)])
+    ('farmersdelight:rope', 12, 5), ('minecraft:lantern', 4, 6), ('tamacraft:pet_kibble', 8, 4), ('raft:rope', 8, 4)])
 B.table('rare_crate', '&9Rare Crate', 'questsicons:rare_crate', [
     ('minecraft:diamond', 2, 15), ('minecraft:emerald', 8, 15), ('minecraft:golden_apple', 2, 12), ('minecraft:ender_pearl', 4, 12),
     ('minecraft:iron_block', 2, 10), ('minecraft:gold_block', 1, 8), ('minecraft:saddle', 1, 6), ('minecraft:name_tag', 2, 6),
     ('minecraft:experience_bottle', 16, 10), ('minecraft:lapis_block', 2, 8), ('minecraft:obsidian', 8, 8), ('minecraft:trial_key', 1, 6),
-    ('jewelry:ruby', 2, 5), ('jewelry:sapphire', 2, 5), ('tamagotchi:tamagotchi_heart', 1, 4), ('raft:titanium_ingot', 3, 4)])
+    ('jewelry:ruby', 2, 5), ('jewelry:sapphire', 2, 5), ('tamacraft:tamacraft_heart', 1, 4), ('raft:titanium_ingot', 3, 4)])
 B.table('epic_crate', '&5Epic Crate', 'questsicons:epic_crate', [
     ('minecraft:diamond', 5, 15), ('minecraft:netherite_scrap', 1, 10), ('minecraft:totem_of_undying', 1, 8),
     ('minecraft:enchanted_golden_apple', 1, 3), ('minecraft:diamond_block', 1, 8), ('minecraft:shulker_shell', 2, 8),
@@ -826,7 +827,7 @@ B.table('legendary_crate', '&6Legendary Crate', 'questsicons:legendary_crate', [
     ('minecraft:diamond_block', 4, 12), ('minecraft:heavy_core', 1, 3), ('minecraft:music_disc_pigstep', 1, 4), ('minecraft:dragon_breath', 8, 5)])
 
 HERE = os.path.dirname(__file__)
-for extra in ('dc_quests_raft.py', 'dc_quests_pets.py'):
+for extra in ('dc_quests_raft.py', 'dc_quests_pets.py', 'dc_quests_island.py'):
     if os.path.exists(os.path.join(HERE, extra)):
         exec(open(os.path.join(HERE, extra)).read())
 
@@ -892,7 +893,7 @@ def task_icons():
                 if 'icon' in tk: continue
                 if tk['type'] == 'observation' and tk.get('entity'):
                     ns, path = tk['observe'].split(':')
-                    tk['icon'] = {'tamagotchi': f'{ns}:{path}_plush', 'betternether': f'{ns}:spawn_egg_{path}'}.get(ns, f'{ns}:{path}_spawn_egg')
+                    tk['icon'] = {'tamacraft': f'{ns}:{path}_plush', 'betternether': f'{ns}:spawn_egg_{path}'}.get(ns, f'{ns}:{path}_spawn_egg')
                 elif tk['type'] == 'advancement' and qq.get('icon'):
                     tk['icon'] = qq['icon']
 task_icons()

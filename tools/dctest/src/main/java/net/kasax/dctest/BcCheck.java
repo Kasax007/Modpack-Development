@@ -64,7 +64,7 @@ import java.util.function.Predicate;
  * summon needs an Ancient Crystal, it heals after 30 s without players</li>
  * <li>trench: which creatures spawn in the abyssal trench (anglerfish against glow squid)</li>
  * <li>structures: natural Beach Craft structures in the real world, screenshots from above and inside</li>
- * <li>pets: Tamagotchi pet homes resolved in the pack (look-alike structures of other mods), a pet in one of them</li>
+ * <li>pets: Tamacraft pet homes resolved in the pack (look-alike structures of other mods), a pet in one of them</li>
  * <li>dreamstar: recipe loaded with its ingredients, the "Living the Dream" advancement when holding the star</li>
  * <li>sounds: whale song and bubble vent sounds really play (sound log, the test client has no audio device)</li>
  * </ul>
@@ -638,7 +638,7 @@ final class BcCheck {
             Registry<Structure> reg = s.registryAccess().lookupOrThrow(Registries.STRUCTURE);
             reg.getTags().forEach(named -> {
                 String tag = named.key().location().toString();
-                if (!tag.startsWith("tamagotchi:pet_home/")) return;
+                if (!tag.startsWith("tamacraft:pet_home/")) return;
                 JsonArray a = new JsonArray();
                 named.stream().forEach(holder -> a.add(holder.getRegisteredName()));
                 h.add(tag, a);
@@ -676,7 +676,7 @@ final class BcCheck {
                 String pets = srv(s -> {
                     StringBuilder sb = new StringBuilder();
                     for (Entity e : s.overworld().getEntities((Entity) null, new AABB(px - 48, py - 48, pz - 48, px + 48, py + 48, pz + 48),
-                            e -> BuiltInRegistries.ENTITY_TYPE.getKey(e.getType()).getNamespace().equals("tamagotchi"))) {
+                            e -> BuiltInRegistries.ENTITY_TYPE.getKey(e.getType()).getNamespace().equals("tamacraft"))) {
                         sb.append(BuiltInRegistries.ENTITY_TYPE.getKey(e.getType())).append(' ');
                     }
                     return sb.toString().trim();
@@ -689,7 +689,7 @@ final class BcCheck {
         cmd("gamemode creative @a");
         cmd("execute in minecraft:overworld run tp @a 0.5 250 0.5");
         r.add("look_alike_homes", tries);
-        boolean rs = homes.has("tamagotchi:pet_home/desert_dragon") && homes.getAsJsonArray("tamagotchi:pet_home/desert_dragon").toString().contains("repurposed_structures");
+        boolean rs = homes.has("tamacraft:pet_home/desert_dragon") && homes.getAsJsonArray("tamacraft:pet_home/desert_dragon").toString().contains("repurposed_structures");
         r.addProperty("result", rs ? "OK" : "FAIL pet homes miss the Repurposed Structures look-alikes");
         return r;
     }

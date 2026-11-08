@@ -298,7 +298,7 @@
 			optional: true
 			description: [
 				"&7Deep below the surface lie the copper halls of the &eTrial Chambers&7. Beat the trial spawners for &eTrial Keys&7 and open the vaults."
-				"&7Rare pets of the &dTamagotchi&7 path hide here (the Mimic) and in woodland mansions."
+				"&7Rare pets of the &dTamacraft&7 path hide here (the Mimic) and in woodland mansions."
 			]
 			tasks: [
 				{

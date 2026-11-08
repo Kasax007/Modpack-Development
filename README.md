@@ -20,4 +20,4 @@ If you have any issues with the pack, feel free to create an issue - and don't f
 Minecraft 26.3, Fabric Loader 0.20.1, Java 25. Quests run on my mod
 [Quest Icons](https://www.curseforge.com/minecraft/mc-mods/quest-icons) (FTB Quests is not available for 26.3),
 the raft ocean is my mod [Beach Craft](https://www.curseforge.com/minecraft/mc-mods/beach-craft), and the pets are my mod
-[Tamagotchi](https://www.curseforge.com/minecraft/mc-mods/tamagotchi).
+[Tamacraft](https://www.curseforge.com/minecraft/mc-mods/tamacraft).

@@ -176,7 +176,7 @@
 				"&d&o\"One dream is left, Dreamer. Gather a treasure from every corner of the Dream and bind them into a star.\""
 				""
 				"&7The &dDream Star&7 is the trophy of Dreamcraft. It shines, cannot burn and never despawns. Its recipe uses eight treasures from the whole pack:"
-				"&7&e2 Ametrine Ingots&7, a &eQuest Crown&7, a &enetherite staff&7, a &eNether Star&7, a &eLapotronic Energy Orb&7, a &eTamagotchi Heart&7, a &eDragon Egg or Dragon Head&7 and the &eHeart of the Tide&7."
+				"&7&e2 Ametrine Ingots&7, a &eQuest Crown&7, a &enetherite staff&7, a &eNether Star&7, a &eLapotronic Energy Orb&7, a &eTamacraft Heart&7, a &eDragon Egg or Dragon Head&7 and the &eHeart of the Tide&7."
 				"&7The quests around the star tell you where each one comes from. Press &eR&7 on the Dream Star in JEI to see the recipe."
 			]
 			tasks: [ ]
@@ -278,16 +278,16 @@
 		}
 		{
 			id: "A3516701D783F2CA"
-			title: "Tamagotchi Heart"
+			title: "Tamacraft Heart"
 			x: 14.01d
 			y: 2.4d
 			dependencies: ["CFB4C619A4FA37A8"]
 			hide_dependency_lines: true
 			description: [
-				"&7Five red dye around an amethyst shard. It tames the rare pets of the &dTamagotchi&7 side path - craft a fresh one for the star."
+				"&7Five red dye around an amethyst shard. It tames the rare pets of the &dTamacraft&7 side path - craft a fresh one for the star."
 			]
 			tasks: [
-				{ id: "5D9C8BB8AAB9C8E4", type: "item", item: "tamagotchi:tamagotchi_heart" }
+				{ id: "5D9C8BB8AAB9C8E4", type: "item", item: "tamacraft:tamacraft_heart" }
 			]
 			rewards: [
 				{ id: "5D95FFB8AAB46F52", type: "xp", xp: 100 }
@@ -338,7 +338,7 @@
 			description: [
 				"&d&o\"Eight treasures, one star. This is what your journey looks like, Dreamer.\""
 				""
-				"&7Craft the &dDream Star&7: Ametrine, Crown, Ametrine on top, staff, Nether Star and Lapotronic Orb in the middle, Tamagotchi Heart, Dragon Egg or Head and Heart of the Tide at the bottom."
+				"&7Craft the &dDream Star&7: Ametrine, Crown, Ametrine on top, staff, Nether Star and Lapotronic Orb in the middle, Tamacraft Heart, Dragon Egg or Head and Heart of the Tide at the bottom."
 				"&7It unlocks the challenge &5Living the Dream&7."
 			]
 			tasks: [
