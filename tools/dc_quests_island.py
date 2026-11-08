@@ -68,7 +68,7 @@ il.quest('sea_grapes', 'Sea Grapes', 0, -3.6, [
     TIP + '&eSea Grapes&7 grow under water in the Coral Shallows and the Glowing Lagoon. Plant them on sand or gravel in the sea; when ripe, right-click to pick 2 or 3 bunches - they grow back.'],
     [item('raft:sea_grapes', 3)], [rxp(60)], deps=['crops'], optional=True)
 il.quest('pot', 'The Cooking Pot', 3.6, -3.6, [
-    TIP + 'Set the &eCooking Pot&7 on a campfire, fire, brazier, simple grill, magma or lava, add up to 4 ingredients one by one and it cooks in 10 seconds. Serve with bowls; sneak-click with an empty hand takes the ingredients back.',
+    TIP + 'Set the &eCooking Pot&7 on a campfire, fire, brazier, simple grill, magma or lava and add the ingredients one by one: it only takes what fits a dish and tells you what is still missing. It cooks in 10 seconds; serve with bowls. Sneak-use with an empty hand gives everything back.',
     TIP + '&eIsland Curry&7: cooked rice, chili, sweet potato and coconut (3 bowls, Regeneration). &eSeafood Chowder&7: a fish, crab claw or eel fillet, sweet potato, kelp and sea grapes (3 bowls, Water Breathing).'],
     [item('raft:cooking_pot'), item('raft:island_curry')], [give('minecraft:bowl', 8), rxp(100)], deps=['crops'], icon='raft:island_curry')
 il.quest('trap', 'Fish Trap', 5.4, -3.6, [
@@ -94,6 +94,8 @@ il.quest('finders', 'Finders Keepers', -1.8, 0, [
     TIP + 'Right-click the &eWreck Compass&7 and its needle turns to the nearest shipwreck within about 1000 blocks - galleons, cargo ships, fishing boats, sunken planes and overworld wrecks - and it tells you how far it is.',
     TIP + 'The &eCaptain\'s Spyglass&7 zooms twice as far as a spyglass and shows the distance to what you look at.'],
     [item('raft:wreck_compass'), item('raft:captains_spyglass')], [rxp(100)], deps=['start'], icon='raft:wreck_compass')
-il.quest('lure', 'Golden Lure', -3.6, 0, [
-    TIP + 'Keep &eFish Bait&7 with your fishing rod for faster bites (like Lure I). The &eGolden Lure&7 also brings better treasure (like Luck of the Sea II). One is used per cast.'],
-    [item('raft:golden_lure')], [give('raft:fish_bait', 16)], deps=['finders'], optional=True)
+il.quest('lure', 'Tackle Box', -3.6, 0, [
+    TIP + 'Craft a &eDriftwood Fishing Rod&7 (3 driftwood planks, 2 string) and sneak-use it: its &etackle box&7 has one slot for &eFish Bait&7 and one for &eGolden Lures&7. Every cast uses one of each that is loaded.',
+    TIP + 'Bait makes fish bite sooner (like Lure I); the Golden Lure also brings better treasure (like Luck of the Sea II). A plain rod still uses them from your off hand or bag.'],
+    [item('raft:driftwood_fishing_rod'), item('raft:golden_lure')], [give('raft:fish_bait', 16)], deps=['finders'], optional=True,
+    icon='raft:driftwood_fishing_rod')
