@@ -1,6 +1,7 @@
-"""usage: cf_install.py CLIENT_FILE_ID [SERVER_FILE_ID]  (e.g. 9409459 9409463 for V1.2)
-Installs Dreamcraft the way a launcher does: the client zip from CurseForge, every manifest file from
-CurseForge (by project and file id), the overrides on top. Writes report.json (file names, sizes, sha1)."""
+"""usage: cf_install.py CLIENT_FILE_ID|CLIENT_ZIP [SERVER_FILE_ID]  (e.g. 9409459 9409463 for V1.2)
+Installs Dreamcraft the way a launcher does: the client zip from CurseForge (or a local zip built by mkpack.py, to test
+a pack before its upload), every manifest file from CurseForge (by project and file id), the overrides on top.
+Writes report.json (file names, sizes, sha1)."""
 import json, os, subprocess, zipfile, hashlib, sys
 from concurrent.futures import ThreadPoolExecutor
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -19,9 +20,12 @@ def get(pid, fid, dst_dir):
             return name
     return None
 os.makedirs(f'{INST}/mods', exist_ok=True)
-pack = get(545167, int(sys.argv[1]), BASE)
+if os.path.isfile(sys.argv[1]):
+    pack = os.path.abspath(sys.argv[1])          # a local pack zip, not uploaded yet
+else:
+    pack = f'{BASE}/' + get(545167, int(sys.argv[1]), BASE)
 print('pack', pack, flush=True)
-z = zipfile.ZipFile(f'{BASE}/{pack}')
+z = zipfile.ZipFile(pack)
 man = json.loads(z.read('manifest.json'))
 for n in z.namelist():
     if n.startswith('overrides/') and not n.endswith('/'):
