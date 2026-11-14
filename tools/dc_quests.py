@@ -855,13 +855,14 @@ q.quest('safe', 'Safe Chest', 4, -1, [
     [item(UIC + 'safe_chest')], [give('minecraft:gold_ingot', 4)], deps=['iron_chest'], optional=True)
 q.quest('search', 'Find My Item', 6, -1, [
     TIP + 'Open an upgraded chest: the search field finds any item, the rarity filter sorts by rarity, and &eQuick Stack&7 and &eDump&7 move your items into nearby chests with one click.',
-    TIP + 'Link chests to see their contents from one place and let the chest point you to the item you are looking for.'],
+    TIP + 'Link chests to see their contents from one place and let the chest point you to the item you are looking for.',
+    TIP + 'Chests leave your items where you put them. If you would rather have them tidied automatically, open your inventory (not in Creative mode), click the &egear button&7 below it and switch on &eKeep stored items tidy&7.'],
     [check('I tried the search and Quick Stack')], [rxp(60)], deps=['iron_chest'])
 q.quest('drawers', 'Bigger Drawers', 8, -1, [
     TIP + '&eStorage Drawers&7 grow with &eStorage Upgrades&7 from obsidian (I) up to netherite (VII). Open a drawer and put the upgrades into its slots. A &eDrawer Key&7 locks a drawer to its item.'],
     [item('storagedrawers:iron_storage_upgrade')], [give('minecraft:obsidian', 4)], deps=['search'], optional=True)
 q.quest('sorting', 'Tidy Up', 2, 2, [
-    TIP + '&eInventory Profiles Next&7 sorts your inventory and any open chest with one key (see Controls). &eMouse Tweaks&7: hold right-click and drag to spread items, scroll over a stack to move it, shift-drag to move many stacks.'],
+    TIP + '&eInventory Profiles Next&7 sorts your inventory or an open chest when you click the small &esort button&7 above the top right slot. If you want a key for it, set one under Mods > Inventory Profiles Next > Hotkeys. &eMouse Tweaks&7: hold right-click and drag to spread items, scroll over a stack to move it, shift-drag to move many stacks.'],
     [check('I sorted a chest')], [rxp(40)], deps=['start'])
 q.quest('crafting', 'Crafting Tweaks', 4, 2, [
     TIP + '&eCrafting Tweaks&7 adds small buttons next to every crafting grid: rotate the recipe, spread the items evenly or clear the grid. JEI\'s &e+&7 button fills the grid for you.'],

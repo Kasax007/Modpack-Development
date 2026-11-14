@@ -18,5 +18,17 @@
     "AutoRefillSettings": {
         "auto_refill_enable_indicator_icons": false,
         "auto_refill_enable_horbar_indicator_icons": false
+    },
+    "Hotkeys": {
+        "sort_inventory": {
+            "main": {
+                "keys": ""
+            }
+        }
+    },
+    "Tweaks": {
+        "container_swipe_moving_items": {
+            "value": false
+        }
     }
 }

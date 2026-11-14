@@ -238,6 +238,7 @@ Tamacraft (formerly Tamagotchi), Quest Icons and Beach Craft are my own mods.
 | [Trinkets Updated](https://www.curseforge.com/minecraft/mc-mods/trinkets-updated) | trinkets-4.2.0+26.3.jar | both |
 | [Ube's Delight](https://www.curseforge.com/minecraft/mc-mods/ubes-delight) | ubesdelight-fabric-26.3-0.4.15.jar | both |
 | [UniLib](https://www.curseforge.com/minecraft/mc-mods/unilib) | UniLib-1.2.1+26.3-fabric.jar | client |
+| [Upgraded Iron Chests](https://www.curseforge.com/minecraft/mc-mods/upgraded-iron-chests) | upgraded-iron-chests-1.5.1.jar | both |
 | [Variants&Ventures](https://www.curseforge.com/minecraft/mc-mods/variants-and-ventures) | variantsandventures-fabric-1.0.29-mc26.3.jar | both |
 | [Villager In A Bucket](https://www.curseforge.com/minecraft/mc-mods/villager-in-a-bucket) | villagerinabucket-fabric-26.3-1.0.0.jar | both |
 | [VillagersTradingPlus](https://www.curseforge.com/minecraft/mc-mods/villagerstradingplus) | villagertradingplus-fabric-mc26.3-1.1.0.jar | both |

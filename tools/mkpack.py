@@ -23,6 +23,25 @@ tama = next(m for m in json.load(open(f'{REPO}/pack/mods.json')) if m['projectID
 tama_file = int(sys.argv[4]) if len(sys.argv) > 4 and sys.argv[4] != '-' else tama['fileID']
 db = json.load(open(f'{SP}/packdb.json'))
 
+# Files below overrides/ that may be shipped in exactly one pack version (path -> version).
+# config/upgraded-iron-chests-client.properties carries pendingServerApply=true: with it the client of Upgraded Iron Chests
+# pushes "Keep stored items tidy = off" (and "Show chest effects = on") once to the first world or server it joins. That
+# helps players whose server still runs V1.6.1. Shipped a second time it would silently switch the setting off again for
+# players who have turned it on. Before the next version is built, delete the file from pack/overrides/config and from the
+# working copy $SP/pack/overrides/config, and remove the entry here.
+ONE_VERSION_ONLY = {'config/upgraded-iron-chests-client.properties': 'V1.6.2'}
+# Client settings in overrides/config that have no place in the server pack.
+CLIENT_ONLY_CONFIG = {'upgraded-iron-chests-client.properties'}
+for rel, only in ONE_VERSION_ONLY.items():
+    if version != only and os.path.exists(f'{SP}/pack/overrides/{rel}'):
+        sys.exit(f'overrides/{rel} may be shipped in {only} only (see ONE_VERSION_ONLY in tools/mkpack.py). Delete it from '
+                 f'pack/overrides and from {SP}/pack/overrides before building {version}.')
+# The server pack takes Quest Icons and Beach Craft from $SP/ownjars: exactly one jar of each must be there.
+for prefix in ('QuestIcons-', 'raft-'):
+    own = [os.path.basename(j) for j in glob.glob(f'{SP}/ownjars/{prefix}*.jar')]
+    if len(own) != 1:
+        sys.exit(f'{SP}/ownjars must hold exactly one {prefix}*.jar for the server pack, found {own}')
+
 
 def cf_jar(pid, fid):
     """The jar of one CurseForge file, from the cache $SP/jars/<file id>-<name> or downloaded (name from cfwidget)."""
@@ -151,7 +170,9 @@ with zipfile.ZipFile(server_zip, 'w', zipfile.ZIP_DEFLATED) as z:
             for r, ds, fs in os.walk(src):
                 rel = os.path.relpath(r, src)
                 if rel.startswith('fancymenu') or rel.startswith('drippyloadingscreen'): continue
-                for f in fs: z.write(os.path.join(r, f), f'{root}/{sub}/' + os.path.normpath(os.path.join(rel, f)))
+                for f in fs:
+                    if rel == '.' and f in CLIENT_ONLY_CONFIG: continue
+                    z.write(os.path.join(r, f), f'{root}/{sub}/' + os.path.normpath(os.path.join(rel, f)))
     z.write(f'{SP}/srv/fabric-server-launch.jar', f'{root}/fabric-server-launch.jar')
     for fname, content, mode in (('start.sh', start_sh, 0o755), ('start.bat', start_bat, 0o644), ('README.txt', readme.replace('{n}', str(n)), 0o644),
                                  ('server.properties', props, 0o644)):

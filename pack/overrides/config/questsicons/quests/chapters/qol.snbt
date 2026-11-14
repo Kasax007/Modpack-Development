@@ -140,6 +140,7 @@
 			description: [
 				"&7Open an upgraded chest: the search field finds any item, the rarity filter sorts by rarity, and &eQuick Stack&7 and &eDump&7 move your items into nearby chests with one click."
 				"&7Link chests to see their contents from one place and let the chest point you to the item you are looking for."
+				"&7Chests leave your items where you put them. If you would rather have them tidied automatically, open your inventory (not in Creative mode), click the &egear button&7 below it and switch on &eKeep stored items tidy&7."
 			]
 			tasks: [
 				{ id: "5748628AF022A419", type: "checkmark", title: "I tried the search and Quick Stack" }
@@ -177,7 +178,7 @@
 			y: 2.0d
 			dependencies: ["93C17F5186699551"]
 			description: [
-				"&7&eInventory Profiles Next&7 sorts your inventory and any open chest with one key (see Controls). &eMouse Tweaks&7: hold right-click and drag to spread items, scroll over a stack to move it, shift-drag to move many stacks."
+				"&7&eInventory Profiles Next&7 sorts your inventory or an open chest when you click the small &esort button&7 above the top right slot. If you want a key for it, set one under Mods > Inventory Profiles Next > Hotkeys. &eMouse Tweaks&7: hold right-click and drag to spread items, scroll over a stack to move it, shift-drag to move many stacks."
 			]
 			tasks: [
 				{ id: "1CFE56B2430A6AD5", type: "checkmark", title: "I sorted a chest" }
