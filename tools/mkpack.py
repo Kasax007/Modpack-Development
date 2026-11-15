@@ -29,7 +29,8 @@ db = json.load(open(f'{SP}/packdb.json'))
 # helps players whose server still runs V1.6.1. Shipped a second time it would silently switch the setting off again for
 # players who have turned it on. Before the next version is built, delete the file from pack/overrides/config and from the
 # working copy $SP/pack/overrides/config, and remove the entry here.
-ONE_VERSION_ONLY = {'config/upgraded-iron-chests-client.properties': 'V1.6.2'}
+# V1.6.2 shipped config/upgraded-iron-chests-client.properties this way (removed again in V1.6.3).
+ONE_VERSION_ONLY = {}
 # Client settings in overrides/config that have no place in the server pack.
 CLIENT_ONLY_CONFIG = {'upgraded-iron-chests-client.properties'}
 for rel, only in ONE_VERSION_ONLY.items():
