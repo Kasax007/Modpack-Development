@@ -45,6 +45,8 @@ SEL = {
  # dependencies found by the resolver
  1659764:'lib',1092048:'lib',923377:'lib',1531135:'lib',854949:'lib',623764:'lib',1283899:'lib',
  1023259:'lib',962162:'lib',1475746:'lib',1218484:'lib',927915:'lib',1509777:'lib',1056812:'lib',320926:'lib',1171906:'lib',916747:'lib',856996:'lib',1635301:'lib',
+ # added later: Polymorph+ (choose between conflicting recipe results, V1.6.4)
+ 1586874:'qol',
  # quests (own mod)
  690531:'quests',
 }

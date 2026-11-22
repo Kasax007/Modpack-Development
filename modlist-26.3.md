@@ -1,6 +1,6 @@
 # Dreamcraft 26.3 - mod list
 
-250 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
+251 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
 Tamacraft (formerly Tamagotchi), Quest Icons and Beach Craft are my own mods.
 
 | Mod | File | Side |
@@ -171,6 +171,7 @@ Tamacraft (formerly Tamagotchi), Quest Icons and Beach Craft are my own mods.
 | [Pick Up Notifier](https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier) | pickupnotifier-v26.3.0-mc26.3.x+fabric.jar | client |
 | [Ping Wheel](https://www.curseforge.com/minecraft/mc-mods/ping-wheel) | Ping-Wheel-1.12.2-fabric-26.3.jar | both |
 | [Player Animation Library](https://www.curseforge.com/minecraft/mc-mods/player-animation-library) | PlayerAnimationLibMerged-1.2.8+mc.26.3.jar | both |
+| [Polymorph+](https://www.curseforge.com/minecraft/mc-mods/polymorph-plus) | polymorph_plus-fabric-1.5.0-26.3.0.jar | both |
 | [Presence Footsteps](https://www.curseforge.com/minecraft/mc-mods/presence-footsteps) | PresenceFootsteps-1.14.0+26.3.jar | client |
 | [Prickle](https://www.curseforge.com/minecraft/mc-mods/prickle) | PrickleMC-fabric-MC26.3-26.3.0.2.jar | both |
 | [Puzzles Lib](https://www.curseforge.com/minecraft/mc-mods/puzzles-lib) | puzzleslib-v26.3.17-mc26.3.x+fabric.jar | both |
@@ -221,7 +222,7 @@ Tamacraft (formerly Tamagotchi), Quest Icons and Beach Craft are my own mods.
 | [Subtle Effects](https://www.curseforge.com/minecraft/mc-mods/subtle-effects) | SubtleEffects-fabric-26.3-1.15.1-hotfix.1.jar | both |
 | [SuperMartijn642's Config Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib) | supermartijn642configlib-1.1.8a-fabric-mc26.3.jar | both |
 | [SuperMartijn642's Core Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib) | supermartijn642corelib-1.1.26c-fabric-mc26.3.jar | both |
-| [Tamacraft](https://www.curseforge.com/minecraft/mc-mods/tamacraft) | tamacraft-1.3.1.jar | both |
+| [Tamacraft](https://www.curseforge.com/minecraft/mc-mods/tamacraft) | tamacraft-1.3.3.jar | both |
 | [Tech Reborn](https://www.curseforge.com/minecraft/mc-mods/techreborn) | TechReborn-6.2.1.jar | both |
 | [Tectonic](https://www.curseforge.com/minecraft/mc-mods/tectonic) | tectonic-3.0.31-fabric-26.3.jar | both |
 | [TerraBlender (Fabric)](https://www.curseforge.com/minecraft/mc-mods/terrablender-fabric) | TerraBlender-fabric-26.3-26.3.0.0.9.jar | both |
