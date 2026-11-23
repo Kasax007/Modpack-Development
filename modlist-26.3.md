@@ -1,6 +1,6 @@
 # Dreamcraft 26.3 - mod list
 
-251 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
+250 mods from CurseForge, plus Quest Icons and Beach Craft (Raft). "client" = not in the server pack.
 Tamacraft (formerly Tamagotchi), Quest Icons and Beach Craft are my own mods.
 
 | Mod | File | Side |
@@ -160,7 +160,6 @@ Tamacraft (formerly Tamagotchi), Quest Icons and Beach Craft are my own mods.
 | [Naturalist](https://www.curseforge.com/minecraft/mc-mods/naturalist) | naturalist-2.0.7-fabric-26.3.jar | both |
 | [Nature's Compass](https://www.curseforge.com/minecraft/mc-mods/natures-compass) | NaturesCompass-26.3-2.5.1-fabric.jar | both |
 | [Neruina - Ticking Entity Fixer](https://www.curseforge.com/minecraft/mc-mods/neruina) | neruina-3.3.5+26.3-fabric.jar | both |
-| [No Chat Reports](https://www.curseforge.com/minecraft/mc-mods/no-chat-reports) | NoChatReports-FABRIC-26.3-v2.21.0.jar | both |
 | [Not Enough Animations](https://www.curseforge.com/minecraft/mc-mods/not-enough-animations) | notenoughanimations-fabric-1.12.7-mc26.3.jar | both |
 | [Not Enough Crashes (Fabric)](https://www.curseforge.com/minecraft/mc-mods/not-enough-crashes) | notenoughcrashes-fabric-4.5.1+26.3.jar | both |
 | [Not Enough Recipe Book [NERB]](https://www.curseforge.com/minecraft/mc-mods/notenoughrecipebook) | nerb-fabric-0.5-26.3.jar | both |

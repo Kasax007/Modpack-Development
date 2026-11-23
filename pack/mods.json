@@ -1395,15 +1395,6 @@
   "env": "*"
  },
  {
-  "title": "No Chat Reports",
-  "slug": "no-chat-reports",
-  "projectID": 634062,
-  "fileID": 9017226,
-  "file": "NoChatReports-FABRIC-26.3-v2.21.0.jar",
-  "modid": "nochatreports",
-  "env": "*"
- },
- {
   "title": "Not Enough Animations",
   "slug": "not-enough-animations",
   "projectID": 433760,
